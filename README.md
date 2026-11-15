@@ -24,6 +24,7 @@ The product should offer:
 | Engineers | [Architecture](docs/ARCHITECTURE.md), [product requirements](docs/PRODUCT_REQUIREMENTS.md), [roadmap](docs/ROADMAP.md) |
 | Codex / AI coding agents | [AGENTS.md](AGENTS.md), [Codex playbook](docs/CODEX_PLAYBOOK.md) |
 | Open-source integrators | [Reuse audit](docs/REUSE_AUDIT.md), [licensing and ownership](docs/OWNERSHIP_AND_LICENSES.md) |
+| All public repo references | [Complete repository list (TXT)](docs/RECOMMENDED_PUBLIC_REPOSITORIES.txt) |
 | ML engineers | [Model strategy](docs/MODEL_TRAINING.md), [evaluation](docs/TESTING_AND_EVALUATION.md) |
 | Security and ops | [Security architecture](docs/SECURITY_ARCHITECTURE.md), [costs](docs/COSTS_AND_OPERATIONS.md) |
 | Contributors | [Onboarding](docs/DEVELOPER_ONBOARDING.md), [CONTRIBUTING.md](CONTRIBUTING.md) |

@@ -1,0 +1,182 @@
+FINE-TUNE PROJECT — PUBLIC REPOSITORIES FOR STUDY AND REUSE
+===========================================================
+Last reviewed: 2026-11-15
+Project: https://github.com/kawaho3/fine-tune
+Purpose: Complete inventory of public GitHub repositories previously recommended
+         in this project's ChatGPT planning conversations.
+
+IMPORTANT
+---------
+This is a RESEARCH INVENTORY, not a list of dependencies installed in fine-tune.
+Do NOT copy whole competing products or assume public source means public domain.
+Before adoption, pin a revision, inspect source/license/third-party assets,
+validate commercial-use terms, security, compatibility, maintenance and costs.
+Study/reuse legally licensed components; make our original product modular.
+No ranking or feature-parity claim is implied.
+
+Legend:
+  CORE CANDIDATE: evaluate as direct library or independently operated service
+  STUDY: learn architecture/workflow; don't import an entire fork
+  EVALUATE: test alternatives and select ONE
+  LATER: defer until justified by product milestones
+
+1) AI AGENTS / EXISTING WEBSITE BUILDER REFERENCES
+----------------------------------------------------
+01. OpenHands Software Agent SDK
+    URL: https://github.com/OpenHands/software-agent-sdk
+    Role: CORE CANDIDATE — agent sessions, coding tools, workspace integration.
+    Note: use via adapter; keep our orchestration replaceable.
+
+02. OpenHands (full application)
+    URL: https://github.com/OpenHands/OpenHands
+    Role: STUDY — mature coding-agent app, execution and UX patterns.
+    Note: do not blindly merge the entire platform into our product.
+
+03. bolt.diy
+    URL: https://github.com/stackblitz-labs/bolt.diy
+    Role: STUDY — prompt-to-app workflow, code editor and preview patterns.
+    Note: investigate separate WebContainers commercial runtime terms.
+
+04. Dyad
+    URL: https://github.com/dyad-sh/dyad
+    Role: STUDY — local-first AI app-building and local model workflows.
+    Note: separate core vs. optional pro component licensing.
+
+05. Totalum AI App Builder Open
+    URL: https://github.com/totalumlabs/ai-app-builder-open
+    Role: STUDY — app builder UI, preview and project organization.
+    Note: AI/runtime can depend on an external Totalum API; not zero-API ready.
+
+06. Convex Chef (historical reference)
+    URL: https://github.com/get-convex/chef
+    Role: STUDY — full-stack app generation and database workflow patterns.
+    Note: the old GitHub repository API URL returned a "Moved Permanently"
+          response on 2026-11-15. Confirm current repository location,
+          license and service requirements before relying on it.
+
+2) FRONTEND / VISUAL DESIGN / CODE EDITING
+------------------------------------------
+07. Monaco Editor
+    URL: https://github.com/microsoft/monaco-editor
+    Role: CORE CANDIDATE — professional in-browser code editor.
+
+08. shadcn/ui
+    URL: https://github.com/shadcn-ui/ui
+    Role: CORE CANDIDATE — frontend UI component patterns.
+
+09. Puck
+    URL: https://github.com/puckeditor/puck
+    Role: EVALUATE — schema-based drag-and-drop React page editor.
+
+10. Onlook
+    URL: https://github.com/onlook-dev/onlook
+    Role: EVALUATE / STUDY — visual editing of code-backed React/Next.js apps.
+    Note: compare against Puck; do not adopt both without a reason.
+
+11. screenshot-to-code
+    URL: https://github.com/abi/screenshot-to-code
+    Role: STUDY — screenshot-to-UI implementation approaches.
+    Note: some workflows require external multimodal model providers.
+
+3) AUTHENTICATION, DATA, JOBS AND COLLABORATION
+-----------------------------------------------
+12. Better Auth
+    URL: https://github.com/better-auth/better-auth
+    Role: CORE CANDIDATE — user accounts, sessions and organizations.
+
+13. PostgreSQL
+    URL: https://github.com/postgres/postgres
+    Role: CORE CANDIDATE — relational database for app/project metadata.
+
+14. BullMQ
+    URL: https://github.com/taskforcesh/bullmq
+    Role: LATER — background jobs and task scheduling.
+    Note: adds Redis/operational overhead.
+
+15. Yjs
+    URL: https://github.com/yjs/yjs
+    Role: LATER — real-time shared editing and CRDT synchronization.
+
+16. Hocuspocus
+    URL: https://github.com/ueberdosis/hocuspocus
+    Role: LATER — self-hosted Yjs sync backend.
+
+4) SANDBOXING, TESTING AND DEPLOYMENT
+-------------------------------------
+17. OpenSandbox
+    URL: https://github.com/opensandbox-group/OpenSandbox
+    Role: EVALUATE — isolated agent/code execution.
+    Note: compare to OpenHands SDK workspace support; choose ONE primary
+          production sandbox strategy and verify security properties.
+
+18. Playwright
+    URL: https://github.com/microsoft/playwright
+    Role: CORE CANDIDATE — headless browser, UI and end-to-end testing.
+
+19. Coolify
+    URL: https://github.com/coollabsio/coolify
+    Role: LATER — independently operated deployment control plane.
+    Note: never give generated code unrestricted deployment credentials.
+
+5) MODEL INFERENCE, FINE-TUNING AND OBSERVABILITY
+-------------------------------------------------
+20. Ollama
+    URL: https://github.com/ollama/ollama
+    Role: CORE CANDIDATE — local/self-hosted model inference experiments.
+
+21. vLLM
+    URL: https://github.com/vllm-project/vllm
+    Role: LATER — scalable self-hosted inference runtime.
+
+22. Unsloth
+    URL: https://github.com/unslothai/unsloth
+    Role: LATER — GPU fine-tuning/QLoRA pipeline.
+    Note: check licenses of separately distributed Studio/enterprise modules.
+
+23. Langfuse
+    URL: https://github.com/langfuse/langfuse
+    Role: EVALUATE — tracing, cost measurement and agent/model evaluations.
+    Note: check licensing for each included module.
+
+24. OpenTelemetry JS
+    URL: https://github.com/open-telemetry/opentelemetry-js
+    Role: CORE CANDIDATE — application metrics, traces and instrumentation.
+
+RELATED OPEN-WEIGHT MODELS DISCUSSED (NOT GITHUB REPOSITORY PICKS)
+-----------------------------------------------------------------
+- Qwen2.5-Coder-7B-Instruct: initial fine-tuning/baseline candidate.
+- Qwen3.5-9B: newer comparison candidate.
+- Qwen3-Coder-family models: stronger, more demanding coding candidate.
+Find official model cards, allowed commercial uses, checkpoint revision,
+context/memory requirements and benchmark evidence before use.
+No model has been selected, downloaded or trained by this repository.
+
+PRIORITY ORDER FOR OUR PRODUCT
+------------------------------
+1. Keep the existing offline/mock builder scaffold working and CI green.
+2. Review OpenHands SDK + one secure workspace strategy + Ollama provider.
+3. Connect Playwright; measure a real prompt-to-build-to-preview-to-export
+   workflow with bounded retries and no unrestricted untrusted execution.
+4. Add Monaco/shadcn and the appropriate account/data layer.
+5. Evaluate ONE structured/code-backed visual editor (Puck vs. Onlook).
+6. Add deployment, collaboration, scale-out serving and fine-tuning only when
+   the preceding milestones and evaluation suite justify them.
+
+LICENSE / SECURITY WARNINGS
+---------------------------
+- Public GitHub visibility is NOT an authorization to reuse code.
+- The GitHub API did not assert a single standard SPDX license for Dyad,
+  Yjs, Langfuse or PostgreSQL; review their actual license texts.
+- Licenses may differ by subdirectory, SaaS/enterprise features, runtime,
+  assets, models, and versions; legal review is required for commercial use.
+- A GitHub repository is not automatically free to host or operate.
+- A Docker container alone is not proof of a safe multi-tenant sandbox.
+- No repo listed here is automatically integrated into the current product.
+
+See also:
+  docs/REUSE_AUDIT.md
+  docs/ARCHITECTURE.md
+  docs/ROADMAP.md
+  docs/OWNERSHIP_AND_LICENSES.md
+  docs/SECURITY_ARCHITECTURE.md
+  AGENTS.md
