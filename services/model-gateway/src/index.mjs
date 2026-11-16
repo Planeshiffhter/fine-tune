@@ -188,7 +188,7 @@ export class OllamaModelProvider {
   }
   async call(messages, model, stream, options, budget, signal) {
     const providerOptions = budget ? { ...options, num_predict: budget.maxOutputTokens } : options;
-    return this.fetchImpl(new URL('/api/chat', this.endpoint), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model, messages, stream, ...(providerOptions ? { options: providerOptions } : {}) }), signal });
+    return this.fetchImpl(new URL('/api/chat', this.endpoint), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model, messages, stream, ...(providerOptions ? { options: providerOptions } : {}) }), redirect: 'error', signal });
   }
   async generate({ messages, model: requested, options, budget, signal }) {
     const model = this.model(requested);

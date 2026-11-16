@@ -58,6 +58,36 @@ test('creates a bounded OpenHands conversation using the v1.62 REST shape', asyn
   });
 });
 
+test('rejects redirects without replaying conversation data or the session key', async () => {
+  const dummyKey = 'redirect-regression-dummy-key';
+  let sourceRequests = 0;
+  let targetRequests = 0;
+  let forwardedKeys = 0;
+  let failure;
+  await withServer(async (request, response) => {
+    await readJson(request);
+    targetRequests += 1;
+    if (request.headers['x-session-api-key'] === dummyKey) forwardedKeys += 1;
+    json(response, 200, { id: 'redirected-conversation' });
+  }, async (targetUrl) => {
+    await withServer((request, response) => {
+      request.resume();
+      sourceRequests += 1;
+      response.writeHead(307, { Location: `${targetUrl}/api/conversations` });
+      response.end();
+    }, async (baseUrl) => {
+      const adapter = new OpenHandsAgentServerAdapter({ baseUrl, apiKey: dummyKey });
+      try {
+        await adapter.createSession({ agent: { kind: 'Agent', llm: { model: 'fixture' } }, initialMessage: 'Keep this fixture at the configured server.' });
+      } catch (error) { failure = error; }
+    });
+  });
+  assert.equal(sourceRequests, 1);
+  assert.deepEqual({ targetRequests, forwardedKeys }, { targetRequests: 0, forwardedKeys: 0 });
+  assert.ok(failure instanceof AgentAdapterError);
+  assert.equal(failure.code, 'transport_error');
+});
+
 test('sends user event then runs, pauses and interrupts using stable lifecycle endpoints', async () => {
   const seen = [];
   await withServer(async (request, response) => {

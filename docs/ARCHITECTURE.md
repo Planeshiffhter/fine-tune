@@ -28,6 +28,17 @@ See [repository structure](REPOSITORY_STRUCTURE.md) for the active layout and
 preservation scope. Keep upstream source compressed here to avoid automatic test
 discovery of unpacked third-party code.
 
+The follow-up full audit inventories the 65-file `e40fa80` starting state and
+all 39 commits reachable after explicitly fetching every remote branch. Its
+[feature/dependency map](../AnalyseFuture/DEPENDENCY_MAP.txt) explains the actual
+cross-folder call paths. These are deliberate boundaries, not competing engines.
+The canonical product vision is now
+[AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt](../AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt);
+`docs/PROJECT_IDEA.txt` remains a navigation compatibility file.
+
+Both adapter HTTP paths now reject redirects, and the test script explicitly
+lists active tests. See [ADR 0006](decisions/0006-reference-and-request-boundaries.md).
+
 ## Target repository layout
 
     apps/

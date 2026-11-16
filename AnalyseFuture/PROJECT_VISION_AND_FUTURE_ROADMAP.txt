@@ -1,0 +1,899 @@
+FINE-TUNE: AN AI APP BUILDER THAT SHOWS ITS WORK
+Canonical project vision and evidence-based future roadmap
+Prepared: 17 November 2026
+Reviewed during repository recovery and consolidation: 17 November 2026
+Canonical location: AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt
+Repository: kawaho3/fine-tune
+
+DOCUMENT PURPOSE
+
+This document proposes a direction for the complete project. It builds on the
+work already present rather than starting over. It does not authorize a code
+rewrite, language migration, new integration, deployment, or infrastructure spend.
+The owner guides implementation through separately scoped instructions. The owner
+has separately authorized the current repository organization; this idea document
+does not authorize implementation of its proposed product features.
+
+EVIDENCE AND FEASIBILITY CLASSIFICATION
+
+  EXISTING AND VERIFIED: present code with passing evidence for its stated scope.
+  EXISTING BUT BROKEN: behavior with a demonstrated failing requirement.
+  TECHNICALLY FEASIBLE NOW: established techniques and scoped engineering work.
+  FEASIBLE WITH ADDITIONAL RESOURCES: additional infrastructure, compute,
+    specialist review, operating capacity or funding is needed.
+  EXPERIMENTAL: a testable approach whose value/integration is not yet proven.
+  SPECULATIVE: a possible direction without sufficient present evidence.
+  CURRENTLY INFEASIBLE OR UNSUPPORTED: beyond available resources/scope, or a
+    guarantee that cannot be substantiated; not always impossible forever.
+
+Detailed labels below remain shorthand: EXISTING describes implemented scope;
+PROPOSED means work not delivered; RESEARCH needs experiments; UNSUPPORTED PROMISE
+identifies claims we reject. The register below supplies the finer classification.
+Only new evidence, resources or scope justifies changing a capability's status.
+
+Dates describe planning horizons, not deadlines. Competitor names are reference
+points from our project documents, not a new audit of their current products.
+
+
+0. REQUESTED TOPICS AND DECISION SUMMARY
+=======================================
+
+This document derives the project from inspected source and recorded intent. It
+is not an industry-agnostic idea pasted onto an unrelated codebase: the present
+code implements an offline web-app-builder mock and integration boundaries. The
+README, charter and requirements document the full-stack-builder ambition.
+
+The twenty requested topics are addressed here and developed below:
+
+  01. CURRENT PROJECT: a Node.js workspace serving a static UI and deterministic
+      generation API, plus separately tested model and agent adapters. Section 3.
+  02. ORIGINAL INTENT: prompt-to-plan-to-source-to-isolated-build-to-tested-preview
+      and export, later approved deployment. Sections 1, 5 and 21.
+  03. IMPLEMENTED WORK: prompt validation/templates, mock API/assets/headers,
+      static preview/download, model-gateway contracts and agent transport. Tests
+      establish their limited scope, not a full live agent pipeline. Section 3.
+  04. USEFULNESS: an executable offline baseline, repeatable tests and reusable
+      provider boundaries without paid inference. Sections 2, 3 and 6.
+  05. MISSING WORK: real integration, generated-app execution/checks, durable
+      projects, data/auth, full export and operations. Section 3 distinguishes
+      those omissions from demonstrably broken existing behavior.
+  06. IMMEDIATE IMPROVEMENT: accurate status, coherent feature ownership, preserved
+      references and reproducible setup; inspect changes before execution. The
+      recovery records specify actual changes. Sections 8, 9, 12 and 19.
+  07. NEXT BUILD: prove a pinned real-agent boundary and one restricted execution
+      path, then a deterministic build/browser/export fixture. Section 12.
+  08. SIGNIFICANT IMPROVEMENT: acceptance evidence, regression-preserving changes,
+      complete portable exports and bounded cost. Sections 5-7 and 10.
+  09. ADVANCED CAPABILITIES: supervised upkeep, supported repository import,
+      reviewed visual edits and team workflows. Sections 14 and 15.
+  10. USEFUL AI: requirements assistance, scoped generation, error-informed repair
+      and measured routing, supervised by independent checks. Sections 5 and 15.
+  11. TECHNOLOGIES: pinned agent/runtime/browser/model/editor/data/auth components
+      and later training. Section 8's research shortlist states needed evidence.
+  12. REALISTIC TODAY: one-stack templates, API/database code, tests, isolated
+      execution, export and controlled edits using established techniques. These
+      remain implementation work; public execution needs security gates. Sections
+      7, 12 and 18, and the classification register below.
+  13. POSSIBLE BUT DIFFICULT/EXPENSIVE: secure multi-user operation, private installs,
+      unfamiliar code, model hosting and safe data migrations. They require
+      infrastructure and specialist review. Sections 9, 11, 14 and 17.
+  14. CURRENTLY IMPRACTICAL: arbitrary apps/languages, frontier-model training with
+      ordinary coding-task resources and unlimited free compute. Section 18.
+  15. FUTURE DEPENDENCIES: specialist models, long-run agents and broader runtime
+      coverage need evaluations, consented data and operating capacity. Sections
+      11 and 15. No future AI breakthrough is a prerequisite we can guarantee.
+  16. ONE YEAR: around November 2027, investigate a narrow pilot with real
+      build/browser/export and bounded-repair evidence. Section 13.
+  17. TWO YEARS: around November 2028, investigate supported-project maintenance,
+      team controls and staged operational integrations. Section 14.
+  18. THREE TO FIVE YEARS: around November 2029-2031, research supervised lifecycle
+      assistance, project representations, specialist models and selected new
+      formats. Section 15. These are conditional scenarios, not delivery dates.
+  19. DO NOT PURSUE: unrestricted production autonomy, duplicate runtimes,
+      premature base-model training, all-framework support and high-stakes decision
+      systems; they dilute validation or imply unsupported safety. Sections 4, 8,
+      12, 15 and 18 explain why.
+  20. POSSIBLE LASTING ADVANTAGES: consented/provenance-tracked task/repair evidence,
+      deep workflow templates, portable projects, dependable upgrades and support.
+      They must earn value; they are not proven exclusive moats. Sections 6, 10,
+      11 and 16.
+
+CAPABILITY CLASSIFICATION REGISTER
+
+EXISTING AND VERIFIED, within recorded scope:
+  Deterministic validation/static generation; local API/assets, input errors and
+  defined headers; mock model contracts; fake-server agent lifecycle. Historical
+  evidence includes 29 passing repository tests and local HTTP readiness and
+  generation checks. Consult AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt for this
+  recovery's actual commands. This vision is not itself a fresh execution report.
+
+EXISTING BUT BROKEN, THEN REPAIRED DURING RECOVERY:
+  Real HTTP regressions reproduced request forwarding through redirects in the
+  agent and Ollama adapters, including forwarding a dummy session key. Both now
+  reject redirects. Three regressions failed before the fix and passed after it;
+  the maintained suite now passes 32 tests. The repair is not proof of a complete
+  secure execution platform. See SECURITY_AUDIT.txt and TEST_AND_VALIDATION_REPORT.txt.
+  The mock API still does not call these adapters: that is a missing integration,
+  not proof that its tested generation behavior is broken. Other unconfirmed
+  source-review concerns remain explicitly unresolved in the security report.
+
+TECHNICALLY FEASIBLE NOW:
+  Complete source export, scoped acceptance checks, one supported generated stack,
+  durable project state, checkpoints/diffs and real pinned agent compatibility.
+  Established techniques exist, but engineering and validation remain necessary.
+
+FEASIBLE WITH ADDITIONAL RESOURCES:
+  Runtime isolation/capacity, authenticated preview routing, persistent data/auth,
+  model hosting, public/private deployment, recovery and incident support. A small
+  prototype differs from operating a secure multi-tenant service; the latter needs
+  infrastructure, specialist review and sustained maintenance.
+
+EXPERIMENTAL:
+  Direct OpenHands/OpenSandbox integration, measured task/model routing, visual
+  edits mapping reliably to source, safe imported-repository changes and improved
+  repair policies. Compare bounded experiments before adoption and retain a
+  supported alternative or human handoff.
+
+SPECULATIVE:
+  Broad app representations enabling migration across many stacks, dependable
+  long-running multi-agent maintenance and durable advantages from project-specific
+  model training. Treat these as research questions, not scheduled capabilities.
+
+CURRENTLY INFEASIBLE OR UNSUPPORTED:
+  Universal correctness/security guarantees, every application from any prompt,
+  unlimited zero-cost operation, autonomous high-stakes deployment and training a
+  frontier base model with ordinary repository-task resources. A narrow impressive
+  demonstration cannot substantiate these claims.
+
+DEPENDENCIES, EFFORT, COST, OWNERS AND VALUE
+
+Compatibility fixtures: bounded agent/runtime engineering plus verification review;
+primarily developer and test-runtime cost. Gate: pinned lifecycle, cleanup, limits
+and negative cases pass. Value: resolve integration uncertainty before more UI.
+Do not estimate a delivery date from archive size or package-import success.
+
+First executable slice: product, runtime and verification responsibilities work
+jointly; implementation/testing effort plus bounded model/runtime spend. Gate:
+fresh build, agreed browser/API workflow, intentionally broken fixture detection
+and portable export. Value: establish the core promise before broadening scope.
+
+Developer-assisted pilot: sustained product/QA effort and security/operations
+review, storage, inference, preview and support cost. Gate: usable recovery,
+budget limits and scoped security review. Value: establish repeated customer
+benefit and viable cost per successful task.
+
+Expansion/research: increasing maintenance breadth and specialist work; private
+deployment or training may need substantial infrastructure or GPU funding. Gate:
+measured demand, held-out comparisons and an explicit budget. Value: depends on
+customer outcomes, not novelty. This roadmap authorizes no large GPU training or
+new paid provider by itself.
+
+The product owner sets scope/budget. The runtime owner owns limits/cleanup;
+verification owns independent fixtures; security/operations owns review/recovery.
+Section 17 lists responsibilities, not an assumed existing staff roster. Annual
+review can narrow, defer or stop a feature that does not justify its cost.
+
+
+1. THE PROJECT IN ONE SENTENCE
+==============================
+
+Build an independently operated AI development platform that turns a business
+request into an editable application, tests the important user workflows, explains
+what passed and what remains uncertain, and lets the customer keep the source.
+
+Suggested public description:
+  "Describe the app you need. Build it, check it, improve it, and own the code."
+
+The central product idea is a continuous chain:
+  Request -> agreed scope -> acceptance checks -> generated code -> isolated
+  execution -> browser verification -> bounded repair -> preview -> source export
+  -> explicitly approved deployment -> checks after future changes.
+
+The opportunity is not merely producing more code. It is reducing the distance
+between a convincing demonstration and an application someone can actually use.
+Passing checks provide evidence within their scope; they do not prove universal
+correctness or production security.
+
+The repository name can remain fine-tune. Training a model is an optional future
+method, not the product's first purpose or a prerequisite for usefulness.
+
+
+2. THE PROBLEM WE WANT TO SOLVE
+===============================
+
+A small business owner can describe a process, but may struggle to translate it
+into data models, access permissions, screens, hosting and maintenance. A developer
+can do that work, but spends time on repetitive setup, debugging and revisions.
+
+A generated interface can look complete while its essential behavior is missing:
+records disappear on reload, one user sees another user's data, an edit breaks an
+older feature, or the downloaded project cannot be installed elsewhere.
+
+Our product should answer five practical questions:
+  1. What exactly will this application do?
+  2. Can its important workflows be demonstrated with repeatable checks?
+  3. What was changed, and what is still missing or failing?
+  4. What will another attempt or continued operation cost?
+  5. Can the owner take the source and continue without our platform?
+
+This is a product hypothesis. Before expanding the platform, validate it with
+real users and observe whether these answers change their willingness to adopt
+and pay. A large feature list alone does not establish demand.
+
+
+3. WHAT WE ALREADY HAVE, AND WHAT IT MEANS
+========================================
+
+EXISTING: the original JavaScript/Node.js monorepo.
+  apps/web contains a static builder interface.
+  apps/api serves that interface and the mock generation API.
+  packages/core validates prompts and returns deterministic static templates.
+  This is useful scaffolding and a working local demo, not live AI generation.
+
+EXISTING: the offline browser/API demonstration.
+  It accepts a prompt, returns a plan and static HTML, offers a sandboxed static
+  iframe preview, and supports downloading the HTML file. It does not build or
+  run an arbitrary generated application, persist projects, or export a complete
+  production repository. An iframe sandbox is not a server execution sandbox.
+
+EXISTING: services/model-gateway.
+  It defines a replaceable inference boundary with a deterministic mock and an
+  opt-in Ollama adapter, timeouts, cancellation, bounded retries and streaming.
+  Live Ollama inference has not been validated in this environment. The current
+  builder's generation endpoint is not wired to this model gateway.
+
+EXISTING: services/agent.
+  The thin OpenHands Agent Server adapter covers bounded session lifecycle and
+  related transport operations. Its tests use a fake server. This does not prove
+  a real coding agent, model or execution workspace is integrated and working.
+
+EXISTING: documentation and a test baseline.
+  Architecture, product requirements, reuse research, security requirements and
+  a roadmap already exist. During onboarding on 17 November 2026, dependency setup
+  and all 29 repository tests passed on Node.js 24.22.1 / npm 11.9.0, with no skips.
+  Live HTTP checks verified health, static assets and deterministic generation.
+  These are historical onboarding observations, not new browser or production
+  test results established by this idea document.
+
+AVAILABLE UPSTREAM SOURCE, NOT INTEGRATED FEATURES:
+  AnalyseFuture/upstream-archives/software-agent-sdk-main.zip contains OpenHands
+  agent components, mainly Python,
+  with a TypeScript client. Examined package versions are 1.62.0; the Python core
+  requires Python 3.12 or newer. The upstream license examined is MIT.
+
+  AnalyseFuture/upstream-archives/OpenSandbox-main.zip contains Python/Go
+  infrastructure and several language
+  SDKs. Examined TypeScript SDK versions are 1.2.1. The upstream license examined
+  is Apache-2.0. The repository's earlier audit references release-1.2.0, so the
+  ZIP must not be assumed identical to the audited release.
+
+  Both ZIPs were extracted as reference copies outside the application checkout.
+  Their source is not automatically connected to our app. Archive CRC checks
+  passed, but CRC integrity does not establish release provenance or safety.
+  Installation, license obligations, exact version pinning and compatibility
+  still need verification before adoption.
+
+  AnalyseFuture also retains original documents revised during organization and
+  a preservation manifest for every file in baseline commit 0c45350. Reference
+  material is not automatically integrated or safe to execute. The active
+  application layout remains apps/, packages/ and services/; see
+  docs/REPOSITORY_STRUCTURE.md for the review, scope and limits. The remote main
+  matched the previously pushed baseline when inspected, so this repository
+  review did not establish the reported account compromise.
+
+NOT YET DELIVERED:
+  A verified real-agent run; selected secure execution strategy; real full-stack
+  generation; generated-app build and browser tests; persistent projects; product
+  authentication; tenant isolation; production hosting; billing; real deployment;
+  model training; or a complete commercial product.
+
+We should keep the existing work and connect it through tested boundaries. Having
+two large upstream archives does not mean the hard integration work is finished.
+
+
+4. WHO WE SHOULD SERVE FIRST
+============================
+
+Recommended first customer:
+  A small software agency, freelance developer or technical founder who builds
+  simple internal tools for a business and can review the generated result.
+
+Recommended first application family:
+  Request trackers, lead trackers, lightweight inventory tools and approval flows.
+  Choose one initially. A service-request portal is a good concrete candidate.
+
+Why start here:
+  The workflows are understandable, testable and repeat across customers. An
+  experienced reviewer can catch requirements the AI missed. This is a narrower
+  starting point than promising any application for any non-technical user.
+
+Later audiences, after evidence supports expansion:
+  Non-technical founders with guided templates; small business operations teams;
+  education and prototyping users; and organizations needing private deployment.
+  Each audience has different reliability, support and security expectations.
+
+Initially exclude:
+  Systems responsible for medical decisions, financial trading, critical public
+  infrastructure, legal determinations or other high-consequence autonomous work.
+  Real payments and sensitive personal records also introduce obligations beyond
+  an ordinary demonstration. They should not enter the first validation fixture.
+
+
+5. THE FIRST COMPLETE USER STORY
+================================
+
+Example request:
+  "Build a service-request portal. Customers submit a request and see its status.
+  Staff manage requests. Managers assign work and review progress. It must work
+  on mobile, and I want the source code."
+
+Step A: make the request specific.
+  Establish roles, fields, state transitions and the important user workflows.
+  Show assumptions and exclusions. Do not invent an email or payment integration
+  and present it as connected. Start with test accounts and synthetic data.
+
+Step B: turn requirements into a visible contract.
+  Example checks: a customer creates a request; the request survives a reload;
+  a staff member updates its status; another customer's account cannot read it;
+  an invalid request displays a useful error; the main flow works on mobile.
+  The user can correct the contract before generation begins.
+
+Step C: build inside a restricted workspace.
+  Create inspectable files, use the supported stack, install pinned dependencies,
+  and run the build and relevant tests. Record tool and dependency versions.
+
+Step D: verify behavior.
+  Browser automation follows the agreed workflow. Backend tests verify data and
+  permissions. Record passed, failed, skipped and unrun checks separately.
+  The agent must not achieve a pass by deleting or weakening acceptance checks.
+
+Step E: repair within limits.
+  Use errors and observations to attempt a bounded fix. Stop at the agreed time,
+  cost or iteration limit. If a dependency or permission blocks progress, report
+  it clearly. A partial result remains partial; do not label it complete.
+
+Step F: let the owner inspect and continue.
+  Display the preview, source, changes and verification record. Export a complete
+  source archive with setup instructions and dependency locks. Deployment is a
+  separate action with destination, expected cost and approval made explicit.
+
+Step G: handle a follow-up change.
+  "Add a priority field and filter urgent requests."
+  Preserve existing work, show the changes and rerun the earlier workflows plus
+  new checks. Create a recoverable checkpoint before applying changes.
+
+This story is the intended product experience. It is not a description of what
+the current static mock already does.
+
+
+6. THE MAIN PRODUCT DIFFERENTIATORS
+==================================
+
+A. A verification record for every run.
+  List the requirement, corresponding check, result, application revision and
+  evidence location. Include build logs and relevant browser observations, with
+  private data redacted. Show untested assumptions. Avoid an unexplained score
+  such as "98% safe" that implies more certainty than the checks justify.
+
+B. Safe iteration as a primary workflow.
+  A useful builder must preserve manual edits and previous behavior. Checkpoints,
+  diffs, regression checks and restoration matter as much as the first generation.
+  Restoring application code is different from restoring database data; database
+  migrations require a separate backup and recovery process.
+
+C. Source portability.
+  The exported project should install and run in a fresh supported environment.
+  Include configuration examples without secret values. Disclose external service
+  requirements and provider-specific dependencies rather than claiming perfect
+  portability. Source ownership remains subject to upstream licenses and rights.
+
+D. Model choice with honest tradeoffs.
+  Keep the model provider replaceable. Offer a mock for development and validated
+  local/self-hosted options where practical. An optional hosted provider can be
+  added later with explicit authorization and metering. Local inference has
+  hardware and operating costs and may perform differently from hosted models.
+
+E. Bounded cost and visible failure.
+  Show the run budget, progress and cancellation control. Measure cost per useful
+  completed task rather than making unlimited-generation promises. Distinguish
+  model failure, build failure, environment failure and a missing user decision.
+
+These differentiators are hypotheses to test against alternatives, not claims
+that competitors lack them. Our advantage must be demonstrated with evidence.
+
+
+7. FEATURE SCOPE: FIRST PROOF, MVP AND EXPANSION
+==============================================
+
+FIRST EXECUTABLE PROOF, before a commercial MVP:
+  - One deterministic fixture creates a real small application in isolation.
+  - That application actually builds, starts and passes a browser workflow.
+  - An intentionally broken fixture is detected as a failure.
+  - A complete source export runs in a fresh supported environment.
+  - A separately measured live-model attempt uses the same workflow and limits.
+
+MVP CANDIDATE, after the first proof:
+  - One app family and one supported generated-app stack.
+  - Prompt, scope, plan and visible task progress.
+  - Persistent project/session state and recoverable checkpoints.
+  - Working frontend/backend/database flow for the selected template.
+  - Reviewed access control for the chosen roles.
+  - Isolated build/run, browser checks, bounded repair and authenticated preview.
+  - Source explorer, diffs, full export, usage limits and clear failure messages.
+  - Follow-up edits that rerun existing acceptance checks.
+
+POST-MVP CANDIDATES:
+  - Repository import and authorized Git synchronization.
+  - Richer code editing through an established editor.
+  - One visual editing method, with changes mapped back to source.
+  - A small catalog of audited business integrations.
+  - Approved deployments, custom domains, backups and operational monitoring.
+  - Organizations, collaboration, billing and private deployment options.
+
+Do not build every candidate at once. Add a capability when it solves a measured
+user problem and its operational cost and maintenance owner are clear.
+
+
+8. HOW ONE PRODUCT CAN USE DIFFERENT LANGUAGES
+=============================================
+
+One product does not need one implementation language. It needs clear ownership,
+stable contracts, predictable setup and a coherent user experience.
+
+PROPOSED division:
+  Product web/API and orchestration: JavaScript initially; TypeScript can be
+  introduced gradually if the owner chooses it. Do not discard the working .mjs
+  scaffold merely to achieve language consistency.
+
+  Agent engine: retain upstream Python in OpenHands behind the existing adapter.
+  Exchange validated API messages instead of embedding its internals everywhere.
+
+  Execution infrastructure: keep upstream Go/Python components in their supported
+  runtimes if adopted. The product uses an SDK/API, not a rewrite of the runtime.
+
+  Generated apps: initially support one documented stack. A reasonable candidate
+  is TypeScript with a reviewed web framework and PostgreSQL. Confirm the exact
+  framework, authentication approach and runtime through a small working fixture.
+
+Possible service flow:
+  Browser -> product API -> project/task state
+                         -> agent adapter -> OpenHands Agent Server
+                         -> model gateway -> selected model provider
+                         -> workspace manager -> one execution strategy
+                         -> checks, artifacts, preview and export
+
+The current model gateway and the future Agent Server may configure model access
+differently. Prove the intended request path before claiming the gateway controls
+all agent calls. Avoid duplicate retry loops and contradictory token budgets.
+
+Keep one original product monorepo. Consume upstream releases as pinned services
+or dependencies with required notices. Do not copy both entire upstream products
+into application source and assume that creates an integrated system.
+
+Choose one owner of workspace/process lifecycle. OpenHands has workspace concepts
+and OpenSandbox offers execution infrastructure; direct compatibility has not been
+proven. Compare them with one lifecycle/security fixture before selecting a path.
+
+This document does not implement a runtime restructure or language conversion.
+The separately authorized organization pass moves upstream archives into
+AnalyseFuture and updates navigation/status while retaining existing active code.
+
+
+9. SAFETY, DATA AND TRUST THAT THE PRODUCT NEEDS
+===============================================
+
+Running generated code changes the risk profile of the platform. Before exposing
+that capability publicly, verify isolation and authorization rather than relying
+on a brand name, a successful container start or a static iframe sandbox.
+
+Required design work includes:
+  - Per-project execution boundaries with resource and lifetime limits.
+  - No production/platform secrets available to generated code.
+  - Restricted network access, including blocked cloud metadata/control services.
+  - Tenant/project authorization on files, tasks, previews and artifacts.
+  - Separate preview origins and scoped preview access.
+  - Safe dependency handling and preserved package/TLS verification.
+  - Redacted logs, defined retention and an explicit deletion policy.
+  - Recovery checks and auditable external write/deployment actions.
+  - Tests for path traversal, cross-user access, runaway work and secret leakage.
+
+Treat repository content, prompts and tool output as untrusted input. A malicious
+instruction inside a dependency or generated document must not grant authority.
+
+Generated tests alone are insufficient assurance: use maintained independent
+fixtures, negative cases and human review. Do not silently change requirements
+until the output passes. Keep the user informed of missing checks.
+
+The public repository must not receive private customer code, datasets, prompts,
+credentials or deployment secrets without appropriate authorization and rights.
+
+
+10. HOW WE WILL MEASURE WHETHER IT IS GOOD
+=========================================
+
+Create a versioned evaluation set for the supported app family. Keep some tasks
+held out from tuning and template authoring. Record exact model/runtime versions,
+budgets and dependencies. Compare against the current baseline under similar
+conditions; include enough runs to show variability for nondeterministic models.
+
+Measure:
+  - End-to-end completion: all required checks pass within the run budget.
+  - Build success and behavioral test success, reported separately.
+  - Regressions after a follow-up change.
+  - Successful export and fresh-environment startup.
+  - Time to first useful preview and total task duration, including tail latency.
+  - Cost per successful task, including the cost of failed attempts.
+  - Number of repair attempts and reasons for stopping.
+  - Human corrections needed before the result is usable.
+  - Retention, repeated use and willingness to pay in user trials.
+
+An illustrative early benchmark could contain 20 small tasks across a few related
+workflows. That is a proposed starting point, not an existing evaluation or proof
+of broad capability. Do not publish performance percentages without a denominator,
+test definition, exclusions and measured results.
+
+Before a limited pilot, require the agreed core checks for every supported
+template, independently reviewed negative access tests, a successful recovery
+exercise and no unresolved critical findings from the scoped security review.
+This gate does not prove that undiscovered vulnerabilities do not exist.
+
+
+11. BUSINESS IDEA AND SUSTAINABILITY
+===================================
+
+Potential value:
+  Help a developer or agency deliver a dependable small application faster and
+  maintain it with fewer regressions. The customer pays for saved delivery and
+  maintenance effort, not for a large volume of generated text.
+
+Possible packaging to test:
+  - A local/developer experience for evaluation.
+  - A hosted individual plan with bounded included usage.
+  - Team features for shared projects, controls and reviewed workflows.
+  - Optional private deployment and support after operational maturity.
+
+These are experiments, not approved prices or a free-forever commitment. Choosing
+an open-source distribution model also requires a project license decision; a
+public GitHub repository alone does not grant a license.
+
+Track total costs:
+  Inference, CPU/GPU time, sandbox execution, dependency downloads, previews,
+  database/object storage, logs, support, abuse handling, backups and maintenance.
+  Keep platform generation cost separate from running the customer's deployed app.
+
+A useful accounting formula:
+  Cost per successful task = total attributable cost of successful AND failed
+  attempts / number of tasks meeting the defined completion criteria.
+
+Possible long-term strengths:
+  Well-tested workflow templates; reliable upgrade paths; good support; portable
+  projects; and consented, validated repair/evaluation evidence. These advantages
+  must be earned. A generic chat interface or a different model name is easy for
+  others to reproduce.
+
+
+12. THE NEXT PRACTICAL MILESTONES
+================================
+
+Milestone 1: prove a real agent boundary.
+  Run a pinned OpenHands Agent Server compatibility fixture with bounded access.
+  Verify session lifecycle, timeout, cancellation, final output and cleanup.
+  Separate transport compatibility from a successful real-model coding task.
+
+Milestone 2: select and prove one execution path.
+  Exercise create, file write/read, command execution, limits, artifact retrieval
+  and destruction. Test failure/cleanup and isolation boundaries. Choose whether
+  the OpenHands workspace path is sufficient or OpenSandbox adds justified value.
+
+Milestone 3: finish the first executable proof from Section 7.
+  The deterministic path must build and pass a real browser workflow before a
+  convincing UI or a live-model demonstration is treated as product completion.
+
+Milestone 4: evaluate live generation.
+  Use an authorized provider and supported template, track cost/latency and compare
+  with fixtures. Report failures and partial results without changing the benchmark.
+
+Milestone 5: add durable projects and safe edits.
+  Persist state, preserve manual changes, checkpoint source/artifacts and test
+  recovery after interrupted work. Then add the chosen full-stack business flow.
+
+Milestone 6: conduct a small developer-assisted pilot.
+  Observe real tasks and support needs. Expand only if the workflow is useful,
+  the security gates are met and cost per success supports a viable service.
+
+This sequence preserves the existing work. It does not start with a new foundation
+model, many agent frameworks, a marketplace or every programming language.
+
+
+13. A ONE-YEAR HORIZON: AROUND NOVEMBER 2027
+==========================================
+
+This is a plausible product direction, conditional on evidence, people and budget.
+It is not a forecast that every feature will be completed within a year.
+
+Desired position:
+  A narrow but dependable developer-assisted builder for one business-app family.
+  It can generate, check, revise and export a useful supported application, with
+  honest limits and a repeatable pilot workflow.
+
+Features worth attempting:
+  - Reliable core templates with persistent data and tested roles.
+  - Regression-preserving follow-up edits and readable diffs.
+  - Full exports and a limited approved deployment path.
+  - A validated model choice and per-task budget controls.
+  - Better requirements capture and accessible, responsive default interfaces.
+  - Project recovery after worker or workspace interruption.
+
+Conditions for expansion:
+  Repeat users complete valuable tasks, support burden is understood, the product
+  meets the defined security gates and measured economics are acceptable.
+  If these conditions fail, narrow the template or customer segment instead of
+  adding unrelated features to disguise the problem.
+
+
+14. A TWO-YEAR HORIZON: AROUND NOVEMBER 2028
+==========================================
+
+Desired position:
+  Move from initial creation toward maintaining a supported application's lifecycle.
+  Continue to restrict claims to stacks and workflows we can actually evaluate.
+
+Features worth researching and then attempting:
+  - Import an existing supported repository, map its structure and propose edits.
+  - Detect relevant dependencies and rerun affected regression checks.
+  - Team permissions, design conventions and reusable organization templates.
+  - Visual editing that produces reviewable source changes.
+  - Staged dependency/security updates with compatibility tests.
+  - Backup-aware schema changes, with human approval and recovery exercises.
+  - Better task/model routing based on measured quality, cost and privacy needs.
+  - Private installation for customers with appropriate operational support.
+
+Harder requirements:
+  Existing code is inconsistent; tests may be absent; business rules may be
+  undocumented. Begin with a supported subset, show uncertainty and seek review.
+  Do not promise that any legacy repository can be imported and safely repaired.
+
+
+15. A THREE-TO-FIVE-YEAR HORIZON: NOVEMBER 2029-2031
+==============================================
+
+These are research directions, not commitments or claims about future AI progress.
+
+A. A supervised application maintenance assistant.
+  Detect an issue, reproduce it in isolation, propose a minimal patch, run checks
+  and prepare a change for the authorized owner. Start with low-risk maintenance;
+  keep production permissions and rollback decisions under explicit control.
+
+B. A model-independent application description.
+  Explore whether requirements, data relationships, permissions and verification
+  rules can be retained in a useful common representation. It might aid supported
+  migrations, but cannot make arbitrary language/framework conversion lossless.
+
+C. Specialized evaluation-driven models.
+  Fine-tune or adapt an existing suitably licensed model only if consented data,
+  compute and held-out evaluations justify it. Compare with stronger prompting,
+  retrieval, templates and routing before spending on training. Training can
+  regress general ability or memorize data; evaluate privacy and quality risks.
+
+D. Better human/agent collaboration.
+  Test specialized planning, implementation and verification roles. Add multiple
+  agents only when their measured benefit exceeds coordination cost. More agents
+  can share the same mistaken assumption; independence must be demonstrated.
+
+E. Broader application formats.
+  Consider additional web stacks, mobile clients, offline operation or deeper
+  business integrations one at a time, each with its own supported runtime,
+  permission model, export test and operational owner.
+
+Progress in general AI may make some parts easier and create new competitors.
+It may also expose new risks. Annual reviews should update this vision using
+observed capability, customer demand and operating results, rather than assuming
+that waiting one or two years will automatically solve today's hard problems.
+
+
+16. WHO WILL TRY TO BUILD THESE FEATURES IN THE AI ERA?
+======================================================
+
+No one can know exactly which company will ship which feature in one or two years.
+The following groups are plausible participants, not confirmed future roadmaps:
+
+  AI app builders: services in the category represented by Lovable, Replit Agent
+  and Bolt.new are relevant benchmarks for prompt-to-application workflows.
+
+  Developer-tool and repository platforms: organizations providing editors,
+  coding assistants, source hosting and CI can extend into generation and upkeep.
+
+  Model providers and open-model communities: better coding models, tool use and
+  longer task handling could change what the product can accomplish and its cost.
+
+  Cloud, database and deployment providers: these businesses can connect app
+  creation more closely with hosting and managed infrastructure.
+
+  Open-source agent/runtime communities: projects such as OpenHands and OpenSandbox
+  can supply reusable building blocks; our integration and security remain our job.
+
+  Agencies, independent developers and specialist startups: focused workflow and
+  industry knowledge can support useful products even without frontier-model R&D.
+
+We should expect overlap and competition, not assume a future feature will remain
+exclusive. Evaluate current alternatives through dated documentation and trials
+before making any comparison claim. This document does not perform that audit.
+
+Our practical response:
+  Choose a small customer problem, make the workflow measurably reliable, preserve
+  portability and integrate improved components when evidence supports a change.
+
+
+17. WHO WILL DO THE WORK ON OUR PROJECT?
+=======================================
+
+These are responsibilities, not assumed existing hires. One person may cover
+several roles at first, but each critical responsibility needs a named owner.
+
+  Product owner: chooses the initial customer, approves scope, priorities, spending
+  and release decisions. This remains the user's role unless explicitly delegated.
+
+  Product/full-stack engineer: owns the UI/API, project state and supported app
+  templates, and maintains readable contracts between components.
+
+  Agent/runtime engineer: proves the real-agent integration, execution lifecycle,
+  cancellation, quotas and cleanup. Reuses upstream capabilities where appropriate.
+
+  Verification engineer: maintains independent acceptance fixtures and browser,
+  regression and export checks. Investigates false passes and flaky tests.
+
+  Security/operations reviewer: reviews isolation, tenant permissions, secrets,
+  deployment, recovery and operational readiness before broader exposure.
+
+  Design and user-research responsibility: observes real customer tasks and makes
+  the product understandable without hiding failure or uncertainty.
+
+  ML/evaluation specialist, later if needed: validates model selection and any
+  fine-tuning experiment. This is not the first mandatory team investment.
+
+AI coding tools can assist these people with implementation, review and tests.
+They do not replace accountable ownership, access authorization or independent
+verification. Larger promises require a larger maintenance and support capability.
+
+
+18. WHAT IS NOT POSSIBLE, NOT GUARANTEED, OR SIMPLY NOT BUILT YET
+================================================================
+
+Important distinction: "not implemented here" does not mean "impossible." Also,
+"possible to prototype" does not mean "safe, economical and dependable at scale."
+
+UNSUPPORTED PROMISES, now and as commitments about the future:
+  - Any prompt always produces the correct, secure, production-ready application.
+  - Zero bugs, zero security vulnerabilities or guaranteed perfect isolation.
+  - Guaranteed correctness for arbitrary programs and arbitrary future inputs.
+    General program verification has fundamental limits; bounded checks and
+    formal methods can establish specific properties under stated assumptions.
+  - Correctly inferring every unstated business rule without clarification.
+  - Guaranteed legal compliance or third-party intellectual-property clearance
+    from generated output or a successful build alone.
+  - Guaranteed commercial success, market leadership, fixed delivery dates or
+    universal cost savings merely because the product uses AI.
+
+PRACTICAL LIMITATIONS, not claims of permanent impossibility:
+  - All languages, frameworks and legacy projects in the first release.
+  - Unlimited free inference, execution, hosting or retries.
+  - Strong local-model performance on every low-cost device.
+  - Building a frontier foundation model with ordinary coding-task resources.
+  - Lossless automatic translation of arbitrary Python/Go/JavaScript systems.
+  - Unattended production schema changes and autonomous handling of high-stakes
+    systems without review, recovery and the relevant operational controls.
+  - Direct OpenHands/OpenSandbox interoperability without a compatibility fixture.
+
+FEASIBLE CAPABILITIES THAT ARE NOT YET BUILT OR VERIFIED IN THIS PROJECT:
+  Real-agent coding; isolated builds; generated-app browser verification; durable
+  projects; complete source export; database-backed app generation; authentication;
+  approved deployment; and reliable follow-up editing. These need engineering and
+  evidence, not a claim that the basic idea is impossible.
+
+What we can responsibly promise while developing:
+  Clear supported scope, truthful progress, bounded attempts, inspectable changes,
+  measured checks, preserved ownership boundaries and explicit unresolved issues.
+
+
+19. MAIN RISKS AND HOW TO RESPOND
+=================================
+
+Integration grows faster than useful functionality.
+  Response: one agent engine, one runtime strategy, one supported stack and a
+  working vertical slice before adding more infrastructure.
+
+The app looks convincing but fails a real task.
+  Response: agree on observable behavior, maintain negative cases and verify the
+  exported app outside the original generation workspace.
+
+Repairs erase manual work or weaken requirements.
+  Response: preserve checkpoints, inspect diffs and protect acceptance criteria.
+
+Cost increases through retries or idle workspaces.
+  Response: explicit run limits, automatic expiry, cancellation, usage accounting
+  and measured cost per success.
+
+Sensitive data or code leaks through logs, models or public Git.
+  Response: minimize data, redact artifacts, scope access and use explicit consent
+  and retention rules. Never train on customer content by default.
+
+Upstream updates break an integration or license assumptions.
+  Response: pin versions, preserve notices, review changes and run compatibility
+  checks before upgrades. Do not confuse a main-branch ZIP with a stable release.
+
+Development workspace loss interrupts progress.
+  Response: small commits, durable remote backups when authorized, retained setup
+  instructions and tested restoration. A local commit alone does not survive
+  losing the entire machine. Live processes are not a durable backup.
+
+The product has no reason for users to choose it.
+  Response: validate the chosen customer problem, compare real workflows against
+  alternatives and improve measured outcomes instead of pursuing feature counts.
+
+
+20. OWNER DECISIONS FOR LATER IMPLEMENTATION
+===========================================
+
+This idea recommends defaults but does not block useful planning on answers.
+Before the corresponding implementation step, the owner should settle:
+  - Which first app family and customer group to validate.
+  - The initial supported generated-app stack.
+  - The approved model/provider and maximum experimental spend.
+  - Which runtime wins the execution compatibility/security fixture.
+  - Hosting, privacy, project licensing and distribution choices.
+  - The acceptance criteria for a pilot and conditions for stopping or narrowing.
+
+Development preference already supplied by the owner:
+  Work directly on main, without feature branches or pull requests; make frequent
+  commits, approximately every five minutes during substantive editing. That is
+  this repository's requested workflow, not a universal Git policy for customers.
+  Remote writes and deployment follow the owner's applicable authorization.
+
+Recommended immediate implementation topic, when separately requested:
+  Prove one real, pinned agent session and one restricted execution workflow, then
+  complete a deterministic build/browser/export fixture. Keep the existing app,
+  gateway and adapter; do not restart the project or rewrite upstream languages.
+
+
+21. SOURCE BASIS AND STATUS OF THIS IDEA
+========================================
+
+This proposal draws on the checked-in README and these project documents:
+  docs/IMPLEMENTATION_STATUS.md
+  docs/PROJECT_CHARTER.md
+  docs/PRODUCT_REQUIREMENTS.md
+  docs/ARCHITECTURE.md
+  docs/ROADMAP.md
+  docs/REUSE_AUDIT.md
+  docs/SECURITY_ARCHITECTURE.md
+  docs/FEATURE_MATRIX.md
+  docs/COSTS_AND_OPERATIONS.md
+
+It also uses dated onboarding observations, direct archive inspection and the
+subsequent recovery/organization review. It does not contain fresh market research, competitor trials, legal
+advice, a completed security audit, a revenue forecast or new test results.
+
+Current structure/status documents have been updated to describe the adapter on
+main. Original historical copies are retained under AnalyseFuture/baseline-documents/.
+Use actual source, Git history and dated test evidence to establish current state;
+do not interpret a historical branch label or a future roadmap as proof of delivery.
+
+The intended destination is ambitious: an app builder that helps people create
+and maintain useful software with clear evidence and control. The next success is
+deliberately smaller: one complete, repeatable, honestly verified user workflow.
+
+
+CANONICAL DOCUMENT AND RECOVERY RECORDS
+=======================================
+
+The canonical vision is AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt.
+The former docs/PROJECT_IDEA.txt location remains a compatibility navigation file;
+its earlier full text is preserved under AnalyseFuture/baseline-documents/.
+This retains earlier ideas without maintaining competing active roadmaps.
+
+Use AnalyseFuture/FEATURE_INVENTORY.txt for implementation status,
+AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt for actual commands/outcomes,
+AnalyseFuture/SECURITY_AUDIT.txt for confirmed/unresolved security findings, and
+AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt to continue. A roadmap does not
+substitute for those records. Organization does not prove the reported account
+compromise occurred and does not establish that account access is secure.

@@ -11,6 +11,12 @@ This service package has zero third-party npm dependencies. It establishes the c
 
 Ollama endpoints are restricted to loopback hosts by default. A remote endpoint requires the explicit OLLAMA_ALLOW_REMOTE=true operator setting. User prompts cannot choose or override the provider URL.
 
+Native HTTP requests reject redirects for both generation and streaming, including
+when remote endpoints are enabled. Configure the final Ollama endpoint directly;
+prompts are not automatically replayed to a redirect destination. Through the
+gateway, rejected redirects use the existing structured `provider_unavailable`
+error and retain its bounded retry behavior for non-streaming requests.
+
 ## Configuration
 
 MODEL_PROVIDER=mock|ollama
@@ -31,4 +37,8 @@ The gateway validates messages, propagates caller cancellation, applies a bounde
 
 ## Verification
 
-Run npm ci --ignore-scripts and npm test from the repository root. The suite uses deterministic fixtures and mocked fetch responses. A real Ollama smoke test is intentionally outside CI and must be reported separately.
+Run npm ci --ignore-scripts and npm test from the repository root. The suite uses
+deterministic fixtures, mocked fetch responses and local HTTP servers. Two-server
+native-fetch regressions check that 307 redirects receive no follow-up request or
+prompt at their destination for generation and streaming. A real Ollama smoke
+test is intentionally outside CI and must be reported separately.

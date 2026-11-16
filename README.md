@@ -21,8 +21,9 @@ The product should offer:
 | Audience | Read first |
 | --- | --- |
 | Everyone | [Project charter](docs/PROJECT_CHARTER.md), [current status](docs/IMPLEMENTATION_STATUS.md) |
-| Product planning | [Detailed project idea (TXT)](docs/PROJECT_IDEA.txt): existing work, feasibility limits and conditional future horizons |
+| Product planning | [Canonical project vision and future roadmap (TXT)](AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt): existing work, feasibility limits and conditional future horizons |
 | Repository organization | [Structure and preservation review](docs/REPOSITORY_STRUCTURE.md), [AnalyseFuture reference inventory](AnalyseFuture/README.md) |
+| Complete recovery records | [Repository audit](AnalyseFuture/REPOSITORY_AUDIT.txt), [feature inventory](AnalyseFuture/FEATURE_INVENTORY.txt), [validation results](AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt), [continuation guide](AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt) |
 | Engineers | [Architecture](docs/ARCHITECTURE.md), [product requirements](docs/PRODUCT_REQUIREMENTS.md), [roadmap](docs/ROADMAP.md) |
 | Codex / AI coding agents | [AGENTS.md](AGENTS.md), [Codex playbook](docs/CODEX_PLAYBOOK.md) |
 | Open-source integrators | [Reuse audit](docs/REUSE_AUDIT.md), [licensing and ownership](docs/OWNERSHIP_AND_LICENSES.md) |
@@ -59,6 +60,12 @@ npm ci --ignore-scripts
 npm test
 npm run dev
 ```
+
+`npm test` explicitly names the four maintained test files. Add new active tests
+to that command when extending the suite; archived reference code is excluded.
+Both HTTP adapters reject redirects, so configure the final Ollama/Agent Server
+endpoint rather than an address that redirects elsewhere. See the
+[security review](AnalyseFuture/SECURITY_AUDIT.txt) for evidence and unresolved limits.
 
 Open http://127.0.0.1:3000. The browser demo still uses a deterministic static generator; it is **not yet connected** to the model gateway.
 

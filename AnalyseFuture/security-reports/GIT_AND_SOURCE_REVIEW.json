@@ -1,0 +1,291 @@
+{
+  "audit_time_utc": "2026-11-16T23:09:01.601306+00:00",
+  "baseline_commit": "e40fa8080eb201562d1382cc53b5b0a24d1b52ee",
+  "scope": "Read-only current tracked source/manifests/workflow review and all commits reachable from locally fetched branch/tag refs. No GitHub account/protection APIs used.",
+  "method": [
+    "git rev-list --all; git ls-tree -rz for each reachable commit; unique blob reads through git cat-file",
+    "Metadata-only high-specificity credential pattern scan; no matching values retained or printed",
+    "Direct source/manifests/workflow inspection and branch component tree comparison",
+    "No historical/upstream code executed and no package installation performed by this reviewer"
+  ],
+  "counts": {
+    "commits": 39,
+    "unique_blobs": 91,
+    "text_blobs_scanned": 89,
+    "binary_blobs_excluded": 2,
+    "credential_pattern_matches": 3
+  },
+  "refs": [
+    {
+      "ref": "refs/heads/main",
+      "commit": "e40fa8080eb201562d1382cc53b5b0a24d1b52ee"
+    },
+    {
+      "ref": "refs/remotes/origin/HEAD",
+      "commit": "e40fa8080eb201562d1382cc53b5b0a24d1b52ee"
+    },
+    {
+      "ref": "refs/remotes/origin/feat/model-gateway-foundation",
+      "commit": "8929a14655acb7390959795db2638b30ff816786"
+    },
+    {
+      "ref": "refs/remotes/origin/feat/openhands-agent-adapter",
+      "commit": "367c646b36e071386b104d34c81f07454ebddeb7"
+    },
+    {
+      "ref": "refs/remotes/origin/feat/phase0-offline-mock-scaffold",
+      "commit": "0a24bef06f3ed26b26d818b954862025c0f15696"
+    },
+    {
+      "ref": "refs/remotes/origin/main",
+      "commit": "e40fa8080eb201562d1382cc53b5b0a24d1b52ee"
+    },
+    {
+      "ref": "refs/tags/recovery/before-complete-audit-e40fa80",
+      "commit": "e40fa8080eb201562d1382cc53b5b0a24d1b52ee"
+    }
+  ],
+  "nonshallow": true,
+  "historical_file_modes": [
+    "100644"
+  ],
+  "git_lfs_pointer_blobs": [],
+  "credential_pattern_names": [
+    "private_key",
+    "github_token",
+    "aws_access_id",
+    "openai_style_token",
+    "credential_url"
+  ],
+  "credential_matches_metadata_only": [
+    {
+      "commit_first_scanned": "e40fa8080eb201562d1382cc53b5b0a24d1b52ee",
+      "git_blob": "92301618d25f6683b6dc54c96e6b904e74b34531",
+      "path_first_seen": "services/agent/test/agent.test.mjs",
+      "line": 127,
+      "pattern": "credential_url",
+      "classification": "intentional invalid credential-URL rejection fixture"
+    },
+    {
+      "commit_first_scanned": "e40fa8080eb201562d1382cc53b5b0a24d1b52ee",
+      "git_blob": "dc0b5678c85376252304ef56799d8bc3be4cca11",
+      "path_first_seen": "services/model-gateway/test/model-gateway.test.mjs",
+      "line": 25,
+      "pattern": "credential_url",
+      "classification": "intentional invalid credential-URL rejection fixture"
+    },
+    {
+      "commit_first_scanned": "3c27b43dad7e9c4a348b20f3179bcd2d5dd5508e",
+      "git_blob": "ed5d502806c03222d277182716390b858cdc4005",
+      "path_first_seen": "services/model-gateway/test/model-gateway.test.mjs",
+      "line": 25,
+      "pattern": "credential_url",
+      "classification": "intentional invalid credential-URL rejection fixture"
+    }
+  ],
+  "binary_exclusions": [
+    {
+      "path_first_seen": "AnalyseFuture/upstream-archives/OpenSandbox-main.zip",
+      "git_blob": "44a1ee59ab57a2e5e35feb0644d45785f5cf2f0f",
+      "bytes": 72999206,
+      "reason": "binary ZIP excluded from textual scan"
+    },
+    {
+      "path_first_seen": "AnalyseFuture/upstream-archives/software-agent-sdk-main.zip",
+      "git_blob": "a1a6f43b8066e6b976cbe45687fc0cb4e8323df8",
+      "bytes": 15842982,
+      "reason": "binary ZIP excluded from textual scan"
+    }
+  ],
+  "branch_component_comparisons": [
+    {
+      "branch": "origin/feat/phase0-offline-mock-scaffold",
+      "paths": [
+        "apps",
+        "packages"
+      ],
+      "comparison_main": "e40fa8080eb201562d1382cc53b5b0a24d1b52ee",
+      "changed_paths": [],
+      "identical_component_contents": true
+    },
+    {
+      "branch": "origin/feat/model-gateway-foundation",
+      "paths": [
+        "services/model-gateway"
+      ],
+      "comparison_main": "e40fa8080eb201562d1382cc53b5b0a24d1b52ee",
+      "changed_paths": [],
+      "identical_component_contents": true
+    },
+    {
+      "branch": "origin/feat/openhands-agent-adapter",
+      "paths": [
+        "services/agent"
+      ],
+      "comparison_main": "e40fa8080eb201562d1382cc53b5b0a24d1b52ee",
+      "changed_paths": [],
+      "identical_component_contents": true
+    }
+  ],
+  "feature_history": [
+    {
+      "commits": [
+        "4d5a176"
+      ],
+      "change": "Initial README only."
+    },
+    {
+      "commits": [
+        "034e299"
+      ],
+      "change": "Project vision, architecture, contributor/security/roadmap documentation and templates."
+    },
+    {
+      "commits": [
+        "0a24bef",
+        "ec181c9"
+      ],
+      "change": "Same offline mock scaffold feature branch and squash: API/static UI/core, tests, CI and workspace manifests."
+    },
+    {
+      "commits": [
+        "d562474"
+      ],
+      "change": "Public-repository candidate inventory document."
+    },
+    {
+      "commits": [
+        "3f0263a",
+        "32e2d3a",
+        "d74a40a",
+        "0675e96",
+        "576fd52",
+        "0da7726",
+        "d98ff4b",
+        "5463168",
+        "d5c8557",
+        "7cf7d70",
+        "c0911b1",
+        "dc272da",
+        "2226f17",
+        "3c27b43",
+        "4cd8251",
+        "1945732",
+        "479d417",
+        "e0c6697",
+        "8929a14",
+        "7797090"
+      ],
+      "change": "Model-gateway branch and squash: mock/Ollama contract, registration/docs, noncooperative-provider timeout fix and regression, CI action pins. Component is identical on main."
+    },
+    {
+      "commits": [
+        "f98b0ee",
+        "570d83f",
+        "ebed4e1",
+        "db84a7b",
+        "1fb7b2c",
+        "cb30cd0",
+        "c3f5d04",
+        "bc4330c",
+        "9d20bdc",
+        "367c646",
+        "5a4b690"
+      ],
+      "change": "OpenHands transport adapter branch and squash: lifecycle and validation, fake-server tests, env defaults/registration/docs. Component is identical on main."
+    },
+    {
+      "commits": [
+        "3e4f0b0"
+      ],
+      "change": "Adds two upstream ZIP source references; does not integrate their code."
+    },
+    {
+      "commits": [
+        "0c45350"
+      ],
+      "change": "Detailed product-idea TXT and status note."
+    },
+    {
+      "commits": [
+        "e40fa80"
+      ],
+      "change": "Archive relocation, complete preservation manifest and seven historical document snapshots; active documentation corrections. Active source/test/dependency/CI paths unchanged from 5a4b690."
+    }
+  ],
+  "findings": [
+    {
+      "id": "SEC-01",
+      "status": "future-discovery-risk-confirmed-by-configuration",
+      "evidence": [
+        "package.json:18"
+      ],
+      "finding": "npm test invokes node --test without path boundaries. Extracted/copied future third-party JS tests under AnalyseFuture can enter test discovery; npm workspace membership does not prevent this. ZIP files currently remain compressed and are not discovered as JavaScript tests.",
+      "recommendation": "Keep references compressed or scope the test command to the maintained component test directories before storing executable reference trees in the checkout."
+    },
+    {
+      "id": "SEC-02",
+      "status": "source-review-hardening-candidate-not-exploited",
+      "evidence": [
+        "services/agent/src/index.mjs:44",
+        "services/agent/src/index.mjs:145",
+        "services/model-gateway/src/index.mjs:137",
+        "services/model-gateway/src/index.mjs:191"
+      ],
+      "finding": "The adapters validate the initially configured loopback URL but do not set a redirect policy or revalidate redirect destinations. Native fetch follows redirects. The agent also adds a custom session API key header. A redirecting or compromised configured service can therefore undermine the stated endpoint boundary; this was not reproduced in this read-only audit.",
+      "recommendation": "Before broader use reject redirects or explicitly validate every redirect destination and credential-forwarding rule; test both adapters."
+    },
+    {
+      "id": "SEC-03",
+      "status": "known-unimplemented-production-boundary",
+      "evidence": [
+        "services/agent/src/index.mjs:170"
+      ],
+      "finding": "createSession defaults to a local workspace at /workspace; iteration limits and a transport adapter are not execution isolation. The builder does not currently invoke this adapter.",
+      "recommendation": "Select and verify the restricted workspace strategy before real generated-code execution; do not describe the default as a secure sandbox."
+    },
+    {
+      "id": "SEC-04",
+      "status": "source-review-robustness-candidate-not-reproduced",
+      "evidence": [
+        "apps/api/src/app.mjs:63"
+      ],
+      "finding": "Request URL parsing occurs before the handler try/catch. An invalid absolute URL could reject the async handler outside its error response path; actual HTTP exploitability was not exercised in this audit.",
+      "recommendation": "In a separately scoped hardening task handle URL parse failures and test malformed request targets."
+    },
+    {
+      "id": "SEC-05",
+      "status": "intentional-local-mock-limitation",
+      "evidence": [
+        "apps/api/src/server.mjs:5",
+        "apps/api/src/app.mjs",
+        "docs/MOCK_PROTOTYPE.md"
+      ],
+      "finding": "The local mock is unauthenticated and has no tenant/persistence/rate-limit boundary. It binds loopback by default; changing HOST does not add production controls.",
+      "recommendation": "Retain local-only operation until reviewed authentication, authorization, quotas and preview isolation exist."
+    }
+  ],
+  "positive_observations": [
+    "No tracked executable/symlink/submodule modes in the reachable history.",
+    "No Git LFS pointer blobs in reachable history.",
+    "No installation lifecycle hooks in current npm manifests; only dev/start/test/check scripts.",
+    "Current lockfile contains local workspace links only; no external npm package artifacts.",
+    "CI uses contents:read, pinned action revisions, npm ci --ignore-scripts and npm test. Action provenance and current advisories were not independently re-audited.",
+    "Current static app uses an asset allowlist, prompt/body validation, escaped generated user text, security headers and sandboxed static iframe.",
+    "No source-level dynamic eval, shell spawning or silent upstream installation identified in maintained runtime source."
+  ],
+  "limitations": [
+    "A pattern scan is not proof that all secrets, malicious logic or vulnerabilities are absent.",
+    "ZIP internals were excluded from this textual Git-blob scan; archive-specific inspection is separate.",
+    "Reachable fetched refs cannot establish deleted/unfetched/server-only history, force-push provenance or account access.",
+    "No claim about account protection settings, collaborator membership or credential validity.",
+    "Hardening candidates were not exploited or fixed by this reviewer."
+  ],
+  "subsequent_repair": {
+    "SEC-01": "Test discovery now explicitly lists the four active maintained test files. Archive exclusion experiment recorded in validation report.",
+    "SEC-02": "Three real-HTTP redirect regressions failed before fix and passed after redirect:error in both adapters; focus20/20 and maintained32/32 passed. Initial findings above describe pre-repair source review.",
+    "SEC-03": "Unchanged known gap: no execution isolation selected.",
+    "SEC-04": "Unchanged unconfirmed robustness candidate; no exploitability claim.",
+    "SEC-05": "Unchanged local-only mock scope."
+  }
+}

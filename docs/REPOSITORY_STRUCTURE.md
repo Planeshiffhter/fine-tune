@@ -101,3 +101,20 @@ change GitHub account permissions, rotate deployment secrets, or inspect account
 security logs. If unauthorized access is still suspected, those account/access
 checks remain separate from reorganizing files. Do not publish credential values
 as part of preservation or an investigation.
+
+## Full recovery follow-up
+
+The uploaded master request triggered a broader pass starting at `e40fa80`:
+65 tracked files, four fetched remote branches and 39 reachable commits. See
+[REPOSITORY_AUDIT.txt](../AnalyseFuture/REPOSITORY_AUDIT.txt) and the complete report
+index in [AnalyseFuture/README.md](../AnalyseFuture/README.md). All original content
+remains retained; fifteen originals from this later baseline have inert `.txt`
+copies under `AnalyseFuture/historical-implementations/before-complete-audit/`.
+
+The one active planning document now lives at
+`AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt`, with a compatibility pointer
+at its old docs path. The application layers remain in their original valid
+locations. New archive-member/security inventories and recovery reports are
+reference records, not application dependencies. Three new real-HTTP regression
+tests accompany redirect rejection in the two adapters; test discovery explicitly
+selects the four active test files. The current suite has 32 tests.

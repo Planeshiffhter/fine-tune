@@ -1,0 +1,799 @@
+{
+  "review_date": "2026-11-17",
+  "scope": "All archive member paths/metadata inventoried; all readable UTF-8 text scanned for four strict credential signatures; automated static triage of selected manifests/workflows/Dockerfiles; targeted manual review of selected excerpts and security-marker context. No extraction, installation or upstream execution. Not an exhaustive upstream source/dependency/runtime security audit; no claim of malware absence or authenticated release provenance.",
+  "archives": [
+    {
+      "archive_path": "AnalyseFuture/upstream-archives/OpenSandbox-main.zip",
+      "sha256": "d91b2e7579c6272100b4bbbed861827888de58e90edd0782784346c986134332",
+      "archive_commit_comment": "44e79a2dc3c99e26d82aa87fe13a73537d7e7812",
+      "entries": 3996,
+      "files_including_symlinks": 3384,
+      "directories": 612,
+      "compressed_bytes": 72999206,
+      "uncompressed_bytes": 100471972,
+      "extension_counts": {
+        ".go": 1061,
+        ".py": 1013,
+        ".md": 277,
+        ".yaml": 162,
+        ".kt": 143,
+        ".ts": 103,
+        ".cs": 97,
+        ".sh": 87,
+        ".mjs": 60,
+        "[none]": 54,
+        ".svg": 36,
+        ".json": 28,
+        ".yml": 27,
+        ".png": 25,
+        ".tsx": 24,
+        ".toml": 19,
+        ".jpg": 16,
+        ".java": 14,
+        ".dockerignore": 11,
+        ".mod": 10,
+        ".sum": 10,
+        ".typed": 9,
+        ".kts": 9,
+        ".txt": 8,
+        ".lock": 7,
+        ".h": 7,
+        ".csproj": 7,
+        ".tpl": 6,
+        ".css": 5,
+        ".gotmpl": 5,
+        ".properties": 5,
+        ".c": 4,
+        ".html": 3,
+        ".tmpl": 3,
+        ".props": 3,
+        ".pem": 2,
+        ".example": 2,
+        ".vue": 2,
+        ".gif": 2,
+        ".sln": 2,
+        ".jar": 2,
+        ".bat": 1,
+        ".proto": 1,
+        ".o": 1,
+        ".conf": 1,
+        ".mts": 1,
+        ".drawio": 1,
+        ".debug": 1,
+        ".image-committer": 1,
+        ".Dockerfile": 1,
+        ".commit": 1,
+        ".template": 1,
+        ".sandbox-test-image": 1,
+        ".user": 1,
+        ".mustache": 1
+      },
+      "symlinks": [
+        {
+          "path": "OpenSandbox-main/server/CLAUDE.md",
+          "target": "AGENTS.md",
+          "stays_within_archive_root": true
+        }
+      ],
+      "unsafe_paths": [],
+      "duplicate_member_paths": [],
+      "text_scan_files": 3338,
+      "text_scan_bytes": 34525245,
+      "binary_or_non_utf8_files": 46,
+      "secret_signature_hits": [
+        {
+          "path": "OpenSandbox-main/components/egress/tests/resolver/fixtures/test-localhost-key.pem",
+          "category": "private_key_header",
+          "match_count": 1,
+          "context_classification": "Localhost resolver TLS test fixture private key; no production use established; do not reuse as an operational credential",
+          "line_numbers": [
+            1
+          ]
+        }
+      ],
+      "static_risk_markers": [
+        {
+          "path": "OpenSandbox-main/.github/workflows/console-test.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/dependency-stability.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/deploy-docs-pages.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/detect-changes.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/egress-test.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/execd-test.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/fast-sandbox-test.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/helm-docs.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/helm-release-test.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/ingress-test.yaml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/kubernetes-nightly-build.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/kubernetes-test.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/nodeagent-test.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/pr-label-check.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/real-e2e.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/release-packages.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/release-preflight.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/release-umbrella.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/sdk-tests.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/server-test.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/.github/workflows/verify-license.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/examples/vscode/Dockerfile",
+          "markers": [
+            "curl_or_wget_to_shell"
+          ]
+        },
+        {
+          "path": "OpenSandbox-main/server/Dockerfile",
+          "markers": [
+            "curl_or_wget_to_shell"
+          ]
+        }
+      ],
+      "crc_check": "passed",
+      "automated_static_triage_files": [
+        "OpenSandbox-main/.agents/skills/opensandbox-release-notes/package.json",
+        "OpenSandbox-main/.github/workflows/console-test.yml",
+        "OpenSandbox-main/.github/workflows/dependency-stability.yml",
+        "OpenSandbox-main/.github/workflows/deploy-docs-pages.yml",
+        "OpenSandbox-main/.github/workflows/detect-changes.yml",
+        "OpenSandbox-main/.github/workflows/egress-test.yml",
+        "OpenSandbox-main/.github/workflows/execd-test.yml",
+        "OpenSandbox-main/.github/workflows/fast-sandbox-test.yml",
+        "OpenSandbox-main/.github/workflows/helm-docs.yml",
+        "OpenSandbox-main/.github/workflows/helm-release-test.yml",
+        "OpenSandbox-main/.github/workflows/ingress-test.yaml",
+        "OpenSandbox-main/.github/workflows/kubernetes-nightly-build.yml",
+        "OpenSandbox-main/.github/workflows/kubernetes-test.yml",
+        "OpenSandbox-main/.github/workflows/nodeagent-test.yml",
+        "OpenSandbox-main/.github/workflows/pr-label-check.yml",
+        "OpenSandbox-main/.github/workflows/real-e2e.yml",
+        "OpenSandbox-main/.github/workflows/release-packages.yml",
+        "OpenSandbox-main/.github/workflows/release-preflight.yml",
+        "OpenSandbox-main/.github/workflows/release-umbrella.yml",
+        "OpenSandbox-main/.github/workflows/runner-system-prune.yml",
+        "OpenSandbox-main/.github/workflows/sdk-tests.yml",
+        "OpenSandbox-main/.github/workflows/server-test.yml",
+        "OpenSandbox-main/.github/workflows/verify-license.yml",
+        "OpenSandbox-main/LICENSE",
+        "OpenSandbox-main/README.md",
+        "OpenSandbox-main/cli/pyproject.toml",
+        "OpenSandbox-main/components/egress/Dockerfile",
+        "OpenSandbox-main/components/egress/Dockerfile.dockerignore",
+        "OpenSandbox-main/components/egress/go.mod",
+        "OpenSandbox-main/components/execd/Dockerfile",
+        "OpenSandbox-main/components/execd/Dockerfile.dockerignore",
+        "OpenSandbox-main/components/execd/go.mod",
+        "OpenSandbox-main/components/ingress/Dockerfile",
+        "OpenSandbox-main/components/ingress/Dockerfile.dockerignore",
+        "OpenSandbox-main/components/ingress/go.mod",
+        "OpenSandbox-main/components/internal/go.mod",
+        "OpenSandbox-main/components/nodeagent/Dockerfile",
+        "OpenSandbox-main/components/nodeagent/Dockerfile.dockerignore",
+        "OpenSandbox-main/components/nodeagent/go.mod",
+        "OpenSandbox-main/console/bff/Dockerfile",
+        "OpenSandbox-main/console/web/Dockerfile",
+        "OpenSandbox-main/console/web/package.json",
+        "OpenSandbox-main/docs/package.json",
+        "OpenSandbox-main/examples/chrome/Dockerfile",
+        "OpenSandbox-main/examples/chrome/Dockerfile.dockerignore",
+        "OpenSandbox-main/examples/chrome/go.mod",
+        "OpenSandbox-main/examples/client-pool-schedule/go.mod",
+        "OpenSandbox-main/examples/deer-flow/Dockerfile",
+        "OpenSandbox-main/examples/desktop/Dockerfile",
+        "OpenSandbox-main/examples/desktop/Dockerfile.dockerignore",
+        "OpenSandbox-main/examples/harbor-evaluation/tasks/hello-opensandbox/environment/Dockerfile",
+        "OpenSandbox-main/examples/playwright/Dockerfile",
+        "OpenSandbox-main/examples/playwright/Dockerfile.dockerignore",
+        "OpenSandbox-main/examples/vscode/Dockerfile",
+        "OpenSandbox-main/examples/vscode/Dockerfile.dockerignore",
+        "OpenSandbox-main/kubernetes/Dockerfile",
+        "OpenSandbox-main/kubernetes/Dockerfile.debug",
+        "OpenSandbox-main/kubernetes/Dockerfile.debug.dockerignore",
+        "OpenSandbox-main/kubernetes/Dockerfile.dockerignore",
+        "OpenSandbox-main/kubernetes/Dockerfile.image-committer",
+        "OpenSandbox-main/kubernetes/go.mod",
+        "OpenSandbox-main/kubernetes/test/e2e_qemu/testdata/Dockerfile",
+        "OpenSandbox-main/scripts/fast-sandbox-env/Dockerfile.sandbox-test-image",
+        "OpenSandbox-main/sdks/code-interpreter/javascript/package.json",
+        "OpenSandbox-main/sdks/code-interpreter/python/pyproject.toml",
+        "OpenSandbox-main/sdks/mcp/sandbox/python/pyproject.toml",
+        "OpenSandbox-main/sdks/package.json",
+        "OpenSandbox-main/sdks/sandbox/go/go.mod",
+        "OpenSandbox-main/sdks/sandbox/javascript/package.json",
+        "OpenSandbox-main/sdks/sandbox/python/pyproject.toml",
+        "OpenSandbox-main/server/Dockerfile",
+        "OpenSandbox-main/server/Dockerfile.dockerignore",
+        "OpenSandbox-main/server/pyproject.toml",
+        "OpenSandbox-main/tests/go/go.mod",
+        "OpenSandbox-main/tests/javascript/package.json",
+        "OpenSandbox-main/tests/python/pyproject.toml"
+      ],
+      "automated_static_triage_count": 76,
+      "manually_reviewed_excerpts": [
+        "README.md overview",
+        "LICENSE terms identification",
+        "server/pyproject.toml complete",
+        "sdks/sandbox/javascript/package.json complete",
+        "components/execd/go.mod toolchain",
+        "server/Dockerfile installer/runtime lines",
+        "examples/vscode/Dockerfile installer/user lines",
+        ".github/workflows/deploy-docs-pages.yml trigger/permissions/actions",
+        ".github/workflows/release-packages.yml permissions/build/publish steps"
+      ],
+      "license_observed": "Apache-2.0 at archive root; dependencies and all bundled component licensing not exhaustively audited",
+      "toolchain_observed": {
+        "server_python": ">=3.10",
+        "typescript_sdk": "1.2.1; Node>=20; pnpm9.15.0",
+        "execd_go": "1.25.0"
+      },
+      "integration_notes": [
+        "Archive metadata differs from the earlier audited release-1.2.0; do not assume identity",
+        "server/Dockerfile and examples/vscode/Dockerfile fetch remote shell installers; review pinning/provenance before building",
+        "Archive workflows include write permissions and mutable action-version tags; do not copy into active .github/workflows",
+        "Single symlink server/CLAUDE.md points within the archive root; no traversal paths found"
+      ]
+    },
+    {
+      "archive_path": "AnalyseFuture/upstream-archives/software-agent-sdk-main.zip",
+      "sha256": "b1007f65e71050fd21b2101fba29bf5c90ff83b67e835b4cc353f0d9d276d85e",
+      "archive_commit_comment": "af26602526807ece5277b5ed90f43fb0a7f7b6d3",
+      "entries": 2741,
+      "files_including_symlinks": 2328,
+      "directories": 413,
+      "compressed_bytes": 15842982,
+      "uncompressed_bytes": 36560375,
+      "extension_counts": {
+        ".py": 1666,
+        ".md": 165,
+        ".json": 125,
+        ".ts": 123,
+        ".yml": 47,
+        ".txt": 27,
+        ".png": 26,
+        ".sh": 19,
+        ".jsonl": 17,
+        "[none]": 16,
+        ".tsx": 16,
+        ".mjs": 12,
+        ".gif": 11,
+        ".js": 11,
+        ".html": 8,
+        ".yaml": 6,
+        ".toml": 5,
+        ".jpg": 4,
+        ".css": 4,
+        ".typed": 4,
+        ".j2": 4,
+        ".log": 3,
+        ".cjs": 2,
+        ".jinja": 2,
+        ".back": 1,
+        ".in": 1,
+        ".spec": 1,
+        ".ico": 1,
+        ".lock": 1
+      },
+      "symlinks": [],
+      "unsafe_paths": [],
+      "duplicate_member_paths": [],
+      "text_scan_files": 2289,
+      "text_scan_bytes": 27666433,
+      "binary_or_non_utf8_files": 39,
+      "secret_signature_hits": [
+        {
+          "path": "software-agent-sdk-main/.agents/skills/verify-sdk/programs/S21/live_handshake.py",
+          "category": "openai_style_key",
+          "match_count": 1,
+          "context_classification": "Explicit BOGUS/_BOGUS_KEY nonfunctional authentication test placeholder",
+          "line_numbers": [
+            29
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/tests/agent_server/test_profiles_router.py",
+          "category": "openai_style_key",
+          "match_count": 2,
+          "context_classification": "Credential-shaped synthetic/redaction-test fixture; no live credential finding established",
+          "line_numbers": [
+            2294,
+            2320
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/tests/sdk/agent/test_acp_conformance.py",
+          "category": "openai_style_key",
+          "match_count": 1,
+          "context_classification": "Explicit BOGUS/_BOGUS_KEY nonfunctional authentication test placeholder",
+          "line_numbers": [
+            69
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/tests/sdk/agent/test_acp_tracing.py",
+          "category": "github_token",
+          "match_count": 1,
+          "context_classification": "Credential-shaped synthetic/redaction-test fixture; no live credential finding established",
+          "line_numbers": [
+            380
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/tests/sdk/llm/test_api_key_validation.py",
+          "category": "aws_access_key_id",
+          "match_count": 2,
+          "context_classification": "Mocked provider test uses a documented AWS example identifier and companion example secret; not a discovered live credential",
+          "line_numbers": [
+            215,
+            244
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/tests/sdk/utils/test_command.py",
+          "category": "openai_style_key",
+          "match_count": 2,
+          "context_classification": "Credential-shaped synthetic/redaction-test fixture; no live credential finding established",
+          "line_numbers": [
+            129,
+            133
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/tests/sdk/utils/test_redact.py",
+          "category": "private_key_header",
+          "match_count": 1,
+          "context_classification": "Credential-shaped synthetic/redaction-test fixture; no live credential finding established",
+          "line_numbers": [
+            323
+          ]
+        }
+      ],
+      "static_risk_markers": [
+        {
+          "path": "software-agent-sdk-main/.github/workflows/agent-server-rest-api-breakage.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/agent-server-start-benchmark.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/check-docstrings.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/check-documented-examples.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/check-duplicate-examples.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/create-release.yml",
+          "markers": [
+            "workflow_write_permission"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/deploy-docs.yml",
+          "markers": [
+            "workflow_write_permission"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/deprecation-check.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/integration-runner.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/issue-duplicate-checker.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/issue-readiness-check.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/oh-update-documentation.yml.back",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/persisted-settings-compat.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/pip-revendoring-retirement.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/pr-artifacts.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/pr-description-check.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/precommit.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/prepare-release.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/pypi-release.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/release-binaries.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/remove-duplicate-candidate-label.yml",
+          "markers": [
+            "workflow_write_permission"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/review-thread-gate.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/run-eval.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/run-examples.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/security-scan.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/server.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/storage-scenario.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/tests-macos.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/tests.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/todo-management.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/typescript-client-ci.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/typescript-client-endpoint-audit.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/typescript-client-github-packages-publish.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/typescript-client-integration-tests.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/typescript-client-npm-publish.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/update-version-pins.yml",
+          "markers": [
+            "workflow_write_permission",
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/version-bump-guard.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/.github/workflows/version-bump-prs.yml",
+          "markers": [
+            "action_version_tag_not_immutable_commit_sha"
+          ]
+        },
+        {
+          "path": "software-agent-sdk-main/clients/typescript/package.json",
+          "markers": [
+            "npm_lifecycle_install_or_prepare"
+          ]
+        }
+      ],
+      "crc_check": "passed",
+      "automated_static_triage_files": [
+        "software-agent-sdk-main/.github/workflows/README-RELEASE.md",
+        "software-agent-sdk-main/.github/workflows/agent-server-rest-api-breakage.yml",
+        "software-agent-sdk-main/.github/workflows/agent-server-start-benchmark.yml",
+        "software-agent-sdk-main/.github/workflows/cancel-eval.yml",
+        "software-agent-sdk-main/.github/workflows/check-docstrings.yml",
+        "software-agent-sdk-main/.github/workflows/check-documented-examples.yml",
+        "software-agent-sdk-main/.github/workflows/check-duplicate-examples.yml",
+        "software-agent-sdk-main/.github/workflows/create-release.yml",
+        "software-agent-sdk-main/.github/workflows/deploy-docs.yml",
+        "software-agent-sdk-main/.github/workflows/deprecation-check.yml",
+        "software-agent-sdk-main/.github/workflows/integration-runner.yml",
+        "software-agent-sdk-main/.github/workflows/issue-duplicate-checker.yml",
+        "software-agent-sdk-main/.github/workflows/issue-readiness-check.yml",
+        "software-agent-sdk-main/.github/workflows/oh-update-documentation.yml.back",
+        "software-agent-sdk-main/.github/workflows/persisted-settings-compat.yml",
+        "software-agent-sdk-main/.github/workflows/pip-revendoring-retirement.yml",
+        "software-agent-sdk-main/.github/workflows/pr-artifacts.yml",
+        "software-agent-sdk-main/.github/workflows/pr-description-check.yml",
+        "software-agent-sdk-main/.github/workflows/precommit.yml",
+        "software-agent-sdk-main/.github/workflows/prepare-release.yml",
+        "software-agent-sdk-main/.github/workflows/pypi-release.yml",
+        "software-agent-sdk-main/.github/workflows/release-binaries.yml",
+        "software-agent-sdk-main/.github/workflows/remove-duplicate-candidate-label.yml",
+        "software-agent-sdk-main/.github/workflows/review-thread-gate.yml",
+        "software-agent-sdk-main/.github/workflows/run-eval.yml",
+        "software-agent-sdk-main/.github/workflows/run-examples.yml",
+        "software-agent-sdk-main/.github/workflows/security-scan.yml",
+        "software-agent-sdk-main/.github/workflows/server.yml",
+        "software-agent-sdk-main/.github/workflows/storage-scenario.yml",
+        "software-agent-sdk-main/.github/workflows/tests-macos.yml",
+        "software-agent-sdk-main/.github/workflows/tests.yml",
+        "software-agent-sdk-main/.github/workflows/todo-management.yml",
+        "software-agent-sdk-main/.github/workflows/typescript-client-ci.yml",
+        "software-agent-sdk-main/.github/workflows/typescript-client-endpoint-audit.yml",
+        "software-agent-sdk-main/.github/workflows/typescript-client-github-packages-publish.yml",
+        "software-agent-sdk-main/.github/workflows/typescript-client-integration-tests.yml",
+        "software-agent-sdk-main/.github/workflows/typescript-client-npm-publish.yml",
+        "software-agent-sdk-main/.github/workflows/update-version-pins.yml",
+        "software-agent-sdk-main/.github/workflows/version-bump-guard.yml",
+        "software-agent-sdk-main/.github/workflows/version-bump-prs.yml",
+        "software-agent-sdk-main/.pre-commit-config.yaml",
+        "software-agent-sdk-main/.python-version",
+        "software-agent-sdk-main/LICENSE",
+        "software-agent-sdk-main/Makefile",
+        "software-agent-sdk-main/README.md",
+        "software-agent-sdk-main/clients/typescript/example/package.json",
+        "software-agent-sdk-main/clients/typescript/examples/local-agent/package.json",
+        "software-agent-sdk-main/clients/typescript/examples/local/package.json",
+        "software-agent-sdk-main/clients/typescript/package.json",
+        "software-agent-sdk-main/examples/02_remote_agent_server/06_custom_tool/Dockerfile",
+        "software-agent-sdk-main/openhands-agent-server/openhands/agent_server/docker/Dockerfile",
+        "software-agent-sdk-main/openhands-agent-server/openhands/agent_server/vscode_extensions/openhands-settings/package.json",
+        "software-agent-sdk-main/openhands-agent-server/pyproject.toml",
+        "software-agent-sdk-main/openhands-sdk/pyproject.toml",
+        "software-agent-sdk-main/openhands-tools/pyproject.toml",
+        "software-agent-sdk-main/openhands-workspace/pyproject.toml",
+        "software-agent-sdk-main/pyproject.toml",
+        "software-agent-sdk-main/setup.py"
+      ],
+      "automated_static_triage_count": 58,
+      "manually_reviewed_excerpts": [
+        "README.md overview",
+        "LICENSE terms identification",
+        "pyproject.toml workspace/test configuration",
+        "openhands-sdk/pyproject.toml complete",
+        "openhands-agent-server/pyproject.toml complete",
+        "clients/typescript/package.json complete",
+        "setup.py complete",
+        "Makefile complete",
+        ".github/workflows/pypi-release.yml permissions/build/publish steps",
+        ".github/workflows/typescript-client-npm-publish.yml permissions/build/publish steps"
+      ],
+      "license_observed": "MIT at archive root; dependencies and all bundled component licensing not exhaustively audited",
+      "toolchain_observed": {
+        "python_packages": ">=3.12; package versions1.62.0",
+        "python_development_pin": "3.13",
+        "typescript_client": "1.62.0; prepare lifecycle builds package",
+        "Makefile_uv_minimum": "0.8.13"
+      },
+      "integration_notes": [
+        "TypeScript client prepare lifecycle runs cleanup/build on supported installs; never run during reference inspection",
+        "Makefile build installs dependencies and pre-commit hooks; clean removes caches; none were run",
+        "Archive workflows may publish packages or write repository state with appropriately configured credentials; do not copy them into this project",
+        "Model/provider, browser tooling, Python dependency graph and execution workspace require separate controlled compatibility/security review"
+      ]
+    }
+  ]
+}

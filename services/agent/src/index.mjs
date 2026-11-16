@@ -145,6 +145,7 @@ export class OpenHandsAgentServerAdapter {
       response = await waitForSignal(() => this.fetchImpl(new URL(path.replace(/^\//, ''), this.baseUrl.toString().replace(/\/?$/, '/')), {
         method,
         headers,
+        redirect: 'error',
         ...(body === undefined ? {} : { body: JSON.stringify(body) }),
         signal: abort.signal,
       }), abort.signal);

@@ -13,6 +13,15 @@ No baseline file content was discarded.
 | [upstream-archives/software-agent-sdk-main.zip](upstream-archives/software-agent-sdk-main.zip) | Original OpenHands source archive; not a working agent integration |
 | [baseline-documents/](baseline-documents/) | Unmodified copies of seven documents before their organization/status updates |
 | [PRESERVATION_MANIFEST.json](PRESERVATION_MANIFEST.json) | Original path, retained path, size, SHA-256 and Git blob for every one of the 55 baseline files |
+| [REPOSITORY_AUDIT.txt](REPOSITORY_AUDIT.txt) | Full follow-up audit starting from 65 tracked files and 39 reachable commits |
+| [COMPLETE_FILE_INVENTORY.txt](COMPLETE_FILE_INVENTORY.txt) | Classification of every starting and delivered tracked path |
+| [FEATURE_INVENTORY.txt](FEATURE_INVENTORY.txt) / [DEPENDENCY_MAP.txt](DEPENDENCY_MAP.txt) | Eight code-backed groups, planned capabilities and actual call/dependency paths |
+| [SECURITY_AUDIT.txt](SECURITY_AUDIT.txt) | Reproduced/fixed findings, unresolved concerns and account-access limits |
+| [PROJECT_VISION_AND_FUTURE_ROADMAP.txt](PROJECT_VISION_AND_FUTURE_ROADMAP.txt) | Canonical detailed product vision; the old docs path is a compatibility pointer |
+| [MIGRATION_SUMMARY.txt](MIGRATION_SUMMARY.txt) / [ORIGINAL_TO_NEW_PATH_MAPPING.txt](ORIGINAL_TO_NEW_PATH_MAPPING.txt) | Applied changes, compatibility and per-path preservation |
+| [NEXT_DEVELOPER_INSTRUCTIONS.txt](NEXT_DEVELOPER_INSTRUCTIONS.txt) / [WORK_PROGRESS.txt](WORK_PROGRESS.txt) | Handoff and persistent progress |
+| [historical-implementations/before-complete-audit/](historical-implementations/before-complete-audit/) | Fifteen original files from the later `e40fa80` baseline, stored with an extra `.txt` suffix |
+| [repository-inventory/](repository-inventory/) / [security-reports/](security-reports/) | Starting-state hashes, all 6,737 ZIP member paths and metadata-only audit evidence |
 
 The baseline is commit `0c45350c73863f7d147f4681f477bb42e6f7f6a1`.
 Historical copies preserve their original wording, relative links and instructions;
@@ -40,9 +49,11 @@ older research document audited release-1.2.0; these are not assumed equivalent.
 
 Keep upstream source compressed in this checkout. If needed, extract into a
 separate reference directory outside the application checkout and inspect before
-running it. Extracted third-party tests inside the repository could be discovered
-by the active `node --test` command. This folder is outside the declared npm
-workspaces, but that alone does not exclude unpacked tests from test discovery.
+running it. `npm test` now names only the four maintained test files. That boundary
+was checked using a temporary archive sentinel. Running bare `node --test` manually
+can still discover unpacked third-party tests; npm workspace membership alone is
+not a quarantine boundary. Historical source snapshots use an extra `.txt` suffix.
+None of this authorizes importing archived material or installing upstream hooks.
 
 Select pinned upstream dependencies/services through the product's existing
 adapters. Do not wholesale merge these projects, automatically install them, or

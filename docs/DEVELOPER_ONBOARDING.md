@@ -24,6 +24,19 @@ npm run dev
 
 Open http://127.0.0.1:3000. The UI generates static HTML templates; it does **not** use an LLM, execute arbitrary code, or persist projects. See [MOCK_PROTOTYPE.md](MOCK_PROTOTYPE.md) for endpoint details and limitations.
 
+The maintained tests are explicitly listed in the root `test` script so archived
+JavaScript cannot enter automatic test discovery. Add new active test files there
+when needed; do not unpack upstream archives inside this checkout or run bare
+`node --test` over preserved material. Ollama and Agent Server endpoint URLs must
+be final endpoints: both adapters reject HTTP redirects.
+
+For the complete current file/feature map, dependency boundaries, validation
+limits and recovery history, read
+[NEXT_DEVELOPER_INSTRUCTIONS.txt](../AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt).
+The detailed vision is
+[PROJECT_VISION_AND_FUTURE_ROADMAP.txt](../AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt).
+Production deployment is not implemented; `npm start` starts the local mock only.
+
 ## How to decide what to build
 
 Use the [PRD](PRODUCT_REQUIREMENTS.md) acceptance IDs and [roadmap](ROADMAP.md). Implement one complete task, with tests and changed status, instead of building all screens with no running backend.

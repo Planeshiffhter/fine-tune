@@ -1,8 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createServer } from 'node:http';
 import { ModelGatewayError, OllamaModelProvider, ModelGateway, createModelGateway, createModelGatewayFromEnv } from '../src/index.mjs';
 
 const messages = [{ role: 'user', content: 'Build a small task app.' }];
+
+async function withServer(handler, fn) {
+  const server = createServer(handler);
+  await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+  const baseUrl = `http://127.0.0.1:${server.address().port}`;
+  try { await fn(baseUrl); }
+  finally { await new Promise((resolve, reject) => server.close((error) => error ? reject(error) : resolve())); }
+}
 
 test('mock provider is deterministic and reports no invented token usage', async () => {
   const gateway = createModelGateway({ provider: 'mock', mock: { responseText: 'fixture-result' } });
@@ -39,6 +48,42 @@ test('Ollama adapter sends chat request, applies budget and maps usage', async (
   assert.equal(result.text, 'done');
   assert.deepEqual(result.usage, { inputTokens: 12, outputTokens: 5, totalTokens: 17 });
 });
+
+for (const mode of ['generate', 'stream']) {
+  test(`Ollama ${mode} rejects redirects without replaying prompts to another server`, async () => {
+    let sourceRequests = 0;
+    let targetRequests = 0;
+    let forwardedPrompts = 0;
+    let failure;
+    await withServer(async (request, response) => {
+      const chunks = [];
+      for await (const chunk of request) chunks.push(chunk);
+      const body = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+      targetRequests += 1;
+      if (body.messages?.[0]?.content === messages[0].content) forwardedPrompts += 1;
+      response.setHeader('Content-Type', mode === 'stream' ? 'application/x-ndjson' : 'application/json');
+      response.end(JSON.stringify({ message: { content: 'redirected result' }, done: true }) + '\n');
+    }, async (targetUrl) => {
+      await withServer((request, response) => {
+        request.resume();
+        sourceRequests += 1;
+        response.writeHead(307, { Location: `${targetUrl}/api/chat` });
+        response.end();
+      }, async (baseUrl) => {
+        const gateway = new ModelGateway(new OllamaModelProvider({ baseUrl, model: 'fixture' }), { maxRetries: 0 });
+        try {
+          if (mode === 'generate') await gateway.generate({ messages });
+          else for await (const _event of gateway.stream({ messages })) { /* Consume the native HTTP stream. */ }
+        } catch (error) { failure = error; }
+      });
+    });
+    assert.equal(sourceRequests, 1);
+    assert.deepEqual({ targetRequests, forwardedPrompts }, { targetRequests: 0, forwardedPrompts: 0 });
+    assert.ok(failure instanceof ModelGatewayError);
+    assert.equal(failure.code, 'provider_unavailable');
+    assert.equal(failure.provider, 'ollama');
+  });
+}
 
 test('retries only retryable provider failures within the configured bound', async () => {
   let calls = 0;

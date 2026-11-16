@@ -1,0 +1,56 @@
+DUPLICATE AND SCATTERED-IMPLEMENTATION ANALYSIS
+Scope: 65 starting tracked paths, all active components, four fetched branch tips
+and 39 reachable pre-recovery commits. No filename-only merging was performed.
+
+D01 - HISTORICAL FEATURE BRANCHES
+origin/feat/phase0-offline-mock-scaffold: all 11 apps/packages paths match main.
+origin/feat/model-gateway-foundation: all 15 apps/packages/gateway paths match main.
+origin/feat/openhands-agent-adapter: all 19 maintained component paths match main.
+Their individual development commits were squash-merged. Preserve existing refs;
+merging old branch ancestry would add no implementation and can revive stale docs.
+The gateway noncooperative timeout fix and regression are already present on main.
+
+D02 - MOCK GENERATOR VS MOCK MODEL
+packages/core generates safe static project templates; MockModelProvider returns
+text through an inference contract. They have distinct outputs/callers. They are
+not competing app generators and were not collapsed into an incompatible API.
+The current HTTP app uses core only; future integration is explicit missing work.
+
+D03 - HTTP/UI/CORE FILES
+app.js handles browser events/rendering/downloads, app.mjs validates HTTP framing,
+and core owns prompt/template logic. Existing imports share one core generator.
+They form one feature through separate responsibilities; physically merging these
+files would mix trust/runtime boundaries and lose maintainability.
+
+D04 - AGENT AND MODEL TRANSPORT HELPERS
+Both validate URLs, timeouts, errors and configuration, but expose different error
+classes, retry rules and lifecycle semantics. Agent mutations are not retried;
+model non-streaming transient errors can be. Shared-helper extraction is deferred
+until a real integration proves a stable common contract. Only redirect rejection
+was applied consistently at their existing common request paths.
+
+D05 - DOCUMENT AND SOURCE SNAPSHOTS
+AnalyseFuture/baseline-documents contains seven intentional historical copies.
+The later before-complete-audit tree preserves 15 originals with .txt suffixes.
+These are recovery evidence, excluded from active imports/packages/test discovery,
+not alternative production implementations. Keep original bytes, dates and scope.
+
+D06 - PROJECT IDEAS
+The owner requires a detailed vision at AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt.
+Rather than create a competing active idea, the existing full vision is reused,
+extended with capability classifications and 3-5 year gates, and made canonical.
+The former docs path is a short navigation pointer; its original full text is safe
+in both Git history and the recorded snapshots. One planning responsibility was
+consolidated. No source implementations were merged or discarded.
+
+D07 - UPSTREAM ZIP REFERENCES
+OpenHands and OpenSandbox have overlapping workspace concepts, but are different
+projects. The latter is not automatically a compatible runtime for the former.
+Keep compressed references; choose one tested workspace owner later. Their SDK
+languages are not duplicate product backends that should be rewritten into JS.
+
+COUNTS
+Actual source implementations merged: 0 (none missing/compatible-but-separated).
+Canonical planning responsibilities consolidated: 1.
+Active source files moved: 0. Full vision relocated with compatibility pointer: 1.
+Duplicate historical copies retained intentionally: 7 existing + 15 new snapshots.

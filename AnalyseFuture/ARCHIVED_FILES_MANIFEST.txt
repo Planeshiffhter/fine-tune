@@ -1,0 +1,55 @@
+ARCHIVED FILES MANIFEST
+No live credentials or established malicious material was newly archived.
+Original source snapshots have an extra .txt suffix; they are never active test/package imports.
+
+AnalyseFuture/README.md -> AnalyseFuture/historical-implementations/before-complete-audit/AnalyseFuture/README.md.txt
+  SHA256 6953e19eb64532000b11b426e0211ea42fbe6927d1f52c769faa3e69b7f19b57
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+README.md -> AnalyseFuture/historical-implementations/before-complete-audit/README.md.txt
+  SHA256 7c3dddc018f3287c2116cb45476fb39f0c18252fa6bdb708419b19234acc21c9
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+SECURITY.md -> AnalyseFuture/historical-implementations/before-complete-audit/SECURITY.md.txt
+  SHA256 42c55b408804e8cf07a7a165fbd61d75e769d86f3a41c657ae475fa6bf4b36cc
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+docs/ARCHITECTURE.md -> AnalyseFuture/historical-implementations/before-complete-audit/docs/ARCHITECTURE.md.txt
+  SHA256 225e655d30604346ca373d40c60f6701569337cd5d5e30aac2bc2fa49ae665a9
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+docs/DEVELOPER_ONBOARDING.md -> AnalyseFuture/historical-implementations/before-complete-audit/docs/DEVELOPER_ONBOARDING.md.txt
+  SHA256 b15e4f0767e1b68b418d2f9bb052001f12845c16e0b555b14f4bd64f7e1eb217
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+docs/IMPLEMENTATION_STATUS.md -> AnalyseFuture/historical-implementations/before-complete-audit/docs/IMPLEMENTATION_STATUS.md.txt
+  SHA256 179a67608927c5410f613a1b87a9ed096b7e65b7735c43f5da72fb35875a33af
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+docs/PROJECT_IDEA.txt -> AnalyseFuture/historical-implementations/before-complete-audit/docs/PROJECT_IDEA.txt.txt
+  SHA256 cc2f1fb8ec24953ef22e0db5be30f23630f93090d9012a6f722cd22979775845
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path / canonical future vision.
+docs/REPOSITORY_STRUCTURE.md -> AnalyseFuture/historical-implementations/before-complete-audit/docs/REPOSITORY_STRUCTURE.md.txt
+  SHA256 7a29e26c394933876f4ed5bc93ab704f61fc74c192314339f0f50697d9321f44
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+package.json -> AnalyseFuture/historical-implementations/before-complete-audit/package.json.txt
+  SHA256 7903b9d446fd42c62d6009b351e809be71a8a0c95682b4c7909da185275ab7b9
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+services/agent/README.md -> AnalyseFuture/historical-implementations/before-complete-audit/services/agent/README.md.txt
+  SHA256 6daa23c3a6480d65b32faa1c36800d202be740e6dbc1c58d01557499480b57b8
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+services/agent/src/index.mjs -> AnalyseFuture/historical-implementations/before-complete-audit/services/agent/src/index.mjs.txt
+  SHA256 7929d9cda6651cc6bce7085b5e9a3b32491b0d4c84a828b9e70864d466dae12f
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+services/agent/test/agent.test.mjs -> AnalyseFuture/historical-implementations/before-complete-audit/services/agent/test/agent.test.mjs.txt
+  SHA256 4793d1ef2bb0a35494664ebd07e1acb58d0f69161363ab66dae21f537ef33ade
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+services/model-gateway/README.md -> AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/README.md.txt
+  SHA256 db5221c39326428e47a5982f282d6e422380b0b5ad3758164ef451099701897d
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+services/model-gateway/src/index.mjs -> AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/src/index.mjs.txt
+  SHA256 895a9ce0dfcdb9f26383415e731e33893ac826f20c01ae03aab676355ea5e110
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+services/model-gateway/test/model-gateway.test.mjs -> AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/test/model-gateway.test.mjs.txt
+  SHA256 845a1897753d94a99481b91ade624d6579e0e3cb26543336a49e46dd611e2125
+  Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
+
+Existing preserved material from prior pass:2unchangedZIPs and7baseline documents.
+See PRESERVATION_MANIFEST.json for all55originalpaths from0c45350 and README hashes.
+Newly copied originals this pass:15. Actual displaced source files:0.
+The15includes small documents preserved before review even where final edits were unnecessary.
+Baseline15snapshot paths recover exact e40fa80bytes; no repeated upstream extraction.

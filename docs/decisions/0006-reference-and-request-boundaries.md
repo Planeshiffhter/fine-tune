@@ -1,0 +1,30 @@
+# ADR 0006 — Reference material and request boundaries
+
+**Status:** Accepted for the repository recovery pass.
+**Date:** 2026-11-17.
+
+## Context
+
+Preserved upstream source is useful evidence, but broad Node test discovery could
+execute future unpacked reference tests. The existing adapter endpoint checks
+also applied only to initial URLs: native fetch followed redirects, and real
+two-server fixtures reproduced prompt and dummy session-key forwarding.
+
+## Decision
+
+- Keep upstream projects compressed under `AnalyseFuture/upstream-archives/`.
+- Store source snapshots with an additional `.txt` suffix and no active imports.
+- Explicitly name the four maintained test files in the npm test command.
+- Reject HTTP redirects in the common Agent Server request and Ollama call paths.
+- Retain one canonical future vision at the requested `AnalyseFuture` path and
+  keep the previous docs path as a compatibility pointer.
+
+## Consequences and validation
+
+New test files must be added explicitly. A temporary archive test failed under
+bare Node discovery but was excluded by `npm test`. Three redirect regressions
+failed before the HTTP fix and passed after it; the complete suite now has 32
+passing tests. Operators must configure final endpoint URLs. Public class and
+HTTP API contracts remain unchanged; custom fetch implementations must honor
+standard redirect options. This does not prove account security, isolate real
+agent execution, or authorize executing archived code.

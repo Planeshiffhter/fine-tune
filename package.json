@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "node apps/api/src/server.mjs",
     "start": "node apps/api/src/server.mjs",
-    "test": "node --test",
+    "test": "node --test apps/api/test/app.test.mjs packages/core/test/core.test.mjs services/agent/test/agent.test.mjs services/model-gateway/test/model-gateway.test.mjs",
     "check": "npm test"
   }
 }

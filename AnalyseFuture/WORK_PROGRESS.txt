@@ -1,12 +1,35 @@
 COMPLETE REPOSITORY RECOVERY - PROGRESS
 Date: 17 November 2026
-Start: e40fa8080eb201562d1382cc53b5b0a24d1b52ee
+Starting commit: e40fa8080eb201562d1382cc53b5b0a24d1b52ee
+Backup tag: recovery/before-complete-audit-e40fa80 (pushed)
 
-Completed: explicit fetch of all four remote branches; 39 reachable commits identified; all 65 starting tracked paths inventoried with hashes; initial current/history/source review; durable recovery tag pushed.
-Current: complete feature and archive review; test redirect risk; decide minimal verified changes.
-Pending: full required reports, canonical future vision, focused tests/quarantine validation, final inventory, direct main delivery.
-Decisions: preserve previous archive organization and all useful source; no feature-tip code missing from main; no arbitrary history merges or rewrites.
-Blockers: GitHub repository/branch-protection API returned Forbidden; normal push will respect protection. Live model/agent/sandbox/production not available or part of this recovery.
-Validation: previous session29tests passed; current-run tests not yet executed.
-Remaining directories: active source is assigned for deep review; archived ZIP members assigned for metadata/selected-source review; generated reports will be reviewed before delivery.
-Next: complete analysis, preserve affected originals before changes, implement only supported repairs.
+COMPLETED
+- All 65 starting tracked paths classified; all four remote heads and 39 initial
+  reachable commits fetched/reviewed; feature-tip implementations already on main.
+- Archive metadata inventory covers 6,737 entries / 5,712 files; selected deeper
+  coverage and limits recorded separately. No upstream execution or extraction.
+- Fifteen originals preserved as inert .txt snapshots before changes.
+- Redirect forwarding reproduced by three failing HTTP tests and repaired in both
+  adapters. Focused20/20 and full32/32 tests passed after repair.
+- Maintained test paths explicitly selected; archive sentinel exclusion passed.
+- Canonical detailed vision consolidated; all required named recovery reports and
+  dependency map written. Old vision path remains a compatibility pointer.
+- Baseline snapshot/originals committed and pushed at 9656107.
+
+CURRENT
+Final syntax, complete path/hash/link/document consistency, real startup/API
+checks and independent review; current implementation/report checkpoint delivery.
+
+PENDING FOR THIS RECOVERY
+Complete final validation notes, update progress status and verify final main push.
+No outstanding source merge is needed; no branch/tag/history rewrite is planned.
+
+EXTERNAL LIMITS
+Repository/branch protection APIs returned Forbidden; normal Git read/push works.
+Account event/access review, deleted remote history, full upstream source audit,
+live model/agent/sandbox, browser UI automation and production validation remain
+unrun or external. They do not become passed through document creation.
+
+NEXT
+Finish current recovery checks, preserve findings truthfully, then follow
+NEXT_DEVELOPER_INSTRUCTIONS.txt for a separately scoped real-agent/runtime fixture.

@@ -37,6 +37,15 @@ OPENHANDS_ALLOW_REMOTE=false
 
 Remote Agent Server URLs are disabled by default. Secrets belong in the runtime secret store, never in committed environment files.
 
+Native HTTP requests reject redirects, including when remote endpoints are enabled.
+Configure the final Agent Server endpoint directly. This prevents automatic replay
+of conversation data and the session API key to a redirect destination. A rejected
+redirect uses the existing structured `transport_error` response.
+
 ## Verification
 
-The contract tests use a local fake HTTP server and make no paid model calls. A real OpenHands Agent Server integration test is a separate milestone and must not be reported as complete until it actually runs.
+The contract tests use local fake HTTP servers and make no paid model calls.
+A two-server native-fetch regression checks that a 307 redirect receives no
+follow-up request or session key at its destination. A real OpenHands Agent Server
+integration test is a separate milestone and must not be reported as complete
+until it actually runs.

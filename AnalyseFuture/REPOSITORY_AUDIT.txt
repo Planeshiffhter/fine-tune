@@ -1,0 +1,75 @@
+COMPLETE REPOSITORY AUDIT
+Date: 17 November 2026
+Repository: kawaho3/fine-tune - https://github.com/kawaho3/fine-tune
+Default branch: main (verified through git ls-remote --symref origin HEAD).
+Starting commit: e40fa8080eb201562d1382cc53b5b0a24d1b52ee.
+
+DISCOVERY AND RECOVERABILITY
+The starting tree had 65 tracked regular files, no tracked executable files,
+symlinks, submodules or LFS pointers, and no uncommitted/untracked project work.
+The checkout is not shallow. The configured fetch refspec originally fetched
+only main. Explicitly fetching +refs/heads/*:refs/remotes/origin/* --tags exposed
+all four visible remote heads and 39 reachable commits before recovery commits.
+There were no existing remote tags. The recovery tag
+recovery/before-complete-audit-e40fa80 was created and pushed before source edits.
+No branch/tag was removed, no history was rewritten and no force push was used.
+STARTING_STATE.json records every starting path/hash and the initial fetched refs.
+
+COVERAGE
+Every starting tracked path was classified. All active JavaScript, HTML, CSS,
+package manifests/lockfile, tests, CI, configuration, current/historical docs and
+planning records were read. Git-history review inspected 91 unique blobs across
+39 reachable commits; 89 textual blobs received strict secret-pattern scanning.
+The two ZIP blobs are separately inventoried: 6,737 member paths, 5,712 files
+including one internal symlink, 5,627 UTF-8 text files scanned for signatures.
+Automated static triage covered 134 selected upstream manifests/workflows and
+Dockerfiles; manual targeted excerpts covered 19 upstream files. This is NOT a
+line-by-line deep review of all 5,712 upstream files or their dependencies.
+Binary assets were classified by metadata, not rendered or semantically audited.
+No inaccessible tracked path was encountered. Deleted/unfetched server-only
+history and GitHub account activity cannot be established from available refs.
+
+ACTUAL PRODUCT
+The code is an offline static app-builder mock, plus separately tested model and
+agent transport boundaries. Eight code-backed feature groups are described in
+FEATURE_INVENTORY.txt; 13 planned groups are explicitly not delivered. Three
+supporting repository capabilities are counted separately. The mock API calls
+core generation, not either adapter. Python/OpenHands and Go/Python/OpenSandbox
+remain optional upstream services, not installed production components.
+
+CONSOLIDATION DECISIONS
+All feature-tip maintained implementation files already match main: mock 11/11,
+model 15/15, agent 19/19. Squash-merged branch histories are not missing features.
+No arbitrary branch merges or source rewrites were justified. Keep apps/web,
+apps/api, packages/core, services/agent and services/model-gateway as explicit
+responsibilities; cross-layer files are related by calls, not competing copies.
+The existing full project idea was transferred/expanded into the requested
+AnalyseFuture canonical vision; docs/PROJECT_IDEA.txt remains a compatibility
+pointer. Fifteen pre-change originals have inert .txt preservation copies.
+
+IMPLEMENTED REPAIRS
+1. Both adapter fetch paths reject redirects. Three actual HTTP regressions
+   reproduced cross-port forwarding, including a dummy session key, before the
+   fix and observed zero destination requests after it.
+2. npm test now names exactly four active test files. A temporary archive test
+   was discovered by bare Node and excluded by the maintained command.
+3. Canonical vision/navigation, continuation instructions and complete reports
+   replace disconnected recovery information without discarding prior records.
+No public product API, data schema, dependency or production service was added.
+
+SECURITY AND ACCESS LIMITS
+No repository evidence established account compromise or a live leaked credential.
+That does not establish absence of compromise, malware or vulnerabilities.
+Repository/protection API calls returned Forbidden; permissions, protection rules,
+collaborators, audit logs and deleted remote history remain unverified. Normal Git
+read/write works and normal pushes respect server restrictions. See SECURITY_AUDIT.
+Real agent execution isolation, auth/tenant controls, deployed preview, persistence
+and deployment remain missing. This work neither rotates credentials nor operates
+customer/production systems. Required external account review is owner-controlled.
+
+VALIDATION AND HANDOFF
+See TEST_AND_VALIDATION_REPORT.txt for before/after, expected negative controls,
+failed/unrun distinctions and current-instance limits. See NEXT_DEVELOPER_INSTRUCTIONS
+for setup, actual call paths and the next narrow agent/runtime fixture. The final
+Git commit/remote verification is reported in the delivery response; report facts
+are tied to the starting snapshot plus the enclosing delivered recovery commits.

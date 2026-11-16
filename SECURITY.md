@@ -2,7 +2,11 @@
 
 ## Project maturity
 
-As of 13 November 2026 this is a documentation-first repository, not a deployed application. No security audit, penetration test, or vulnerability response SLA is claimed.
+As of 17 November 2026 this repository contains a local offline mock and tested
+adapter boundaries, not a deployed production platform. A bounded source/history
+and archive review is recorded in [AnalyseFuture/SECURITY_AUDIT.txt](AnalyseFuture/SECURITY_AUDIT.txt).
+It is not an exhaustive security audit, penetration test, account-access review or
+vulnerability response SLA. Public generated-code execution is not implemented.
 
 ## Reporting a vulnerability
 
