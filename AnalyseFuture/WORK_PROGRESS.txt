@@ -1,0 +1,12 @@
+COMPLETE REPOSITORY RECOVERY - PROGRESS
+Date: 17 November 2026
+Start: e40fa8080eb201562d1382cc53b5b0a24d1b52ee
+
+Completed: explicit fetch of all four remote branches; 39 reachable commits identified; all 65 starting tracked paths inventoried with hashes; initial current/history/source review; durable recovery tag pushed.
+Current: complete feature and archive review; test redirect risk; decide minimal verified changes.
+Pending: full required reports, canonical future vision, focused tests/quarantine validation, final inventory, direct main delivery.
+Decisions: preserve previous archive organization and all useful source; no feature-tip code missing from main; no arbitrary history merges or rewrites.
+Blockers: GitHub repository/branch-protection API returned Forbidden; normal push will respect protection. Live model/agent/sandbox/production not available or part of this recovery.
+Validation: previous session29tests passed; current-run tests not yet executed.
+Remaining directories: active source is assigned for deep review; archived ZIP members assigned for metadata/selected-source review; generated reports will be reviewed before delivery.
+Next: complete analysis, preserve affected originals before changes, implement only supported repairs.

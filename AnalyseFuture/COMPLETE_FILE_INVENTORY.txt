@@ -1,0 +1,137 @@
+COMPLETE FILE INVENTORY - DISCOVERY SNAPSHOT
+Repository: kawaho3/fine-tune
+Starting commit: e40fa8080eb201562d1382cc53b5b0a24d1b52ee
+Initial tracked paths: 65
+Discovery completed before source/structure changes. Final per-file classifications will extend this snapshot.
+All tracked files were read as text or inspected as ZIP metadata; archive source review has a separately stated scope.
+
+.env.example
+  Mode 100644; bytes 691; SHA256 96c8531c8964568216e991294e06d243528d52588ea682b40fd8c9390128b7fb
+.github/ISSUE_TEMPLATE/bug_report.md
+  Mode 100644; bytes 354; SHA256 f3bd1102a04e668d8730555f661899bdd1f1e4058778b369671804526c4f6507
+.github/ISSUE_TEMPLATE/feature_request.md
+  Mode 100644; bytes 426; SHA256 5f82b1e1e54654451dc49ed8ed44c6a73dd54d6eef337a05eb4474f039272154
+.github/pull_request_template.md
+  Mode 100644; bytes 866; SHA256 151b282424466d8e1728c2ae2a1632a1e0d271aa553d1c9dab639f8e96a17ef7
+.github/workflows/ci.yml
+  Mode 100644; bytes 453; SHA256 5334e4420298d3e6e014c1cd5924e9ce0fbc787ea27091f560cb59aa1f31d84b
+.gitignore
+  Mode 100644; bytes 72; SHA256 660e721ead310a854416640c3cf88dd735b243c22c936e230f08a50b77f1f4d4
+AGENTS.md
+  Mode 100644; bytes 3072; SHA256 afa53947796b3bd6829028f8e32e798d3f245feeabc90409e1163f6c65aedbbb
+AnalyseFuture/PRESERVATION_MANIFEST.json
+  Mode 100644; bytes 20472; SHA256 57fad994dcfded39f3b491dd1b2f0772506281306e75cbab06ef0ec4d7a9d254
+AnalyseFuture/README.md
+  Mode 100644; bytes 3221; SHA256 6953e19eb64532000b11b426e0211ea42fbe6927d1f52c769faa3e69b7f19b57
+AnalyseFuture/baseline-documents/CONTRIBUTING.md
+  Mode 100644; bytes 2350; SHA256 807abe33eb2a3f7ef668e6feeef14d68ca017971f470df34039170ac95a3a002
+AnalyseFuture/baseline-documents/README.md
+  Mode 100644; bytes 5998; SHA256 40c38bbfe85ccf3baa7a6c85b6e93d820c111768df4e68afc718c76c587c1c6b
+AnalyseFuture/baseline-documents/docs/ARCHITECTURE.md
+  Mode 100644; bytes 6930; SHA256 5072f4566dbba4aded263bb77f6f3a6857972d572e8ca6771a049e85e0f80daa
+AnalyseFuture/baseline-documents/docs/IMPLEMENTATION_STATUS.md
+  Mode 100644; bytes 6340; SHA256 68a51f9e83c218c079aae78477cc740e8252ab09b893fd5767a1d9c881d1a7cf
+AnalyseFuture/baseline-documents/docs/PROJECT_IDEA.txt
+  Mode 100644; bytes 36237; SHA256 6167c60d8a87cdeb4a1c94fce5e88c212931993801ef71956b5b95d1233af2a1
+AnalyseFuture/baseline-documents/docs/REUSE_AUDIT.md
+  Mode 100644; bytes 8031; SHA256 2c8957191dd0d2a64c6a45e7f21dbbc8f690853c7ae640d0cd45423e2b82e410
+AnalyseFuture/baseline-documents/docs/ROADMAP.md
+  Mode 100644; bytes 6404; SHA256 1e7080eb70eb4cb338c00f60a332d9de00b1379d223cf34064e8440cafdc2e85
+AnalyseFuture/upstream-archives/OpenSandbox-main.zip
+  Mode 100644; bytes 72999206; SHA256 d91b2e7579c6272100b4bbbed861827888de58e90edd0782784346c986134332
+AnalyseFuture/upstream-archives/software-agent-sdk-main.zip
+  Mode 100644; bytes 15842982; SHA256 b1007f65e71050fd21b2101fba29bf5c90ff83b67e835b4cc353f0d9d276d85e
+CONTRIBUTING.md
+  Mode 100644; bytes 2837; SHA256 268b937b7ac3b1a4615d375394ad40bcaeab1f96602bf4b83628056bbfea3d57
+README.md
+  Mode 100644; bytes 6700; SHA256 7c3dddc018f3287c2116cb45476fb39f0c18252fa6bdb708419b19234acc21c9
+SECURITY.md
+  Mode 100644; bytes 1732; SHA256 42c55b408804e8cf07a7a165fbd61d75e769d86f3a41c657ae475fa6bf4b36cc
+apps/api/package.json
+  Mode 100644; bytes 148; SHA256 54965daddcb8bdfc1a8872a1f818feb09df07762998413008678e5f2f19fd6a9
+apps/api/src/app.mjs
+  Mode 100644; bytes 3945; SHA256 98c79711eae6c654b30702bb70aa0f5bac2025bdf56d38d3c5f2882016d45e8c
+apps/api/src/server.mjs
+  Mode 100644; bytes 781; SHA256 4ce437468c2a03b7815a80427a5c687d243b70a567558c7734b042ab618adfbc
+apps/api/test/app.test.mjs
+  Mode 100644; bytes 3331; SHA256 b3c5220d509dd85f89fc726cb0bd43d553f174088b42e45d84b60ea4f5987d86
+apps/web/package.json
+  Mode 100644; bytes 92; SHA256 69b837c5d0e0b5394d175f0ee912dabd7318a2976d85ce512695c798b7410d78
+apps/web/public/app.js
+  Mode 100644; bytes 3233; SHA256 c9dd06666d82ce7a88a5397f727ad52abaf9fc1b8627c4ecdf6add60b8413cec
+apps/web/public/index.html
+  Mode 100644; bytes 5107; SHA256 ac932f056347e0a489054bfef8b02a7ae1d086c518b75e11a250360900eef06d
+apps/web/public/styles.css
+  Mode 100644; bytes 6918; SHA256 0aa3da1a958f58aff533e77944923a16743f109bbb36c5c50ebd33853ccecda3
+docs/ARCHITECTURE.md
+  Mode 100644; bytes 7423; SHA256 225e655d30604346ca373d40c60f6701569337cd5d5e30aac2bc2fa49ae665a9
+docs/CODEX_PLAYBOOK.md
+  Mode 100644; bytes 2761; SHA256 62c2be57c5fe63dad7e088dff9be5c23af95a936c11106e83235db9a81ed29bf
+docs/COSTS_AND_OPERATIONS.md
+  Mode 100644; bytes 2125; SHA256 7397f971abc3fb67b669173b6d644a4f42e6b3b52cfaebb89887644ca3a01a0a
+docs/DEVELOPER_ONBOARDING.md
+  Mode 100644; bytes 1964; SHA256 b15e4f0767e1b68b418d2f9bb052001f12845c16e0b555b14f4bd64f7e1eb217
+docs/FEATURE_MATRIX.md
+  Mode 100644; bytes 2354; SHA256 bd1718597dd50d6441de2151e3c942cfb13b31336cfffeb95e0f6d5b03930b04
+docs/IMPLEMENTATION_STATUS.md
+  Mode 100644; bytes 8806; SHA256 179a67608927c5410f613a1b87a9ed096b7e65b7735c43f5da72fb35875a33af
+docs/MOCK_PROTOTYPE.md
+  Mode 100644; bytes 2920; SHA256 13691bb244732a354334fb1e3448069dea0a2d08a9ab3c24c969de7480492267
+docs/MODEL_TRAINING.md
+  Mode 100644; bytes 2885; SHA256 8b215a2f4dc508c8722255db06a6b5a279fcb8ffde3dfe0d69d6f4aa58ae7dde
+docs/OWNERSHIP_AND_LICENSES.md
+  Mode 100644; bytes 2028; SHA256 fe06bbde18e798985976b09f7f60981f41b6532f31e08d76d83d72fa87be77eb
+docs/PRODUCT_REQUIREMENTS.md
+  Mode 100644; bytes 3914; SHA256 170d05bc8ed9903d3c3abe2bdf83172609366663d3921c6a54469f6d06b83735
+docs/PROJECT_CHARTER.md
+  Mode 100644; bytes 2938; SHA256 464e266cb072b9633b819b68e26874ebf744fad44fd610217429e64bd4e8997a
+docs/PROJECT_IDEA.txt
+  Mode 100644; bytes 37341; SHA256 cc2f1fb8ec24953ef22e0db5be30f23630f93090d9012a6f722cd22979775845
+docs/RECOMMENDED_PUBLIC_REPOSITORIES.txt
+  Mode 100644; bytes 7786; SHA256 420eaf6311239eb590b92bb39d2c8ad08bb77a155d8e48317fa8ef5e6143844f
+docs/REPOSITORY_STRUCTURE.md
+  Mode 100644; bytes 5893; SHA256 7a29e26c394933876f4ed5bc93ab704f61fc74c192314339f0f50697d9321f44
+docs/REUSE_AUDIT.md
+  Mode 100644; bytes 8698; SHA256 c4ffad8bda8a64397f9f5aeca6317ee424fc7403cbb95f982b93ac64cf4ec335
+docs/ROADMAP.md
+  Mode 100644; bytes 6477; SHA256 841fadd4ba2ca7ee81226dae445c18534102409d15d8734397778c3984357737
+docs/SECURITY_ARCHITECTURE.md
+  Mode 100644; bytes 3073; SHA256 ebee7d4a96699d630c8a4e14b9ede98a113fa12420e68a3325d3596316e646a5
+docs/TESTING_AND_EVALUATION.md
+  Mode 100644; bytes 2511; SHA256 beef947f0b23b3762a4d8735aeff3151f6d0769a246c77d36b9470eebaaf79d1
+docs/decisions/0001-monorepo-reuse-first.md
+  Mode 100644; bytes 1224; SHA256 7f43ec1b2199adbbdbbe7732c436c4e2165f34ab97af7cf0c2ca9a362f88326c
+docs/decisions/0002-one-agent-first.md
+  Mode 100644; bytes 882; SHA256 cf4e288ec73452035ed23efd66aa65b484d32d2cad6201a05d2db4acf9cad9e6
+docs/decisions/0003-sandbox-boundary.md
+  Mode 100644; bytes 1086; SHA256 e66b870014351f77ff48ae163587c1fc8236e463cd4cce5b190847f14825ee3c
+docs/decisions/0004-model-gateway-boundary.md
+  Mode 100644; bytes 1443; SHA256 75cb515f489e515980bed0862070f09fece87388e05348b2ebe9988a4a2fb370
+docs/decisions/0005-openhands-agent-adapter.md
+  Mode 100644; bytes 2011; SHA256 0392763767e1371638c5802f4cb280cc9b625412416d597b4ed86e20c4a20577
+package-lock.json
+  Mode 100644; bytes 1343; SHA256 b1418d95b8dc46b18800d165f17ab4d5b7f6174ce5b72edcf6fb3a8b3f0b2211
+package.json
+  Mode 100644; bytes 425; SHA256 7903b9d446fd42c62d6009b351e809be71a8a0c95682b4c7909da185275ab7b9
+packages/core/package.json
+  Mode 100644; bytes 140; SHA256 a83e5d965f6e60e0add5a1798349b86e409af74fdb2c7d3a293a9a76f38bffdb
+packages/core/src/index.mjs
+  Mode 100644; bytes 8588; SHA256 0a45a8938807c184151a1d33edd765c02acbe6c072fbbecaf9ea2bb48e7d9466
+packages/core/test/core.test.mjs
+  Mode 100644; bytes 2632; SHA256 8970ab74841d022525fd0cb6c21069f130d214cf6fbd2ac2a8c38a78e61f46c1
+services/agent/README.md
+  Mode 100644; bytes 1882; SHA256 6daa23c3a6480d65b32faa1c36800d202be740e6dbc1c58d01557499480b57b8
+services/agent/package.json
+  Mode 100644; bytes 141; SHA256 45aa9d2d38f00f865ca770267359c6240186a1dec7d4fbc3291e357b162bfaba
+services/agent/src/index.mjs
+  Mode 100644; bytes 11720; SHA256 7929d9cda6651cc6bce7085b5e9a3b32491b0d4c84a828b9e70864d466dae12f
+services/agent/test/agent.test.mjs
+  Mode 100644; bytes 7113; SHA256 4793d1ef2bb0a35494664ebd07e1acb58d0f69161363ab66dae21f537ef33ade
+services/model-gateway/README.md
+  Mode 100644; bytes 1700; SHA256 db5221c39326428e47a5982f282d6e422380b0b5ad3758164ef451099701897d
+services/model-gateway/package.json
+  Mode 100644; bytes 149; SHA256 ff9937deeabfe67b96bc3150c976da1ba9e313181c30b51d3b320f7a98132f9c
+services/model-gateway/src/index.mjs
+  Mode 100644; bytes 16894; SHA256 895a9ce0dfcdb9f26383415e731e33893ac826f20c01ae03aab676355ea5e110
+services/model-gateway/test/model-gateway.test.mjs
+  Mode 100644; bytes 8423; SHA256 845a1897753d94a99481b91ade624d6579e0e3cb26543336a49e46dd611e2125
