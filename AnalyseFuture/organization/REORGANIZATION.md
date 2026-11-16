@@ -38,3 +38,17 @@ force push, branch deletion or history rewrite is used.
 Use ../../PROJECT_STRUCTURE.md for current navigation and the complete placement
 index. The exact enclosing Git commit identifies the delivered organization; final
 remote matching is confirmed in the delivery response.
+
+## Static review record
+
+Independent file/hash/reference review found all 101 originals preserved, all 84
+relocations represented, and all 106 delivered paths assigned. All 28 immutable
+historical/source/metadata/driver artifacts retain their original bytes. Current
+local links in 35 Markdown documents resolve; the old history copies are evidence
+and intentionally retain old wording. Relative imports, public workspace aliases,
+lockfile links, root command paths and static asset file references align.
+The only application-source edits are three asset-directory references and the
+browser roadmap URL. These are static findings, not executed tests or runtime
+results. Empty directory shells left by moving files were removed; no file content
+was deleted. A relative TXT navigation link and the earlier structure report's
+historical label were corrected during the final documentation review.

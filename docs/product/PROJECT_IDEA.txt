@@ -4,8 +4,8 @@ The detailed, canonical project vision has moved to:
 
   AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt
 
-From this docs/ directory, open:
-  ../AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt
+From this docs/product/ directory, open:
+  ../../AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt
 
 It includes existing work, feasibility limits, future participants, costs, owners,
 and conditional one-, two-, and three-to-five-year horizons.

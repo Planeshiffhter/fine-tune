@@ -1,5 +1,12 @@
 # Repository structure and preservation review
 
+> **Historical review:** this document records earlier recovery passes and their
+> layouts, before the functional folder sort. Its diagrams and references to
+> original source locations below are historical, not the current directory tree.
+> Use [PROJECT_STRUCTURE.md](../../PROJECT_STRUCTURE.md) for the canonical current
+> layout and every file's destination. The functional sort did not run tests or
+> runtime validation; older passing results do not verify the new paths.
+
 Reviewed on **17 November 2026**, using baseline
 `0c45350c73863f7d147f4681f477bb42e6f7f6a1`.
 
