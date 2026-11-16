@@ -4,7 +4,7 @@
 
 As of 17 November 2026 this repository contains a local offline mock and tested
 adapter boundaries, not a deployed production platform. A bounded source/history
-and archive review is recorded in [AnalyseFuture/SECURITY_AUDIT.txt](AnalyseFuture/SECURITY_AUDIT.txt).
+and archive review is recorded in [AnalyseFuture/security/SECURITY_AUDIT.txt](AnalyseFuture/security/SECURITY_AUDIT.txt).
 It is not an exhaustive security audit, penetration test, account-access review or
 vulnerability response SLA. Public generated-code execution is not implemented.
 
@@ -23,4 +23,4 @@ Do **not** share working exploits, leaked credentials, customer code, or sensiti
 - Rate-limit and bound compute, disk, concurrency and generated requests; log security-relevant events without leaking secrets.
 - Scan dependencies, container images and generated outputs before public launch.
 
-The fuller threat model is [docs/SECURITY_ARCHITECTURE.md](docs/SECURITY_ARCHITECTURE.md).
+The fuller threat model is [docs/security/SECURITY_ARCHITECTURE.md](docs/security/SECURITY_ARCHITECTURE.md).

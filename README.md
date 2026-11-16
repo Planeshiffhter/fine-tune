@@ -18,19 +18,25 @@ The product should offer:
 
 ## Start here
 
+The current whole-project layout and every file's placement are documented in
+[PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md). Documentation is grouped in the
+[functional index](docs/README.md). This reorganization did **not** run tests,
+install packages or start the application; previous validation results remain
+historical. The restructuring commits use `[skip ci]`.
+
 | Audience | Read first |
 | --- | --- |
-| Everyone | [Project charter](docs/PROJECT_CHARTER.md), [current status](docs/IMPLEMENTATION_STATUS.md) |
-| Product planning | [Canonical project vision and future roadmap (TXT)](AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt): existing work, feasibility limits and conditional future horizons |
-| Repository organization | [Structure and preservation review](docs/REPOSITORY_STRUCTURE.md), [AnalyseFuture reference inventory](AnalyseFuture/README.md) |
-| Complete recovery records | [Repository audit](AnalyseFuture/REPOSITORY_AUDIT.txt), [feature inventory](AnalyseFuture/FEATURE_INVENTORY.txt), [validation results](AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt), [continuation guide](AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt) |
-| Engineers | [Architecture](docs/ARCHITECTURE.md), [product requirements](docs/PRODUCT_REQUIREMENTS.md), [roadmap](docs/ROADMAP.md) |
-| Codex / AI coding agents | [AGENTS.md](AGENTS.md), [Codex playbook](docs/CODEX_PLAYBOOK.md) |
-| Open-source integrators | [Reuse audit](docs/REUSE_AUDIT.md), [licensing and ownership](docs/OWNERSHIP_AND_LICENSES.md) |
-| All public repo references | [Complete repository list (TXT)](docs/RECOMMENDED_PUBLIC_REPOSITORIES.txt) |
-| ML engineers | [Model strategy](docs/MODEL_TRAINING.md), [evaluation](docs/TESTING_AND_EVALUATION.md) |
-| Security and ops | [Security architecture](docs/SECURITY_ARCHITECTURE.md), [costs](docs/COSTS_AND_OPERATIONS.md) |
-| Contributors | [Onboarding](docs/DEVELOPER_ONBOARDING.md), [CONTRIBUTING.md](CONTRIBUTING.md) |
+| Everyone | [Project charter](docs/product/PROJECT_CHARTER.md), [current status](docs/development/IMPLEMENTATION_STATUS.md) |
+| Product planning | [Canonical project vision and future roadmap (TXT)](AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt): existing work, feasibility limits and conditional future horizons |
+| Repository organization | [Current complete structure](PROJECT_STRUCTURE.md), [preservation and relocation record](AnalyseFuture/organization/REORGANIZATION.md), [historical reference inventory](AnalyseFuture/README.md) |
+| Complete recovery records | [Repository audit](AnalyseFuture/audit/REPOSITORY_AUDIT.txt), [feature inventory](AnalyseFuture/features/FEATURE_INVENTORY.txt), [validation results](AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt), [continuation guide](AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt) |
+| Engineers | [Architecture](docs/architecture/ARCHITECTURE.md), [product requirements](docs/product/PRODUCT_REQUIREMENTS.md), [roadmap](docs/product/ROADMAP.md) |
+| Codex / AI coding agents | [AGENTS.md](AGENTS.md), [Codex playbook](docs/development/CODEX_PLAYBOOK.md) |
+| Open-source integrators | [Reuse audit](docs/research/REUSE_AUDIT.md), [licensing and ownership](docs/legal/OWNERSHIP_AND_LICENSES.md) |
+| All public repo references | [Complete repository list (TXT)](docs/research/RECOMMENDED_PUBLIC_REPOSITORIES.txt) |
+| ML engineers | [Model strategy](docs/model-training/MODEL_TRAINING.md), [evaluation](docs/development/TESTING_AND_EVALUATION.md) |
+| Security and ops | [Security architecture](docs/security/SECURITY_ARCHITECTURE.md), [costs](docs/operations/COSTS_AND_OPERATIONS.md) |
+| Contributors | [Onboarding](docs/development/DEVELOPER_ONBOARDING.md), [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 ## Architecture direction
 
@@ -44,7 +50,7 @@ Use one **original monorepo** with separately versioned, replaceable integration
 - **Future product UI/data:** modern web UI, Monaco, PostgreSQL and reviewed auth once the core generation/execution workflow is working.
 - **Deployment/training:** later gates, not prerequisites for the first vertical slice.
 
-See [architecture](docs/ARCHITECTURE.md), [reuse audit](docs/REUSE_AUDIT.md), and [ADR 0004](docs/decisions/0004-model-gateway-boundary.md).
+See [architecture](docs/architecture/ARCHITECTURE.md), [reuse audit](docs/research/REUSE_AUDIT.md), and [ADR 0004](docs/architecture/decisions/0004-model-gateway-boundary.md).
 
 Active code remains in `apps/`, `packages/` and `services/`. Original upstream ZIPs
 and preserved historical documents live in [AnalyseFuture](AnalyseFuture/README.md)
@@ -65,7 +71,7 @@ npm run dev
 to that command when extending the suite; archived reference code is excluded.
 Both HTTP adapters reject redirects, so configure the final Ollama/Agent Server
 endpoint rather than an address that redirects elsewhere. See the
-[security review](AnalyseFuture/SECURITY_AUDIT.txt) for evidence and unresolved limits.
+[security review](AnalyseFuture/security/SECURITY_AUDIT.txt) for evidence and unresolved limits.
 
 Open http://127.0.0.1:3000. The browser demo still uses a deterministic static generator; it is **not yet connected** to the model gateway.
 
@@ -87,7 +93,7 @@ Example settings are in `.env.example`. Ollama defaults to loopback-only endpoin
 
 ## Ownership, visibility and license
 
-This GitHub repository is **currently public**. Public visibility is not the same as a license grant. No project-wide license has been chosen or granted here; review [ownership and licenses](docs/OWNERSHIP_AND_LICENSES.md) before copying code or accepting substantial contributions. Never commit credentials, private customer code, or secrets.
+This GitHub repository is **currently public**. Public visibility is not the same as a license grant. No project-wide license has been chosen or granted here; review [ownership and licenses](docs/legal/OWNERSHIP_AND_LICENSES.md) before copying code or accepting substantial contributions. Never commit credentials, private customer code, or secrets.
 
 ## Contributing
 

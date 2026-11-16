@@ -1,6 +1,6 @@
 # Instructions for Codex and AI Coding Contributors
 
-Read README.md, docs/IMPLEMENTATION_STATUS.md, docs/PROJECT_CHARTER.md, docs/ARCHITECTURE.md, docs/REUSE_AUDIT.md, docs/ROADMAP.md, and docs/SECURITY_ARCHITECTURE.md **before writing code**.
+Read README.md, docs/development/IMPLEMENTATION_STATUS.md, docs/product/PROJECT_CHARTER.md, docs/architecture/ARCHITECTURE.md, docs/research/REUSE_AUDIT.md, docs/product/ROADMAP.md, and docs/security/SECURITY_ARCHITECTURE.md **before writing code**.
 
 ## Required working style
 
@@ -14,7 +14,7 @@ Read README.md, docs/IMPLEMENTATION_STATUS.md, docs/PROJECT_CHARTER.md, docs/ARC
 8. Do not perform large GPU model training as part of ordinary Codex Cloud coding tasks. Implement training scripts and evaluations first.
 9. Do not commit secrets, private datasets, customer prompts/code without consent, model weights of uncertain license, or third-party code without notices.
 10. Write tests, run relevant checks where tools permit, record exact commands/results, and be clear about tests not run. Document failures or blockers.
-11. Update docs/IMPLEMENTATION_STATUS.md and affected architecture/decision docs with every material change.
+11. Update docs/development/IMPLEMENTATION_STATUS.md and affected architecture/decision docs with every material change.
 12. Prefer small reviewable commits/PRs. Avoid generating elaborate scaffolding without a real vertical-slice test.
 
 ## Target vertical slice
@@ -35,4 +35,4 @@ Natural-language prompt → plan → files created → tests/build in restricted
 
 A generated app must actually build and run; its defined user workflow must pass tests. UI mockups or endpoint stubs are not a working full-stack product. Avoid promising deadlines, model accuracy, or cost savings without measured evidence.
 
-See docs/CODEX_PLAYBOOK.md for reusable task prompts.
+See docs/development/CODEX_PLAYBOOK.md for reusable task prompts.

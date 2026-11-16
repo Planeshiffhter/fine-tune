@@ -1,0 +1,47 @@
+PRESERVED PRE-REORGANIZATION REPORT
+Original baseline: 84dd0aa43e8b66ff3e6f4e32d703f3b8b0ab955a
+The report body below records the earlier audit and its original paths/results.
+For current locations use PROJECT_STRUCTURE.md at the repository root and
+AnalyseFuture/organization/PATH_MAPPING.json. No tests were run for this sort.
+
+MIGRATION SUMMARY - COMPLETE RECOVERY FOLLOW-UP
+Start: e40fa8080eb201562d1382cc53b5b0a24d1b52ee,65 tracked files.
+Backup: recovery/before-complete-audit-e40fa80 (tag pushed before source edits).
+Initial history: four remote heads,39 reachable commits,91 unique Git blobs.
+No reset, branch deletion, force push or publication-history rewrite.
+
+PATH CHANGES
+- Full docs/PROJECT_IDEA.txt content -> canonical
+  AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt, expanded using existing work.
+- docs/PROJECT_IDEA.txt remains as a compatibility pointer, so old links still work.
+- Fifteen originals copied to historical-implementations/before-complete-audit/
+  with an extra .txt suffix; originalpath/hash/retainedpath records are in the
+  complete inventory, mapping and archive manifest.
+- Two upstream ZIPs had already been moved in e40fa80. No repeat extraction or
+  additional source move occurred. Earlier seven historical documents remain.
+
+RUNTIME/TEST CHANGES
+Agent request and shared Ollama call reject redirects with standard fetch option.
+This applies to inference generation/streaming and agent lifecycle requests.
+Endpoints that relied on redirects must be configured to the final URL. Public
+exported classes, error types, retry/cancel rules and mock HTTP contracts remain.
+Custom fetch implementations must implement standard redirect:error semantics.
+The root test script explicitly names four maintained files; add new files there.
+No dependency version, workspace membership, lockfile, database or CI YAML change.
+
+COUNTS AND COMPATIBILITY
+One full planning document relocated with old-path compatibility; one planning
+responsibility consolidated; zero active source files moved or implementations
+merged;15 original files newly preserved. These counts exclude generated reports,
+previously archived2 ZIPs / 7 docs and the temporary verification sentinel (removed).
+All65 starting file contents remain either at unchanged paths or in inert snapshots.
+Original55-file preservation from0c45350 is also still verifiable.
+
+RUNNING AND RECOVERY
+Existing commands npm ci --ignore-scripts, npm test and npm run dev continue.
+No .env auto-loader or production deployment was added. Default127.0.0.1:3000
+remains local-only. Use Git history or a preserved original to recover a selected
+file after inspecting newer work; do not reset published main to the old tag.
+
+See TEST_AND_VALIDATION_REPORT for executed/not-run checks, SECURITY_AUDIT for
+limits, and NEXT_DEVELOPER_INSTRUCTIONS for the next small implementation task.

@@ -1,0 +1,82 @@
+PRESERVED PRE-REORGANIZATION REPORT
+Original baseline: 84dd0aa43e8b66ff3e6f4e32d703f3b8b0ab955a
+The report body below records the earlier audit and its original paths/results.
+For current locations use PROJECT_STRUCTURE.md at the repository root and
+AnalyseFuture/organization/PATH_MAPPING.json. No tests were run for this sort.
+
+SECURITY REVIEW - FINDINGS, REPAIRS AND LIMITS
+Date: 17 November 2026. Start: e40fa8080eb201562d1382cc53b5b0a24d1b52ee.
+A bounded repository/history/archive review; not a penetration test, forensic
+attribution, exhaustive malware audit, dependency advisory audit or account review.
+
+METHOD AND COVERAGE
+Reviewed all active source, four test files, manifests/lockfile, CI and config.
+Reviewed 39 reachable commits / 91 unique blobs; strict signatures scanned 89 text
+blobs. All historical tracked modes100644; no gitlinks, LFS pointers or executables.
+Three credential-in-URL signature hits across historical blobs are synthetic URL
+rejection fixtures; no secret values are reproduced here. No high-specificity
+key/token match was found in those Git text blobs. Pattern scans are incomplete
+by nature and cannot establish that all sensitive data or malicious logic is absent.
+
+Archive paths/metadata cover all 6,737 members/5,712files. Signature scans read5,627
+UTF-8 files. Eight matching files were synthetic auth/redaction examples, documented
+example credentials or a localhost TLS test key. No live-credential exposure was
+established. Both CRC/hash checks passed; this authenticates neither upstream tag
+nor author. See security-reports/UPSTREAM_ARCHIVE_REVIEW.json for coverage/paths.
+Only 134 selected upstream files received automated static triage and19 files had
+manually reviewed excerpts; other upstream source/dependencies are NOT deeply audited.
+Archive workflows may grant write permissions/use mutable tags; Dockerfiles may
+pipe remote installers to a shell; a client prepare hook builds code. These remain
+compressed, inactive references. No upstream installer/hook/workflow was executed.
+
+CONFIRMED AND REPAIRED
+SEC-01 - Unbounded automatic test discovery.
+  Starting npm test was bare node --test. Workspace exclusions did not prevent
+  future archived JS from discovery. The new command enumerates four maintained
+  test files. A controlled archive sentinel failed under bare discovery, and the
+  maintained suite passed32 tests while excluding it. Sentinel was then removed.
+  Continue to keep sources compressed/inert; explicit imports or manual execution
+  can defeat this procedural boundary. This is not an OS sandbox.
+SEC-02 - Redirect request/data forwarding.
+  Native fetch followed redirects after initial endpoint validation. Two loopback
+  HTTP servers reproduced a 307 to a different port. The Agent Server adapter sent
+  its dummy X-Session-API-Key to that destination; Ollama generation and streaming
+  forwarded the synthetic prompt. No real key, remote endpoint or customer data
+  was used. Three regressions failed before fix; all passed after redirect:error
+  in both shared request paths. Destination requests are now zero in these cases.
+  Configure final endpoint URLs. Custom fetch replacements must honor the standard
+  redirect option; this test does not establish DNS, proxy or arbitrary custom
+  transport security. API classes/errors and retry rules remain unchanged.
+
+UNRESOLVED / KNOWN SCOPE
+SEC-03 - Agent sessions default to local /workspace. No execution isolation is
+  implemented/proven. Do not run untrusted generated programs there or claim that
+  transport timeout/iteration limits establish a sandbox. Select/test one runtime.
+SEC-04 - API request URL parsing is outside its error catch. This is a source-review
+  robustness concern, not an exercised exploit. Reproduce malformed request targets
+  in a separately scoped hardening test before claiming impact or fixing behavior.
+SEC-05 - Mock API is unauthenticated, without persistence, quotas or tenant controls.
+  Loopback-only default is intentional; changing HOST does not make it production.
+SEC-06 - Upstream archive versions/provenance need selection. OpenSandbox metadata
+  differs from the historical release1.2.0 audit. No dependencies/images were
+  installed/scanned to establish a real deployed security posture.
+
+ACCOUNT AND HISTORY LIMITS
+Current main matched the earlier pushed version at inspection; reviewed history
+contains no established attacker attribution. Deleted refs/server-only logs and
+identity authorization cannot be reconstructed from reachable source. GitHub API
+calls for repository permissions and main protection returned Forbidden. Do not
+infer missing protection or absent permissions. Normal HTTPS Git works; no token
+was extracted or requested. Normal pushes enforce the server's permissions/rules.
+
+OWNER ACTION IF UNAUTHORIZED ACCESS IS STILL SUSPECTED
+In GitHub's secure settings, review security events/sessions, collaborators/teams,
+installed apps/OAuth grants, deploy keys, actions secrets/environments and recent
+workflow changes. Revoke unknown access, rotate affected credentials if exposure
+is suspected, and enable appropriate authentication/protection with trusted owners.
+Never put credential values in an issue, audit report or public preservation folder.
+These are conditional follow-ups, not actions performed or a confirmed incident.
+
+No security finding requires bypassing protection, rewriting history, publishing
+new secret material or stopping the normal reviewed repository push. Real production
+execution remains gated on a separate isolation/auth/operations review.

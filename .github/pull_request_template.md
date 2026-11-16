@@ -12,7 +12,7 @@ Include files/modules, visible behavior, dependency additions and alternatives c
 - [ ] Acceptance criteria tested (or skips explained).
 - [ ] Security/tenant isolation and secret handling reviewed.
 - [ ] Licensing and operating costs checked for new dependencies.
-- [ ] Documentation and docs/IMPLEMENTATION_STATUS.md updated.
+- [ ] Documentation and docs/development/IMPLEMENTATION_STATUS.md updated.
 - [ ] No unapproved third-party code, private data or credentials committed.
 
 ### Commands and evidence

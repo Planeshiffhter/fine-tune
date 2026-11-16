@@ -1,0 +1,47 @@
+PRESERVED PRE-REORGANIZATION REPORT
+Original baseline: 84dd0aa43e8b66ff3e6f4e32d703f3b8b0ab955a
+The report body below records the earlier audit and its original paths/results.
+For current locations use PROJECT_STRUCTURE.md at the repository root and
+AnalyseFuture/organization/PATH_MAPPING.json. No tests were run for this sort.
+
+CONSOLIDATION REPORT
+Existing work took priority. Source review and branch comparison found one current
+implementation per responsibility; no abandoned alternative source was recovered.
+
+APPLIED
+- Canonical project planning: reused/expanded the existing detailed idea into the
+  exact requested AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt. Left the old
+  docs path as a compatibility pointer, preserving its previous full content.
+- Test ownership: one npm entrypoint explicitly selects the maintained API/core/
+  agent/model tests. This prevents preserved reference tests joining production
+  validation. CI already invokes npm test and needs no path duplication.
+- Endpoint policy: the two adapters' existing common request paths reject redirects;
+  no provider/session API was replaced or duplicated. Three actual HTTP regressions
+  cover the previously unguarded forwarding paths.
+- Recovery knowledge: this report set provides the complete inventory, dependency
+  map, feature statuses, history/security findings, path mapping and continuation
+  guide under one requested AnalyseFuture index. Old dated evidence is retained.
+
+INTENTIONALLY SEPARATE
+Browser UI, HTTP framing and core generation remain in their own runtime layers.
+Model inference and agent conversation lifecycle keep separate public contracts.
+Common-looking URL/error helpers remain separate where semantics differ; no broad
+abstraction or new library was introduced. Upstream workspace systems are not
+silently stacked or wholesale copied into product code.
+
+NOT MERGED
+Three feature branches have identical maintained components already on main.
+Merging pre-squash histories would add no feature and risks stale documentation.
+No branch/tag was deleted. No unique behavior was found that needs such a merge.
+
+FEATURE PRESERVATION
+All eight code-backed feature groups remain at their existing source locations.
+The stable mock HTTP shape, exported classes, templates, streaming behavior,
+retry rules and UI assets remain. Redirects now deliberately fail: an operator
+must use the configured final endpoint. See migration summary for compatibility.
+Original source/tests/readmes/package/vision are retained as inert snapshots and
+Git history. No valuable content was permanently deleted.
+
+Counts for this pass: one full planning document relocated/consolidated; zero
+active source files moved; zero source implementations merged;15originals copied
+into historical preservation. Previously moved ZIPs stay in their preserved paths.

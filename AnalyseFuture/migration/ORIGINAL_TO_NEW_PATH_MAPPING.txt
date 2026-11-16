@@ -1,0 +1,210 @@
+PRESERVED PRE-REORGANIZATION REPORT
+Original baseline: 84dd0aa43e8b66ff3e6f4e32d703f3b8b0ab955a
+The report body below records the earlier audit and its original paths/results.
+For current locations use PROJECT_STRUCTURE.md at the repository root and
+AnalyseFuture/organization/PATH_MAPPING.json. No tests were run for this sort.
+
+ORIGINAL TO NEW PATH MAPPING
+Starting commit: e40fa8080eb201562d1382cc53b5b0a24d1b52ee
+One full vision is canonicalized; other source paths stay compatible.
+
+.env.example
+  KEEP unchanged at original path
+  Original content retained at: .env.example
+.github/ISSUE_TEMPLATE/bug_report.md
+  KEEP unchanged at original path
+  Original content retained at: .github/ISSUE_TEMPLATE/bug_report.md
+.github/ISSUE_TEMPLATE/feature_request.md
+  KEEP unchanged at original path
+  Original content retained at: .github/ISSUE_TEMPLATE/feature_request.md
+.github/pull_request_template.md
+  KEEP unchanged at original path
+  Original content retained at: .github/pull_request_template.md
+.github/workflows/ci.yml
+  KEEP unchanged at original path
+  Original content retained at: .github/workflows/ci.yml
+.gitignore
+  KEEP unchanged at original path
+  Original content retained at: .gitignore
+AGENTS.md
+  KEEP unchanged at original path
+  Original content retained at: AGENTS.md
+AnalyseFuture/PRESERVATION_MANIFEST.json
+  KEEP unchanged at original path
+  Original content retained at: AnalyseFuture/PRESERVATION_MANIFEST.json
+AnalyseFuture/README.md
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/AnalyseFuture/README.md.txt
+AnalyseFuture/baseline-documents/CONTRIBUTING.md
+  KEEP unchanged at original path
+  Original content retained at: AnalyseFuture/baseline-documents/CONTRIBUTING.md
+AnalyseFuture/baseline-documents/README.md
+  KEEP unchanged at original path
+  Original content retained at: AnalyseFuture/baseline-documents/README.md
+AnalyseFuture/baseline-documents/docs/ARCHITECTURE.md
+  KEEP unchanged at original path
+  Original content retained at: AnalyseFuture/baseline-documents/docs/ARCHITECTURE.md
+AnalyseFuture/baseline-documents/docs/IMPLEMENTATION_STATUS.md
+  KEEP unchanged at original path
+  Original content retained at: AnalyseFuture/baseline-documents/docs/IMPLEMENTATION_STATUS.md
+AnalyseFuture/baseline-documents/docs/PROJECT_IDEA.txt
+  KEEP unchanged at original path
+  Original content retained at: AnalyseFuture/baseline-documents/docs/PROJECT_IDEA.txt
+AnalyseFuture/baseline-documents/docs/REUSE_AUDIT.md
+  KEEP unchanged at original path
+  Original content retained at: AnalyseFuture/baseline-documents/docs/REUSE_AUDIT.md
+AnalyseFuture/baseline-documents/docs/ROADMAP.md
+  KEEP unchanged at original path
+  Original content retained at: AnalyseFuture/baseline-documents/docs/ROADMAP.md
+AnalyseFuture/upstream-archives/OpenSandbox-main.zip
+  KEEP unchanged at original path
+  Original content retained at: AnalyseFuture/upstream-archives/OpenSandbox-main.zip
+AnalyseFuture/upstream-archives/software-agent-sdk-main.zip
+  KEEP unchanged at original path
+  Original content retained at: AnalyseFuture/upstream-archives/software-agent-sdk-main.zip
+CONTRIBUTING.md
+  KEEP unchanged at original path
+  Original content retained at: CONTRIBUTING.md
+README.md
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/README.md.txt
+SECURITY.md
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/SECURITY.md.txt
+apps/api/package.json
+  KEEP unchanged at original path
+  Original content retained at: apps/api/package.json
+apps/api/src/app.mjs
+  KEEP unchanged at original path
+  Original content retained at: apps/api/src/app.mjs
+apps/api/src/server.mjs
+  KEEP unchanged at original path
+  Original content retained at: apps/api/src/server.mjs
+apps/api/test/app.test.mjs
+  KEEP unchanged at original path
+  Original content retained at: apps/api/test/app.test.mjs
+apps/web/package.json
+  KEEP unchanged at original path
+  Original content retained at: apps/web/package.json
+apps/web/public/app.js
+  KEEP unchanged at original path
+  Original content retained at: apps/web/public/app.js
+apps/web/public/index.html
+  KEEP unchanged at original path
+  Original content retained at: apps/web/public/index.html
+apps/web/public/styles.css
+  KEEP unchanged at original path
+  Original content retained at: apps/web/public/styles.css
+docs/ARCHITECTURE.md
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/docs/ARCHITECTURE.md.txt
+docs/CODEX_PLAYBOOK.md
+  KEEP unchanged at original path
+  Original content retained at: docs/CODEX_PLAYBOOK.md
+docs/COSTS_AND_OPERATIONS.md
+  KEEP unchanged at original path
+  Original content retained at: docs/COSTS_AND_OPERATIONS.md
+docs/DEVELOPER_ONBOARDING.md
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/docs/DEVELOPER_ONBOARDING.md.txt
+docs/FEATURE_MATRIX.md
+  KEEP unchanged at original path
+  Original content retained at: docs/FEATURE_MATRIX.md
+docs/IMPLEMENTATION_STATUS.md
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/docs/IMPLEMENTATION_STATUS.md.txt
+docs/MOCK_PROTOTYPE.md
+  KEEP unchanged at original path
+  Original content retained at: docs/MOCK_PROTOTYPE.md
+docs/MODEL_TRAINING.md
+  KEEP unchanged at original path
+  Original content retained at: docs/MODEL_TRAINING.md
+docs/OWNERSHIP_AND_LICENSES.md
+  KEEP unchanged at original path
+  Original content retained at: docs/OWNERSHIP_AND_LICENSES.md
+docs/PRODUCT_REQUIREMENTS.md
+  KEEP unchanged at original path
+  Original content retained at: docs/PRODUCT_REQUIREMENTS.md
+docs/PROJECT_CHARTER.md
+  KEEP unchanged at original path
+  Original content retained at: docs/PROJECT_CHARTER.md
+docs/PROJECT_IDEA.txt
+  MOVE full planning content to AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt; old path becomes pointer
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/docs/PROJECT_IDEA.txt.txt
+docs/RECOMMENDED_PUBLIC_REPOSITORIES.txt
+  KEEP unchanged at original path
+  Original content retained at: docs/RECOMMENDED_PUBLIC_REPOSITORIES.txt
+docs/REPOSITORY_STRUCTURE.md
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/docs/REPOSITORY_STRUCTURE.md.txt
+docs/REUSE_AUDIT.md
+  KEEP unchanged at original path
+  Original content retained at: docs/REUSE_AUDIT.md
+docs/ROADMAP.md
+  KEEP unchanged at original path
+  Original content retained at: docs/ROADMAP.md
+docs/SECURITY_ARCHITECTURE.md
+  KEEP unchanged at original path
+  Original content retained at: docs/SECURITY_ARCHITECTURE.md
+docs/TESTING_AND_EVALUATION.md
+  KEEP unchanged at original path
+  Original content retained at: docs/TESTING_AND_EVALUATION.md
+docs/decisions/0001-monorepo-reuse-first.md
+  KEEP unchanged at original path
+  Original content retained at: docs/decisions/0001-monorepo-reuse-first.md
+docs/decisions/0002-one-agent-first.md
+  KEEP unchanged at original path
+  Original content retained at: docs/decisions/0002-one-agent-first.md
+docs/decisions/0003-sandbox-boundary.md
+  KEEP unchanged at original path
+  Original content retained at: docs/decisions/0003-sandbox-boundary.md
+docs/decisions/0004-model-gateway-boundary.md
+  KEEP unchanged at original path
+  Original content retained at: docs/decisions/0004-model-gateway-boundary.md
+docs/decisions/0005-openhands-agent-adapter.md
+  KEEP unchanged at original path
+  Original content retained at: docs/decisions/0005-openhands-agent-adapter.md
+package-lock.json
+  KEEP unchanged at original path
+  Original content retained at: package-lock.json
+package.json
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/package.json.txt
+packages/core/package.json
+  KEEP unchanged at original path
+  Original content retained at: packages/core/package.json
+packages/core/src/index.mjs
+  KEEP unchanged at original path
+  Original content retained at: packages/core/src/index.mjs
+packages/core/test/core.test.mjs
+  KEEP unchanged at original path
+  Original content retained at: packages/core/test/core.test.mjs
+services/agent/README.md
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/services/agent/README.md.txt
+services/agent/package.json
+  KEEP unchanged at original path
+  Original content retained at: services/agent/package.json
+services/agent/src/index.mjs
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/services/agent/src/index.mjs.txt
+services/agent/test/agent.test.mjs
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/services/agent/test/agent.test.mjs.txt
+services/model-gateway/README.md
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/README.md.txt
+services/model-gateway/package.json
+  KEEP unchanged at original path
+  Original content retained at: services/model-gateway/package.json
+services/model-gateway/src/index.mjs
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/src/index.mjs.txt
+services/model-gateway/test/model-gateway.test.mjs
+  COPY original into inert snapshot; current path remains
+  Original content retained at: AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/test/model-gateway.test.mjs.txt
+
+Earlier root-ZIP moves are already recorded in PRESERVATION_MANIFEST.json:
+OpenSandbox-main.zip -> AnalyseFuture/upstream-archives/OpenSandbox-main.zip
+software-agent-sdk-main.zip -> AnalyseFuture/upstream-archives/software-agent-sdk-main.zip
+No active source merge or path/API removal occurred. Generated report files are additions, not lost originals.

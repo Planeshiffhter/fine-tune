@@ -1,0 +1,1775 @@
+{
+  "date": "2026-11-17",
+  "repository": "kawaho3/fine-tune",
+  "starting_commit": "84dd0aa43e8b66ff3e6f4e32d703f3b8b0ab955a",
+  "backup_tag": "recovery/before-functional-sort-84dd0aa",
+  "starting_tracked_files": 101,
+  "moved_files": 84,
+  "tests_run": false,
+  "ci_policy": "All restructuring commits include [skip ci]; no test/app/install command is executed.",
+  "original_text_archive_sha256": "f064921b564485bf594c9eec11b37787a540fcdb676427f2a0b2350128093950",
+  "records": [
+    {
+      "original_path": ".env.example",
+      "new_path": ".env.example",
+      "bytes": 691,
+      "sha256": "96c8531c8964568216e991294e06d243528d52588ea682b40fd8c9390128b7fb",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/.env.example",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "root-project-entrypoints",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Build/configuration",
+        "Purpose": "Non-secret host/model/agent runtime configuration examples; not auto-loaded",
+        "Dependencies": "None at runtime",
+        "Use/status": "Active setup/test configuration",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Names and non-secret defaults only; do not commit real .env values"
+      }
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "new_path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "bytes": 354,
+      "sha256": "f3bd1102a04e668d8730555f661899bdd1f1e4058778b369671804526c4f6507",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/.github/ISSUE_TEMPLATE/bug_report.md",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "github-automation",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "CI/contribution support",
+        "Purpose": "Issue or contribution template; not an executable workflow",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Workflow statically reviewed; remote run status not verified"
+      }
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "new_path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "bytes": 426,
+      "sha256": "5f82b1e1e54654451dc49ed8ed44c6a73dd54d6eef337a05eb4474f039272154",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/.github/ISSUE_TEMPLATE/feature_request.md",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "github-automation",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "CI/contribution support",
+        "Purpose": "Issue or contribution template; not an executable workflow",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Workflow statically reviewed; remote run status not verified"
+      }
+    },
+    {
+      "original_path": ".github/pull_request_template.md",
+      "new_path": ".github/pull_request_template.md",
+      "bytes": 866,
+      "sha256": "151b282424466d8e1728c2ae2a1632a1e0d271aa553d1c9dab639f8e96a17ef7",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/.github/pull_request_template.md",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "github-automation",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "CI/contribution support",
+        "Purpose": "Issue or contribution template; not an executable workflow",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Workflow statically reviewed; remote run status not verified"
+      }
+    },
+    {
+      "original_path": ".github/workflows/ci.yml",
+      "new_path": ".github/workflows/ci.yml",
+      "bytes": 453,
+      "sha256": "5334e4420298d3e6e014c1cd5924e9ce0fbc787ea27091f560cb59aa1f31d84b",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/.github/workflows/ci.yml",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "github-automation",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "CI/contribution support",
+        "Purpose": "CI: read-only permissions, pinned actions, frozen install and maintained test command",
+        "Dependencies": "GitHubActions + Node22/npm; npmtest",
+        "Use/status": "Active CI onmain/pull_request",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Workflow statically reviewed; remote run status not verified"
+      }
+    },
+    {
+      "original_path": ".gitignore",
+      "new_path": ".gitignore",
+      "bytes": 72,
+      "sha256": "660e721ead310a854416640c3cf88dd735b243c22c936e230f08a50b77f1f4d4",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/.gitignore",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "root-project-entrypoints",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Build/configuration",
+        "Purpose": "Excludes dependencies, local environment values, logs and build outputs",
+        "Dependencies": "None at runtime",
+        "Use/status": "Active setup/test configuration",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "AGENTS.md",
+      "new_path": "AGENTS.md",
+      "bytes": 3072,
+      "sha256": "afa53947796b3bd6829028f8e32e798d3f245feeabc90409e1163f6c65aedbbb",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AGENTS.md",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "root-project-entrypoints",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Project governance/navigation",
+        "Purpose": "Coding-agent repository rules and evidence requirements",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/ARCHIVED_FILES_MANIFEST.txt",
+      "new_path": "AnalyseFuture/inventory/ARCHIVED_FILES_MANIFEST.txt",
+      "bytes": 5511,
+      "sha256": "7b751dfd7502b31c89af3b16c83c7fa2523e174fa7821b1f611257da214df163",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/ARCHIVED_FILES_MANIFEST.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/inventory",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Original path/hash/replacement/reason for all15new snapshots and prior archives",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/COMPLETE_FILE_INVENTORY.txt",
+      "new_path": "AnalyseFuture/inventory/COMPLETE_FILE_INVENTORY.txt",
+      "bytes": 59441,
+      "sha256": "b1cc07a4e07e9a0bff0ccd758dd87a5097f9ada114c80fda1d8f26de705107b9",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/COMPLETE_FILE_INVENTORY.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/inventory",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Every initial/delivered path with role, use, dependency, safety and disposition",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/CONSOLIDATION_REPORT.txt",
+      "new_path": "AnalyseFuture/migration/CONSOLIDATION_REPORT.txt",
+      "bytes": 2512,
+      "sha256": "2bdd3e15b4a3d8b8b47a2ae82534e52e98a279237d3da7cbfd21cba451d46219",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/CONSOLIDATION_REPORT.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/migration",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Actual consolidation work and reason no source-branch merge is needed",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/DEPENDENCY_MAP.txt",
+      "new_path": "AnalyseFuture/features/DEPENDENCY_MAP.txt",
+      "bytes": 7697,
+      "sha256": "a1aed3670cdd58e191bb43e9ef2b97cd7048471e3adc11e2e775ba81095c0924",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/DEPENDENCY_MAP.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/features",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Actual call graph, package exports, environment inputs and optional services",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/DUPLICATE_ANALYSIS.txt",
+      "new_path": "AnalyseFuture/features/DUPLICATE_ANALYSIS.txt",
+      "bytes": 3390,
+      "sha256": "15da1610590d14d3a35f5203a2bd886ad759bf5d27d172a548da697c25fbed9c",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/DUPLICATE_ANALYSIS.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/features",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Capability comparisons and reasons to consolidate or retain boundaries",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/FEATURE_INVENTORY.txt",
+      "new_path": "AnalyseFuture/features/FEATURE_INVENTORY.txt",
+      "bytes": 20572,
+      "sha256": "3ebaf1379cac455d17ea4f5abc6e4afdb7e69f43ce5561da79cdba1d47bb6a59",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/FEATURE_INVENTORY.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/features",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Eight code-backed groups, thirteen planned groups and supporting capabilities",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/MIGRATION_SUMMARY.txt",
+      "new_path": "AnalyseFuture/migration/MIGRATION_SUMMARY.txt",
+      "bytes": 2532,
+      "sha256": "1c355c22886d7c83fdee16b26dd1b929f99fe4e156698caae420d694a34720f9",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/MIGRATION_SUMMARY.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/migration",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Applied migration, compatibility, counts and recovery guidance",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt",
+      "new_path": "AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt",
+      "bytes": 4811,
+      "sha256": "fb0ee9302c2f2d46894fdd42b90a050b1e77165097e7a55acc1bff5d5cc57f34",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/handoff",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Reproducible setup/validation, current graph and next narrow milestone",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/ORIGINAL_TO_NEW_PATH_MAPPING.txt",
+      "new_path": "AnalyseFuture/migration/ORIGINAL_TO_NEW_PATH_MAPPING.txt",
+      "bytes": 10278,
+      "sha256": "dbac08d0c2141161ad30860d6d978eced3d4ca3105103f9c0debef9927ab5847",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/ORIGINAL_TO_NEW_PATH_MAPPING.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/migration",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "All65starting path decisions and retained-original locations",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/PRESERVATION_MANIFEST.json",
+      "new_path": "AnalyseFuture/inventory/PRESERVATION_MANIFEST.json",
+      "bytes": 20472,
+      "sha256": "57fad994dcfded39f3b491dd1b2f0772506281306e75cbab06ef0ec4d7a9d254",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/PRESERVATION_MANIFEST.json",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/inventory",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Preservation",
+        "Purpose": "Earlier55-file0c45350original-to-retained map, sizes,Gitblobs,SHA256",
+        "Dependencies": "Referenced retained files, not runtime",
+        "Use/status": "Historical evidence",
+        "Duplicate/unique assessment": "Complements later65-file snapshot",
+        "Safety": "Metadata only; all paths/hash checks verified"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+      "new_path": "AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+      "bytes": 47812,
+      "sha256": "b5283efd06a7005251b41ca6df42897984321796719deb02b07712f4fa0c9a2b",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/planning",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Canonical detailed product vision, twenty requested topics and feasible horizons",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Canonical vision replaces full docs copy",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/README.md",
+      "new_path": "AnalyseFuture/README.md",
+      "bytes": 4816,
+      "sha256": "88f7a820d8fac0ca9d6ee75479a53fb34b32d783d3d22ca64480ccbd334c9855",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/README.md",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "root-project-entrypoints",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Index of recovery reports and safe retained reference handling",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/REPOSITORY_AUDIT.txt",
+      "new_path": "AnalyseFuture/audit/REPOSITORY_AUDIT.txt",
+      "bytes": 5234,
+      "sha256": "162867476e441bee2b68d075c8ba2d4bd66a83626d2efb6b47b9069a6563e855",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/REPOSITORY_AUDIT.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/audit",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Audit scope, discovery/history, implemented decisions and coverage limits",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/SECURITY_AUDIT.txt",
+      "new_path": "AnalyseFuture/security/SECURITY_AUDIT.txt",
+      "bytes": 5237,
+      "sha256": "f63ed02e149300619540000cf4ea138a9f88f462b21391511bd261aee2244b6e",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/SECURITY_AUDIT.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/security",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Confirmed/repaired findings versus unverified concerns and account limitations",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/TECHNICAL_DEBT.txt",
+      "new_path": "AnalyseFuture/handoff/TECHNICAL_DEBT.txt",
+      "bytes": 2794,
+      "sha256": "3721d252186561587a287f8c02861d824ab4a7a8fefe4a81c0155e20250e86d6",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/TECHNICAL_DEBT.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/handoff",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Prioritized engineering/security/product gaps with required evidence",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt",
+      "new_path": "AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt",
+      "bytes": 4763,
+      "sha256": "b6e57470732e40a8d37546110ddef446ffdb7b6456ae382284f98513a3e35bc8",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/validation",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Executed outcomes, expected failing reproductions and unrun checks",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/WORK_PROGRESS.txt",
+      "new_path": "AnalyseFuture/handoff/WORK_PROGRESS.txt",
+      "bytes": 3150,
+      "sha256": "57870142e0672b2b819e11af53ae392fdbd56b6b91e75ab3ebad4188cf7204a9",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/WORK_PROGRESS.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/handoff",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Recovery/product planning",
+        "Purpose": "Persistent completion/current/pending state and continuation decisions",
+        "Dependencies": "Cross-references to audited source/reports; no runtime dependency",
+        "Use/status": "Active documentation; canonical vision or recovery evidence",
+        "Duplicate/unique assessment": "Complementary scoped report; historical copies explicit",
+        "Safety": "Plain text/Markdown; no executable reference"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/baseline-documents/CONTRIBUTING.md",
+      "new_path": "AnalyseFuture/history/baseline-documents/CONTRIBUTING.md",
+      "bytes": 2350,
+      "sha256": "807abe33eb2a3f7ef668e6feeef14d68ca017971f470df34039170ac95a3a002",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/baseline-documents/CONTRIBUTING.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical documentation",
+        "Purpose": "Original pre-organization document from0c45350",
+        "Dependencies": "None; historical links/wording intentionally retained",
+        "Use/status": "Not active guidance",
+        "Duplicate/unique assessment": "Intentional baseline copy",
+        "Safety": "Plain text; not evaluated as current instructions"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/baseline-documents/README.md",
+      "new_path": "AnalyseFuture/history/baseline-documents/README.md",
+      "bytes": 5998,
+      "sha256": "40c38bbfe85ccf3baa7a6c85b6e93d820c111768df4e68afc718c76c587c1c6b",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/baseline-documents/README.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical documentation",
+        "Purpose": "Original pre-organization document from0c45350",
+        "Dependencies": "None; historical links/wording intentionally retained",
+        "Use/status": "Not active guidance",
+        "Duplicate/unique assessment": "Intentional baseline copy",
+        "Safety": "Plain text; not evaluated as current instructions"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/baseline-documents/docs/ARCHITECTURE.md",
+      "new_path": "AnalyseFuture/history/baseline-documents/docs/ARCHITECTURE.md",
+      "bytes": 6930,
+      "sha256": "5072f4566dbba4aded263bb77f6f3a6857972d572e8ca6771a049e85e0f80daa",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/baseline-documents/docs/ARCHITECTURE.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical documentation",
+        "Purpose": "Original pre-organization document from0c45350",
+        "Dependencies": "None; historical links/wording intentionally retained",
+        "Use/status": "Not active guidance",
+        "Duplicate/unique assessment": "Intentional baseline copy",
+        "Safety": "Plain text; not evaluated as current instructions"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/baseline-documents/docs/IMPLEMENTATION_STATUS.md",
+      "new_path": "AnalyseFuture/history/baseline-documents/docs/IMPLEMENTATION_STATUS.md",
+      "bytes": 6340,
+      "sha256": "68a51f9e83c218c079aae78477cc740e8252ab09b893fd5767a1d9c881d1a7cf",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/baseline-documents/docs/IMPLEMENTATION_STATUS.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical documentation",
+        "Purpose": "Original pre-organization document from0c45350",
+        "Dependencies": "None; historical links/wording intentionally retained",
+        "Use/status": "Not active guidance",
+        "Duplicate/unique assessment": "Intentional baseline copy",
+        "Safety": "Plain text; not evaluated as current instructions"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/baseline-documents/docs/PROJECT_IDEA.txt",
+      "new_path": "AnalyseFuture/history/baseline-documents/docs/PROJECT_IDEA.txt",
+      "bytes": 36237,
+      "sha256": "6167c60d8a87cdeb4a1c94fce5e88c212931993801ef71956b5b95d1233af2a1",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/baseline-documents/docs/PROJECT_IDEA.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical documentation",
+        "Purpose": "Original pre-organization document from0c45350",
+        "Dependencies": "None; historical links/wording intentionally retained",
+        "Use/status": "Not active guidance",
+        "Duplicate/unique assessment": "Intentional baseline copy",
+        "Safety": "Plain text; not evaluated as current instructions"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/baseline-documents/docs/REUSE_AUDIT.md",
+      "new_path": "AnalyseFuture/history/baseline-documents/docs/REUSE_AUDIT.md",
+      "bytes": 8031,
+      "sha256": "2c8957191dd0d2a64c6a45e7f21dbbc8f690853c7ae640d0cd45423e2b82e410",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/baseline-documents/docs/REUSE_AUDIT.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical documentation",
+        "Purpose": "Original pre-organization document from0c45350",
+        "Dependencies": "None; historical links/wording intentionally retained",
+        "Use/status": "Not active guidance",
+        "Duplicate/unique assessment": "Intentional baseline copy",
+        "Safety": "Plain text; not evaluated as current instructions"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/baseline-documents/docs/ROADMAP.md",
+      "new_path": "AnalyseFuture/history/baseline-documents/docs/ROADMAP.md",
+      "bytes": 6404,
+      "sha256": "1e7080eb70eb4cb338c00f60a332d9de00b1379d223cf34064e8440cafdc2e85",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/baseline-documents/docs/ROADMAP.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical documentation",
+        "Purpose": "Original pre-organization document from0c45350",
+        "Dependencies": "None; historical links/wording intentionally retained",
+        "Use/status": "Not active guidance",
+        "Duplicate/unique assessment": "Intentional baseline copy",
+        "Safety": "Plain text; not evaluated as current instructions"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/AnalyseFuture/README.md.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/AnalyseFuture/README.md.txt",
+      "bytes": 3221,
+      "sha256": "6953e19eb64532000b11b426e0211ea42fbe6927d1f52c769faa3e69b7f19b57",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/AnalyseFuture/README.md.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/README.md.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/README.md.txt",
+      "bytes": 6700,
+      "sha256": "7c3dddc018f3287c2116cb45476fb39f0c18252fa6bdb708419b19234acc21c9",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/README.md.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/SECURITY.md.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/SECURITY.md.txt",
+      "bytes": 1732,
+      "sha256": "42c55b408804e8cf07a7a165fbd61d75e769d86f3a41c657ae475fa6bf4b36cc",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/SECURITY.md.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/docs/ARCHITECTURE.md.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/docs/ARCHITECTURE.md.txt",
+      "bytes": 7423,
+      "sha256": "225e655d30604346ca373d40c60f6701569337cd5d5e30aac2bc2fa49ae665a9",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/docs/ARCHITECTURE.md.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/docs/DEVELOPER_ONBOARDING.md.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/docs/DEVELOPER_ONBOARDING.md.txt",
+      "bytes": 1964,
+      "sha256": "b15e4f0767e1b68b418d2f9bb052001f12845c16e0b555b14f4bd64f7e1eb217",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/docs/DEVELOPER_ONBOARDING.md.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/docs/IMPLEMENTATION_STATUS.md.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/docs/IMPLEMENTATION_STATUS.md.txt",
+      "bytes": 8806,
+      "sha256": "179a67608927c5410f613a1b87a9ed096b7e65b7735c43f5da72fb35875a33af",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/docs/IMPLEMENTATION_STATUS.md.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/docs/PROJECT_IDEA.txt.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/docs/PROJECT_IDEA.txt.txt",
+      "bytes": 37341,
+      "sha256": "cc2f1fb8ec24953ef22e0db5be30f23630f93090d9012a6f722cd22979775845",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/docs/PROJECT_IDEA.txt.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/docs/REPOSITORY_STRUCTURE.md.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/docs/REPOSITORY_STRUCTURE.md.txt",
+      "bytes": 5893,
+      "sha256": "7a29e26c394933876f4ed5bc93ab704f61fc74c192314339f0f50697d9321f44",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/docs/REPOSITORY_STRUCTURE.md.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/package.json.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/package.json.txt",
+      "bytes": 425,
+      "sha256": "7903b9d446fd42c62d6009b351e809be71a8a0c95682b4c7909da185275ab7b9",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/package.json.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/services/agent/README.md.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/services/agent/README.md.txt",
+      "bytes": 1882,
+      "sha256": "6daa23c3a6480d65b32faa1c36800d202be740e6dbc1c58d01557499480b57b8",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/services/agent/README.md.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/services/agent/src/index.mjs.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/services/agent/src/index.mjs.txt",
+      "bytes": 11720,
+      "sha256": "7929d9cda6651cc6bce7085b5e9a3b32491b0d4c84a828b9e70864d466dae12f",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/services/agent/src/index.mjs.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/services/agent/test/agent.test.mjs.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/services/agent/test/agent.test.mjs.txt",
+      "bytes": 7113,
+      "sha256": "4793d1ef2bb0a35494664ebd07e1acb58d0f69161363ab66dae21f537ef33ade",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/services/agent/test/agent.test.mjs.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/README.md.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/services/model-gateway/README.md.txt",
+      "bytes": 1700,
+      "sha256": "db5221c39326428e47a5982f282d6e422380b0b5ad3758164ef451099701897d",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/README.md.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/src/index.mjs.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/services/model-gateway/src/index.mjs.txt",
+      "bytes": 16894,
+      "sha256": "895a9ce0dfcdb9f26383415e731e33893ac826f20c01ae03aab676355ea5e110",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/src/index.mjs.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/test/model-gateway.test.mjs.txt",
+      "new_path": "AnalyseFuture/history/before-complete-audit/services/model-gateway/test/model-gateway.test.mjs.txt",
+      "bytes": 8423,
+      "sha256": "845a1897753d94a99481b91ade624d6579e0e3cb26543336a49e46dd611e2125",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/historical-implementations/before-complete-audit/services/model-gateway/test/model-gateway.test.mjs.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/history",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Historical recovery",
+        "Purpose": "Exact pre-change original from e40fa80; path is recoverable by removing snapshot prefix and extra .txt",
+        "Dependencies": "None; inert .txt snapshot",
+        "Use/status": "Not active",
+        "Duplicate/unique assessment": "Intentional historical copy of original; not an alternative runtime",
+        "Safety": "Extra .txt suffix and explicit test list; do not import or execute"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/recovery-notes/BROWSER_SMOKE_DRIVER.txt",
+      "new_path": "AnalyseFuture/validation/drivers/BROWSER_SMOKE_DRIVER.txt",
+      "bytes": 3537,
+      "sha256": "fe27d2d5e26341735463500944e8cae4c8c28ef82e6e61442acdd80c0fb1d026",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/recovery-notes/BROWSER_SMOKE_DRIVER.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/validation",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Verification evidence",
+        "Purpose": "Inert reproducible headless-browser smoke driver using optional environment tooling",
+        "Dependencies": "Python Playwright and Chromium only when manually restored outside checkout",
+        "Use/status": "Not part of active runtime or automatic tests",
+        "Duplicate/unique assessment": "Supports validation evidence; not a competing application",
+        "Safety": "Stored as plain .txt; synthetic localhost fixture only"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/repository-inventory/STARTING_STATE.json",
+      "new_path": "AnalyseFuture/inventory/evidence/STARTING_STATE.json",
+      "bytes": 17612,
+      "sha256": "14fd6ac746e6c45625735013d7131d7e7a7a965950a7f53c79a4a205cd8951c1",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/repository-inventory/STARTING_STATE.json",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/inventory",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Inventory evidence",
+        "Purpose": "Immutable65-file starting snapshot, SHA256, refs and recovery baseline",
+        "Dependencies": "Git/archive metadata only",
+        "Use/status": "Audit evidence",
+        "Duplicate/unique assessment": "Complements per-file narrative inventory",
+        "Safety": "Metadata only; no upstream execution"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/repository-inventory/UPSTREAM_ARCHIVE_CONTENTS.txt",
+      "new_path": "AnalyseFuture/inventory/evidence/UPSTREAM_ARCHIVE_CONTENTS.txt",
+      "bytes": 825708,
+      "sha256": "bfb7efb4a4cc82c98952009ef7544ea876685ae9670ea3f88887c1b3f6620835",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/repository-inventory/UPSTREAM_ARCHIVE_CONTENTS.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/inventory",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Inventory evidence",
+        "Purpose": "All6737ZIPmember paths/types/sizes/CRC values",
+        "Dependencies": "Git/archive metadata only",
+        "Use/status": "Audit evidence",
+        "Duplicate/unique assessment": "Complements per-file narrative inventory",
+        "Safety": "Metadata only; no upstream execution"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/security-reports/GIT_AND_SOURCE_REVIEW.json",
+      "new_path": "AnalyseFuture/security/evidence/GIT_AND_SOURCE_REVIEW.json",
+      "bytes": 11728,
+      "sha256": "c4304e3bb503c299daf412fb9c659cc999140c589c7683bd4df4c3049c3357af",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/security-reports/GIT_AND_SOURCE_REVIEW.json",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/security",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Security evidence",
+        "Purpose": "Metadata-only Git/source or upstream review; initial observations plus subsequent-repair status",
+        "Dependencies": "Security report and retained sources; no runtime dependency",
+        "Use/status": "Audit evidence",
+        "Duplicate/unique assessment": "Supports report, not competing source",
+        "Safety": "No matched credential values; bounded static evidence"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/security-reports/UPSTREAM_ARCHIVE_REVIEW.json",
+      "new_path": "AnalyseFuture/security/evidence/UPSTREAM_ARCHIVE_REVIEW.json",
+      "bytes": 31862,
+      "sha256": "919644c4d878955344c99b41eb2b4f4b345c1af7f02cf663787a43bbc6e6b143",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/AnalyseFuture/security-reports/UPSTREAM_ARCHIVE_REVIEW.json",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/security",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Security evidence",
+        "Purpose": "Metadata-only Git/source or upstream review; initial observations plus subsequent-repair status",
+        "Dependencies": "Security report and retained sources; no runtime dependency",
+        "Use/status": "Audit evidence",
+        "Duplicate/unique assessment": "Supports report, not competing source",
+        "Safety": "No matched credential values; bounded static evidence"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/upstream-archives/OpenSandbox-main.zip",
+      "new_path": "AnalyseFuture/references/upstream/OpenSandbox-main.zip",
+      "bytes": 72999206,
+      "sha256": "d91b2e7579c6272100b4bbbed861827888de58e90edd0782784346c986134332",
+      "original_copy": "AnalyseFuture/references/upstream/OpenSandbox-main.zip",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/references",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Upstream reference",
+        "Purpose": "Original licensed upstream ZIP; not a working product integration",
+        "Dependencies": "None: no active import, install or workflow discovery",
+        "Use/status": "Not active; compressed reference",
+        "Duplicate/unique assessment": "Unique upstream project; overlapping workspace concepts require comparison",
+        "Safety": "CRC/hash/paths/text signatures reviewed; full upstream source/dependency audit not performed"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/upstream-archives/software-agent-sdk-main.zip",
+      "new_path": "AnalyseFuture/references/upstream/software-agent-sdk-main.zip",
+      "bytes": 15842982,
+      "sha256": "b1007f65e71050fd21b2101fba29bf5c90ff83b67e835b4cc353f0d9d276d85e",
+      "original_copy": "AnalyseFuture/references/upstream/software-agent-sdk-main.zip",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "AnalyseFuture/references",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Upstream reference",
+        "Purpose": "Original licensed upstream ZIP; not a working product integration",
+        "Dependencies": "None: no active import, install or workflow discovery",
+        "Use/status": "Not active; compressed reference",
+        "Duplicate/unique assessment": "Unique upstream project; overlapping workspace concepts require comparison",
+        "Safety": "CRC/hash/paths/text signatures reviewed; full upstream source/dependency audit not performed"
+      }
+    },
+    {
+      "original_path": "CONTRIBUTING.md",
+      "new_path": "CONTRIBUTING.md",
+      "bytes": 2837,
+      "sha256": "268b937b7ac3b1a4615d375394ad40bcaeab1f96602bf4b83628056bbfea3d57",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/CONTRIBUTING.md",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "root-project-entrypoints",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Project governance/navigation",
+        "Purpose": "External contribution workflow and owner-authorized direct-main exception",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "README.md",
+      "new_path": "README.md",
+      "bytes": 7429,
+      "sha256": "fd07fde70f72fb1b64a7b93dd6950216a4c115bfe3ed3eb9aae3fbfdf4e311a9",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/README.md",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "root-project-entrypoints",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Project governance/navigation",
+        "Purpose": "Project entry point, supported quickstart, current limitations and report navigation",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "SECURITY.md",
+      "new_path": "SECURITY.md",
+      "bytes": 1989,
+      "sha256": "650bb7ea5806256f81552c050731f617ecc0c40b95dce5cf0fc6466ac31f67c5",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/SECURITY.md",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "root-project-entrypoints",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Project governance/navigation",
+        "Purpose": "Vulnerability reporting policy and bounded security maturity statement",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "apps/api/package.json",
+      "new_path": "apps/builder-api/package.json",
+      "bytes": 148,
+      "sha256": "54965daddcb8bdfc1a8872a1f818feb09df07762998413008678e5f2f19fd6a9",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/apps/api/package.json",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "apps/builder-api",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Workspace packaging",
+        "Purpose": "Manifest for @fine-tune/api",
+        "Dependencies": "@fine-tune/core 0.1.0",
+        "Use/status": "Active local workspace registration",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "No install lifecycle hook"
+      }
+    },
+    {
+      "original_path": "apps/api/src/app.mjs",
+      "new_path": "apps/builder-api/src/app.mjs",
+      "bytes": 3945,
+      "sha256": "98c79711eae6c654b30702bb70aa0f5bac2025bdf56d38d3c5f2882016d45e8c",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/apps/api/src/app.mjs",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "apps/builder-api",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "F02 Deterministic template project generation; F03 Local HTTP API and asset host",
+        "Purpose": "Implementation of F02 Deterministic template project generation; F03 Local HTTP API and asset host",
+        "Dependencies": "node:fs/promises, @fine-tune/core",
+        "Use/status": "Active offline mock runtime",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Source deeply reviewed; synthetic fixtures only; broader product gaps recorded"
+      }
+    },
+    {
+      "original_path": "apps/api/src/server.mjs",
+      "new_path": "apps/builder-api/src/server.mjs",
+      "bytes": 781,
+      "sha256": "4ce437468c2a03b7815a80427a5c687d243b70a567558c7734b042ab618adfbc",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/apps/api/src/server.mjs",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "apps/builder-api",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "F03 Local HTTP API and asset host",
+        "Purpose": "Implementation of F03 Local HTTP API and asset host",
+        "Dependencies": "node:http, ./app.mjs",
+        "Use/status": "Active offline mock runtime",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Source deeply reviewed; synthetic fixtures only; broader product gaps recorded"
+      }
+    },
+    {
+      "original_path": "apps/api/test/app.test.mjs",
+      "new_path": "apps/builder-api/test/app.test.mjs",
+      "bytes": 3331,
+      "sha256": "b3c5220d509dd85f89fc726cb0bd43d553f174088b42e45d84b60ea4f5987d86",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/apps/api/test/app.test.mjs",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "apps/builder-api",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "F03 Local HTTP API and asset host; F04 Browser request, examples, plan and static preview",
+        "Purpose": "Existing tests and meaningful real HTTP regressions for F03 Local HTTP API and asset host; F04 Browser request, examples, plan and static preview",
+        "Dependencies": "node:test, node:assert/strict, node:http, ../src/app.mjs",
+        "Use/status": "Maintained test only",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Source deeply reviewed; synthetic fixtures only; broader product gaps recorded"
+      }
+    },
+    {
+      "original_path": "apps/web/package.json",
+      "new_path": "apps/builder-web/package.json",
+      "bytes": 92,
+      "sha256": "69b837c5d0e0b5394d175f0ee912dabd7318a2976d85ce512695c798b7410d78",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/apps/web/package.json",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "apps/builder-web",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Workspace packaging",
+        "Purpose": "Manifest for @fine-tune/web",
+        "Dependencies": "No third-party packages; native Node/browser APIs",
+        "Use/status": "Active local workspace registration",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "No install lifecycle hook"
+      }
+    },
+    {
+      "original_path": "apps/web/public/app.js",
+      "new_path": "apps/builder-web/public/app.js",
+      "bytes": 3233,
+      "sha256": "c9dd06666d82ce7a88a5397f727ad52abaf9fc1b8627c4ecdf6add60b8413cec",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/apps/web/public/app.js",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "apps/builder-web",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "F04 Browser request, examples, plan and static preview; F05 Single HTML source download",
+        "Purpose": "Implementation of F04 Browser request, examples, plan and static preview; F05 Single HTML source download",
+        "Dependencies": "Native platform APIs; see DEPENDENCY_MAP for optional HTTP service",
+        "Use/status": "Active offline mock runtime",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Source deeply reviewed; synthetic fixtures only; broader product gaps recorded"
+      }
+    },
+    {
+      "original_path": "apps/web/public/index.html",
+      "new_path": "apps/builder-web/public/index.html",
+      "bytes": 5107,
+      "sha256": "ac932f056347e0a489054bfef8b02a7ae1d086c518b75e11a250360900eef06d",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/apps/web/public/index.html",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "apps/builder-web",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Browser UI",
+        "Purpose": "Static accessible interface markup/styles; empty-sandbox iframe and downloadable HTML UI",
+        "Dependencies": "Served by API asset allowlist; app.js/style references",
+        "Use/status": "Active offline UI asset",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Static code reviewed; headless mock UI flows verified; not an accessibility/full-app audit"
+      }
+    },
+    {
+      "original_path": "apps/web/public/styles.css",
+      "new_path": "apps/builder-web/public/styles.css",
+      "bytes": 6918,
+      "sha256": "0aa3da1a958f58aff533e77944923a16743f109bbb36c5c50ebd33853ccecda3",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/apps/web/public/styles.css",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "apps/builder-web",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Browser UI",
+        "Purpose": "Static accessible interface markup/styles; empty-sandbox iframe and downloadable HTML UI",
+        "Dependencies": "Served by API asset allowlist; app.js/style references",
+        "Use/status": "Active offline UI asset",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Static code reviewed; headless mock UI flows verified; not an accessibility/full-app audit"
+      }
+    },
+    {
+      "original_path": "docs/ARCHITECTURE.md",
+      "new_path": "docs/architecture/ARCHITECTURE.md",
+      "bytes": 8119,
+      "sha256": "c0dc28df321ca206c04988ab101958ad1d066f8ce389d37c7e77498fbb505f94",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/ARCHITECTURE.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/architecture",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Current component boundaries, proposed target architecture and accepted decisions",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/CODEX_PLAYBOOK.md",
+      "new_path": "docs/development/CODEX_PLAYBOOK.md",
+      "bytes": 2761,
+      "sha256": "62c2be57c5fe63dad7e088dff9be5c23af95a936c11106e83235db9a81ed29bf",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/CODEX_PLAYBOOK.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/development",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Scoped engineering prompts and evidence-driven contributor workflow",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/COSTS_AND_OPERATIONS.md",
+      "new_path": "docs/operations/COSTS_AND_OPERATIONS.md",
+      "bytes": 2125,
+      "sha256": "7397f971abc3fb67b669173b6d644a4f42e6b3b52cfaebb89887644ca3a01a0a",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/COSTS_AND_OPERATIONS.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/operations",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Inference/runtime cost accounting and proposed operational controls",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/DEVELOPER_ONBOARDING.md",
+      "new_path": "docs/development/DEVELOPER_ONBOARDING.md",
+      "bytes": 2745,
+      "sha256": "702c5d033635475e3daa7e87c30846f7a17e1cc7e038c49ec62fb054d51c8819",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/DEVELOPER_ONBOARDING.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/development",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Actual Node/npm setup, test/start commands and integration limits",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/FEATURE_MATRIX.md",
+      "new_path": "docs/product/FEATURE_MATRIX.md",
+      "bytes": 2354,
+      "sha256": "bd1718597dd50d6441de2151e3c942cfb13b31336cfffeb95e0f6d5b03930b04",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/FEATURE_MATRIX.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/product",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Proposed competitive capability backlog; not verified competitor facts",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/IMPLEMENTATION_STATUS.md",
+      "new_path": "docs/development/IMPLEMENTATION_STATUS.md",
+      "bytes": 11961,
+      "sha256": "24e92b856b136253ce3029ecb235b800c9a0a4e703758ab393f7e2772e85f544",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/IMPLEMENTATION_STATUS.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/development",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Dated implementation/test evidence and explicit missing capabilities",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/MOCK_PROTOTYPE.md",
+      "new_path": "docs/development/MOCK_PROTOTYPE.md",
+      "bytes": 2920,
+      "sha256": "13691bb244732a354334fb1e3448069dea0a2d08a9ab3c24c969de7480492267",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/MOCK_PROTOTYPE.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/development",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Implemented static mock contracts, endpoints and non-capabilities",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/MODEL_TRAINING.md",
+      "new_path": "docs/model-training/MODEL_TRAINING.md",
+      "bytes": 2885,
+      "sha256": "8b215a2f4dc508c8722255db06a6b5a279fcb8ffde3dfe0d69d6f4aa58ae7dde",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/MODEL_TRAINING.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/model-training",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Deferred model selection/training/data/evaluation proposals",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/OWNERSHIP_AND_LICENSES.md",
+      "new_path": "docs/legal/OWNERSHIP_AND_LICENSES.md",
+      "bytes": 2028,
+      "sha256": "fe06bbde18e798985976b09f7f60981f41b6532f31e08d76d83d72fa87be77eb",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/OWNERSHIP_AND_LICENSES.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/legal",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Project ownership/license status and third-party rights requirements",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/PRODUCT_REQUIREMENTS.md",
+      "new_path": "docs/product/PRODUCT_REQUIREMENTS.md",
+      "bytes": 3914,
+      "sha256": "170d05bc8ed9903d3c3abe2bdf83172609366663d3921c6a54469f6d06b83735",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/PRODUCT_REQUIREMENTS.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/product",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Proposed FR01-FR15 acceptance requirements and product journey",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/PROJECT_CHARTER.md",
+      "new_path": "docs/product/PROJECT_CHARTER.md",
+      "bytes": 2938,
+      "sha256": "464e266cb072b9633b819b68e26874ebf744fad44fd610217429e64bd4e8997a",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/PROJECT_CHARTER.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/product",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Documented full-stack-builder intent, customer hypotheses and constraints",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/PROJECT_IDEA.txt",
+      "new_path": "docs/product/PROJECT_IDEA.txt",
+      "bytes": 661,
+      "sha256": "b0b1031bddc027ceb3cd1ade3467f5388d519717edbc63790661e43b54855315",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/PROJECT_IDEA.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/product",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Compatibility navigation to the canonical requested full future vision",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/RECOMMENDED_PUBLIC_REPOSITORIES.txt",
+      "new_path": "docs/research/RECOMMENDED_PUBLIC_REPOSITORIES.txt",
+      "bytes": 7786,
+      "sha256": "420eaf6311239eb590b92bb39d2c8ad08bb77a155d8e48317fa8ef5e6143844f",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/RECOMMENDED_PUBLIC_REPOSITORIES.txt",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/research",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Research reference inventory; not active dependencies",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/REPOSITORY_STRUCTURE.md",
+      "new_path": "docs/architecture/REPOSITORY_STRUCTURE.md",
+      "bytes": 6918,
+      "sha256": "ea0aaa578c8af114a248ed0c90873e0e851f7dca43eecaa6d9828b50afb71801",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/REPOSITORY_STRUCTURE.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/architecture",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Earlier preservation review plus full-follow-up active layout explanation",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/REUSE_AUDIT.md",
+      "new_path": "docs/research/REUSE_AUDIT.md",
+      "bytes": 8698,
+      "sha256": "c4ffad8bda8a64397f9f5aeca6317ee424fc7403cbb95f982b93ac64cf4ec335",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/REUSE_AUDIT.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/research",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Dated upstream release/license research and integration decisions/limits",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/ROADMAP.md",
+      "new_path": "docs/product/ROADMAP.md",
+      "bytes": 6477,
+      "sha256": "841fadd4ba2ca7ee81226dae445c18534102409d15d8734397778c3984357737",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/ROADMAP.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/product",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Gated backlog, existing foundation and unfinished runtime/product work",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/SECURITY_ARCHITECTURE.md",
+      "new_path": "docs/security/SECURITY_ARCHITECTURE.md",
+      "bytes": 3073,
+      "sha256": "ebee7d4a96699d630c8a4e14b9ede98a113fa12420e68a3325d3596316e646a5",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/SECURITY_ARCHITECTURE.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/security",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Proposed trust boundaries, threats and pre-production control requirements",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/TESTING_AND_EVALUATION.md",
+      "new_path": "docs/development/TESTING_AND_EVALUATION.md",
+      "bytes": 2511,
+      "sha256": "beef947f0b23b3762a4d8735aeff3151f6d0769a246c77d36b9470eebaaf79d1",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/TESTING_AND_EVALUATION.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/development",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "Evaluation methodology and not-yet-achieved target criteria",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/decisions/0001-monorepo-reuse-first.md",
+      "new_path": "docs/architecture/decisions/0001-monorepo-reuse-first.md",
+      "bytes": 1224,
+      "sha256": "7f43ec1b2199adbbdbbe7732c436c4e2165f34ab97af7cf0c2ca9a362f88326c",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/decisions/0001-monorepo-reuse-first.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/architecture",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "ADR: one original monorepo with replaceable pinned integrations",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/decisions/0002-one-agent-first.md",
+      "new_path": "docs/architecture/decisions/0002-one-agent-first.md",
+      "bytes": 882,
+      "sha256": "cf4e288ec73452035ed23efd66aa65b484d32d2cad6201a05d2db4acf9cad9e6",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/decisions/0002-one-agent-first.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/architecture",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "ADR: one engine/gateway before measured multi-agent expansion",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/decisions/0003-sandbox-boundary.md",
+      "new_path": "docs/architecture/decisions/0003-sandbox-boundary.md",
+      "bytes": 1086,
+      "sha256": "e66b870014351f77ff48ae163587c1fc8236e463cd4cce5b190847f14825ee3c",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/decisions/0003-sandbox-boundary.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/architecture",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "ADR: isolate generated code; implementation remains pending",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/decisions/0004-model-gateway-boundary.md",
+      "new_path": "docs/architecture/decisions/0004-model-gateway-boundary.md",
+      "bytes": 1443,
+      "sha256": "75cb515f489e515980bed0862070f09fece87388e05348b2ebe9988a4a2fb370",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/decisions/0004-model-gateway-boundary.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/architecture",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "ADR: implemented inference contract and offline defaults",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/decisions/0005-openhands-agent-adapter.md",
+      "new_path": "docs/architecture/decisions/0005-openhands-agent-adapter.md",
+      "bytes": 2011,
+      "sha256": "0392763767e1371638c5802f4cb280cc9b625412416d597b4ed86e20c4a20577",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/decisions/0005-openhands-agent-adapter.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/architecture",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "ADR: thin Agent Server transport; real integration deferred",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "docs/decisions/0006-reference-and-request-boundaries.md",
+      "new_path": "docs/architecture/decisions/0006-reference-and-request-boundaries.md",
+      "bytes": 1480,
+      "sha256": "99e6bd4248e6e2c96e653c992257a1ebe0bfbe86f13597a84d3f80a0106683c7",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/docs/decisions/0006-reference-and-request-boundaries.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "docs/architecture",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Architecture/product documentation",
+        "Purpose": "ADR: explicit test roots, inert references, redirect rejection and canonical vision",
+        "Dependencies": "None at runtime",
+        "Use/status": "Documentation/reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "package-lock.json",
+      "new_path": "package-lock.json",
+      "bytes": 1343,
+      "sha256": "b1418d95b8dc46b18800d165f17ab4d5b7f6174ce5b72edcf6fb3a8b3f0b2211",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/package-lock.json",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "root-project-entrypoints",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Build/configuration",
+        "Purpose": "Frozen lock for local workspace links; no third-party npm package tree",
+        "Dependencies": "Node>=22/npm>=10; five local workspace links; no third-party npm packages",
+        "Use/status": "Active setup/test configuration",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "package.json",
+      "new_path": "package.json",
+      "bytes": 571,
+      "sha256": "a5ce538250ed693729be075fb971f5189fb70c6871e1ae94c978e5680ce6ce95",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/package.json",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "root-project-entrypoints",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Build/configuration",
+        "Purpose": "Root npm workspaces, runtime requirement, start and explicit active test entrypoint",
+        "Dependencies": "Node>=22/npm>=10; five local workspace links; no third-party npm packages",
+        "Use/status": "Active setup/test configuration",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Text only; no runtime execution"
+      }
+    },
+    {
+      "original_path": "packages/core/package.json",
+      "new_path": "packages/project-generator/package.json",
+      "bytes": 140,
+      "sha256": "a83e5d965f6e60e0add5a1798349b86e409af74fdb2c7d3a293a9a76f38bffdb",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/packages/core/package.json",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "packages/project-generator",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Workspace packaging",
+        "Purpose": "Manifest for @fine-tune/core",
+        "Dependencies": "No third-party packages; native Node/browser APIs",
+        "Use/status": "Active local workspace registration",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "No install lifecycle hook"
+      }
+    },
+    {
+      "original_path": "packages/core/src/index.mjs",
+      "new_path": "packages/project-generator/src/index.mjs",
+      "bytes": 8588,
+      "sha256": "0a45a8938807c184151a1d33edd765c02acbe6c072fbbecaf9ea2bb48e7d9466",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/packages/core/src/index.mjs",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "packages/project-generator",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "F01 Prompt validation and safe rendering; F02 Deterministic template project generation",
+        "Purpose": "Implementation of F01 Prompt validation and safe rendering; F02 Deterministic template project generation",
+        "Dependencies": "Native platform APIs; see DEPENDENCY_MAP for optional HTTP service",
+        "Use/status": "Active offline mock runtime",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Source deeply reviewed; synthetic fixtures only; broader product gaps recorded"
+      }
+    },
+    {
+      "original_path": "packages/core/test/core.test.mjs",
+      "new_path": "packages/project-generator/test/core.test.mjs",
+      "bytes": 2632,
+      "sha256": "8970ab74841d022525fd0cb6c21069f130d214cf6fbd2ac2a8c38a78e61f46c1",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/packages/core/test/core.test.mjs",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "packages/project-generator",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "F01 Prompt validation and safe rendering; F02 Deterministic template project generation",
+        "Purpose": "Existing tests and meaningful real HTTP regressions for F01 Prompt validation and safe rendering; F02 Deterministic template project generation",
+        "Dependencies": "node:test, node:assert/strict, ../src/index.mjs",
+        "Use/status": "Maintained test only",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Source deeply reviewed; synthetic fixtures only; broader product gaps recorded"
+      }
+    },
+    {
+      "original_path": "services/agent/README.md",
+      "new_path": "services/agent-adapter/README.md",
+      "bytes": 2327,
+      "sha256": "fd6946726c7db099a091dfe9393d65db1bb49358ecae26bdd43ebd602463c207",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/services/agent/README.md",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "services/agent-adapter",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Adapter documentation",
+        "Purpose": "Public boundary/configuration, redirect policy and fixture/live integration limits",
+        "Dependencies": "Related adapter source and tests; no runtime dependency",
+        "Use/status": "Active developer reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "No executable content; example configuration only"
+      }
+    },
+    {
+      "original_path": "services/agent/package.json",
+      "new_path": "services/agent-adapter/package.json",
+      "bytes": 141,
+      "sha256": "45aa9d2d38f00f865ca770267359c6240186a1dec7d4fbc3291e357b162bfaba",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/services/agent/package.json",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "services/agent-adapter",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Workspace packaging",
+        "Purpose": "Manifest for @fine-tune/agent",
+        "Dependencies": "No third-party packages; native Node/browser APIs",
+        "Use/status": "Active local workspace registration",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "No install lifecycle hook"
+      }
+    },
+    {
+      "original_path": "services/agent/src/index.mjs",
+      "new_path": "services/agent-adapter/src/index.mjs",
+      "bytes": 11747,
+      "sha256": "5bf80953da49f1ea19133cfc79719a99d78c6ff3c88d1aecd794aa9cd8763058",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/services/agent/src/index.mjs",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "services/agent-adapter",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "F08 OpenHands conversation lifecycle transport",
+        "Purpose": "Implementation of F08 OpenHands conversation lifecycle transport",
+        "Dependencies": "Native platform APIs; see DEPENDENCY_MAP for optional HTTP service",
+        "Use/status": "Library tested separately; disconnected from mockAPI",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Source deeply reviewed; synthetic fixtures only; broader product gaps recorded"
+      }
+    },
+    {
+      "original_path": "services/agent/test/agent.test.mjs",
+      "new_path": "services/agent-adapter/test/agent.test.mjs",
+      "bytes": 8397,
+      "sha256": "81a3a43bd86dd5aadb59f3137db4ed54e0a1e247a9dd3d5df4078e3156d94469",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/services/agent/test/agent.test.mjs",
+      "disposition": "moved by functional responsibility",
+      "functional_collection": "services/agent-adapter",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "F08 OpenHands conversation lifecycle transport",
+        "Purpose": "Existing tests and meaningful real HTTP regressions for F08 OpenHands conversation lifecycle transport",
+        "Dependencies": "node:test, node:assert/strict, node:http, ../src/index.mjs",
+        "Use/status": "Maintained test only",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Source deeply reviewed; synthetic fixtures only; broader product gaps recorded"
+      }
+    },
+    {
+      "original_path": "services/model-gateway/README.md",
+      "new_path": "services/model-gateway/README.md",
+      "bytes": 2265,
+      "sha256": "5f892929b75dabadd8050473579f8b19dda362b3b0c166c6fb05ba0ac52c7189",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/services/model-gateway/README.md",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "services/model-gateway",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Adapter documentation",
+        "Purpose": "Public boundary/configuration, redirect policy and fixture/live integration limits",
+        "Dependencies": "Related adapter source and tests; no runtime dependency",
+        "Use/status": "Active developer reference",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "No executable content; example configuration only"
+      }
+    },
+    {
+      "original_path": "services/model-gateway/package.json",
+      "new_path": "services/model-gateway/package.json",
+      "bytes": 149,
+      "sha256": "ff9937deeabfe67b96bc3150c976da1ba9e313181c30b51d3b320f7a98132f9c",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/services/model-gateway/package.json",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "services/model-gateway",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "Workspace packaging",
+        "Purpose": "Manifest for @fine-tune/model-gateway",
+        "Dependencies": "No third-party packages; native Node/browser APIs",
+        "Use/status": "Active local workspace registration",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "No install lifecycle hook"
+      }
+    },
+    {
+      "original_path": "services/model-gateway/src/index.mjs",
+      "new_path": "services/model-gateway/src/index.mjs",
+      "bytes": 16913,
+      "sha256": "a02b28146e5c1551039d85604e0b512937a9ed62d456b62f8c183b6d92612939",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/services/model-gateway/src/index.mjs",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "services/model-gateway",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "F06 Provider-independent model gateway and deterministic provider; F07 Ollama HTTP/NDJSON transport",
+        "Purpose": "Implementation of F06 Provider-independent model gateway and deterministic provider; F07 Ollama HTTP/NDJSON transport",
+        "Dependencies": "Native platform APIs; see DEPENDENCY_MAP for optional HTTP service",
+        "Use/status": "Library tested separately; disconnected from mockAPI",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Source deeply reviewed; synthetic fixtures only; broader product gaps recorded"
+      }
+    },
+    {
+      "original_path": "services/model-gateway/test/model-gateway.test.mjs",
+      "new_path": "services/model-gateway/test/model-gateway.test.mjs",
+      "bytes": 10554,
+      "sha256": "27000380cdb866cff0ce18cf211eb16ef509a706a93eca1ab27ed218534c5e72",
+      "original_copy": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip!/services/model-gateway/test/model-gateway.test.mjs",
+      "disposition": "retained conventional/root location",
+      "functional_collection": "services/model-gateway",
+      "purpose_and_dependencies_at_start": {
+        "Owner": "F06 Provider-independent model gateway and deterministic provider; F07 Ollama HTTP/NDJSON transport",
+        "Purpose": "Existing tests and meaningful real HTTP regressions for F06 Provider-independent model gateway and deterministic provider; F07 Ollama HTTP/NDJSON transport",
+        "Dependencies": "node:test, node:assert/strict, node:http, ../src/index.mjs",
+        "Use/status": "Maintained test only",
+        "Duplicate/unique assessment": "No competing active implementation",
+        "Safety": "Source deeply reviewed; synthetic fixtures only; broader product gaps recorded"
+      }
+    }
+  ],
+  "ignored_local_workspace_links_retargeted": [
+    {
+      "path": "node_modules/@fine-tune/api",
+      "before": "../../apps/api",
+      "after": "../../apps/builder-api"
+    },
+    {
+      "path": "node_modules/@fine-tune/web",
+      "before": "../../apps/web",
+      "after": "../../apps/builder-web"
+    },
+    {
+      "path": "node_modules/@fine-tune/core",
+      "before": "../../packages/core",
+      "after": "../../packages/project-generator"
+    },
+    {
+      "path": "node_modules/@fine-tune/agent",
+      "before": "../../services/agent",
+      "after": "../../services/agent-adapter"
+    }
+  ],
+  "new_files": [
+    {
+      "path": "PROJECT_STRUCTURE.md",
+      "purpose": "Canonical current whole-project organization and per-file relocation index"
+    },
+    {
+      "path": "docs/README.md",
+      "purpose": "Functional documentation navigation index"
+    },
+    {
+      "path": "AnalyseFuture/organization/PATH_MAPPING.json",
+      "purpose": "All101starting file purposes/dependencies, source-to-destination mapping, original hashes and link changes"
+    },
+    {
+      "path": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip",
+      "purpose": "99exact pre-sort text originals, compressed and inert"
+    },
+    {
+      "path": "AnalyseFuture/organization/REORGANIZATION.md",
+      "purpose": "Current organization scope, decisions and static-only review record"
+    }
+  ],
+  "expected_final_tracked_files": 106
+}

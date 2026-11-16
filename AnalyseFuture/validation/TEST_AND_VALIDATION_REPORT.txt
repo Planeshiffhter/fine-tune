@@ -1,0 +1,74 @@
+PRESERVED PRE-REORGANIZATION REPORT
+Original baseline: 84dd0aa43e8b66ff3e6f4e32d703f3b8b0ab955a
+The report body below records the earlier audit and its original paths/results.
+For current locations use PROJECT_STRUCTURE.md at the repository root and
+AnalyseFuture/organization/PATH_MAPPING.json. No tests were run for this sort.
+
+TEST AND VALIDATION REPORT
+Date: 17 November 2026; current cloud instance; Node v24.22.1, npm 11.9.0.
+Starting commit: e40fa8080eb201562d1382cc53b5b0a24d1b52ee.
+
+PASSED
+- Baseline npm test (before repairs):29 passed,0 failed,0 skipped.
+- Focused agent/gateway suites after redirect fix:20 passed,0 failed,0 skipped.
+- Complete maintained suite including3 new HTTP regressions:32 passed,0 failed,0 skipped.
+- Archive test-discovery experiment: bare node --test in AnalyseFuture discovered
+  a known temporary sentinel and failed as expected; npm test from repository
+  root ignored it and passed32 tests. Sentinel was removed in finally cleanup.
+- npm ci --ignore-scripts --no-audit --no-fund --cache /workspace/.cache/npm:
+  frozen installation passed; five local workspace links, no external npm packages.
+- Both ZIP CRC tests and original SHA256 comparisons passed. All 6,737 members are
+  inventoried. No unsafe paths/duplicate members; one internal symlink verified.
+- History scan:39 reachable commits/91 blobs; strict signatures on89 Git text blobs and
+  5,627 archived UTF-8 text files. Matches were classified fixtures/examples, not live
+  credentials. Scanning is bounded pattern evidence, not proof of absence.
+
+EXPECTED PRE-FIX FAILURES (REPRODUCTION, NOT UNRESOLVED FINAL FAILURES)
+Three redirect regressions failed before fix: focused 20 tests,17 passed,3 failed,
+exit 1. Agent redirect destination received 1 request and the dummy session header;
+Ollama generation/streaming destinations each received 1 request and synthetic
+prompt. After redirect:error each destination received 0 requests and all 3 passed.
+The archive sentinel is an intentional negative control, not product test debt.
+
+FINAL RECHECKS - PASSED
+- Fresh server and real Chromium UI check using existing Python Playwright and
+  /usr/bin/chromium: health, initial disabled download, four real template flows
+  (portfolio/store/dashboard/restaurant), prompt counter, rendered sandbox iframe,
+  plan rows, index.html filename/content, controlled HTTP400 UI error and recovery,
+  mobile control visibility, zero uncaught page errors. Validation server stopped.
+- Driver: recovery-notes/BROWSER_SMOKE_DRIVER.txt (inert, optional environment
+  tooling; no product dependency added). To repeat after reviewing it:
+  cp AnalyseFuture/recovery-notes/BROWSER_SMOKE_DRIVER.txt /tmp/browser-smoke.py
+  python3 /tmp/browser-smoke.py
+  Shared-desktop tools were unavailable; this fresh headless browser is not the
+  user's shared session. It is not an accessibility or production browser audit.
+- After frozen installation, npm test again passed 32/32, no failures or skips.
+- All 65 starting file contents and all 55 earlier baseline contents remain
+  recoverable byte-for-byte from active paths or exact inert snapshots.
+- All 14 requested named reports exist. All local links in 32 active Markdown
+  documents resolve; intentional historical copies are excluded from link repair.
+- node --check passed on all 10 active JavaScript source/test files.
+- Test allowlist exactly matches all four maintained test files; lockfile and
+  pinned/read-only CI YAML are unchanged. git diff --check passed.
+- A strict-signature scan of current textual files found no private-key/GitHub-
+  token/AWS-key signature. This is bounded evidence, not a universal secret scan.
+Do not infer a remote CI outcome or unavailable integration passed from these
+local checks. Exact final GitHub SHA is verified in the delivery response.
+
+NOT RUN / NOT AVAILABLE / NOT APPLICABLE
+- GitHub repository permissions/main protection APIs: attempted, Forbidden. Server
+  protection is not inferred absent and no bypass is used. Remote Actions outcome
+  is not verified; CI source is statically reviewed and uses same npm commands.
+- Live Ollama inference, real OpenHands Agent Server/model and generated app build,
+  sandbox isolation, generated-app browser automation, database migrations and
+  production deployment: not present/configured/exercised by this recovery.
+- Separate lint, formatter, typecheck and build scripts: repository declares none.
+  JavaScript syntax checks are useful validation, not a substitute for behavior.
+- Dependency advisory/image scans: no installed third-party npm dependencies or
+  deployed images to establish their state. No exhaustive SAST/penetration test,
+  upstream line-by-line review, legal clearance or account audit was performed.
+
+Exact maintained test command:
+node --test apps/api/test/app.test.mjs packages/core/test/core.test.mjs services/agent/test/agent.test.mjs services/model-gateway/test/model-gateway.test.mjs
+There are12core/APIchecks,10existinggatewaychecks,7existingagentchecks and3new
+redirectchecks. Existing mock/transport assertions do not prove a live AI builder.
