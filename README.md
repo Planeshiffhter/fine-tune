@@ -1,6 +1,6 @@
 # fine-tune — Independent AI Full-Stack App Builder
 
-> **Status: Phase-0 mock + Phase-1 model-gateway foundation (16 November 2026).** The repository includes a runnable deterministic template demo and a provider-independent model gateway with deterministic mock and opt-in local Ollama adapters. It does **not** yet include a working coding agent, secure generated-code sandbox, full-stack generation pipeline, production hosting, or a verified live model run.
+> **Status: Phase-0 mock + Phase-1 gateway and agent-adapter foundations (17 November 2026).** The repository includes a runnable deterministic template demo, a provider-independent model gateway with deterministic mock and opt-in local Ollama adapters, and an OpenHands transport adapter tested against a fake server. It does **not** yet include a verified live coding agent, secure generated-code sandbox, full-stack generation pipeline, production hosting, or a verified live model run.
 
 ## Our mission
 
@@ -21,6 +21,8 @@ The product should offer:
 | Audience | Read first |
 | --- | --- |
 | Everyone | [Project charter](docs/PROJECT_CHARTER.md), [current status](docs/IMPLEMENTATION_STATUS.md) |
+| Product planning | [Detailed project idea (TXT)](docs/PROJECT_IDEA.txt): existing work, feasibility limits and conditional future horizons |
+| Repository organization | [Structure and preservation review](docs/REPOSITORY_STRUCTURE.md), [AnalyseFuture reference inventory](AnalyseFuture/README.md) |
 | Engineers | [Architecture](docs/ARCHITECTURE.md), [product requirements](docs/PRODUCT_REQUIREMENTS.md), [roadmap](docs/ROADMAP.md) |
 | Codex / AI coding agents | [AGENTS.md](AGENTS.md), [Codex playbook](docs/CODEX_PLAYBOOK.md) |
 | Open-source integrators | [Reuse audit](docs/REUSE_AUDIT.md), [licensing and ownership](docs/OWNERSHIP_AND_LICENSES.md) |
@@ -42,6 +44,11 @@ Use one **original monorepo** with separately versioned, replaceable integration
 - **Deployment/training:** later gates, not prerequisites for the first vertical slice.
 
 See [architecture](docs/ARCHITECTURE.md), [reuse audit](docs/REUSE_AUDIT.md), and [ADR 0004](docs/decisions/0004-model-gateway-boundary.md).
+
+Active code remains in `apps/`, `packages/` and `services/`. Original upstream ZIPs
+and preserved historical documents live in [AnalyseFuture](AnalyseFuture/README.md)
+for future inspection. They are references, not installed or integrated features;
+no original file content was discarded during the organization pass.
 
 ## Run the current local mock
 

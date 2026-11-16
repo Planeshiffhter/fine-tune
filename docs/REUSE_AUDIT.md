@@ -46,7 +46,7 @@ Both projects can participate in code execution/workspace workflows, so importin
 
 | Candidate | Public source | Intended role | Current disposition |
 | --- | --- | --- | --- |
-| OpenHands Agent SDK | https://github.com/OpenHands/software-agent-sdk | Coding agent + tools | **Primary agent candidate**; adapter spike next |
+| OpenHands Agent SDK | https://github.com/OpenHands/software-agent-sdk | Coding agent + tools | **Primary agent candidate**; transport adapter on main, live fixture outstanding |
 | bolt.diy | https://github.com/stackblitz-labs/bolt.diy | UX/workflow ideas | Study; review WebContainers commercial terms |
 | Dyad | https://github.com/dyad-sh/dyad | Local app-building workflow | Study; verify core vs pro licensing |
 | Monaco Editor | https://github.com/microsoft/monaco-editor | Browser code editor | Integrate candidate |
@@ -70,6 +70,16 @@ Both projects can participate in code execution/workspace workflows, so importin
 | Convex Chef | https://github.com/get-convex/chef | Full-stack builder reference | Study only; evaluate service dependency |
 
 The complete 24-repository inventory is maintained in [RECOMMENDED_PUBLIC_REPOSITORIES.txt](RECOMMENDED_PUBLIC_REPOSITORIES.txt). Researching that inventory does **not** mean integrating all candidates.
+
+## Preserved source references — 17 November 2026
+
+The original [OpenSandbox archive](../AnalyseFuture/upstream-archives/OpenSandbox-main.zip)
+and [OpenHands archive](../AnalyseFuture/upstream-archives/software-agent-sdk-main.zip)
+are retained under `AnalyseFuture/upstream-archives/`, with hashes and provenance
+notes in the [preservation inventory](../AnalyseFuture/README.md). They are not
+installed runtime dependencies. Examined OpenSandbox TypeScript metadata says
+1.2.1; the historical audit above covers release-1.2.0. Verify the chosen exact
+release and compatibility rather than treating the archive as that audited tag.
 
 ## Mandatory audit template for an adopted dependency
 

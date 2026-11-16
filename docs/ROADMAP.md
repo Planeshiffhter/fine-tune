@@ -2,11 +2,11 @@
 
 **No launch dates or completion percentages are claimed.** Progress is determined by acceptance evidence in [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md).
 
-## Current execution state — 16 November 2026
+## Current execution state — 17 November 2026
 
 - Phase-0 deterministic Node monorepo/mock scaffold: **merged** in PR #8.
 - Provider-independent model gateway: **merged in PR #9**.
-- OpenHands agent adapter: **compatibility spike implemented on `feat/openhands-agent-adapter`; fake-server contract tests pass locally**.
+- OpenHands agent adapter: **transport compatibility spike merged on `main` in `5a4b690`; fake-server contract tests exist; live integration remains unverified**.
 - Restricted workspace/sandbox: not implemented; OpenHands workspace vs OpenSandbox remains to be proven.
 - Real prompt → build → browser tests → preview → export vertical slice: not implemented.
 
@@ -66,7 +66,7 @@ Sandbox security precedes executing untrusted apps; authentication precedes publ
 | --- | --- | --- | --- | --- | --- | --- |
 | FT-001 | Verify the monorepo baseline and CI | — | root workspaces, `.github/workflows/ci.yml` | clean install + existing mock/API tests pass | `npm ci --ignore-scripts`, `npm test` | **Done**; scaffold merged in PR #8 |
 | FT-002 | Provider-independent model gateway | FT-001 | `services/model-gateway`, env config, ADR 0004 | deterministic mock; opt-in Ollama; timeout/cancel/retry/usage/stream contracts; no mandatory paid API | unit/contract + full repository CI | **Done**; merged in PR #9 |
-| FT-003 | OpenHands adapter compatibility spike | FT-002 | `services/agent`, ADR 0005, integration tests | replaceable session interface maps verified v1.62 lifecycle endpoints; SDK details stay inside adapter | fake-server contract, cancellation, timeout and error tests; then real-server fixture | **In review** |
+| FT-003 | OpenHands adapter compatibility spike | FT-002 | `services/agent`, ADR 0005, integration tests | replaceable session interface maps verified v1.62 lifecycle endpoints; SDK details stay inside adapter | fake-server contract, cancellation, timeout and error tests; then real-server fixture | **Transport adapter on main; real-server fixture outstanding** |
 | FT-004 | Select one restricted workspace strategy | FT-003 | future `services/sandbox`, ADR, security tests | create/write/read/run/timeout/artifact/cleanup with explicit isolation policy; choose OpenHands workspace or OpenSandbox based on evidence | lifecycle + traversal + timeout + isolation fixtures | Not started |
 | FT-005 | Deterministic prompt → build vertical slice | FT-003, FT-004 | agent, sandbox, templates, API | fixture creates a real minimal app, runs build/backend checks and exports complete source | integration tests incl. intentionally broken fixture | Not started |
 | FT-006 | Browser verification and preview boundary | FT-005 | Playwright, future preview service | generated app is reachable only through reviewed preview boundary and required user flow passes | Playwright smoke + preview-origin/security tests | Not started |

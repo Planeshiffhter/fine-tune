@@ -1,6 +1,6 @@
 # Architecture — Modular Monorepo
 
-**Status:** Phase-0 browser/API/core mock and the provider-independent model gateway are merged. A thin OpenHands Agent Server adapter compatibility spike exists on `feat/openhands-agent-adapter`. Production sandbox, persistence, authenticated previews, deployment, training and most target UI services remain proposals until verified.
+**Status (17 November 2026):** Phase-0 browser/API/core mock, the provider-independent model gateway and the thin OpenHands Agent Server transport adapter are present on `main`. The adapter has fake-server contract tests; a live coding-agent run is unverified. Production sandbox, persistence, authenticated previews, deployment, training and most target UI services remain proposals until verified.
 
 ## Fundamental choice
 
@@ -14,12 +14,19 @@ One original product repository with clean boundaries and pinned third-party dep
     packages/
       core/                 # prompt validation + deterministic static generator
     services/
-      agent/                # OpenHands Agent Server adapter (feature branch compatibility spike)
+      agent/                # OpenHands transport adapter; fake-server tests only
       model-gateway/        # merged provider-independent mock + Ollama boundary
     docs/
     .github/workflows/
+    AnalyseFuture/          # preserved archives and historical documents; not runtime code
 
 The current builder still calls `packages/core`; it is intentionally **not** described as AI generation.
+
+The original upstream ZIPs are kept in `AnalyseFuture/upstream-archives/`.
+Historical documents and an inventory preserve the pre-organization contents.
+See [repository structure](REPOSITORY_STRUCTURE.md) for the active layout and
+preservation scope. Keep upstream source compressed here to avoid automatic test
+discovery of unpacked third-party code.
 
 ## Target repository layout
 

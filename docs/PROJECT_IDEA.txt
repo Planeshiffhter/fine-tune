@@ -1,6 +1,7 @@
 FINE-TUNE: AN AI APP BUILDER THAT SHOWS ITS WORK
 Detailed project idea and long-term vision
 Prepared: 17 November 2026
+Reviewed during repository organization: 17 November 2026
 Repository: kawaho3/fine-tune
 
 DOCUMENT PURPOSE
@@ -8,7 +9,9 @@ DOCUMENT PURPOSE
 This document proposes a direction for the complete project. It builds on the
 work already present rather than starting over. It does not authorize a code
 rewrite, language migration, new integration, deployment, or infrastructure spend.
-The owner guides implementation through separately scoped instructions.
+The owner guides implementation through separately scoped instructions. The owner
+has separately authorized the current repository organization; this idea document
+does not authorize implementation of its proposed product features.
 
 Labels used throughout:
   EXISTING: present in this repository, with the validation limits stated.
@@ -95,17 +98,20 @@ EXISTING: services/agent.
 
 EXISTING: documentation and a test baseline.
   Architecture, product requirements, reuse research, security requirements and
-  a roadmap already exist. Earlier in this onboarding session, dependency setup
+  a roadmap already exist. During onboarding on 17 November 2026, dependency setup
   and all 29 repository tests passed on Node.js 24.22.1 / npm 11.9.0, with no skips.
   Live HTTP checks verified health, static assets and deterministic generation.
-  These are session observations, not new browser or production test results.
+  These are historical onboarding observations, not new browser or production
+  test results established by this idea document.
 
 AVAILABLE UPSTREAM SOURCE, NOT INTEGRATED FEATURES:
-  software-agent-sdk-main.zip contains OpenHands agent components, mainly Python,
+  AnalyseFuture/upstream-archives/software-agent-sdk-main.zip contains OpenHands
+  agent components, mainly Python,
   with a TypeScript client. Examined package versions are 1.62.0; the Python core
   requires Python 3.12 or newer. The upstream license examined is MIT.
 
-  OpenSandbox-main.zip contains Python/Go infrastructure and several language
+  AnalyseFuture/upstream-archives/OpenSandbox-main.zip contains Python/Go
+  infrastructure and several language
   SDKs. Examined TypeScript SDK versions are 1.2.1. The upstream license examined
   is Apache-2.0. The repository's earlier audit references release-1.2.0, so the
   ZIP must not be assumed identical to the audited release.
@@ -115,6 +121,14 @@ AVAILABLE UPSTREAM SOURCE, NOT INTEGRATED FEATURES:
   passed, but CRC integrity does not establish release provenance or safety.
   Installation, license obligations, exact version pinning and compatibility
   still need verification before adoption.
+
+  AnalyseFuture also retains original documents revised during organization and
+  a preservation manifest for every file in baseline commit 0c45350. Reference
+  material is not automatically integrated or safe to execute. The active
+  application layout remains apps/, packages/ and services/; see
+  docs/REPOSITORY_STRUCTURE.md for the review, scope and limits. The remote main
+  matched the previously pushed baseline when inspected, so this repository
+  review did not establish the reported account compromise.
 
 NOT YET DELIVERED:
   A verified real-agent run; selected secure execution strategy; real full-stack
@@ -309,7 +323,9 @@ Choose one owner of workspace/process lifecycle. OpenHands has workspace concept
 and OpenSandbox offers execution infrastructure; direct compatibility has not been
 proven. Compare them with one lifecycle/security fixture before selecting a path.
 
-No repository restructuring or language conversion is performed by this document.
+This document does not implement a runtime restructure or language conversion.
+The separately authorized organization pass moves upstream archives into
+AnalyseFuture and updates navigation/status while retaining existing active code.
 
 
 9. SAFETY, DATA AND TRUST THAT THE PRODUCT NEEDS
@@ -706,9 +722,10 @@ It also uses earlier observations from this onboarding session and direct archiv
 inspection. It does not contain fresh market research, competitor trials, legal
 advice, a completed security audit, a revenue forecast or new test results.
 
-Some older project documents retain historical feature-branch descriptions.
+Current structure/status documents have been updated to describe the adapter on
+main. Original historical copies are retained under AnalyseFuture/baseline-documents/.
 Use actual source, Git history and dated test evidence to establish current state;
-do not interpret an old branch label or a future roadmap as proof of delivery.
+do not interpret a historical branch label or a future roadmap as proof of delivery.
 
 The intended destination is ambitious: an app builder that helps people create
 and maintain useful software with clear evidence and control. The next success is

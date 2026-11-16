@@ -1,13 +1,14 @@
 # Implementation Status
 
-**As of: 16 November 2026**
+**As of: 17 November 2026**
 
 ## Verified repository state
 
 - The GitHub repository **kawaho3/fine-tune** is public and its default branch is `main`.
-- Current `main` commit before this feature branch: `7797090aaed4d0e1aee15671da416f5c057371da`.
+- Baseline for the 17 November organization review: `0c45350c73863f7d147f4681f477bb42e6f7f6a1`, matching fetched `origin/main` and the previous version pushed in this conversation. No uncommitted or untracked project files were present before the review.
 - Phase-0 deterministic mock scaffold was merged in PR #8.
 - The provider-independent model gateway was merged in PR #9 at `7797090aaed4d0e1aee15671da416f5c057371da`.
+- The OpenHands transport adapter is also present on `main`, merged in `5a4b690` (PR #10). A live agent run remains unverified.
 - PR #9 final CI run #7 passed `npm ci --ignore-scripts` and the complete repository test suite: **22 passed, 0 failed** on Node v22.23.4.
 
 ## Working Phase-0 scaffold
@@ -42,7 +43,8 @@ Environment: Node.js v22.16.0, npm 10.9.2.
 
 ## OpenHands adapter compatibility spike
 
-Branch: `feat/openhands-agent-adapter`.
+Present on `main` since merge commit `5a4b690`. The original development branch was
+`feat/openhands-agent-adapter`; that name is historical context.
 
 Implemented `services/agent` as a thin, replaceable adapter over the verified OpenHands Agent Server v1.62.0 REST contract:
 
@@ -57,7 +59,7 @@ Implemented `services/agent` as a thin, replaceable adapter over the verified Op
 
 Local deterministic fake-server verification on Node v22.16.0: **7 passed, 0 failed**.
 
-This is a contract/transport spike only. A real OpenHands Agent Server, real coding model, WebSocket event stream, and real workspace execution have **not** been validated by this branch.
+This is a contract/transport spike only. A real OpenHands Agent Server, real coding model, WebSocket event stream, and real workspace execution have **not** been validated by the fake-server tests.
 
 ## Upstream research recorded for the next boundaries
 
@@ -76,7 +78,7 @@ See [REUSE_AUDIT.md](REUSE_AUDIT.md).
 
 ## Next verifiable milestone
 
-1. Keep the OpenHands adapter PR green in full repository CI.
+1. Keep the merged OpenHands adapter and full repository checks green on `main`.
 2. Run one pinned OpenHands Agent Server compatibility fixture and verify the adapter against the real server without requiring a paid production model.
 3. Compare the OpenHands workspace path against OpenSandbox with an executable restricted-workspace fixture before choosing one production execution layer.
 4. Continue toward prompt → plan → generated files → isolated build/test → preview → source export.
@@ -88,6 +90,39 @@ inventory, feasibility limits, evaluation criteria, and conditional one-, two-,
 and three-plus-year horizons. It is a planning artifact, not an implementation
 milestone or authorization to restructure code. No new application capabilities
 or test results are claimed by this documentation change.
+
+## Repository organization and preservation — 17 November 2026
+
+- Reviewed all 55 tracked baseline files and compared fetched `origin/main` with
+  the previously pushed `0c45350` baseline. They matched; this review did not
+  establish the reported account compromise or an account-security resolution.
+- Relocated the two original ZIPs to `AnalyseFuture/upstream-archives/` without
+  changing their bytes. Preserved seven original documents before factual and
+  navigation updates in `AnalyseFuture/baseline-documents/`.
+- Added a per-file preservation manifest and
+  [structure review](REPOSITORY_STRUCTURE.md). All 55 baseline contents have a
+  retained copy verified by size and SHA-256. No original content was discarded.
+- Updated `PROJECT_IDEA.txt`, active status descriptions and README navigation.
+  The detailed idea covers existing work, feasible next steps, unsupported
+  promises, future participants and conditional one-/two-/three-plus-year plans.
+- Active application source, test files, workspace definitions and lockfile are
+  unchanged. No third-party code was unpacked into the active checkout or run.
+
+Current-instance validation on Node.js **v24.22.1**, npm **11.9.0**:
+
+- `npm ci --ignore-scripts --no-audit --no-fund --cache /workspace/.cache/npm`:
+  passed; frozen dependency/workspace installation succeeded.
+- `npm test`: **29 passed, 0 failed, 0 skipped**.
+- A separately started real HTTP server passed health, static UI and
+  prompt-to-generated-HTML assertions; that validation server was then stopped.
+- Preservation checks: **55/55 original file contents match**; both archives also
+  passed ZIP CRC checks. These are integrity checks, not proof of upstream trust.
+- Active Markdown local links and `git diff --check` passed.
+
+Live Ollama inference, a real OpenHands agent, generated-app execution, browser
+automation, production deployment and account-access investigation remain unrun
+or outside this organization pass. The existing tests still use mocks/fake servers
+for provider and agent integration.
 
 ## Rules for keeping this document accurate
 

@@ -20,6 +20,14 @@ Thanks for helping build an independent AI full-stack web-app builder. **The rep
 
 ## Proposed development flow
 
+For maintenance explicitly requested by the repository owner, the current
+instruction is to work directly on `main`, create no feature branch or PR, and
+make frequent small commits and pushes while substantive editing continues.
+Preserve displaced reference material under `AnalyseFuture/` with an inventory;
+never include credentials or private customer data. This owner-directed workflow
+overrides steps 2 and 5 below for those tasks. The general external contribution
+flow remains:
+
 1. Create or select an issue with explicit acceptance checks.
 2. Create a dedicated feature branch.
 3. Implement the narrow task and add reproducible tests.
