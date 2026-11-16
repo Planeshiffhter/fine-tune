@@ -81,6 +81,14 @@ See [REUSE_AUDIT.md](REUSE_AUDIT.md).
 3. Compare the OpenHands workspace path against OpenSandbox with an executable restricted-workspace fixture before choosing one production execution layer.
 4. Continue toward prompt → plan → generated files → isolated build/test → preview → source export.
 
+## Planning document added — 17 November 2026
+
+`docs/PROJECT_IDEA.txt` records a proposed product direction, the existing-work
+inventory, feasibility limits, evaluation criteria, and conditional one-, two-,
+and three-plus-year horizons. It is a planning artifact, not an implementation
+milestone or authorization to restructure code. No new application capabilities
+or test results are claimed by this documentation change.
+
 ## Rules for keeping this document accurate
 
 - A feature becomes “implemented” only with links to code, executable verification steps, and test results.
