@@ -83,7 +83,7 @@ TEST OWNERSHIP AND PATHS
   Baseline defined test() calls: 29. Definition count is not a pass result.
   Recovery adds focused safety regressions; final totals belong to the validation report.
   Test dependencies: node:test, node:assert/strict, node:http and native APIs.
-  No browser E2E runner, database migration runner, linter, type checker or
+  No product-managed browser E2E dependency/CI suite, database migration runner, linter, type checker or
   compilation build script exists. npm check delegates to npm test.
 
 CI
@@ -109,8 +109,8 @@ CONSOLIDATION EVIDENCE
   ownership and should remain until a tested integration requires a change.
 
 RECOVERY TEST-DISCOVERY REQUIREMENT
-  Replace unconstrained root node --test discovery with explicit trusted active
-  test files/roots. Otherwise a future unpacked *.test.mjs under AnalyseFuture
+  Recovery replaced unconstrained root node --test discovery with four explicit
+  maintained test files. Otherwise a future unpacked *.test.mjs under AnalyseFuture
   could be executed. Workspace globs alone do not prevent Node discovering it.
   Keep URL/error/timeout helpers per adapter for now: superficially duplicated
   code has different retry and error contracts and no demonstrated consolidation
@@ -122,3 +122,9 @@ PUBLIC-COMPATIBILITY NOTE
   response schema. Redirect rejection is safety behavior for outbound adapter
   requests, not a replacement for authorization, isolation or live compatibility
   verification. No framework migration or language rewrite is needed.
+
+OPTIONAL RECOVERY BROWSER TOOLING
+Environment-provided Python Playwright and /usr/bin/chromium executed a fresh
+headless UI smoke without adding product dependencies. Its inert driver is
+AnalyseFuture/recovery-notes/BROWSER_SMOKE_DRIVER.txt. It is optional validation,
+not an installed project E2E suite or a production runtime dependency.

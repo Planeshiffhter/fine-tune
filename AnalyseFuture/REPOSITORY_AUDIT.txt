@@ -73,3 +73,10 @@ failed/unrun distinctions and current-instance limits. See NEXT_DEVELOPER_INSTRU
 for setup, actual call paths and the next narrow agent/runtime fixture. The final
 Git commit/remote verification is reported in the delivery response; report facts
 are tied to the starting snapshot plus the enclosing delivered recovery commits.
+
+FINAL CURRENT-INSTANCE RESULTS
+Maintained suite32/32 passed after frozen install; fresh headless Chromium mock
+UI/download/error/mobile checks passed. Syntax10files, active links32Markdown
+files,65startingcontents and55oldercontents preservation checks passed. The
+final complete inventory includes every delivered tracked file, including the
+inert browser driver. These do not establish live-agent/production capability.

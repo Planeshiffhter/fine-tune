@@ -124,6 +124,54 @@ automation, production deployment and account-access investigation remain unrun
 or outside this organization pass. The existing tests still use mocks/fake servers
 for provider and agent integration.
 
+## Complete recovery follow-up — 17 November 2026
+
+Starting from `e40fa8080eb201562d1382cc53b5b0a24d1b52ee`, the uploaded master
+request was applied to all **65 starting tracked files**, all **four visible
+remote branch heads** and **39 reachable pre-recovery commits**. The initial
+fetch configuration covered only `main`; other branches were explicitly fetched.
+Their maintained source components already matched `main`, so no source merge or
+history rewrite was justified. A remote recovery tag preserves the starting ref.
+
+- Added the thirteen requested recovery reports plus persistent progress and a
+  dependency map under `AnalyseFuture/`. The complete inventory also covers
+  every delivered path; the ZIP member index lists all **6,737 entries**.
+- Retained **15** pre-change originals with inert `.txt` suffixes. All 65 starting
+  contents and all 55 older baseline contents remain recoverable with matching
+  hashes. No valuable source content was deleted.
+- Consolidated the existing full vision at
+  [PROJECT_VISION_AND_FUTURE_ROADMAP.txt](../AnalyseFuture/PROJECT_VISION_AND_FUTURE_ROADMAP.txt),
+  covering twenty requested topics and conditional one-/two-/three-to-five-year
+  horizons. The previous `docs/PROJECT_IDEA.txt` is a compatibility pointer.
+- Reproduced redirect forwarding of synthetic prompts and a dummy session key
+  with three real HTTP tests. Both adapter request paths now reject redirects.
+  The same three tests failed before the fix and passed after it.
+- Scoped `npm test` to four explicit maintained files. A temporary archive test
+  failed under bare Node discovery but was excluded by the maintained command.
+
+Current-instance results: frozen installation passed; **32 tests passed, 0 failed,
+0 skipped**; **10** active JavaScript files passed syntax checks; local links in
+**32** active Markdown documents resolved. A fresh headless Chromium session using
+existing environment tooling passed four real mock-template flows, rendered
+preview/plan, prompt count, HTML download, controlled error/recovery and mobile
+control visibility, with no uncaught page errors. The inert driver is retained
+under `AnalyseFuture/recovery-notes/`; it adds no product dependency or full
+generated-application E2E suite.
+
+Git/source review scanned 89 textual blobs; archive scanning covered 5,627 UTF-8
+files, with automated triage of 134 selected files and targeted manual excerpts
+from 19 upstream files. This is not an exhaustive upstream source/security audit.
+GitHub repository/protection API reads returned `Forbidden`; account permissions,
+security events and protection settings remain unverified. Normal pushes respect
+server rules. The report does not establish a compromise or an account remedy.
+
+See [REPOSITORY_AUDIT.txt](../AnalyseFuture/REPOSITORY_AUDIT.txt),
+[SECURITY_AUDIT.txt](../AnalyseFuture/SECURITY_AUDIT.txt),
+[TEST_AND_VALIDATION_REPORT.txt](../AnalyseFuture/TEST_AND_VALIDATION_REPORT.txt)
+and [NEXT_DEVELOPER_INSTRUCTIONS.txt](../AnalyseFuture/NEXT_DEVELOPER_INSTRUCTIONS.txt).
+Real model/agent integration, execution isolation, persistence/auth and production
+deployment remain unfinished product work.
+
 ## Rules for keeping this document accurate
 
 - A feature becomes “implemented” only with links to code, executable verification steps, and test results.

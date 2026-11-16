@@ -18,7 +18,8 @@ P1 BEFORE MULTI-USER/DEPLOYED PRODUCT
 5. Reproduce/handle malformed request-target parsing outside catch; assess response
    sizes/timeouts and resource abuse with scoped tests. No confirmed exploit here.
 6. Independent acceptance/regression fixtures and real browser UI/download checks.
-   Current32tests do not prove click interaction or arbitrary generated app behavior.
+   Current 32 tests and a separate headless mock UI smoke do not prove arbitrary
+   generated-app behavior or constitute an accessibility/full browser suite.
 7. Reviewed database/auth/migrations/backups/deployment. No current production path.
 8. Verify dependency/image advisories and exact upstream licenses/versions before
    adoption. ZIP source is not an installed, trusted release or dependency lock.

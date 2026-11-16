@@ -28,7 +28,7 @@ cd /workspace/fine-tune
 node --version                         # requirement >=22; validated24.22.1
 npm --version                          # requirement >=10; validated11.9.0
 npm ci --ignore-scripts --no-audit --no-fund --cache /workspace/.cache/npm
-npm test                               # maintained32tests; no paid calls
+npm test                               # maintained32 tests; no paid calls
 HOST=127.0.0.1 PORT=3000 npm run dev     # keep running in managed terminal
 
 From another terminal request GET/api/health: expect statusok,modeoffline_mock,
@@ -69,3 +69,10 @@ Read code rather than assuming roadmap status. Preserve original bytes before
 superseding work, use reviewed libraries, maintain independent checks, state
 passed/failed/skipped/unrun separately, and update docs/status/evidence. Avoid
 restarting this audit or rewriting working modules unless new findings justify it.
+
+OPTIONAL REPRODUCIBLE MOCK UI SMOKE
+The recovery environment already supplied Python Playwright and Chromium. The
+exact reviewed driver is preserved inert at recovery-notes/BROWSER_SMOKE_DRIVER.txt.
+Copy it outside the checkout and run with that optional tooling to reproduce
+mock preview/download/error/mobile checks. Do not add these tools as mandatory
+product dependencies or infer a full generated-app E2E suite was implemented.

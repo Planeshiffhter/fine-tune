@@ -1,7 +1,7 @@
 MIGRATION SUMMARY - COMPLETE RECOVERY FOLLOW-UP
-Start: e40fa8080eb201562d1382cc53b5b0a24d1b52ee,65trackedfiles.
+Start: e40fa8080eb201562d1382cc53b5b0a24d1b52ee,65 tracked files.
 Backup: recovery/before-complete-audit-e40fa80 (tag pushed before source edits).
-Initial history: four remote heads,39reachablecommits,91uniqueGitblobs.
+Initial history: four remote heads,39 reachable commits,91 unique Git blobs.
 No reset, branch deletion, force push or publication-history rewrite.
 
 PATH CHANGES
@@ -26,9 +26,9 @@ No dependency version, workspace membership, lockfile, database or CI YAML chang
 COUNTS AND COMPATIBILITY
 One full planning document relocated with old-path compatibility; one planning
 responsibility consolidated; zero active source files moved or implementations
-merged;15originalfiles newly preserved. These counts exclude generated reports,
-previously archived2ZIPs/7docs and the temporary verification sentinel (removed).
-All65startingfilecontents remain either at unchanged paths or in inert snapshots.
+merged;15 original files newly preserved. These counts exclude generated reports,
+previously archived2 ZIPs / 7 docs and the temporary verification sentinel (removed).
+All65 starting file contents remain either at unchanged paths or in inert snapshots.
 Original55-file preservation from0c45350 is also still verifiable.
 
 RUNNING AND RECOVERY

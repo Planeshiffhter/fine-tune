@@ -12,9 +12,11 @@ count is not a current pass result. Recovery can add focused regressions without
 changing the feature-group count. See TEST_AND_VALIDATION_REPORT.txt for exact
 commands, current pass/fail/skip counts and limitations.
 
-No confirmed broken product feature was demonstrated by this source review.
-An absent live service, disconnected milestone boundary or untested browser path
-is not automatically a broken implementation. These limitations remain explicit.
+Initial source review did not demonstrate a failing mock feature. Recovery then
+reproduced redirect forwarding in both adapters and repaired it with three native
+HTTP regression tests; the final maintained suite has 32 passing tests. Headless
+Chromium also exercised the existing mock UI/download/error flows. An absent live
+service or disconnected integration is not automatically a broken implementation.
 
 CODE-BACKED FEATURE GROUPS
 ==========================
@@ -81,7 +83,7 @@ Consolidation decision: Keep server entrypoint separate from createHandler so AP
 F04: Browser request, examples, plan and static preview
 -------------------------------------------------------
 Purpose: Collect a prompt, send /api/generate, show progress/errors/template plan and display static srcdoc in an empty-sandbox iframe.
-Current implementation/status: Implemented browser source; no automated real-browser interaction or accessibility suite exists. Static preview is not isolated server execution.
+Current implementation/status: Implemented browser source; current recovery headless Chromium smoke passed four template flows, rendered iframe/plan, error recovery and mobile controls. No accessibility audit or real generated-app isolation is claimed.
 Owned files/services:
   - apps/web/public/index.html
   - apps/web/public/app.js
@@ -96,7 +98,7 @@ Dependencies:
 Existing verification:
   - API tests inspect served HTML and sandbox markup/assets; source inspection maps form selectors and response usage
 Missing or unverified functionality:
-  - Browser end-to-end verification
+  - Maintained CI browser end-to-end suite and broader accessibility/behavior coverage
   - Visual/code editing
   - Workspace preview proxy
   - Persisted state and authenticated preview
@@ -106,7 +108,7 @@ Consolidation decision: One browser implementation exists. Keep CSS/HTML/script 
 F05: Single HTML source download
 --------------------------------
 Purpose: Download the most recent successful mock index.html through a Blob URL; disable download before successful generation.
-Current implementation/status: Implemented browser code; user download interaction is not automatically verified here. It is not full-project export.
+Current implementation/status: Implemented browser code; headless Chromium downloaded index.html and matched its bytes to the real API response. It is not full-project export.
 Owned files/services:
   - apps/web/public/app.js
   - apps/web/public/index.html
@@ -114,11 +116,11 @@ Dependencies:
   - F04
   - Browser Blob, URL.createObjectURL/revokeObjectURL and anchor download APIs
 Existing verification:
-  - No browser download assertion; core/API tests verify index.html exists in response.
+  - Recovery headless Chromium verifies enabled state, suggested filename and downloaded HTML against the response; core/API tests also verify the file exists.
 Missing or unverified functionality:
   - Complete project archive/repository export
   - Fresh-environment install/build verification
-  - Browser download regression test
+  - Maintained CI browser download regression suite
 Recommended active location: apps/web/public
 Consolidation decision: Keep download bound to the same lastHtml state as preview. Do not call the returned README or single-file download a complete source export.
 
@@ -341,3 +343,11 @@ NEXT IMPLEMENTATION PRIORITIES
 5. Validate a bounded live-model task, then durable projects and safe follow-up edits.
 6. Expand supported apps, deployment and fine-tuning only after measured evidence.
 Use TECHNICAL_DEBT.txt and NEXT_DEVELOPER_INSTRUCTIONS.txt for continuation detail.
+
+RECOVERY VALIDATION ADDENDUM
+F07: two added native HTTP tests cover Ollama generation and streaming redirect
+rejection; F08: one added test covers conversation-body/session-key forwarding.
+All three failed before repair and passed after; final maintained count is 32.
+F04/F05 additionally passed environment-provided headless Chromium UI/download/
+error-recovery checks; the inert driver and exact scope are in the validation
+report. No browser dependency was added to product packages.

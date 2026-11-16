@@ -48,8 +48,8 @@ services/model-gateway/test/model-gateway.test.mjs -> AnalyseFuture/historical-i
   SHA256 845a1897753d94a99481b91ade624d6579e0e3cb26543336a49e46dd611e2125
   Reason: retain pre-recovery content before repair, navigation or planning consolidation. Replacement: current original path.
 
-Existing preserved material from prior pass:2unchangedZIPs and7baseline documents.
-See PRESERVATION_MANIFEST.json for all55originalpaths from0c45350 and README hashes.
+Existing preserved material from prior pass:2 unchanged ZIPs and7 baseline documents.
+See PRESERVATION_MANIFEST.json for all 55originalpaths from0c45350 and README hashes.
 Newly copied originals this pass:15. Actual displaced source files:0.
 The15includes small documents preserved before review even where final edits were unnecessary.
 Baseline15snapshot paths recover exact e40fa80bytes; no repeated upstream extraction.

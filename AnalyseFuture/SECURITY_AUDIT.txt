@@ -12,7 +12,7 @@ rejection fixtures; no secret values are reproduced here. No high-specificity
 key/token match was found in those Git text blobs. Pattern scans are incomplete
 by nature and cannot establish that all sensitive data or malicious logic is absent.
 
-Archive paths/metadata cover all6,737members/5,712files. Signature scans read5,627
+Archive paths/metadata cover all 6,737 members/5,712files. Signature scans read5,627
 UTF-8 files. Eight matching files were synthetic auth/redaction examples, documented
 example credentials or a localhost TLS test key. No live-credential exposure was
 established. Both CRC/hash checks passed; this authenticates neither upstream tag
@@ -28,12 +28,12 @@ SEC-01 - Unbounded automatic test discovery.
   Starting npm test was bare node --test. Workspace exclusions did not prevent
   future archived JS from discovery. The new command enumerates four maintained
   test files. A controlled archive sentinel failed under bare discovery, and the
-  maintained suite passed32tests while excluding it. Sentinel was then removed.
+  maintained suite passed32 tests while excluding it. Sentinel was then removed.
   Continue to keep sources compressed/inert; explicit imports or manual execution
   can defeat this procedural boundary. This is not an OS sandbox.
 SEC-02 - Redirect request/data forwarding.
   Native fetch followed redirects after initial endpoint validation. Two loopback
-  HTTP servers reproduced a307 to a different port. The Agent Server adapter sent
+  HTTP servers reproduced a 307 to a different port. The Agent Server adapter sent
   its dummy X-Session-API-Key to that destination; Ollama generation and streaming
   forwarded the synthetic prompt. No real key, remote endpoint or customer data
   was used. Three regressions failed before fix; all passed after redirect:error
