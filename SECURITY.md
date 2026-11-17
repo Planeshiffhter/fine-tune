@@ -4,7 +4,7 @@
 
 As of 17 November 2026 this repository contains a local offline mock and tested
 adapter boundaries, not a deployed production platform. A bounded source/history
-and archive review is recorded in [AnalyseFuture/security/SECURITY_AUDIT.txt](AnalyseFuture/security/SECURITY_AUDIT.txt).
+and archive review is recorded in [AnalyseFuture/history/recovery-reports/security/SECURITY_AUDIT.txt](AnalyseFuture/history/recovery-reports/security/SECURITY_AUDIT.txt).
 It is not an exhaustive security audit, penetration test, account-access review or
 vulnerability response SLA. Public generated-code execution is not implemented.
 

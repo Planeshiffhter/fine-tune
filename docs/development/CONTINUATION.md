@@ -1,109 +1,76 @@
 # Current continuation guide
 
-Updated on **17 November 2026**, after the functional reorganization and the
-subsequently authorized post-move validation from `4a20bb0`.
+Updated: **17 November 2026**, for the whole-repository restructuring from
+`3d00f02c217419e6172a9c2586db7660db1fa391`.
 
-This is the current handoff. The older files under `AnalyseFuture/handoff/`
-preserve the earlier recovery work and its original paths; they are historical
-evidence, not instructions for the renamed layout.
+## Working instructions
 
-## Organization status
+- Use the existing checkout. Each cloud task is already isolated; do not create a
+  worktree unless requested. Follow [AGENTS.md](../../AGENTS.md).
+- The owner requests direct commits and normal pushes to `main`, without a PR,
+  history rewrite or force-push.
+- **Do not run tests for this restructuring.** Do not install dependencies, build,
+  start the app, run browser flows or execute archived source during this pass.
+  Use `[skip ci]` for its commits. Prior authorization to test belonged to an
+  earlier task and is superseded by this request.
+- Keep every existing file and idea. Preserve edited originals and uncertain
+  material under `AnalyseFuture/`, with provenance. Keep historical contents inert.
+- Read the [structure guide](../../PROJECT_STRUCTURE.md),
+  [status](IMPLEMENTATION_STATUS.md) and [architecture](../architecture/ARCHITECTURE.md).
 
-The requested functional sorting is complete. Every one of the 101 original
-tracked files has a recorded home: 84 moved and 17 retained. Original text and
-upstream archives remain recoverable. The structure pass added five records;
-this closure adds this guide and an archive of the documents changed here.
-The subsequent validation phase adds a report and preservation archive, giving
-110 tracked project files, all assigned in
-[PROJECT_STRUCTURE.md](../../PROJECT_STRUCTURE.md) and the
-[placement ledger](../../AnalyseFuture/organization/PATH_MAPPING.json).
+## Functional ownership
 
-No additional source relocation, duplicate implementation merge or deletion is
-needed based on the current inspection. Keeping a correctly placed file in its
-functional collection is a deliberate decision, not an omitted file.
-
-## Current instructions
-
-- Work directly on `main`, without feature branches or a PR, unless the owner
-  changes the instruction. Preserve history; never force-push.
-- The owner lifted the testing pause with “test all and fix them”. Testing and
-  normal CI commits are authorized again. Use the root `npm test` command and
-  keep archived reference code outside test discovery. Do not use `[skip ci]`
-  for these validation/fix commits.
-- Preserve original content before edits and put safe historical/uncertain
-  material in a labeled `AnalyseFuture` collection. Do not publish credentials
-  or private data, or execute preserved source merely because it is archived.
-- Follow [AGENTS.md](../../AGENTS.md) and read the current
-  [status](IMPLEMENTATION_STATUS.md), [architecture](../architecture/ARCHITECTURE.md)
-  and [structure guide](../../PROJECT_STRUCTURE.md).
-
-## Current functional locations
-
-| Responsibility | Current home |
+| Responsibility | Home |
 | --- | --- |
-| HTTP handling, route limits and asset serving | [apps/builder-api](../../apps/builder-api/) |
-| Browser prompts, preview, plan and HTML download | [apps/builder-web](../../apps/builder-web/) |
-| Prompt validation and deterministic project templates | [packages/project-generator](../../packages/project-generator/) |
-| OpenHands lifecycle HTTP boundary | [services/agent-adapter](../../services/agent-adapter/) |
-| Mock/Ollama inference, retries and streams | [services/model-gateway](../../services/model-gateway/) |
-| Product goals and backlog | [docs/product](../product/) |
-| Component design and decisions | [docs/architecture](../architecture/) |
-| Setup, handoff and implementation evidence | [docs/development](./) |
-| Security, legal, research and operations | Their named collections under [docs](../README.md) |
-| Future model-training strategy | [docs/model-training](../model-training/) |
-| Complete future product vision | [AnalyseFuture/planning](../../AnalyseFuture/planning/) |
-| Preservation and old-path lookup | [AnalyseFuture/organization](../../AnalyseFuture/organization/) |
+| HTTP routes, limits and static asset serving | [apps/builder-api](../../apps/builder-api/) |
+| Prompt UI, plan, preview and HTML download | [apps/builder-web](../../apps/builder-web/) |
+| Deterministic templates and prompt validation | [packages/project-generator](../../packages/project-generator/) |
+| OpenHands lifecycle transport | [services/agent-adapter](../../services/agent-adapter/) |
+| Mock/Ollama model-provider boundary | [services/model-gateway](../../services/model-gateway/) |
+| Charter, requirements, roadmap and full future vision | [docs/product](../product/) |
+| Current developer workflow and previous validation scope | [docs/development](./) |
+| Architecture, decisions, security, research and other policies | [docs index](../README.md) |
+| Historical snapshots and recovery reports | [AnalyseFuture/history](../../AnalyseFuture/history/) |
+| Upstream source references, kept compressed | [AnalyseFuture/references/upstream](../../AnalyseFuture/references/upstream/) |
+| Current file catalogue and preservation evidence | [AnalyseFuture/organization](../../AnalyseFuture/organization/) |
 
-Each maintained component keeps its own source, checks and package metadata.
-Public package names remain `@fine-tune/api`, `@fine-tune/web`, `@fine-tune/core`,
-`@fine-tune/agent` and `@fine-tune/model-gateway`; folder renames do not change
-those import contracts. Root scripts and lockfile workspace targets name the
-new folders. The existing runtime still has this limited call graph:
+All five workspace package names stay unchanged: `@fine-tune/api`,
+`@fine-tune/web`, `@fine-tune/core`, `@fine-tune/agent` and
+`@fine-tune/model-gateway`. Keep component tests beside the component. The current
+runtime call path remains:
 
 ```text
 builder-web -> POST /api/generate -> builder-api -> @fine-tune/core
                                                 (project-generator)
-
-agent-adapter and model-gateway: separate, maintained integration boundaries;
-the mock generation endpoint does not invoke them.
+agent-adapter and model-gateway remain independent integration boundaries.
 ```
 
-## What remains beyond organization
+Root npm scripts, API asset paths, workspace symlinks, lockfile entries and
+library exports retain their existing locations. The browser source and roadmap
+links now use the selected `Planeshiffhter/fine-tune` repository.
 
-1. **Post-move baseline validation is complete.** The maintained suite passes
-   41 tests on both Node 22.23.5 and Node 24.22.1, with no failures or skips.
-   Real startup and headless browser mock flows also pass. See
-   [VALIDATION_REPORT.md](VALIDATION_REPORT.md) for the nine added regressions,
-   repaired failures, exact scope and unrun integration milestones. Test future
-   changes appropriately; these results do not prove a production AI platform.
-2. **Real agent compatibility is unfinished product work.** Use a pinned Agent
-   Server fixture and authorized model configuration. Fake-server transport
-   coverage does not establish live coding, and local `/workspace` is not a
-   secure execution sandbox.
-3. **One restricted execution strategy must be selected and verified** before
-   generated or customer code runs. Do not combine competing workspace lifecycles
-   without a compatibility and isolation fixture.
-4. **A generated-app build/preview/export workflow remains to be implemented.**
-   Begin with one deterministic fixture, including a broken case; then evaluate
-   a live model. Persistence, data/auth, deployment and training follow their
-   own evidence gates in the [roadmap](../product/ROADMAP.md).
+## Validation and unfinished product work
 
-These are separate product milestones, not unfinished file sorting. Validation
-repairs the existing boundaries; it does not implement live generation, a sandbox
-or deployment. Passing checks are limited to the report's stated scope.
-The owned repository is the app-builder foundation; a separate English-speaking
-companion implementation has not been supplied or found and must not be invented
-by relabeling the agent conversation adapter.
+[VALIDATION_REPORT.md](VALIDATION_REPORT.md) records the earlier 41-test Node
+22/24 results and startup/browser checks. **No new runtime result is claimed**
+for this static restructuring. The four maintained test files remain in place;
+run them only after the owner lifts the testing pause for the relevant work.
+
+Live agent/model integration, one verified isolated execution path, generated-app
+build/browser/export, persistence, authentication, deployment and training remain
+separate milestones. The repository is an app-builder foundation; do not invent
+missing capabilities or relabel the conversation adapter as a separate product.
 
 ## Preservation and recovery
 
-The backup ref `recovery/before-functional-sort-84dd0aa`, the original-text ZIP,
-all prior archive collections and the source-to-destination ledger remain intact.
-This follow-up preserves its changed documents in
-[FOLLOW_UP_ORIGINALS_E19DFDA.zip](../../AnalyseFuture/organization/FOLLOW_UP_ORIGINALS_E19DFDA.zip).
-Use Git history or a selected preserved original after reviewing current changes;
-do not reset published history to an old backup tag.
+The [file catalogue](../../AnalyseFuture/organization/FILE_CATALOG.json) maps every
+starting file to its current home and the exact retained original. Old reports
+keep their original body paths; use their recorded original location and this
+catalogue to interpret those paths rather than treating them as current links.
+The old 101-file organization ledger is preserved under
+[history/organization](../../AnalyseFuture/history/organization/).
 
-For current navigation, use this guide and `PROJECT_STRUCTURE.md`. For dated
-evidence, consult the labeled historical reports. A normal push followed by a
-matching remote SHA confirms delivery; local files alone do not provide backup.
+The current pre-edit originals are in
+[PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip](../../AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip).
+Select an individual original when needed; do not reset published history.
+Normal push plus matching remote SHA confirms delivery, not application behavior.

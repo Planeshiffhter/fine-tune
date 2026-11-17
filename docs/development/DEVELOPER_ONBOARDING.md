@@ -9,7 +9,7 @@ The first Phase-0 offline mock prototype can now be run locally; it is **not an 
 1. Read [README](../../README.md), [PROJECT_CHARTER](../product/PROJECT_CHARTER.md), [IMPLEMENTATION_STATUS](IMPLEMENTATION_STATUS.md) and [ROADMAP](../product/ROADMAP.md).
 2. Read [ARCHITECTURE](../architecture/ARCHITECTURE.md), [REUSE_AUDIT](../research/REUSE_AUDIT.md) and [SECURITY_ARCHITECTURE](../security/SECURITY_ARCHITECTURE.md).
 3. Read [CONTRIBUTING](../../CONTRIBUTING.md), [AGENTS](../../AGENTS.md) and [ownership/license policy](../legal/OWNERSHIP_AND_LICENSES.md).
-4. Pick a small [issue](https://github.com/kawaho3/fine-tune/issues) with measurable acceptance criteria.
+4. Pick a small [issue](https://github.com/Planeshiffhter/fine-tune/issues) with measurable acceptance criteria.
 5. If proposing a new major dependency, add verification evidence to the reuse audit and record an ADR.
 
 ## Local quickstart (Phase-0 mock)
@@ -32,10 +32,10 @@ be final endpoints: both adapters reject HTTP redirects.
 
 For the current file/feature locations, dependency boundaries, active constraints
 and remaining work, read [CONTINUATION.md](CONTINUATION.md). The earlier
-[NEXT_DEVELOPER_INSTRUCTIONS.txt](../../AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt)
+[NEXT_DEVELOPER_INSTRUCTIONS.txt](../../AnalyseFuture/history/recovery-reports/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt)
 is a preserved pre-reorganization report and uses historical paths.
 The detailed vision is
-[PROJECT_VISION_AND_FUTURE_ROADMAP.txt](../../AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt).
+[PROJECT_VISION_AND_FUTURE_ROADMAP.txt](../product/PROJECT_VISION_AND_FUTURE_ROADMAP.txt).
 Production deployment is not implemented; `npm start` starts the local mock only.
 
 ## How to decide what to build

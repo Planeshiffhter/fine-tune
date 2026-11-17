@@ -1,0 +1,2253 @@
+{
+  "baseline_commit": "3d00f02c217419e6172a9c2586db7660db1fa391",
+  "repository": "Planeshiffhter/fine-tune",
+  "scope": "All tracked baseline files, all current new records, all folders containing project files, and discovered ignored installation metadata/symlinks. .git is retained metadata, excluded from project movement. No tests or product execution.",
+  "summary": {
+    "baseline_files": 110,
+    "moved_files": 28,
+    "edited_originals_in_new_zip": 14,
+    "added_files": 5,
+    "current_project_files": 115,
+    "preexisting_zip_members": 6860
+  },
+  "hash_policy": "Baseline SHA-256 and sizes are verified against retained_original. Added records intentionally omit their own hashes to avoid circular self-digests. Historical prior ledgers keep their original recorded paths/hashes.",
+  "files": [
+    {
+      "original_path": ".env.example",
+      "current_path": ".env.example",
+      "action": "retained byte-identically",
+      "purpose": "Documented non-secret development settings for HTTP binding, deterministic model gateway, optional Ollama, and optional OpenHands adapter; not automatically loaded.",
+      "relationships_at_review": [
+        "apps/builder-api/src/server.mjs",
+        "services/model-gateway/src/index.mjs",
+        "services/agent-adapter/src/index.mjs"
+      ],
+      "baseline_bytes": 691,
+      "baseline_sha256": "96c8531c8964568216e991294e06d243528d52588ea682b40fd8c9390128b7fb",
+      "baseline_git_blob": "03aee49e0c98bd13b0f05fdf51a3f1d29d6c7cc8",
+      "current_bytes": 691,
+      "current_sha256": "96c8531c8964568216e991294e06d243528d52588ea682b40fd8c9390128b7fb",
+      "retained_original": {
+        "file": ".env.example"
+      }
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "current_path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "action": "retained byte-identically",
+      "purpose": "GitHub bug-report form collecting reproduction, impact, environment, sanitized evidence, and proposed regression coverage.",
+      "relationships_at_review": [
+        ".github/ISSUE_TEMPLATE/",
+        "SECURITY.md"
+      ],
+      "baseline_bytes": 354,
+      "baseline_sha256": "f3bd1102a04e668d8730555f661899bdd1f1e4058778b369671804526c4f6507",
+      "baseline_git_blob": "227df514cfeefe268900eeafe5d511688bba22c0",
+      "current_bytes": 354,
+      "current_sha256": "f3bd1102a04e668d8730555f661899bdd1f1e4058778b369671804526c4f6507",
+      "retained_original": {
+        "file": ".github/ISSUE_TEMPLATE/bug_report.md"
+      }
+    },
+    {
+      "original_path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "current_path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "action": "retained byte-identically",
+      "purpose": "GitHub feature-request form tying scope and measurable acceptance to product requirements, roadmap, reuse, licensing, and security.",
+      "relationships_at_review": [
+        "docs/product/PRODUCT_REQUIREMENTS.md",
+        "docs/product/ROADMAP.md",
+        "docs/research/REUSE_AUDIT.md"
+      ],
+      "baseline_bytes": 426,
+      "baseline_sha256": "5f82b1e1e54654451dc49ed8ed44c6a73dd54d6eef337a05eb4474f039272154",
+      "baseline_git_blob": "8b4c92a75a7b6a775ea22227e023ef88d8fc6f82",
+      "current_bytes": 426,
+      "current_sha256": "5f82b1e1e54654451dc49ed8ed44c6a73dd54d6eef337a05eb4474f039272154",
+      "retained_original": {
+        "file": ".github/ISSUE_TEMPLATE/feature_request.md"
+      }
+    },
+    {
+      "original_path": ".github/pull_request_template.md",
+      "current_path": ".github/pull_request_template.md",
+      "action": "retained byte-identically",
+      "purpose": "GitHub contribution review template capturing changes, validation evidence, security/licensing risks, and implementation-status updates.",
+      "relationships_at_review": [
+        "docs/development/IMPLEMENTATION_STATUS.md",
+        "CONTRIBUTING.md"
+      ],
+      "baseline_bytes": 878,
+      "baseline_sha256": "fe5ce895302286963ad749ab82a495f2f736047b72b696e81abbaf0f92766ddf",
+      "baseline_git_blob": "121c10f6874151de4d398bda671f848917142be0",
+      "current_bytes": 878,
+      "current_sha256": "fe5ce895302286963ad749ab82a495f2f736047b72b696e81abbaf0f92766ddf",
+      "retained_original": {
+        "file": ".github/pull_request_template.md"
+      }
+    },
+    {
+      "original_path": ".github/workflows/ci.yml",
+      "current_path": ".github/workflows/ci.yml",
+      "action": "retained byte-identically",
+      "purpose": "GitHub CI workflow installing workspace links and running the explicitly maintained test command on Node.js 22.",
+      "relationships_at_review": [
+        "package.json",
+        "package-lock.json",
+        "main"
+      ],
+      "baseline_bytes": 453,
+      "baseline_sha256": "5334e4420298d3e6e014c1cd5924e9ce0fbc787ea27091f560cb59aa1f31d84b",
+      "baseline_git_blob": "beea39f4f24d81246f4af6bc748b7cf6a4fefd58",
+      "current_bytes": 453,
+      "current_sha256": "5334e4420298d3e6e014c1cd5924e9ce0fbc787ea27091f560cb59aa1f31d84b",
+      "retained_original": {
+        "file": ".github/workflows/ci.yml"
+      }
+    },
+    {
+      "original_path": ".gitignore",
+      "current_path": ".gitignore",
+      "action": "retained byte-identically",
+      "purpose": "Repository-wide exclusions for installed dependencies, runtime environment files, OS metadata, generated coverage/build outputs, and logs.",
+      "relationships_at_review": [
+        "node_modules/",
+        ".env",
+        ".env.example",
+        "coverage/",
+        "dist/"
+      ],
+      "baseline_bytes": 72,
+      "baseline_sha256": "660e721ead310a854416640c3cf88dd735b243c22c936e230f08a50b77f1f4d4",
+      "baseline_git_blob": "a040d2a2d2622edc1cb94ffb2214efbcae2e6c18",
+      "current_bytes": 72,
+      "current_sha256": "660e721ead310a854416640c3cf88dd735b243c22c936e230f08a50b77f1f4d4",
+      "retained_original": {
+        "file": ".gitignore"
+      }
+    },
+    {
+      "original_path": "AGENTS.md",
+      "current_path": "AGENTS.md",
+      "action": "retained byte-identically",
+      "purpose": "Defines repository-specific engineering, preservation, integration and evidence rules for coding agents.",
+      "relationships_at_review": [
+        "README.md",
+        "docs/development/IMPLEMENTATION_STATUS.md",
+        "docs/architecture/ARCHITECTURE.md",
+        "docs/security/SECURITY_ARCHITECTURE.md"
+      ],
+      "baseline_bytes": 3155,
+      "baseline_sha256": "b8e5b00da19161a40c41c3164e51252ac1b8ba98aeace2738647ac67ec44b7a5",
+      "baseline_git_blob": "19beb20773526f0455c92279d42555abc7a338db",
+      "current_bytes": 3155,
+      "current_sha256": "b8e5b00da19161a40c41c3164e51252ac1b8ba98aeace2738647ac67ec44b7a5",
+      "retained_original": {
+        "file": "AGENTS.md"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/README.md",
+      "current_path": "AnalyseFuture/README.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Index of retained historical material, reference provenance and preservation policy.",
+      "relationships_at_review": [
+        "AnalyseFuture/history/",
+        "AnalyseFuture/references/upstream/",
+        "AnalyseFuture/organization/"
+      ],
+      "baseline_bytes": 5562,
+      "baseline_sha256": "5517dada056002f25b30fba57e81a16d4cd2456f92c4150bda02cbe84487db2f",
+      "baseline_git_blob": "5464d1e01dc9116242bb87cfb2bfe5ef491e3202",
+      "current_bytes": 6315,
+      "current_sha256": "4400132408f2d6cfe72d1c15e022d7620a2ceb7e625f9086fc9e32d788d3867d",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "AnalyseFuture/README.md"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/audit/REPOSITORY_AUDIT.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/audit/REPOSITORY_AUDIT.txt",
+      "action": "moved byte-identically",
+      "purpose": "Historical repository recovery audit and recorded scope/limitations.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 5564,
+      "baseline_sha256": "ccac2e53442688128fe896e6d2d17788b258e3f8834e706c62793f6e87da31cc",
+      "baseline_git_blob": "f114cf70b823b4536139bad194bed63e3a7aa6b7",
+      "current_bytes": 5564,
+      "current_sha256": "ccac2e53442688128fe896e6d2d17788b258e3f8834e706c62793f6e87da31cc",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/audit/REPOSITORY_AUDIT.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/features/DEPENDENCY_MAP.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/features/DEPENDENCY_MAP.txt",
+      "action": "moved byte-identically",
+      "purpose": "Recorded browser/API/generator call path and separate agent/model contracts at the earlier recovery baseline.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 8027,
+      "baseline_sha256": "ca13a2ef7335f390d20d97b846b368d3d9de5d696019ea7b08bcb8f4bf46d39a",
+      "baseline_git_blob": "e4d70ad4648c0eb0e95aaca1bc18c27a669be449",
+      "current_bytes": 8027,
+      "current_sha256": "ca13a2ef7335f390d20d97b846b368d3d9de5d696019ea7b08bcb8f4bf46d39a",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/features/DEPENDENCY_MAP.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/features/DUPLICATE_ANALYSIS.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/features/DUPLICATE_ANALYSIS.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier content/feature overlap assessment distinguishing intended adapters and snapshots from duplicate implementations.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 3720,
+      "baseline_sha256": "44875a4b89f1bfc895279cdbaf119e6937edcb568f3ea217ca44efd5828a93e2",
+      "baseline_git_blob": "68623aef04e47e2fea592c4747c858929e3fb9ed",
+      "current_bytes": 3720,
+      "current_sha256": "44875a4b89f1bfc895279cdbaf119e6937edcb568f3ea217ca44efd5828a93e2",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/features/DUPLICATE_ANALYSIS.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/features/FEATURE_INVENTORY.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/features/FEATURE_INVENTORY.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier code-backed feature inventory and unimplemented product capability classifications.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 20902,
+      "baseline_sha256": "2c702b6c2c56c7a8935c29ff67f22d890c2a6c44ce1f1d9a959c44f948825b42",
+      "baseline_git_blob": "bd58d7d773b9721ebab9ee034033640edb788624",
+      "current_bytes": 20902,
+      "current_sha256": "2c702b6c2c56c7a8935c29ff67f22d890c2a6c44ce1f1d9a959c44f948825b42",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/features/FEATURE_INVENTORY.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier continuation instructions with old paths and recovery milestones; retain as dated evidence.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 5141,
+      "baseline_sha256": "2cd351cc26d0417b90cb07f7a5e82cdea9e1e96ae73386f9d0fab7955c97c5f0",
+      "baseline_git_blob": "1f2c54ffa530987b25b760bcaa7003d2177f7333",
+      "current_bytes": 5141,
+      "current_sha256": "2cd351cc26d0417b90cb07f7a5e82cdea9e1e96ae73386f9d0fab7955c97c5f0",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/handoff/TECHNICAL_DEBT.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/handoff/TECHNICAL_DEBT.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier known product gaps, security concerns and integration debt.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 3124,
+      "baseline_sha256": "5060917d3988fcbae6c21f2baa829db929ebc3a872bad3d78830e27017281f3f",
+      "baseline_git_blob": "9f974ee385b445b1191965074b4d23c65f688785",
+      "current_bytes": 3124,
+      "current_sha256": "5060917d3988fcbae6c21f2baa829db929ebc3a872bad3d78830e27017281f3f",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/handoff/TECHNICAL_DEBT.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/handoff/WORK_PROGRESS.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/handoff/WORK_PROGRESS.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier recovery work log and checkpoints; not current execution instructions.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 3480,
+      "baseline_sha256": "edd375122beb1294d92f23b22f0fcfb1b4fb5b5cb02b0e2000061c4de6f9d7ba",
+      "baseline_git_blob": "be4869100ff0b36d78d495af2b65ee6ee19a5676",
+      "current_bytes": 3480,
+      "current_sha256": "edd375122beb1294d92f23b22f0fcfb1b4fb5b5cb02b0e2000061c4de6f9d7ba",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/handoff/WORK_PROGRESS.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/baseline-documents/CONTRIBUTING.md",
+      "current_path": "AnalyseFuture/history/baseline-documents/CONTRIBUTING.md",
+      "action": "retained byte-identically",
+      "purpose": "Original baseline document snapshot: CONTRIBUTING.md; preserve original wording and links.",
+      "relationships_at_review": [
+        "Original snapshot context: CONTRIBUTING.md"
+      ],
+      "baseline_bytes": 2350,
+      "baseline_sha256": "807abe33eb2a3f7ef668e6feeef14d68ca017971f470df34039170ac95a3a002",
+      "baseline_git_blob": "e77d557f9009d5d711b843d8c956cfa905240228",
+      "current_bytes": 2350,
+      "current_sha256": "807abe33eb2a3f7ef668e6feeef14d68ca017971f470df34039170ac95a3a002",
+      "retained_original": {
+        "file": "AnalyseFuture/history/baseline-documents/CONTRIBUTING.md"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/baseline-documents/README.md",
+      "current_path": "AnalyseFuture/history/baseline-documents/README.md",
+      "action": "retained byte-identically",
+      "purpose": "Original baseline document snapshot: README.md; preserve original wording and links.",
+      "relationships_at_review": [
+        "Original snapshot context: README.md"
+      ],
+      "baseline_bytes": 5998,
+      "baseline_sha256": "40c38bbfe85ccf3baa7a6c85b6e93d820c111768df4e68afc718c76c587c1c6b",
+      "baseline_git_blob": "958f2d111eb2d23974cc2b5af53cd44d24680671",
+      "current_bytes": 5998,
+      "current_sha256": "40c38bbfe85ccf3baa7a6c85b6e93d820c111768df4e68afc718c76c587c1c6b",
+      "retained_original": {
+        "file": "AnalyseFuture/history/baseline-documents/README.md"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/baseline-documents/docs/ARCHITECTURE.md",
+      "current_path": "AnalyseFuture/history/baseline-documents/docs/ARCHITECTURE.md",
+      "action": "retained byte-identically",
+      "purpose": "Original baseline document snapshot: docs/ARCHITECTURE.md; preserve original wording and links.",
+      "relationships_at_review": [
+        "Original snapshot context: docs/ARCHITECTURE.md"
+      ],
+      "baseline_bytes": 6930,
+      "baseline_sha256": "5072f4566dbba4aded263bb77f6f3a6857972d572e8ca6771a049e85e0f80daa",
+      "baseline_git_blob": "a626ea25e47743ae26e768129a15c3c76b681a23",
+      "current_bytes": 6930,
+      "current_sha256": "5072f4566dbba4aded263bb77f6f3a6857972d572e8ca6771a049e85e0f80daa",
+      "retained_original": {
+        "file": "AnalyseFuture/history/baseline-documents/docs/ARCHITECTURE.md"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/baseline-documents/docs/IMPLEMENTATION_STATUS.md",
+      "current_path": "AnalyseFuture/history/baseline-documents/docs/IMPLEMENTATION_STATUS.md",
+      "action": "retained byte-identically",
+      "purpose": "Original baseline document snapshot: docs/IMPLEMENTATION_STATUS.md; preserve original wording and links.",
+      "relationships_at_review": [
+        "Original snapshot context: docs/IMPLEMENTATION_STATUS.md"
+      ],
+      "baseline_bytes": 6340,
+      "baseline_sha256": "68a51f9e83c218c079aae78477cc740e8252ab09b893fd5767a1d9c881d1a7cf",
+      "baseline_git_blob": "4e949d5d3ab6c0b29ec08908037901485a01a0f1",
+      "current_bytes": 6340,
+      "current_sha256": "68a51f9e83c218c079aae78477cc740e8252ab09b893fd5767a1d9c881d1a7cf",
+      "retained_original": {
+        "file": "AnalyseFuture/history/baseline-documents/docs/IMPLEMENTATION_STATUS.md"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/baseline-documents/docs/PROJECT_IDEA.txt",
+      "current_path": "AnalyseFuture/history/baseline-documents/docs/PROJECT_IDEA.txt",
+      "action": "retained byte-identically",
+      "purpose": "Original baseline document snapshot: docs/PROJECT_IDEA.txt; preserve original wording and links.",
+      "relationships_at_review": [
+        "Original snapshot context: docs/PROJECT_IDEA.txt"
+      ],
+      "baseline_bytes": 36237,
+      "baseline_sha256": "6167c60d8a87cdeb4a1c94fce5e88c212931993801ef71956b5b95d1233af2a1",
+      "baseline_git_blob": "918e538f99a36437f89dbf2d2fe2c041b628ecb9",
+      "current_bytes": 36237,
+      "current_sha256": "6167c60d8a87cdeb4a1c94fce5e88c212931993801ef71956b5b95d1233af2a1",
+      "retained_original": {
+        "file": "AnalyseFuture/history/baseline-documents/docs/PROJECT_IDEA.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/baseline-documents/docs/REUSE_AUDIT.md",
+      "current_path": "AnalyseFuture/history/baseline-documents/docs/REUSE_AUDIT.md",
+      "action": "retained byte-identically",
+      "purpose": "Original baseline document snapshot: docs/REUSE_AUDIT.md; preserve original wording and links.",
+      "relationships_at_review": [
+        "Original snapshot context: docs/REUSE_AUDIT.md"
+      ],
+      "baseline_bytes": 8031,
+      "baseline_sha256": "2c8957191dd0d2a64c6a45e7f21dbbc8f690853c7ae640d0cd45423e2b82e410",
+      "baseline_git_blob": "53d77ff0d2153f5ff6c1ea5f6c5efde70deb3a67",
+      "current_bytes": 8031,
+      "current_sha256": "2c8957191dd0d2a64c6a45e7f21dbbc8f690853c7ae640d0cd45423e2b82e410",
+      "retained_original": {
+        "file": "AnalyseFuture/history/baseline-documents/docs/REUSE_AUDIT.md"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/baseline-documents/docs/ROADMAP.md",
+      "current_path": "AnalyseFuture/history/baseline-documents/docs/ROADMAP.md",
+      "action": "retained byte-identically",
+      "purpose": "Original baseline document snapshot: docs/ROADMAP.md; preserve original wording and links.",
+      "relationships_at_review": [
+        "Original snapshot context: docs/ROADMAP.md"
+      ],
+      "baseline_bytes": 6404,
+      "baseline_sha256": "1e7080eb70eb4cb338c00f60a332d9de00b1379d223cf34064e8440cafdc2e85",
+      "baseline_git_blob": "c304a5ddd99be658452b1666cb72ecb3ee0e8d9c",
+      "current_bytes": 6404,
+      "current_sha256": "1e7080eb70eb4cb338c00f60a332d9de00b1379d223cf34064e8440cafdc2e85",
+      "retained_original": {
+        "file": "AnalyseFuture/history/baseline-documents/docs/ROADMAP.md"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/AnalyseFuture/README.md.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/AnalyseFuture/README.md.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: AnalyseFuture/README.md.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: AnalyseFuture/README.md"
+      ],
+      "baseline_bytes": 3221,
+      "baseline_sha256": "6953e19eb64532000b11b426e0211ea42fbe6927d1f52c769faa3e69b7f19b57",
+      "baseline_git_blob": "f8390785ea4647ac57ed73656d0813a0bffc96e6",
+      "current_bytes": 3221,
+      "current_sha256": "6953e19eb64532000b11b426e0211ea42fbe6927d1f52c769faa3e69b7f19b57",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/AnalyseFuture/README.md.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/README.md.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/README.md.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: README.md.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: README.md"
+      ],
+      "baseline_bytes": 6700,
+      "baseline_sha256": "7c3dddc018f3287c2116cb45476fb39f0c18252fa6bdb708419b19234acc21c9",
+      "baseline_git_blob": "d5199b4215713ea35c1be1f75de60e8b9bcc44c3",
+      "current_bytes": 6700,
+      "current_sha256": "7c3dddc018f3287c2116cb45476fb39f0c18252fa6bdb708419b19234acc21c9",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/README.md.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/SECURITY.md.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/SECURITY.md.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: SECURITY.md.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: SECURITY.md"
+      ],
+      "baseline_bytes": 1732,
+      "baseline_sha256": "42c55b408804e8cf07a7a165fbd61d75e769d86f3a41c657ae475fa6bf4b36cc",
+      "baseline_git_blob": "f4f7044422b61802820990ce3f52de5eabcc5749",
+      "current_bytes": 1732,
+      "current_sha256": "42c55b408804e8cf07a7a165fbd61d75e769d86f3a41c657ae475fa6bf4b36cc",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/SECURITY.md.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/docs/ARCHITECTURE.md.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/docs/ARCHITECTURE.md.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: docs/ARCHITECTURE.md.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: docs/ARCHITECTURE.md"
+      ],
+      "baseline_bytes": 7423,
+      "baseline_sha256": "225e655d30604346ca373d40c60f6701569337cd5d5e30aac2bc2fa49ae665a9",
+      "baseline_git_blob": "067873cad98460738a6788e8f57e47cd0bb7bd20",
+      "current_bytes": 7423,
+      "current_sha256": "225e655d30604346ca373d40c60f6701569337cd5d5e30aac2bc2fa49ae665a9",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/docs/ARCHITECTURE.md.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/docs/DEVELOPER_ONBOARDING.md.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/docs/DEVELOPER_ONBOARDING.md.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: docs/DEVELOPER_ONBOARDING.md.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: docs/DEVELOPER_ONBOARDING.md"
+      ],
+      "baseline_bytes": 1964,
+      "baseline_sha256": "b15e4f0767e1b68b418d2f9bb052001f12845c16e0b555b14f4bd64f7e1eb217",
+      "baseline_git_blob": "e3cfd9ca0efc3524c07d8ed74290a7eb4a06c3d9",
+      "current_bytes": 1964,
+      "current_sha256": "b15e4f0767e1b68b418d2f9bb052001f12845c16e0b555b14f4bd64f7e1eb217",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/docs/DEVELOPER_ONBOARDING.md.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/docs/IMPLEMENTATION_STATUS.md.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/docs/IMPLEMENTATION_STATUS.md.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: docs/IMPLEMENTATION_STATUS.md.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: docs/IMPLEMENTATION_STATUS.md"
+      ],
+      "baseline_bytes": 8806,
+      "baseline_sha256": "179a67608927c5410f613a1b87a9ed096b7e65b7735c43f5da72fb35875a33af",
+      "baseline_git_blob": "a5fcd7deb0095ccfadadece0e35fda29e120a335",
+      "current_bytes": 8806,
+      "current_sha256": "179a67608927c5410f613a1b87a9ed096b7e65b7735c43f5da72fb35875a33af",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/docs/IMPLEMENTATION_STATUS.md.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/docs/PROJECT_IDEA.txt.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/docs/PROJECT_IDEA.txt.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: docs/PROJECT_IDEA.txt.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: docs/PROJECT_IDEA.txt"
+      ],
+      "baseline_bytes": 37341,
+      "baseline_sha256": "cc2f1fb8ec24953ef22e0db5be30f23630f93090d9012a6f722cd22979775845",
+      "baseline_git_blob": "3b13a18890a5ab94ba74280131d062f0600fcb5f",
+      "current_bytes": 37341,
+      "current_sha256": "cc2f1fb8ec24953ef22e0db5be30f23630f93090d9012a6f722cd22979775845",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/docs/PROJECT_IDEA.txt.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/docs/REPOSITORY_STRUCTURE.md.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/docs/REPOSITORY_STRUCTURE.md.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: docs/REPOSITORY_STRUCTURE.md.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: docs/REPOSITORY_STRUCTURE.md"
+      ],
+      "baseline_bytes": 5893,
+      "baseline_sha256": "7a29e26c394933876f4ed5bc93ab704f61fc74c192314339f0f50697d9321f44",
+      "baseline_git_blob": "b121ae57a6dd5dc18ad75b108cc00e3149bf13e8",
+      "current_bytes": 5893,
+      "current_sha256": "7a29e26c394933876f4ed5bc93ab704f61fc74c192314339f0f50697d9321f44",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/docs/REPOSITORY_STRUCTURE.md.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/package.json.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/package.json.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: package.json.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: package.json"
+      ],
+      "baseline_bytes": 425,
+      "baseline_sha256": "7903b9d446fd42c62d6009b351e809be71a8a0c95682b4c7909da185275ab7b9",
+      "baseline_git_blob": "945e083c44bbc78e0fb8598b4311f9444418b87e",
+      "current_bytes": 425,
+      "current_sha256": "7903b9d446fd42c62d6009b351e809be71a8a0c95682b4c7909da185275ab7b9",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/package.json.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/services/agent/README.md.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/services/agent/README.md.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: services/agent/README.md.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: services/agent/README.md"
+      ],
+      "baseline_bytes": 1882,
+      "baseline_sha256": "6daa23c3a6480d65b32faa1c36800d202be740e6dbc1c58d01557499480b57b8",
+      "baseline_git_blob": "48f5946f91a361088a604b85773288665f824f7d",
+      "current_bytes": 1882,
+      "current_sha256": "6daa23c3a6480d65b32faa1c36800d202be740e6dbc1c58d01557499480b57b8",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/services/agent/README.md.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/services/agent/src/index.mjs.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/services/agent/src/index.mjs.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: services/agent/src/index.mjs.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: services/agent/src/index.mjs"
+      ],
+      "baseline_bytes": 11720,
+      "baseline_sha256": "7929d9cda6651cc6bce7085b5e9a3b32491b0d4c84a828b9e70864d466dae12f",
+      "baseline_git_blob": "a7e4e01f5d17d5025d1c0cf1560b5a8d086a794f",
+      "current_bytes": 11720,
+      "current_sha256": "7929d9cda6651cc6bce7085b5e9a3b32491b0d4c84a828b9e70864d466dae12f",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/services/agent/src/index.mjs.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/services/agent/test/agent.test.mjs.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/services/agent/test/agent.test.mjs.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: services/agent/test/agent.test.mjs.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: services/agent/test/agent.test.mjs"
+      ],
+      "baseline_bytes": 7113,
+      "baseline_sha256": "4793d1ef2bb0a35494664ebd07e1acb58d0f69161363ab66dae21f537ef33ade",
+      "baseline_git_blob": "92301618d25f6683b6dc54c96e6b904e74b34531",
+      "current_bytes": 7113,
+      "current_sha256": "4793d1ef2bb0a35494664ebd07e1acb58d0f69161363ab66dae21f537ef33ade",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/services/agent/test/agent.test.mjs.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/services/model-gateway/README.md.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/services/model-gateway/README.md.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: services/model-gateway/README.md.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: services/model-gateway/README.md"
+      ],
+      "baseline_bytes": 1700,
+      "baseline_sha256": "db5221c39326428e47a5982f282d6e422380b0b5ad3758164ef451099701897d",
+      "baseline_git_blob": "b2974606d0ea4f49b6c0d1604b646503742b8a26",
+      "current_bytes": 1700,
+      "current_sha256": "db5221c39326428e47a5982f282d6e422380b0b5ad3758164ef451099701897d",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/services/model-gateway/README.md.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/services/model-gateway/src/index.mjs.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/services/model-gateway/src/index.mjs.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: services/model-gateway/src/index.mjs.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: services/model-gateway/src/index.mjs"
+      ],
+      "baseline_bytes": 16894,
+      "baseline_sha256": "895a9ce0dfcdb9f26383415e731e33893ac826f20c01ae03aab676355ea5e110",
+      "baseline_git_blob": "6a3450d554554daac5999bfd9cc1f26541d18558",
+      "current_bytes": 16894,
+      "current_sha256": "895a9ce0dfcdb9f26383415e731e33893ac826f20c01ae03aab676355ea5e110",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/services/model-gateway/src/index.mjs.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/history/before-complete-audit/services/model-gateway/test/model-gateway.test.mjs.txt",
+      "current_path": "AnalyseFuture/history/before-complete-audit/services/model-gateway/test/model-gateway.test.mjs.txt",
+      "action": "retained byte-identically",
+      "purpose": "Exact inert snapshot before recovery: services/model-gateway/test/model-gateway.test.mjs.txt; source/test/config/docs content retained with .txt suffix.",
+      "relationships_at_review": [
+        "Original snapshot context: services/model-gateway/test/model-gateway.test.mjs"
+      ],
+      "baseline_bytes": 8423,
+      "baseline_sha256": "845a1897753d94a99481b91ade624d6579e0e3cb26543336a49e46dd611e2125",
+      "baseline_git_blob": "dc0b5678c85376252304ef56799d8bc3be4cca11",
+      "current_bytes": 8423,
+      "current_sha256": "845a1897753d94a99481b91ade624d6579e0e3cb26543336a49e46dd611e2125",
+      "retained_original": {
+        "file": "AnalyseFuture/history/before-complete-audit/services/model-gateway/test/model-gateway.test.mjs.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/inventory/ARCHIVED_FILES_MANIFEST.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/inventory/ARCHIVED_FILES_MANIFEST.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier retained-original/archive list with preservation context.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 5841,
+      "baseline_sha256": "25ab61f4b1766766afc9f0f58019ff71217f8be56d4290b67a44df9b94df5263",
+      "baseline_git_blob": "9b1721dfb52adf58017d8b50444199325135420d",
+      "current_bytes": 5841,
+      "current_sha256": "25ab61f4b1766766afc9f0f58019ff71217f8be56d4290b67a44df9b94df5263",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/inventory/ARCHIVED_FILES_MANIFEST.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/inventory/COMPLETE_FILE_INVENTORY.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/inventory/COMPLETE_FILE_INVENTORY.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier complete path-by-path repository classification, tied to its recorded baseline.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 59771,
+      "baseline_sha256": "79b46f39257973661af5d26cfb2f0218aaaaf92f4f82f09357cbb5d9e14f7bca",
+      "baseline_git_blob": "689069e8a40c373ab3bc6c867eb8dd53ae02a92f",
+      "current_bytes": 59771,
+      "current_sha256": "79b46f39257973661af5d26cfb2f0218aaaaf92f4f82f09357cbb5d9e14f7bca",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/inventory/COMPLETE_FILE_INVENTORY.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/inventory/PRESERVATION_MANIFEST.json",
+      "current_path": "AnalyseFuture/history/recovery-reports/inventory/PRESERVATION_MANIFEST.json",
+      "action": "moved byte-identically",
+      "purpose": "Original 55-file preservation manifest recording Git blobs, retained paths, sizes and SHA-256 hashes.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 20472,
+      "baseline_sha256": "57fad994dcfded39f3b491dd1b2f0772506281306e75cbab06ef0ec4d7a9d254",
+      "baseline_git_blob": "f1dfad94192f71f91114178779515736ed17af86",
+      "current_bytes": 20472,
+      "current_sha256": "57fad994dcfded39f3b491dd1b2f0772506281306e75cbab06ef0ec4d7a9d254",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/inventory/PRESERVATION_MANIFEST.json"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/inventory/evidence/STARTING_STATE.json",
+      "current_path": "AnalyseFuture/history/recovery-reports/inventory/evidence/STARTING_STATE.json",
+      "action": "moved byte-identically",
+      "purpose": "Machine-readable earlier starting Git tree and file metadata evidence.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 17612,
+      "baseline_sha256": "14fd6ac746e6c45625735013d7131d7e7a7a965950a7f53c79a4a205cd8951c1",
+      "baseline_git_blob": "c71ffe2dfe5aaf9d8adc511e9759ceb05c471054",
+      "current_bytes": 17612,
+      "current_sha256": "14fd6ac746e6c45625735013d7131d7e7a7a965950a7f53c79a4a205cd8951c1",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/inventory/evidence/STARTING_STATE.json"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/inventory/evidence/UPSTREAM_ARCHIVE_CONTENTS.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/inventory/evidence/UPSTREAM_ARCHIVE_CONTENTS.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier upstream ZIP member index of 6,737 entries; preserves original paths.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 825708,
+      "baseline_sha256": "bfb7efb4a4cc82c98952009ef7544ea876685ae9670ea3f88887c1b3f6620835",
+      "baseline_git_blob": "7172475133d438585b1d04a33907a5e770c7083f",
+      "current_bytes": 825708,
+      "current_sha256": "bfb7efb4a4cc82c98952009ef7544ea876685ae9670ea3f88887c1b3f6620835",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/inventory/evidence/UPSTREAM_ARCHIVE_CONTENTS.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/migration/CONSOLIDATION_REPORT.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/migration/CONSOLIDATION_REPORT.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier recovery consolidation decisions and preserved-work summary.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 2842,
+      "baseline_sha256": "31653b908444a14c5cac0d39255dbf7b58548613fe719f32fbaf42cfcf9e0c01",
+      "baseline_git_blob": "f4faa1f8110821896f792eec1e52a7eea68535d1",
+      "current_bytes": 2842,
+      "current_sha256": "31653b908444a14c5cac0d39255dbf7b58548613fe719f32fbaf42cfcf9e0c01",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/migration/CONSOLIDATION_REPORT.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/migration/MIGRATION_SUMMARY.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/migration/MIGRATION_SUMMARY.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier migration scope, compatibility changes and limits.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 2862,
+      "baseline_sha256": "eb33c52c5de46a1d0d2dbb2f9412eb55a2cd24ddf2194367211d927f28e6275d",
+      "baseline_git_blob": "8cf1b6bdd488980b5e59091857ec2cbff01a2359",
+      "current_bytes": 2862,
+      "current_sha256": "eb33c52c5de46a1d0d2dbb2f9412eb55a2cd24ddf2194367211d927f28e6275d",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/migration/MIGRATION_SUMMARY.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/migration/ORIGINAL_TO_NEW_PATH_MAPPING.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/migration/ORIGINAL_TO_NEW_PATH_MAPPING.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier original-path to retained-path mapping; interpret from its own baseline.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 10608,
+      "baseline_sha256": "fb008127e5d72cbfa5dc27edecf01ff886c46e627193b1256a829160fb257d92",
+      "baseline_git_blob": "378e2d6b6fe485041b5bd0ea5d6e2b4e0c243ebc",
+      "current_bytes": 10608,
+      "current_sha256": "fb008127e5d72cbfa5dc27edecf01ff886c46e627193b1256a829160fb257d92",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/migration/ORIGINAL_TO_NEW_PATH_MAPPING.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/organization/FOLLOW_UP_ORIGINALS_E19DFDA.zip",
+      "current_path": "AnalyseFuture/history/organization/FOLLOW_UP_ORIGINALS_E19DFDA.zip",
+      "action": "moved byte-identically",
+      "purpose": "Exact ten-document originals before navigation follow-up at e19dfda.",
+      "relationships_at_review": [
+        "Inactive archive; member purposes/dependency names in ARCHIVE_CATALOG.json"
+      ],
+      "baseline_bytes": 58112,
+      "baseline_sha256": "abdf650d562950d246de0582c2cb347e7d14f3fc2ba7e53b46a8ec7be6dbd95a",
+      "baseline_git_blob": "28d1a292d3a02d2129cae6d1c7dc2f2956cafaeb",
+      "current_bytes": 58112,
+      "current_sha256": "abdf650d562950d246de0582c2cb347e7d14f3fc2ba7e53b46a8ec7be6dbd95a",
+      "retained_original": {
+        "file": "AnalyseFuture/history/organization/FOLLOW_UP_ORIGINALS_E19DFDA.zip"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip",
+      "current_path": "AnalyseFuture/history/organization/ORIGINAL_TEXT_FILES.zip",
+      "action": "moved byte-identically",
+      "purpose": "Exact 99 text originals before functional organization at 84dd0aa.",
+      "relationships_at_review": [
+        "Inactive archive; member purposes/dependency names in ARCHIVE_CATALOG.json"
+      ],
+      "baseline_bytes": 370130,
+      "baseline_sha256": "f064921b564485bf594c9eec11b37787a540fcdb676427f2a0b2350128093950",
+      "baseline_git_blob": "feeb8d7fca2a9bac6563402354530aa8bef15c59",
+      "current_bytes": 370130,
+      "current_sha256": "f064921b564485bf594c9eec11b37787a540fcdb676427f2a0b2350128093950",
+      "retained_original": {
+        "file": "AnalyseFuture/history/organization/ORIGINAL_TEXT_FILES.zip"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/organization/PATH_MAPPING.json",
+      "current_path": "AnalyseFuture/history/organization/PATH_MAPPING.json",
+      "action": "moved byte-identically",
+      "purpose": "Prior organization ledger of hashes, moves and validation additions; dated provenance remains unchanged.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 105825,
+      "baseline_sha256": "eb4c59c0c0e73a041660301d4d2f5199c45352d8edc9a0df7fd8b3a2e5b6cbab",
+      "baseline_git_blob": "60f10e95556264580037df18435f119c85a0ba46",
+      "current_bytes": 105825,
+      "current_sha256": "eb4c59c0c0e73a041660301d4d2f5199c45352d8edc9a0df7fd8b3a2e5b6cbab",
+      "retained_original": {
+        "file": "AnalyseFuture/history/organization/PATH_MAPPING.json"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/organization/REORGANIZATION.md",
+      "current_path": "AnalyseFuture/history/organization/REORGANIZATION.md",
+      "action": "moved byte-identically",
+      "purpose": "Prior functional organization record and navigation closure; historical provenance.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 4528,
+      "baseline_sha256": "f5c1add97b81b790df34bd2699975dffbd19d77b8146590bfa056c3d8fd451e9",
+      "baseline_git_blob": "c83934d9c3729972428d75916b1746bf8470d533",
+      "current_bytes": 4528,
+      "current_sha256": "f5c1add97b81b790df34bd2699975dffbd19d77b8146590bfa056c3d8fd451e9",
+      "retained_original": {
+        "file": "AnalyseFuture/history/organization/REORGANIZATION.md"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+      "current_path": "docs/product/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+      "action": "moved and current guidance/navigation updated",
+      "purpose": "Canonical complete product vision: existing work, feasibility limits, future participants, milestones, risks and conditional multi-year horizons.",
+      "relationships_at_review": [
+        "docs/product/PROJECT_CHARTER.md",
+        "docs/product/ROADMAP.md",
+        "docs/development/IMPLEMENTATION_STATUS.md",
+        "docs/development/CONTINUATION.md"
+      ],
+      "baseline_bytes": 48176,
+      "baseline_sha256": "95a0a42ee191fc7e66ae1aae4235b943cbcd9273cd268bf4a1a1c7162e76709a",
+      "baseline_git_blob": "f4a08291bdaefdcecb7effb2f850ab9a93d4a681",
+      "current_bytes": 48658,
+      "current_sha256": "eebde1b4136ed7b5e2a38db1a869b4b88add868b6e011b93818922866ac8bc26",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/references/upstream/OpenSandbox-main.zip",
+      "current_path": "AnalyseFuture/references/upstream/OpenSandbox-main.zip",
+      "action": "retained byte-identically",
+      "purpose": "Uninstalled OpenSandbox runtime/platform source reference including original notices and upstream package boundaries.",
+      "relationships_at_review": [
+        "Inactive archive; member purposes/dependency names in ARCHIVE_CATALOG.json"
+      ],
+      "baseline_bytes": 72999206,
+      "baseline_sha256": "d91b2e7579c6272100b4bbbed861827888de58e90edd0782784346c986134332",
+      "baseline_git_blob": "44a1ee59ab57a2e5e35feb0644d45785f5cf2f0f",
+      "current_bytes": 72999206,
+      "current_sha256": "d91b2e7579c6272100b4bbbed861827888de58e90edd0782784346c986134332",
+      "retained_original": {
+        "file": "AnalyseFuture/references/upstream/OpenSandbox-main.zip"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/references/upstream/software-agent-sdk-main.zip",
+      "current_path": "AnalyseFuture/references/upstream/software-agent-sdk-main.zip",
+      "action": "retained byte-identically",
+      "purpose": "Uninstalled OpenHands agent SDK/server/tools/workspace source reference including original notices and upstream boundaries.",
+      "relationships_at_review": [
+        "Inactive archive; member purposes/dependency names in ARCHIVE_CATALOG.json"
+      ],
+      "baseline_bytes": 15842982,
+      "baseline_sha256": "b1007f65e71050fd21b2101fba29bf5c90ff83b67e835b4cc353f0d9d276d85e",
+      "baseline_git_blob": "a1a6f43b8066e6b976cbe45687fc0cb4e8323df8",
+      "current_bytes": 15842982,
+      "current_sha256": "b1007f65e71050fd21b2101fba29bf5c90ff83b67e835b4cc353f0d9d276d85e",
+      "retained_original": {
+        "file": "AnalyseFuture/references/upstream/software-agent-sdk-main.zip"
+      }
+    },
+    {
+      "original_path": "AnalyseFuture/security/SECURITY_AUDIT.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/security/SECURITY_AUDIT.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier reproduced security findings, unresolved risks and account-review limits.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 5567,
+      "baseline_sha256": "479b1e57a6192baf22587db033376939cb413fb0df297854d96c0c44320310fd",
+      "baseline_git_blob": "a2a9fc615d03775cde2e13415c85b45f58fc0f72",
+      "current_bytes": 5567,
+      "current_sha256": "479b1e57a6192baf22587db033376939cb413fb0df297854d96c0c44320310fd",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/security/SECURITY_AUDIT.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/security/evidence/GIT_AND_SOURCE_REVIEW.json",
+      "current_path": "AnalyseFuture/history/recovery-reports/security/evidence/GIT_AND_SOURCE_REVIEW.json",
+      "action": "moved byte-identically",
+      "purpose": "Earlier bounded Git/source review metadata; does not establish account security.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 11728,
+      "baseline_sha256": "c4304e3bb503c299daf412fb9c659cc999140c589c7683bd4df4c3049c3357af",
+      "baseline_git_blob": "ce1e74e5f974a2ec27ec544032ca31aead0ed9a6",
+      "current_bytes": 11728,
+      "current_sha256": "c4304e3bb503c299daf412fb9c659cc999140c589c7683bd4df4c3049c3357af",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/security/evidence/GIT_AND_SOURCE_REVIEW.json"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/security/evidence/UPSTREAM_ARCHIVE_REVIEW.json",
+      "current_path": "AnalyseFuture/history/recovery-reports/security/evidence/UPSTREAM_ARCHIVE_REVIEW.json",
+      "action": "moved byte-identically",
+      "purpose": "Earlier bounded upstream archive source/manifest/license review metadata.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 31862,
+      "baseline_sha256": "919644c4d878955344c99b41eb2b4f4b345c1af7f02cf663787a43bbc6e6b143",
+      "baseline_git_blob": "4b2cea528e61bb6918142ef8e5a770c0333174ec",
+      "current_bytes": 31862,
+      "current_sha256": "919644c4d878955344c99b41eb2b4f4b345c1af7f02cf663787a43bbc6e6b143",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/security/evidence/UPSTREAM_ARCHIVE_REVIEW.json"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/validation/ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip",
+      "current_path": "AnalyseFuture/history/recovery-reports/validation/ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip",
+      "action": "moved byte-identically",
+      "purpose": "Exact fourteen-file baseline originals before post-move validation fixes at 4a20bb0.",
+      "relationships_at_review": [
+        "Inactive archive; member purposes/dependency names in ARCHIVE_CATALOG.json"
+      ],
+      "baseline_bytes": 56277,
+      "baseline_sha256": "bfced3c4d5fc11d90fe0bed304c0b8176f2ef9c40382777ad21cdfdae15c9ed0",
+      "baseline_git_blob": "fd3a52baa973e9a982632608e17594e62d122cbe",
+      "current_bytes": 56277,
+      "current_sha256": "bfced3c4d5fc11d90fe0bed304c0b8176f2ef9c40382777ad21cdfdae15c9ed0",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/validation/ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/validation/TEST_AND_VALIDATION_REPORT.txt",
+      "action": "moved byte-identically",
+      "purpose": "Earlier recorded commands and results, separate from this no-tests restructuring.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 5093,
+      "baseline_sha256": "d19ff87a77b472e39181c0a8c8a3dbf119f80800058d2e718d007bc7fbe4c901",
+      "baseline_git_blob": "fad94cc7e7332ffa8baef4f9ce9ebf864ab5f1fe",
+      "current_bytes": 5093,
+      "current_sha256": "d19ff87a77b472e39181c0a8c8a3dbf119f80800058d2e718d007bc7fbe4c901",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/validation/TEST_AND_VALIDATION_REPORT.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "AnalyseFuture/validation/drivers/BROWSER_SMOKE_DRIVER.txt",
+      "current_path": "AnalyseFuture/history/recovery-reports/validation/drivers/BROWSER_SMOKE_DRIVER.txt",
+      "action": "moved byte-identically",
+      "purpose": "Inert earlier Playwright smoke-driver reference, deliberately stored as TXT outside maintained test discovery.",
+      "relationships_at_review": [
+        "Historical evidence; preserve original path/reference context",
+        "Current lookup: AnalyseFuture/organization/FILE_CATALOG.json"
+      ],
+      "baseline_bytes": 3537,
+      "baseline_sha256": "fe27d2d5e26341735463500944e8cae4c8c28ef82e6e61442acdd80c0fb1d026",
+      "baseline_git_blob": "a49d0e98b7f6649985924e824ef1f0f167fea567",
+      "current_bytes": 3537,
+      "current_sha256": "fe27d2d5e26341735463500944e8cae4c8c28ef82e6e61442acdd80c0fb1d026",
+      "retained_original": {
+        "file": "AnalyseFuture/history/recovery-reports/validation/drivers/BROWSER_SMOKE_DRIVER.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "CONTRIBUTING.md",
+      "current_path": "CONTRIBUTING.md",
+      "action": "retained byte-identically",
+      "purpose": "Sets contribution terms, small-change workflow and owner-authorized direct-main maintenance.",
+      "relationships_at_review": [
+        "AGENTS.md",
+        "SECURITY.md",
+        ".github/pull_request_template.md",
+        "docs/legal/OWNERSHIP_AND_LICENSES.md"
+      ],
+      "baseline_bytes": 2918,
+      "baseline_sha256": "f584f0c1980da29f265a32a855b8b78a04339c6a4d754dd955799e9fd2b53ab6",
+      "baseline_git_blob": "3e5714f46fcef7448773d74bd073737cffbfc5b7",
+      "current_bytes": 2918,
+      "current_sha256": "f584f0c1980da29f265a32a855b8b78a04339c6a4d754dd955799e9fd2b53ab6",
+      "retained_original": {
+        "file": "CONTRIBUTING.md"
+      }
+    },
+    {
+      "original_path": "PROJECT_STRUCTURE.md",
+      "current_path": "PROJECT_STRUCTURE.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Documents the previous functional organization and cumulative historical placement ledger.",
+      "relationships_at_review": [
+        "AnalyseFuture/organization/PATH_MAPPING.json",
+        "docs/README.md",
+        "apps/",
+        "packages/",
+        "services/"
+      ],
+      "baseline_bytes": 25406,
+      "baseline_sha256": "70816643a0151eb53b4d84033b39681d6fbde6a91e97a25ff1db6bf357fdc7db",
+      "baseline_git_blob": "0a988e058198e180ff53f68ef8796c70006192d3",
+      "current_bytes": 10112,
+      "current_sha256": "6a8ba5080616bf48ce39a959817fc03a6f0c198029e0c5592dc0a06e137ccbdd",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "PROJECT_STRUCTURE.md"
+      }
+    },
+    {
+      "original_path": "README.md",
+      "current_path": "README.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Introduces the AI app-builder foundation, supported mock workflow, boundaries and documentation entrypoints.",
+      "relationships_at_review": [
+        "apps/",
+        "packages/project-generator/",
+        "services/",
+        "docs/README.md",
+        "PROJECT_STRUCTURE.md"
+      ],
+      "baseline_bytes": 8475,
+      "baseline_sha256": "04729f77bfac1807257325f82969f74a37b63c01960d839faafebc0c796f49ce",
+      "baseline_git_blob": "41b09240b32c231346f81084ed46ed48df21bf49",
+      "current_bytes": 8583,
+      "current_sha256": "7c37a86f2cd8eb347330d8bfe56e54717bc751684016b674deb7f65737255e89",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "README.md"
+      }
+    },
+    {
+      "original_path": "SECURITY.md",
+      "current_path": "SECURITY.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Provides vulnerability reporting instructions and minimum public-execution security requirements.",
+      "relationships_at_review": [
+        "docs/security/SECURITY_ARCHITECTURE.md",
+        "AnalyseFuture/security/SECURITY_AUDIT.txt"
+      ],
+      "baseline_bytes": 2025,
+      "baseline_sha256": "a09674f82f22f7a46081fe2cb1c03267039f33dc5d01001d303e77a44a4e00d4",
+      "baseline_git_blob": "c0eb0c4ede8170ed5420663a6b6821dbf89909ad",
+      "current_bytes": 2075,
+      "current_sha256": "41d979f86fbbede23c46e58fa050bd8b4bc9033136e6d72d73d939e62ad282b2",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "SECURITY.md"
+      }
+    },
+    {
+      "original_path": "apps/builder-api/package.json",
+      "current_path": "apps/builder-api/package.json",
+      "action": "retained byte-identically",
+      "purpose": "Private ESM API workspace manifest declaring its dependency on the deterministic generator package.",
+      "relationships_at_review": [
+        "package.json",
+        "packages/project-generator/package.json",
+        "@fine-tune/core"
+      ],
+      "baseline_bytes": 148,
+      "baseline_sha256": "54965daddcb8bdfc1a8872a1f818feb09df07762998413008678e5f2f19fd6a9",
+      "baseline_git_blob": "a658bb355c6c74ce7197e0ee0bac7771cb1dd0d1",
+      "current_bytes": 148,
+      "current_sha256": "54965daddcb8bdfc1a8872a1f818feb09df07762998413008678e5f2f19fd6a9",
+      "retained_original": {
+        "file": "apps/builder-api/package.json"
+      }
+    },
+    {
+      "original_path": "apps/builder-api/src/app.mjs",
+      "current_path": "apps/builder-api/src/app.mjs",
+      "action": "retained byte-identically",
+      "purpose": "HTTP request handler with bounded JSON parsing, error/security headers, health/generation routes, and explicit static UI asset allowlist.",
+      "relationships_at_review": [
+        "@fine-tune/core",
+        "packages/project-generator/src/index.mjs",
+        "apps/builder-web/public/index.html",
+        "apps/builder-web/public/app.js",
+        "apps/builder-web/public/styles.css",
+        "/api/health",
+        "/api/generate"
+      ],
+      "baseline_bytes": 4079,
+      "baseline_sha256": "4e6c86175d1c25a03a8d71befa025f286870bad9a5ca10067d2d64b5a6fbad8f",
+      "baseline_git_blob": "94b574cda2091c0cd70e6233fb212198d097376e",
+      "current_bytes": 4079,
+      "current_sha256": "4e6c86175d1c25a03a8d71befa025f286870bad9a5ca10067d2d64b5a6fbad8f",
+      "retained_original": {
+        "file": "apps/builder-api/src/app.mjs"
+      }
+    },
+    {
+      "original_path": "apps/builder-api/src/server.mjs",
+      "current_path": "apps/builder-api/src/server.mjs",
+      "action": "retained byte-identically",
+      "purpose": "HTTP process entry point using HOST/PORT settings and bounded request/header timeouts.",
+      "relationships_at_review": [
+        "apps/builder-api/src/app.mjs",
+        "package.json",
+        ".env.example"
+      ],
+      "baseline_bytes": 781,
+      "baseline_sha256": "4ce437468c2a03b7815a80427a5c687d243b70a567558c7734b042ab618adfbc",
+      "baseline_git_blob": "745916daf1e09fb83269524debd8bfc3d84b7578",
+      "current_bytes": 781,
+      "current_sha256": "4ce437468c2a03b7815a80427a5c687d243b70a567558c7734b042ab618adfbc",
+      "retained_original": {
+        "file": "apps/builder-api/src/server.mjs"
+      }
+    },
+    {
+      "original_path": "apps/builder-api/test/app.test.mjs",
+      "current_path": "apps/builder-api/test/app.test.mjs",
+      "action": "retained byte-identically",
+      "purpose": "Maintained API tests covering standalone-server malformed URLs, health honesty, allowlisted UI assets, generation results, and invalid/oversized/unsupported requests.",
+      "relationships_at_review": [
+        "apps/builder-api/src/app.mjs",
+        "apps/builder-api/src/server.mjs",
+        "/api/health",
+        "/api/generate",
+        "/app.js",
+        "/styles.css"
+      ],
+      "baseline_bytes": 6572,
+      "baseline_sha256": "8e683267ec545a1b9b0ae5ebcf9516654f7513283d44e9cc6fefc3e8ea40e250",
+      "baseline_git_blob": "254d975654a23cba177a443a07a41f6c1788033a",
+      "current_bytes": 6572,
+      "current_sha256": "8e683267ec545a1b9b0ae5ebcf9516654f7513283d44e9cc6fefc3e8ea40e250",
+      "retained_original": {
+        "file": "apps/builder-api/test/app.test.mjs"
+      }
+    },
+    {
+      "original_path": "apps/builder-web/package.json",
+      "current_path": "apps/builder-web/package.json",
+      "action": "retained byte-identically",
+      "purpose": "Private ESM browser UI workspace manifest; no separate build or third-party dependencies.",
+      "relationships_at_review": [
+        "package.json",
+        "apps/builder-web/public/"
+      ],
+      "baseline_bytes": 92,
+      "baseline_sha256": "69b837c5d0e0b5394d175f0ee912dabd7318a2976d85ce512695c798b7410d78",
+      "baseline_git_blob": "e322028c059d21335a9b9af439de16f2d51e0392",
+      "current_bytes": 92,
+      "current_sha256": "69b837c5d0e0b5394d175f0ee912dabd7318a2976d85ce512695c798b7410d78",
+      "retained_original": {
+        "file": "apps/builder-web/package.json"
+      }
+    },
+    {
+      "original_path": "apps/builder-web/public/app.js",
+      "current_path": "apps/builder-web/public/app.js",
+      "action": "retained byte-identically",
+      "purpose": "Browser controller for prompt counting/examples, API generation, honest mock status, static iframe preview, plan display, and HTML blob download.",
+      "relationships_at_review": [
+        "apps/builder-web/public/index.html",
+        "/api/generate",
+        "apps/builder-api/src/app.mjs"
+      ],
+      "baseline_bytes": 3233,
+      "baseline_sha256": "c9dd06666d82ce7a88a5397f727ad52abaf9fc1b8627c4ecdf6add60b8413cec",
+      "baseline_git_blob": "99326e660325d418a74b8154b19d884a55753311",
+      "current_bytes": 3233,
+      "current_sha256": "c9dd06666d82ce7a88a5397f727ad52abaf9fc1b8627c4ecdf6add60b8413cec",
+      "retained_original": {
+        "file": "apps/builder-web/public/app.js"
+      }
+    },
+    {
+      "original_path": "apps/builder-web/public/index.html",
+      "current_path": "apps/builder-web/public/index.html",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Builder workspace markup connecting the prompt form, examples, status, sandboxed static preview, HTML download control, stylesheet, and browser controller.",
+      "relationships_at_review": [
+        "/styles.css",
+        "/app.js",
+        "apps/builder-web/public/app.js",
+        "apps/builder-web/public/styles.css",
+        "apps/builder-api/src/app.mjs",
+        "https://github.com/kawaho3/fine-tune",
+        "https://github.com/kawaho3/fine-tune/blob/main/docs/product/ROADMAP.md"
+      ],
+      "baseline_bytes": 5115,
+      "baseline_sha256": "22c16245c27ca53ebf370cbff023073b10f9d11cb6d87aa85ae67c5fdee0f37e",
+      "baseline_git_blob": "0904e37ffdc9492fe75f07213d06127cb8883e2f",
+      "current_bytes": 5129,
+      "current_sha256": "b76ce1df213f79d10dbcd1584c5a437261f25ad65bbf18c1662c46931b0ed77f",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "apps/builder-web/public/index.html"
+      }
+    },
+    {
+      "original_path": "apps/builder-web/public/styles.css",
+      "current_path": "apps/builder-web/public/styles.css",
+      "action": "retained byte-identically",
+      "purpose": "Responsive visual styling for the builder workspace, prompt form, preview, status, and small-screen layouts.",
+      "relationships_at_review": [
+        "apps/builder-web/public/index.html",
+        "apps/builder-web/public/app.js",
+        "/styles.css"
+      ],
+      "baseline_bytes": 6918,
+      "baseline_sha256": "0aa3da1a958f58aff533e77944923a16743f109bbb36c5c50ebd33853ccecda3",
+      "baseline_git_blob": "cfba189e16b07ff40389ec49fc151522a49e90b2",
+      "current_bytes": 6918,
+      "current_sha256": "0aa3da1a958f58aff533e77944923a16743f109bbb36c5c50ebd33853ccecda3",
+      "retained_original": {
+        "file": "apps/builder-web/public/styles.css"
+      }
+    },
+    {
+      "original_path": "docs/README.md",
+      "current_path": "docs/README.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Indexes active documentation by engineering and product responsibility.",
+      "relationships_at_review": [
+        "docs/product/",
+        "docs/architecture/",
+        "docs/development/",
+        "AnalyseFuture/README.md"
+      ],
+      "baseline_bytes": 1846,
+      "baseline_sha256": "21d39685c995ede72be778cda51027893ca1e3ba51f7813ee3165a5a32d65e0c",
+      "baseline_git_blob": "51a7e4b9b1da5b61a4e7dea64a2e1c96c18ed7ab",
+      "current_bytes": 1834,
+      "current_sha256": "5304026709ce80ec3ec70635a894a3cffc3d30a4dfef0e5311f1579961765b68",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "docs/README.md"
+      }
+    },
+    {
+      "original_path": "docs/architecture/ARCHITECTURE.md",
+      "current_path": "docs/architecture/ARCHITECTURE.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Defines current component responsibilities, target control flow and proposed future service boundaries.",
+      "relationships_at_review": [
+        "apps/builder-api/",
+        "apps/builder-web/",
+        "packages/project-generator/",
+        "services/agent-adapter/",
+        "services/model-gateway/",
+        "docs/architecture/decisions/"
+      ],
+      "baseline_bytes": 8763,
+      "baseline_sha256": "2bfb0d91bd0de9bb67e1ba37936d589712a87903d4c10dcd0b1a6839bb0c73fa",
+      "baseline_git_blob": "b56741276cb87022d09c1a80b2fb5ab4590e2101",
+      "current_bytes": 9137,
+      "current_sha256": "f64498de6d572242957891d8edcbfab8e3df5f633d13168c6115292a7f24bd16",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "docs/architecture/ARCHITECTURE.md"
+      }
+    },
+    {
+      "original_path": "docs/architecture/REPOSITORY_STRUCTURE.md",
+      "current_path": "AnalyseFuture/history/organization/REPOSITORY_STRUCTURE.md",
+      "action": "moved byte-identically",
+      "purpose": "Records earlier recovery inspections, obsolete directory layouts and preservation scope.",
+      "relationships_at_review": [
+        "AnalyseFuture/inventory/PRESERVATION_MANIFEST.json",
+        "AnalyseFuture/audit/REPOSITORY_AUDIT.txt",
+        "PROJECT_STRUCTURE.md"
+      ],
+      "baseline_bytes": 7437,
+      "baseline_sha256": "924dc2b92eca83f792fe6b671d4bce28ca6191f3397942499bae1f2978bf7aa8",
+      "baseline_git_blob": "467eb0592b2bd29289f229a4312bf5a758721427",
+      "current_bytes": 7437,
+      "current_sha256": "924dc2b92eca83f792fe6b671d4bce28ca6191f3397942499bae1f2978bf7aa8",
+      "retained_original": {
+        "file": "AnalyseFuture/history/organization/REPOSITORY_STRUCTURE.md"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "docs/architecture/decisions/0001-monorepo-reuse-first.md",
+      "current_path": "docs/architecture/decisions/0001-monorepo-reuse-first.md",
+      "action": "retained byte-identically",
+      "purpose": "Records the decision to maintain one original modular monorepo and adopt pinned components through adapters.",
+      "relationships_at_review": [
+        "docs/research/REUSE_AUDIT.md",
+        "apps/",
+        "packages/",
+        "services/"
+      ],
+      "baseline_bytes": 1224,
+      "baseline_sha256": "7f43ec1b2199adbbdbbe7732c436c4e2165f34ab97af7cf0c2ca9a362f88326c",
+      "baseline_git_blob": "3235d580d06592db0267567196c4450dc9728626",
+      "current_bytes": 1224,
+      "current_sha256": "7f43ec1b2199adbbdbbe7732c436c4e2165f34ab97af7cf0c2ca9a362f88326c",
+      "retained_original": {
+        "file": "docs/architecture/decisions/0001-monorepo-reuse-first.md"
+      }
+    },
+    {
+      "original_path": "docs/architecture/decisions/0002-one-agent-first.md",
+      "current_path": "docs/architecture/decisions/0002-one-agent-first.md",
+      "action": "retained byte-identically",
+      "purpose": "Records the single-engine, bounded-agent approach and replaceable model gateway direction.",
+      "relationships_at_review": [
+        "services/agent-adapter/",
+        "services/model-gateway/"
+      ],
+      "baseline_bytes": 882,
+      "baseline_sha256": "cf4e288ec73452035ed23efd66aa65b484d32d2cad6201a05d2db4acf9cad9e6",
+      "baseline_git_blob": "418cc1376e62c0e37685ecfa1395e4b93764c32c",
+      "current_bytes": 882,
+      "current_sha256": "cf4e288ec73452035ed23efd66aa65b484d32d2cad6201a05d2db4acf9cad9e6",
+      "retained_original": {
+        "file": "docs/architecture/decisions/0002-one-agent-first.md"
+      }
+    },
+    {
+      "original_path": "docs/architecture/decisions/0003-sandbox-boundary.md",
+      "current_path": "docs/architecture/decisions/0003-sandbox-boundary.md",
+      "action": "retained byte-identically",
+      "purpose": "Requires a separate least-privilege isolation boundary for untrusted generated workloads.",
+      "relationships_at_review": [
+        "docs/security/SECURITY_ARCHITECTURE.md",
+        "docs/product/ROADMAP.md"
+      ],
+      "baseline_bytes": 1086,
+      "baseline_sha256": "e66b870014351f77ff48ae163587c1fc8236e463cd4cce5b190847f14825ee3c",
+      "baseline_git_blob": "80681cd290ca9fdb2bf806a817ebc0370e41ff59",
+      "current_bytes": 1086,
+      "current_sha256": "e66b870014351f77ff48ae163587c1fc8236e463cd4cce5b190847f14825ee3c",
+      "retained_original": {
+        "file": "docs/architecture/decisions/0003-sandbox-boundary.md"
+      }
+    },
+    {
+      "original_path": "docs/architecture/decisions/0004-model-gateway-boundary.md",
+      "current_path": "docs/architecture/decisions/0004-model-gateway-boundary.md",
+      "action": "retained byte-identically",
+      "purpose": "Accepts the provider-independent mock/Ollama gateway and its timeout, retry, streaming and usage contracts.",
+      "relationships_at_review": [
+        "services/model-gateway/",
+        "docs/research/REUSE_AUDIT.md"
+      ],
+      "baseline_bytes": 1443,
+      "baseline_sha256": "75cb515f489e515980bed0862070f09fece87388e05348b2ebe9988a4a2fb370",
+      "baseline_git_blob": "a47f3a9e8d250d4527d04c0aaf606a51eaff663d",
+      "current_bytes": 1443,
+      "current_sha256": "75cb515f489e515980bed0862070f09fece87388e05348b2ebe9988a4a2fb370",
+      "retained_original": {
+        "file": "docs/architecture/decisions/0004-model-gateway-boundary.md"
+      }
+    },
+    {
+      "original_path": "docs/architecture/decisions/0005-openhands-agent-adapter.md",
+      "current_path": "docs/architecture/decisions/0005-openhands-agent-adapter.md",
+      "action": "retained byte-identically",
+      "purpose": "Accepts the narrow OpenHands v1.62 REST transport compatibility spike and defers live workspace integration.",
+      "relationships_at_review": [
+        "services/agent-adapter/",
+        "docs/product/ROADMAP.md"
+      ],
+      "baseline_bytes": 2019,
+      "baseline_sha256": "fb0c1a1287e7d9a86f99905c3c4c4108a82b1b9f08fb07f0001c3bf7de30531d",
+      "baseline_git_blob": "70bf04e58bed29338d39f0eb60e86fc168d22505",
+      "current_bytes": 2019,
+      "current_sha256": "fb0c1a1287e7d9a86f99905c3c4c4108a82b1b9f08fb07f0001c3bf7de30531d",
+      "retained_original": {
+        "file": "docs/architecture/decisions/0005-openhands-agent-adapter.md"
+      }
+    },
+    {
+      "original_path": "docs/architecture/decisions/0006-reference-and-request-boundaries.md",
+      "current_path": "docs/architecture/decisions/0006-reference-and-request-boundaries.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Records inert reference storage, explicit maintained test discovery and redirect rejection decisions.",
+      "relationships_at_review": [
+        "AnalyseFuture/references/upstream/",
+        "package.json",
+        "services/model-gateway/",
+        "services/agent-adapter/",
+        "docs/product/PROJECT_IDEA.txt"
+      ],
+      "baseline_bytes": 1482,
+      "baseline_sha256": "1ad949fe55309e77e50a5084768dbe424b039ef2529999a08f048db4d553ce14",
+      "baseline_git_blob": "d0ebae718068a4f2c8840725bc680604276108a3",
+      "current_bytes": 2047,
+      "current_sha256": "c59f9f7d49c040dc559afd464dbb6f10986dae2e1c7e598fdea10cfefc038adb",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "docs/architecture/decisions/0006-reference-and-request-boundaries.md"
+      }
+    },
+    {
+      "original_path": "docs/development/CODEX_PLAYBOOK.md",
+      "current_path": "docs/development/CODEX_PLAYBOOK.md",
+      "action": "retained byte-identically",
+      "purpose": "Provides scoped reusable audit, foundation, vertical-slice and review task prompts.",
+      "relationships_at_review": [
+        "AGENTS.md",
+        "docs/research/REUSE_AUDIT.md",
+        "docs/development/IMPLEMENTATION_STATUS.md"
+      ],
+      "baseline_bytes": 2782,
+      "baseline_sha256": "1f7cacf30bdfd9f2626e6e7e6734d170e09fb3318634d92ddc2673425f19124e",
+      "baseline_git_blob": "ea177a9c6bbb0bf2b8772dd0c8072b329c6de26f",
+      "current_bytes": 2782,
+      "current_sha256": "1f7cacf30bdfd9f2626e6e7e6734d170e09fb3318634d92ddc2673425f19124e",
+      "retained_original": {
+        "file": "docs/development/CODEX_PLAYBOOK.md"
+      }
+    },
+    {
+      "original_path": "docs/development/CONTINUATION.md",
+      "current_path": "docs/development/CONTINUATION.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Provides the current developer handoff, component call path, owner workflow and remaining product milestones.",
+      "relationships_at_review": [
+        "PROJECT_STRUCTURE.md",
+        "docs/development/VALIDATION_REPORT.md",
+        "docs/product/ROADMAP.md",
+        "AnalyseFuture/organization/PATH_MAPPING.json"
+      ],
+      "baseline_bytes": 6332,
+      "baseline_sha256": "bcdbe0794b47f736ce61ef37d5b1a0d906f08628458002513aeeacf6364ed75a",
+      "baseline_git_blob": "d345755a2de503fa894cd5b5d786f5c4082cb7f8",
+      "current_bytes": 4364,
+      "current_sha256": "06d49611129fba1ea03f2d6399be999aa2f7cbe01d08f37dd5156cbb6e014874",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "docs/development/CONTINUATION.md"
+      }
+    },
+    {
+      "original_path": "docs/development/DEVELOPER_ONBOARDING.md",
+      "current_path": "docs/development/DEVELOPER_ONBOARDING.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Guides new developers through prerequisite documents and offline mock install/start workflow.",
+      "relationships_at_review": [
+        "README.md",
+        "AGENTS.md",
+        "docs/development/MOCK_PROTOTYPE.md",
+        "docs/development/CONTINUATION.md"
+      ],
+      "baseline_bytes": 2981,
+      "baseline_sha256": "2b99be73330f91b989bc238a0eced12c2352187e9c91a10119b1875d2105991d",
+      "baseline_git_blob": "e09592a9b6c98d55be1bc84f09b4515e15bf0290",
+      "current_bytes": 2995,
+      "current_sha256": "3da7a40bf699be5be0bc8112d3b0fd16fbf9bd60a0a7f12cd89871f5d4e1bc69",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "docs/development/DEVELOPER_ONBOARDING.md"
+      }
+    },
+    {
+      "original_path": "docs/development/IMPLEMENTATION_STATUS.md",
+      "current_path": "docs/development/IMPLEMENTATION_STATUS.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Tracks dated implementation milestones, historical verification evidence and known unimplemented capabilities.",
+      "relationships_at_review": [
+        "apps/",
+        "packages/",
+        "services/",
+        "docs/development/VALIDATION_REPORT.md",
+        "AnalyseFuture/"
+      ],
+      "baseline_bytes": 16926,
+      "baseline_sha256": "f65d1c270ae8502ad664d7336d11ebc31f45e58a82459c69146d631294dcc170",
+      "baseline_git_blob": "c94a5070041f99c71ad857e59eaa345dca8cc7c6",
+      "current_bytes": 4446,
+      "current_sha256": "5fae5385f455ee9b9229b2b39c91d104228f1dd9a830b977a001a6b48c7eafa2",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "docs/development/IMPLEMENTATION_STATUS.md"
+      }
+    },
+    {
+      "original_path": "docs/development/MOCK_PROTOTYPE.md",
+      "current_path": "docs/development/MOCK_PROTOTYPE.md",
+      "action": "retained byte-identically",
+      "purpose": "Documents the deterministic mock API, static preview/download workflow, configuration and explicit non-capabilities.",
+      "relationships_at_review": [
+        "apps/builder-api/src/",
+        "apps/builder-web/public/",
+        "packages/project-generator/",
+        ".env.example"
+      ],
+      "baseline_bytes": 2920,
+      "baseline_sha256": "13691bb244732a354334fb1e3448069dea0a2d08a9ab3c24c969de7480492267",
+      "baseline_git_blob": "f92a6733f9e4a20fb9b175868ffb8f2d4a416a00",
+      "current_bytes": 2920,
+      "current_sha256": "13691bb244732a354334fb1e3448069dea0a2d08a9ab3c24c969de7480492267",
+      "retained_original": {
+        "file": "docs/development/MOCK_PROTOTYPE.md"
+      }
+    },
+    {
+      "original_path": "docs/development/TESTING_AND_EVALUATION.md",
+      "current_path": "docs/development/TESTING_AND_EVALUATION.md",
+      "action": "retained byte-identically",
+      "purpose": "Defines engineering and held-out coding-agent evaluation layers, metrics and vertical-slice acceptance evidence.",
+      "relationships_at_review": [
+        "docs/product/PRODUCT_REQUIREMENTS.md",
+        "docs/product/ROADMAP.md",
+        "docs/model-training/MODEL_TRAINING.md"
+      ],
+      "baseline_bytes": 2511,
+      "baseline_sha256": "beef947f0b23b3762a4d8735aeff3151f6d0769a246c77d36b9470eebaaf79d1",
+      "baseline_git_blob": "6196786f0db78cb2083670f7a680a867a0fa10c5",
+      "current_bytes": 2511,
+      "current_sha256": "beef947f0b23b3762a4d8735aeff3151f6d0769a246c77d36b9470eebaaf79d1",
+      "retained_original": {
+        "file": "docs/development/TESTING_AND_EVALUATION.md"
+      }
+    },
+    {
+      "original_path": "docs/development/VALIDATION_REPORT.md",
+      "current_path": "docs/development/VALIDATION_REPORT.md",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Records the previous post-move Node 22/24 test matrix, startup/browser checks, nine repairs and remaining integration limits.",
+      "relationships_at_review": [
+        "apps/builder-api/",
+        "services/agent-adapter/",
+        "services/model-gateway/",
+        "AnalyseFuture/validation/ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip"
+      ],
+      "baseline_bytes": 6310,
+      "baseline_sha256": "7c58f8bd2f01c6bd999603a2b9d815c2024cfebe8b10dab017a7d7cec2802b25",
+      "baseline_git_blob": "5cf5428a89ce1e35e88e5da4d8923625dfa31a56",
+      "current_bytes": 6702,
+      "current_sha256": "f1ec5e652487558af1f52edaaecd719dc475e90ed1fd2c044519af880eaa1c43",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "docs/development/VALIDATION_REPORT.md"
+      }
+    },
+    {
+      "original_path": "docs/legal/OWNERSHIP_AND_LICENSES.md",
+      "current_path": "docs/legal/OWNERSHIP_AND_LICENSES.md",
+      "action": "retained byte-identically",
+      "purpose": "Explains ownership, absent project-wide license and third-party model/library distribution obligations.",
+      "relationships_at_review": [
+        "docs/research/REUSE_AUDIT.md",
+        "CONTRIBUTING.md",
+        "docs/model-training/MODEL_TRAINING.md"
+      ],
+      "baseline_bytes": 2028,
+      "baseline_sha256": "fe06bbde18e798985976b09f7f60981f41b6532f31e08d76d83d72fa87be77eb",
+      "baseline_git_blob": "cde0a3eb4016ea9b54339513b32400e9d6d94f2a",
+      "current_bytes": 2028,
+      "current_sha256": "fe06bbde18e798985976b09f7f60981f41b6532f31e08d76d83d72fa87be77eb",
+      "retained_original": {
+        "file": "docs/legal/OWNERSHIP_AND_LICENSES.md"
+      }
+    },
+    {
+      "original_path": "docs/model-training/MODEL_TRAINING.md",
+      "current_path": "docs/model-training/MODEL_TRAINING.md",
+      "action": "retained byte-identically",
+      "purpose": "Defines deferred baseline selection, consented trajectory data, QLoRA evaluation gates, hardware and rights constraints.",
+      "relationships_at_review": [
+        "docs/development/TESTING_AND_EVALUATION.md",
+        "docs/legal/OWNERSHIP_AND_LICENSES.md",
+        "services/model-gateway/"
+      ],
+      "baseline_bytes": 2885,
+      "baseline_sha256": "8b215a2f4dc508c8722255db06a6b5a279fcb8ffde3dfe0d69d6f4aa58ae7dde",
+      "baseline_git_blob": "2e45a6a9038febc79367fb2f0a4a6cfcf869763e",
+      "current_bytes": 2885,
+      "current_sha256": "8b215a2f4dc508c8722255db06a6b5a279fcb8ffde3dfe0d69d6f4aa58ae7dde",
+      "retained_original": {
+        "file": "docs/model-training/MODEL_TRAINING.md"
+      }
+    },
+    {
+      "original_path": "docs/operations/COSTS_AND_OPERATIONS.md",
+      "current_path": "docs/operations/COSTS_AND_OPERATIONS.md",
+      "action": "retained byte-identically",
+      "purpose": "Defines reuse-first spending policy, per-run cost accounting and operational prerequisites for public launch.",
+      "relationships_at_review": [
+        "docs/product/ROADMAP.md",
+        "docs/security/SECURITY_ARCHITECTURE.md",
+        "docs/model-training/MODEL_TRAINING.md"
+      ],
+      "baseline_bytes": 2125,
+      "baseline_sha256": "7397f971abc3fb67b669173b6d644a4f42e6b3b52cfaebb89887644ca3a01a0a",
+      "baseline_git_blob": "629cffcde446b66a739329dd28608c4270a384e4",
+      "current_bytes": 2125,
+      "current_sha256": "7397f971abc3fb67b669173b6d644a4f42e6b3b52cfaebb89887644ca3a01a0a",
+      "retained_original": {
+        "file": "docs/operations/COSTS_AND_OPERATIONS.md"
+      }
+    },
+    {
+      "original_path": "docs/product/FEATURE_MATRIX.md",
+      "current_path": "docs/product/FEATURE_MATRIX.md",
+      "action": "retained byte-identically",
+      "purpose": "Catalogues competitive capability ambitions, priorities, research protocol and differentiation metrics.",
+      "relationships_at_review": [
+        "docs/product/PRODUCT_REQUIREMENTS.md",
+        "docs/product/ROADMAP.md",
+        "docs/development/TESTING_AND_EVALUATION.md"
+      ],
+      "baseline_bytes": 2354,
+      "baseline_sha256": "bd1718597dd50d6441de2151e3c942cfb13b31336cfffeb95e0f6d5b03930b04",
+      "baseline_git_blob": "4a50a6c0f10fdab8f1da1818c3fd8e53ff53bc32",
+      "current_bytes": 2354,
+      "current_sha256": "bd1718597dd50d6441de2151e3c942cfb13b31336cfffeb95e0f6d5b03930b04",
+      "retained_original": {
+        "file": "docs/product/FEATURE_MATRIX.md"
+      }
+    },
+    {
+      "original_path": "docs/product/PRODUCT_REQUIREMENTS.md",
+      "current_path": "docs/product/PRODUCT_REQUIREMENTS.md",
+      "action": "retained byte-identically",
+      "purpose": "Defines functional requirements, acceptance evidence, quality attributes and first real vertical slice.",
+      "relationships_at_review": [
+        "docs/development/IMPLEMENTATION_STATUS.md",
+        "docs/product/ROADMAP.md",
+        "docs/security/SECURITY_ARCHITECTURE.md"
+      ],
+      "baseline_bytes": 3914,
+      "baseline_sha256": "170d05bc8ed9903d3c3abe2bdf83172609366663d3921c6a54469f6d06b83735",
+      "baseline_git_blob": "162475ef78bbddc8c8dcbad3832eb2651ed1375f",
+      "current_bytes": 3914,
+      "current_sha256": "170d05bc8ed9903d3c3abe2bdf83172609366663d3921c6a54469f6d06b83735",
+      "retained_original": {
+        "file": "docs/product/PRODUCT_REQUIREMENTS.md"
+      }
+    },
+    {
+      "original_path": "docs/product/PROJECT_CHARTER.md",
+      "current_path": "docs/product/PROJECT_CHARTER.md",
+      "action": "retained byte-identically",
+      "purpose": "Defines product vision, intended users, outcomes, constraints and decision ownership.",
+      "relationships_at_review": [
+        "docs/product/PRODUCT_REQUIREMENTS.md",
+        "docs/architecture/decisions/"
+      ],
+      "baseline_bytes": 2966,
+      "baseline_sha256": "1ddefb251adc3ec715c194b407f4cfd6a0e49579cb4d6543c27c8e786577c9fa",
+      "baseline_git_blob": "8c7d2f5e6c82f666c7bc940b71045c2e6c32a3e6",
+      "current_bytes": 2966,
+      "current_sha256": "1ddefb251adc3ec715c194b407f4cfd6a0e49579cb4d6543c27c8e786577c9fa",
+      "retained_original": {
+        "file": "docs/product/PROJECT_CHARTER.md"
+      }
+    },
+    {
+      "original_path": "docs/product/PROJECT_IDEA.txt",
+      "current_path": "AnalyseFuture/history/organization/compatibility/PROJECT_IDEA.txt",
+      "action": "moved byte-identically",
+      "purpose": "Maintains the old planning location as an explicit pointer to the sole canonical detailed future vision.",
+      "relationships_at_review": [
+        "AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt",
+        "AnalyseFuture/history/before-complete-audit/docs/PROJECT_IDEA.txt.txt"
+      ],
+      "baseline_bytes": 679,
+      "baseline_sha256": "081290ae85d7c91708c9d6020cd0279d769ded9e8a4d9982456574389791c5b3",
+      "baseline_git_blob": "b21e48597a6c812c342afd181253fe8d7f1f455a",
+      "current_bytes": 679,
+      "current_sha256": "081290ae85d7c91708c9d6020cd0279d769ded9e8a4d9982456574389791c5b3",
+      "retained_original": {
+        "file": "AnalyseFuture/history/organization/compatibility/PROJECT_IDEA.txt"
+      },
+      "reference_policy": "Immutable historical content; resolve old references from original_path, then through this catalogue. Not current runtime guidance."
+    },
+    {
+      "original_path": "docs/product/ROADMAP.md",
+      "current_path": "docs/product/ROADMAP.md",
+      "action": "retained byte-identically",
+      "purpose": "Orders implementation gates and FT-001 through FT-010 dependencies without promising launch dates.",
+      "relationships_at_review": [
+        "docs/development/IMPLEMENTATION_STATUS.md",
+        "services/agent-adapter/",
+        "services/model-gateway/",
+        "docs/development/TESTING_AND_EVALUATION.md"
+      ],
+      "baseline_bytes": 6515,
+      "baseline_sha256": "006747a365c18afacb759d9315dfa8cc64d4a02f9c3f788d13dc8c0eeaa77f3b",
+      "baseline_git_blob": "4cffc20038a81ecf87ca33cc934186154ce48e9c",
+      "current_bytes": 6515,
+      "current_sha256": "006747a365c18afacb759d9315dfa8cc64d4a02f9c3f788d13dc8c0eeaa77f3b",
+      "retained_original": {
+        "file": "docs/product/ROADMAP.md"
+      }
+    },
+    {
+      "original_path": "docs/research/RECOMMENDED_PUBLIC_REPOSITORIES.txt",
+      "current_path": "docs/research/RECOMMENDED_PUBLIC_REPOSITORIES.txt",
+      "action": "retained and current guidance/navigation updated",
+      "purpose": "Lists twenty-four study/adoption candidates, roles, model ideas, priorities and license/security cautions.",
+      "relationships_at_review": [
+        "docs/research/REUSE_AUDIT.md",
+        "docs/architecture/ARCHITECTURE.md",
+        "docs/legal/OWNERSHIP_AND_LICENSES.md"
+      ],
+      "baseline_bytes": 7831,
+      "baseline_sha256": "d2730ccadd769c081e36323aa4a85a1f039ad3eb5e4adfd49547dd8d96de1017",
+      "baseline_git_blob": "4324a230fedd55b95eefed8b4bc58525af089166",
+      "current_bytes": 7838,
+      "current_sha256": "c0f8f00f84d68bb607dbf7e91815352ba7b350c5d3bc4356be753699f187ba32",
+      "retained_original": {
+        "archive": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+        "archive_member": "docs/research/RECOMMENDED_PUBLIC_REPOSITORIES.txt"
+      }
+    },
+    {
+      "original_path": "docs/research/REUSE_AUDIT.md",
+      "current_path": "docs/research/REUSE_AUDIT.md",
+      "action": "retained byte-identically",
+      "purpose": "Assesses upstream candidates, pinned releases, license/runtime risks and ordered adoption criteria.",
+      "relationships_at_review": [
+        "services/agent-adapter/",
+        "services/model-gateway/",
+        "AnalyseFuture/references/upstream/",
+        "docs/research/RECOMMENDED_PUBLIC_REPOSITORIES.txt"
+      ],
+      "baseline_bytes": 8713,
+      "baseline_sha256": "375a29ba807869a7a0273bccf1e7e51c3e63e0692de15efb2d6e281c783f5a0c",
+      "baseline_git_blob": "c8d600d25967dd112ac4482d22727bf155829099",
+      "current_bytes": 8713,
+      "current_sha256": "375a29ba807869a7a0273bccf1e7e51c3e63e0692de15efb2d6e281c783f5a0c",
+      "retained_original": {
+        "file": "docs/research/REUSE_AUDIT.md"
+      }
+    },
+    {
+      "original_path": "docs/security/SECURITY_ARCHITECTURE.md",
+      "current_path": "docs/security/SECURITY_ARCHITECTURE.md",
+      "action": "retained byte-identically",
+      "purpose": "Defines trust boundaries, threat controls, negative-test requirements and public-launch security gates.",
+      "relationships_at_review": [
+        "SECURITY.md",
+        "docs/architecture/decisions/0003-sandbox-boundary.md",
+        "docs/product/PRODUCT_REQUIREMENTS.md"
+      ],
+      "baseline_bytes": 3073,
+      "baseline_sha256": "ebee7d4a96699d630c8a4e14b9ede98a113fa12420e68a3325d3596316e646a5",
+      "baseline_git_blob": "bc333784a4f941408b47d58246adee17d0e67867",
+      "current_bytes": 3073,
+      "current_sha256": "ebee7d4a96699d630c8a4e14b9ede98a113fa12420e68a3325d3596316e646a5",
+      "retained_original": {
+        "file": "docs/security/SECURITY_ARCHITECTURE.md"
+      }
+    },
+    {
+      "original_path": "package-lock.json",
+      "current_path": "package-lock.json",
+      "action": "retained byte-identically",
+      "purpose": "Frozen npm workspace installation graph; records all five local workspaces and their node_modules symlinks.",
+      "relationships_at_review": [
+        "package.json",
+        "apps/builder-api/package.json",
+        "apps/builder-web/package.json",
+        "packages/project-generator/package.json",
+        "services/agent-adapter/package.json",
+        "services/model-gateway/package.json"
+      ],
+      "baseline_bytes": 1417,
+      "baseline_sha256": "939442b6999bb42990f7f9e80fd9c52ca58e5b9e84272dc50b5abb1a5e12c946",
+      "baseline_git_blob": "6097cdbf921ee82ca11d1d8db02bb4e2f03c456e",
+      "current_bytes": 1417,
+      "current_sha256": "939442b6999bb42990f7f9e80fd9c52ca58e5b9e84272dc50b5abb1a5e12c946",
+      "retained_original": {
+        "file": "package-lock.json"
+      }
+    },
+    {
+      "original_path": "package.json",
+      "current_path": "package.json",
+      "action": "retained byte-identically",
+      "purpose": "Root npm workspace manifest and development/start/test entry points; requires Node.js 22+.",
+      "relationships_at_review": [
+        "apps/*",
+        "packages/*",
+        "services/*",
+        "package-lock.json",
+        "apps/builder-api/src/server.mjs",
+        "apps/builder-api/test/app.test.mjs",
+        "packages/project-generator/test/core.test.mjs",
+        "services/agent-adapter/test/agent.test.mjs",
+        "services/model-gateway/test/model-gateway.test.mjs"
+      ],
+      "baseline_bytes": 616,
+      "baseline_sha256": "9c60f3adea1ab72f248f0fc1f4c95541d65c4d4a1b94188479f795ebb1da69a4",
+      "baseline_git_blob": "053d71372dd6e02c8d0c593db217a583b9ca05f5",
+      "current_bytes": 616,
+      "current_sha256": "9c60f3adea1ab72f248f0fc1f4c95541d65c4d4a1b94188479f795ebb1da69a4",
+      "retained_original": {
+        "file": "package.json"
+      }
+    },
+    {
+      "original_path": "packages/project-generator/package.json",
+      "current_path": "packages/project-generator/package.json",
+      "action": "retained byte-identically",
+      "purpose": "Private generator workspace manifest exporting the dependency-free deterministic core module.",
+      "relationships_at_review": [
+        "package.json",
+        "packages/project-generator/src/index.mjs",
+        "@fine-tune/core"
+      ],
+      "baseline_bytes": 140,
+      "baseline_sha256": "a83e5d965f6e60e0add5a1798349b86e409af74fdb2c7d3a293a9a76f38bffdb",
+      "baseline_git_blob": "2b1af45166c77e8c973dc81bb08cd373b40554da",
+      "current_bytes": 140,
+      "current_sha256": "a83e5d965f6e60e0add5a1798349b86e409af74fdb2c7d3a293a9a76f38bffdb",
+      "retained_original": {
+        "file": "packages/project-generator/package.json"
+      }
+    },
+    {
+      "original_path": "packages/project-generator/src/index.mjs",
+      "current_path": "packages/project-generator/src/index.mjs",
+      "action": "retained byte-identically",
+      "purpose": "Deterministic prompt validation/template-selection/HTML-escaping core returning a static index.html and explanatory README without execution or persistence.",
+      "relationships_at_review": [
+        "apps/builder-api/src/app.mjs",
+        "packages/project-generator/test/core.test.mjs",
+        "index.html (generated output)",
+        "README.md (generated output)"
+      ],
+      "baseline_bytes": 8588,
+      "baseline_sha256": "0a45a8938807c184151a1d33edd765c02acbe6c072fbbecaf9ea2bb48e7d9466",
+      "baseline_git_blob": "e404ee988a82ffad31786d9e65e754c4b1280628",
+      "current_bytes": 8588,
+      "current_sha256": "0a45a8938807c184151a1d33edd765c02acbe6c072fbbecaf9ea2bb48e7d9466",
+      "retained_original": {
+        "file": "packages/project-generator/src/index.mjs"
+      }
+    },
+    {
+      "original_path": "packages/project-generator/test/core.test.mjs",
+      "current_path": "packages/project-generator/test/core.test.mjs",
+      "action": "retained byte-identically",
+      "purpose": "Maintained generator tests for prompt limits/Unicode, semantic template selection, determinism, HTML escaping, and absence of external assets/scripts.",
+      "relationships_at_review": [
+        "packages/project-generator/src/index.mjs",
+        "package.json"
+      ],
+      "baseline_bytes": 2632,
+      "baseline_sha256": "8970ab74841d022525fd0cb6c21069f130d214cf6fbd2ac2a8c38a78e61f46c1",
+      "baseline_git_blob": "fc5261db0ac6c78fc58aab6ade1e38854bb95abb",
+      "current_bytes": 2632,
+      "current_sha256": "8970ab74841d022525fd0cb6c21069f130d214cf6fbd2ac2a8c38a78e61f46c1",
+      "retained_original": {
+        "file": "packages/project-generator/test/core.test.mjs"
+      }
+    },
+    {
+      "original_path": "services/agent-adapter/README.md",
+      "current_path": "services/agent-adapter/README.md",
+      "action": "retained byte-identically",
+      "purpose": "Agent adapter contract/configuration guide explaining supported OpenHands v1.62 lifecycle operations, redirects, fake-server verification, and remaining live-integration limits.",
+      "relationships_at_review": [
+        "services/agent-adapter/src/index.mjs",
+        "services/agent-adapter/test/agent.test.mjs",
+        ".env.example"
+      ],
+      "baseline_bytes": 2327,
+      "baseline_sha256": "fd6946726c7db099a091dfe9393d65db1bb49358ecae26bdd43ebd602463c207",
+      "baseline_git_blob": "b3d7b5d41b3cbd6a1352a41c293395c17e2a9ab9",
+      "current_bytes": 2327,
+      "current_sha256": "fd6946726c7db099a091dfe9393d65db1bb49358ecae26bdd43ebd602463c207",
+      "retained_original": {
+        "file": "services/agent-adapter/README.md"
+      }
+    },
+    {
+      "original_path": "services/agent-adapter/package.json",
+      "current_path": "services/agent-adapter/package.json",
+      "action": "retained byte-identically",
+      "purpose": "Private agent integration workspace manifest exporting the OpenHands REST adapter boundary.",
+      "relationships_at_review": [
+        "package.json",
+        "services/agent-adapter/src/index.mjs",
+        "@fine-tune/agent"
+      ],
+      "baseline_bytes": 141,
+      "baseline_sha256": "45aa9d2d38f00f865ca770267359c6240186a1dec7d4fbc3291e357b162bfaba",
+      "baseline_git_blob": "98d676591127b72b43a39539fd9322bc6cc567c0",
+      "current_bytes": 141,
+      "current_sha256": "45aa9d2d38f00f865ca770267359c6240186a1dec7d4fbc3291e357b162bfaba",
+      "retained_original": {
+        "file": "services/agent-adapter/package.json"
+      }
+    },
+    {
+      "original_path": "services/agent-adapter/src/index.mjs",
+      "current_path": "services/agent-adapter/src/index.mjs",
+      "action": "retained byte-identically",
+      "purpose": "Replaceable OpenHands Agent Server REST transport with endpoint safety, bounded conversation settings, lifecycle/events/final-response operations, cancellation, timeout, and structured errors.",
+      "relationships_at_review": [
+        "services/agent-adapter/package.json",
+        "services/agent-adapter/README.md",
+        ".env.example",
+        "/api/conversations",
+        "http://127.0.0.1:8000"
+      ],
+      "baseline_bytes": 11862,
+      "baseline_sha256": "531661591305018bca5d9d89d3c9260f7a14c6ebbecb563fabc36aa73a8d9f6a",
+      "baseline_git_blob": "b8c85ebd48fd8c19b2d6e4ba2444b2b108a39431",
+      "current_bytes": 11862,
+      "current_sha256": "531661591305018bca5d9d89d3c9260f7a14c6ebbecb563fabc36aa73a8d9f6a",
+      "retained_original": {
+        "file": "services/agent-adapter/src/index.mjs"
+      }
+    },
+    {
+      "original_path": "services/agent-adapter/test/agent.test.mjs",
+      "current_path": "services/agent-adapter/test/agent.test.mjs",
+      "action": "retained byte-identically",
+      "purpose": "Maintained fake-HTTP-server and injected-transport contract tests for OpenHands request shape, lifecycle, events, errors, redirect protection, timeout/cancellation, and safe IDs/configuration.",
+      "relationships_at_review": [
+        "services/agent-adapter/src/index.mjs",
+        "package.json",
+        "/api/conversations"
+      ],
+      "baseline_bytes": 10658,
+      "baseline_sha256": "a90414cecc436970ca9b8fe1ce0e6bb21d368bc6e24a49dea799acf1a0dfe68a",
+      "baseline_git_blob": "c6a22ba653e684075d168307f288de8ba5e08cfa",
+      "current_bytes": 10658,
+      "current_sha256": "a90414cecc436970ca9b8fe1ce0e6bb21d368bc6e24a49dea799acf1a0dfe68a",
+      "retained_original": {
+        "file": "services/agent-adapter/test/agent.test.mjs"
+      }
+    },
+    {
+      "original_path": "services/model-gateway/README.md",
+      "current_path": "services/model-gateway/README.md",
+      "action": "retained byte-identically",
+      "purpose": "Model boundary guide describing mock/Ollama providers, budget/usage contracts, endpoint safety, streaming completeness, retry/cancellation semantics, and verification scope.",
+      "relationships_at_review": [
+        "services/model-gateway/src/index.mjs",
+        "services/model-gateway/test/model-gateway.test.mjs",
+        "docs/development/VALIDATION_REPORT.md",
+        ".env.example"
+      ],
+      "baseline_bytes": 2683,
+      "baseline_sha256": "b14b956299040d902b3d1690b98719318c76564fabcd533b86604f5f116eed80",
+      "baseline_git_blob": "a0a9c1a970245036796fdc6d14044d6c2d1e52f6",
+      "current_bytes": 2683,
+      "current_sha256": "b14b956299040d902b3d1690b98719318c76564fabcd533b86604f5f116eed80",
+      "retained_original": {
+        "file": "services/model-gateway/README.md"
+      }
+    },
+    {
+      "original_path": "services/model-gateway/package.json",
+      "current_path": "services/model-gateway/package.json",
+      "action": "retained byte-identically",
+      "purpose": "Private model-inference workspace manifest exporting the provider-independent gateway module.",
+      "relationships_at_review": [
+        "package.json",
+        "services/model-gateway/src/index.mjs",
+        "@fine-tune/model-gateway"
+      ],
+      "baseline_bytes": 149,
+      "baseline_sha256": "ff9937deeabfe67b96bc3150c976da1ba9e313181c30b51d3b320f7a98132f9c",
+      "baseline_git_blob": "96ff197df3729b60d2e3ffa322b852d779d6f724",
+      "current_bytes": 149,
+      "current_sha256": "ff9937deeabfe67b96bc3150c976da1ba9e313181c30b51d3b320f7a98132f9c",
+      "retained_original": {
+        "file": "services/model-gateway/package.json"
+      }
+    },
+    {
+      "original_path": "services/model-gateway/src/index.mjs",
+      "current_path": "services/model-gateway/src/index.mjs",
+      "action": "retained byte-identically",
+      "purpose": "Provider-independent inference gateway with deterministic mock and opt-in Ollama adapters, request/budget validation, token usage, bounded retries/timeouts, cancellation, and NDJSON streaming.",
+      "relationships_at_review": [
+        "services/model-gateway/package.json",
+        "services/model-gateway/README.md",
+        ".env.example",
+        "/api/chat",
+        "http://127.0.0.1:11434"
+      ],
+      "baseline_bytes": 17148,
+      "baseline_sha256": "f029f3b40cc7ecd7c5f7b39e71f9792ae38e5a87fe175839873d052854f65219",
+      "baseline_git_blob": "f9f016c0f5b9d11857095205c1bce8272ddeb127",
+      "current_bytes": 17148,
+      "current_sha256": "f029f3b40cc7ecd7c5f7b39e71f9792ae38e5a87fe175839873d052854f65219",
+      "retained_original": {
+        "file": "services/model-gateway/src/index.mjs"
+      }
+    },
+    {
+      "original_path": "services/model-gateway/test/model-gateway.test.mjs",
+      "current_path": "services/model-gateway/test/model-gateway.test.mjs",
+      "action": "retained byte-identically",
+      "purpose": "Maintained inference contract tests using mocked fetch/local servers for provider replacement, budgets, usage, retries/timeouts, cancellation, redirect protection, and complete/incomplete streaming.",
+      "relationships_at_review": [
+        "services/model-gateway/src/index.mjs",
+        "package.json",
+        "/api/chat"
+      ],
+      "baseline_bytes": 14593,
+      "baseline_sha256": "90fa5ab9602d20dc899e339993b2790ff509866f62924471b802af12c960a627",
+      "baseline_git_blob": "e68b0e06c870613f920798ee669a9a0f3aa5c53c",
+      "current_bytes": 14593,
+      "current_sha256": "90fa5ab9602d20dc899e339993b2790ff509866f62924471b802af12c960a627",
+      "retained_original": {
+        "file": "services/model-gateway/test/model-gateway.test.mjs"
+      }
+    }
+  ],
+  "added_files": [
+    {
+      "path": "AnalyseFuture/organization/REORGANIZATION.md",
+      "purpose": "Current restructuring decisions, scope, preservation evidence and static-only review limits."
+    },
+    {
+      "path": "AnalyseFuture/organization/FILE_CATALOG.json",
+      "purpose": "Complete 110-file baseline-to-current placement/preservation ledger and added/local file coverage."
+    },
+    {
+      "path": "AnalyseFuture/organization/FILE_CATALOG.md",
+      "purpose": "Readable whole-file placement and purpose index generated from the machine-readable ledger."
+    },
+    {
+      "path": "AnalyseFuture/organization/ARCHIVE_CATALOG.json",
+      "purpose": "Per-member inert content-derived inventory for all five pre-existing archives, including directories."
+    },
+    {
+      "path": "AnalyseFuture/organization/PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip",
+      "purpose": "Exact pre-edit originals of 14 modified baseline files, each stored at its original relative path."
+    }
+  ],
+  "folders": [
+    ".github",
+    ".github/ISSUE_TEMPLATE",
+    ".github/workflows",
+    "AnalyseFuture",
+    "AnalyseFuture/history",
+    "AnalyseFuture/history/baseline-documents",
+    "AnalyseFuture/history/baseline-documents/docs",
+    "AnalyseFuture/history/before-complete-audit",
+    "AnalyseFuture/history/before-complete-audit/AnalyseFuture",
+    "AnalyseFuture/history/before-complete-audit/docs",
+    "AnalyseFuture/history/before-complete-audit/services",
+    "AnalyseFuture/history/before-complete-audit/services/agent",
+    "AnalyseFuture/history/before-complete-audit/services/agent/src",
+    "AnalyseFuture/history/before-complete-audit/services/agent/test",
+    "AnalyseFuture/history/before-complete-audit/services/model-gateway",
+    "AnalyseFuture/history/before-complete-audit/services/model-gateway/src",
+    "AnalyseFuture/history/before-complete-audit/services/model-gateway/test",
+    "AnalyseFuture/history/organization",
+    "AnalyseFuture/history/organization/compatibility",
+    "AnalyseFuture/history/recovery-reports",
+    "AnalyseFuture/history/recovery-reports/audit",
+    "AnalyseFuture/history/recovery-reports/features",
+    "AnalyseFuture/history/recovery-reports/handoff",
+    "AnalyseFuture/history/recovery-reports/inventory",
+    "AnalyseFuture/history/recovery-reports/inventory/evidence",
+    "AnalyseFuture/history/recovery-reports/migration",
+    "AnalyseFuture/history/recovery-reports/security",
+    "AnalyseFuture/history/recovery-reports/security/evidence",
+    "AnalyseFuture/history/recovery-reports/validation",
+    "AnalyseFuture/history/recovery-reports/validation/drivers",
+    "AnalyseFuture/organization",
+    "AnalyseFuture/references",
+    "AnalyseFuture/references/upstream",
+    "apps",
+    "apps/builder-api",
+    "apps/builder-api/src",
+    "apps/builder-api/test",
+    "apps/builder-web",
+    "apps/builder-web/public",
+    "docs",
+    "docs/architecture",
+    "docs/architecture/decisions",
+    "docs/development",
+    "docs/legal",
+    "docs/model-training",
+    "docs/operations",
+    "docs/product",
+    "docs/research",
+    "docs/security",
+    "packages",
+    "packages/project-generator",
+    "packages/project-generator/src",
+    "packages/project-generator/test",
+    "services",
+    "services/agent-adapter",
+    "services/agent-adapter/src",
+    "services/agent-adapter/test",
+    "services/model-gateway",
+    "services/model-gateway/src",
+    "services/model-gateway/test"
+  ],
+  "local_nonproject_entries": [
+    {
+      "path": ".git",
+      "role": "Git metadata; preserved in place and excluded from project relocation"
+    },
+    {
+      "path": "node_modules/.package-lock.json",
+      "role": "local generated dependency metadata; retained",
+      "symlink": false
+    },
+    {
+      "path": "node_modules/@fine-tune/agent",
+      "role": "installed npm workspace symlink; retained",
+      "target": "../../services/agent-adapter"
+    },
+    {
+      "path": "node_modules/@fine-tune/web",
+      "role": "installed npm workspace symlink; retained",
+      "target": "../../apps/builder-web"
+    },
+    {
+      "path": "node_modules/@fine-tune/api",
+      "role": "installed npm workspace symlink; retained",
+      "target": "../../apps/builder-api"
+    },
+    {
+      "path": "node_modules/@fine-tune/core",
+      "role": "installed npm workspace symlink; retained",
+      "target": "../../packages/project-generator"
+    },
+    {
+      "path": "node_modules/@fine-tune/model-gateway",
+      "role": "installed npm workspace symlink; retained",
+      "target": "../../services/model-gateway"
+    }
+  ],
+  "identical_baseline_content_groups": []
+}

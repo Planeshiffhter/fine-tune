@@ -1,74 +1,108 @@
-# Functional reorganization record
+# Whole-repository functional organization
 
-Date: 17 November 2026. Starting commit:
-`84dd0aa43e8b66ff3e6f4e32d703f3b8b0ab955a`.
-Remote backup tag: `recovery/before-functional-sort-84dd0aa`.
+Date: **17 November 2026**. Repository: `Planeshiffhter/fine-tune`.
+Starting commit: `3d00f02c217419e6172a9c2586db7660db1fa391`, matching fetched
+`origin/main`. The checkout was clean; the task-provided local `work` branch was
+switched to local `main` tracking `origin/main`. No feature branch or worktree
+was created. Existing Git history is retained.
 
-The owner requested whole-project functional sorting, no deletion, direct `main`
-delivery and no tests. We classified all 101 starting tracked files, including
-nested historical copies, metadata, four source components being renamed, the
-already descriptive model gateway, documentation and two upstream ZIPs. The
-current repository is an app-builder foundation; no separate English-speaking
-companion implementation was found in owned source or fetched branch tips.
+## Acceptance and scope
 
-84 files were moved and 17 retained at conventional/already appropriate locations.
-Five new organization/navigation records bring the delivered count to 106. No
-source implementation was merged, deleted or replaced with a weaker version.
-The module labels describe actual roles; public npm names and exports stay intact.
+The owner's request covers every project file and folder: classify by function,
+keep all existing work, preserve uncertain material, repair current references,
+write a clean structure guide and deliver directly to `main`. The explicit
+**no-tests** instruction governs this pass. Product feature implementation,
+installation, builds, runtime startup and upstream integration are outside scope.
 
-Before edits, 99 text originals were compressed into ORIGINAL_TEXT_FILES.zip;
-two upstream ZIPs are retained without byte changes. PATH_MAPPING.json records
-all original hashes, destinations, purpose/dependency/use/duplicate assessments,
-local workspace-link changes, and the new records. Historical source and metadata
-remain inert and retain their bytes. Earlier audit text reports carry a historical
-header; their previous body is preserved in the original-text ZIP.
+The analysis covers all 110 starting tracked files, hidden GitHub/config files,
+nested historical snapshots, installed local dependency metadata/symlinks, and
+all 6,860 members in the five existing ZIPs. Owned code, test bodies, manifests,
+lockfile, docs and archive contents were read as data. Test files were inspected
+but never executed. Archive members were read without extraction or execution.
+Open GitHub issue retrieval was attempted but the API returned `Forbidden`;
+no issue state or account permissions were inferred from that failure.
 
-Source path repairs: root start/test commands, lockfile workspace keys/link targets,
-API static asset references and browser roadmap URL. Current Markdown links are
-resolved from their original source/target to the new source/target. Old source
-snapshot contents, metadata hashes and recorded historic paths were not globally
-rewritten. No dependency, public API or product feature was added.
+## Placement decisions
 
-No tests, installation, server, browser or project code execution is authorized
-for this pass. Only file/Git/hash/static reference review is performed. Commit
-messages include [skip ci] to prevent this push from requesting the existing CI
-test workflow. A later authorized session must validate runtime behavior. No
-force push, branch deletion or history rewrite is used.
+| Collection | Decision and reason |
+| --- | --- |
+| `apps/`, `packages/`, `services/` | Retain clear existing boundaries and colocated source/tests/assets. API, generator, agent and model modules have different responsibilities. |
+| Root config and `.github/` | Retain conventional discovery locations, workspace graph, package names and CI configuration. |
+| `docs/product/` | Move the maintained complete vision here; retain all feasibility limits and future ideas. |
+| `docs/product/PROJECT_IDEA.txt` | Move obsolete compatibility-only text to historical organization records, byte-identical. Current docs link directly to the canonical full vision. |
+| `docs/architecture/REPOSITORY_STRUCTURE.md` | Move this explicitly historical recovery review into historical organization records; it contains earlier layouts, not current architecture. |
+| `AnalyseFuture/{audit,features,handoff,inventory,migration,security,validation}/` | Move all dated reports/evidence into `history/recovery-reports/`, keeping their internal functional subcollections and exact bytes. |
+| Former `AnalyseFuture/organization/` | Retain old report, ledger and restoration archives under `history/organization/`; do not overwrite old evidence with new facts. |
+| Existing snapshots and upstream ZIPs | Preserve bytes/internal layout in their established snapshot/reference homes. Never import or unpack as active implementation. |
+| Current `AnalyseFuture/organization/` | New baseline-specific catalogue, report, archive-member classification and pre-edit originals. |
 
-Use ../../PROJECT_STRUCTURE.md for current navigation and the complete placement
-index. The exact enclosing Git commit identifies the delivered organization; final
-remote matching is confirmed in the delivery response.
+Exactly **28 starting files move**. Unmoved files were considered and retained
+for their actual purpose, not ignored. No suspicious/damaged owned file was
+established. Duplicate-looking historical copies remain independently preserved.
+No feature, dependency, package name, lock entry, test assertion or import changed.
+The static HTML's two repository links now target `Planeshiffhter/fine-tune`.
 
-## Static review record
+## Documentation and reference repairs
 
-Independent file/hash/reference review found all 101 originals preserved, all 84
-relocations represented, and all 106 delivered paths assigned. All 28 immutable
-historical/source/metadata/driver artifacts retain their original bytes. Current
-local links in 35 Markdown documents resolve; the old history copies are evidence
-and intentionally retain old wording. Relative imports, public workspace aliases,
-lockfile links, root command paths and static asset file references align.
-The only application-source edits are three asset-directory references and the
-browser roadmap URL. These are static findings, not executed tests or runtime
-results. Empty directory shells left by moving files were removed; no file content
-was deleted. A relative TXT navigation link and the earlier structure report's
-historical label were corrected during the final documentation review.
+The current structure guide is rebuilt around the actual tree and ownership rules,
+with a complete catalogue instead of cumulative old path tables. Current status
+and handoff now distinguish the no-tests request from earlier authorized validation.
+Affected active Markdown/TXT paths point to relocated reports and product vision.
+An amendment to ADR 0006 records the new canonical vision location without
+rewriting its earlier validation claims. Old repository navigation in the live UI,
+onboarding and research index now targets the selected repository.
 
-## Remaining-navigation closure
+Historical report bodies, snapshots, hashes, recorded old path tables and archive
+internals are intentionally byte-identical. Old relative links must be interpreted
+from their catalogue-recorded original location, then resolved through the new
+mapping. They are not current instructions. The earlier structure guide/status
+chronology and every other edited original survive in the restoration ZIP.
 
-Starting from `e19dfdafc841f73ed8b62d1fe9123cb8c8ef05e7`, a second static sweep
-found no remaining source relocation or configuration repair. Current onboarding
-and top-level links still directed developers to a labeled historical handoff.
-The new `docs/development/CONTINUATION.md` closes that navigation gap and separates
-completed organization from deferred validation and future product milestones.
-The active architecture also points to the canonical current structure guide.
+## Static preservation and consistency review
 
-All ten changed pre-follow-up documents are retained in
-`FOLLOW_UP_ORIGINALS_E19DFDA.zip`; the ledger records their hashes and two new files.
-The original functional-sort counts (101 original files, 84 moves, 106 initial
-delivery files) remain historical facts. Current tracked count is 108 after adding
-the guide and backup. Historical snapshots, reports, source and upstream archives
-were not rewritten. No source, dependency, API or runtime feature changed.
+- Full starting-file coverage and unique, existing destinations in `FILE_CATALOG.json`.
+- SHA-256/size comparison of all 110 original contents, at their current path or
+  exact baseline member in `PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip`.
+- All relocated historical evidence and five pre-existing ZIPs retain their original bytes.
+- Every existing archive member was read and hashed; member paths, functional
+  roles, bounded import/manifest metadata and directory entries are recorded.
+  No duplicate member paths or traversal paths were observed. One internal upstream
+  symlink stays inert inside its ZIP. This is not an exhaustive source/security audit.
+- Current local Markdown links and referenced paths resolve. Historical links
+  remain original-context evidence and are excluded from current-navigation checks.
+- Existing npm workspace manifests/lock targets, package exports, literal relative
+  imports and API static asset targets were inspected without executing them.
+- Root scripts, test paths, CI workflow and all application logic/test files remain
+  unchanged, apart from the two HTML navigation URLs.
+- Existing ignored installation metadata and five workspace symlinks are retained.
+- `git diff --check` is the final whitespace review. No installer, build, test,
+  server, browser, upstream hook or executable product validation was run.
 
-No tests or project execution were run. Only static path/reference, Git, content
-and preservation review applies. Direct `main` commits carry `[skip ci]`; runtime
-validation remains deferred under the owner's instruction.
+Recorded static totals: **110/110** starting contents preserved; **49** relocated
+or already archived historical files byte-identical; **297** current Markdown
+links resolve; all **27** active/configuration files reviewed; all **five**
+workspace targets resolve. The new ZIP retains **14** edited originals. Five new
+records bring the current tracked project inventory to **115** files. Empty
+directory shells left by moving files were removed; no file content was deleted.
+
+These checks establish content preservation and static consistency only. Previous
+41-test Node 22/24 and browser/startup results apply to the prior documented
+baseline, not this pass. Commit `[skip ci]` avoids requesting the existing push CI
+workflow; no new runtime pass is claimed.
+
+## Records and delivery
+
+- [PROJECT_STRUCTURE.md](../../PROJECT_STRUCTURE.md): canonical current organization.
+- [FILE_CATALOG.md](FILE_CATALOG.md) / [FILE_CATALOG.json](FILE_CATALOG.json): every
+  starting file's role, relationships, current home and retained-original location;
+  also all added records and local generated metadata decisions.
+- [ARCHIVE_CATALOG.json](ARCHIVE_CATALOG.json): classification/provenance of all
+  members of the five pre-existing ZIPs, without changing their internal layout.
+- [PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip](PRE_RESTRUCTURE_ORIGINALS_3D00F02.zip): every
+  edited original at its exact baseline path. New archive members are indexed by
+  `retained_original` in the file catalogue.
+
+Delivery uses a normal commit and push to `main`, no PR, reset, branch deletion or
+force-push. The final response records the resulting commit after comparison with
+remote `refs/heads/main`. No publication, account-security fix or new application
+capability is implied by Git delivery.

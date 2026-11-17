@@ -28,3 +28,13 @@ passing tests. Operators must configure final endpoint URLs. Public class and
 HTTP API contracts remain unchanged; custom fetch implementations must honor
 standard redirect options. This does not prove account security, isolate real
 agent execution, or authorize executing archived code.
+
+## Location amendment — 17 November 2026
+
+The later whole-repository structure review places the maintained canonical vision
+with [product planning](../../product/PROJECT_VISION_AND_FUTURE_ROADMAP.txt).
+The obsolete compatibility pointer is retained under
+`AnalyseFuture/history/organization/compatibility/`. This supersedes only the
+vision-location decision above; upstream quarantine, inert snapshots, explicit
+test discovery and redirect rejection are unchanged. This location-only pass runs
+no tests; earlier evidence above applies to its original baseline.

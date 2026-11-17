@@ -1,5 +1,9 @@
 # Post-move validation and fixes
 
+> Historical validation evidence from the previous baseline. The later whole-repository
+> restructuring is static-only: its owner explicitly requested no tests. The results
+> below have not been rerun for that restructuring; its commits use `[skip ci]`.
+
 Date: **17 November 2026**. Starting commit:
 `4a20bb07af3a81c4da256214900e617dad69383a`.
 
@@ -85,8 +89,8 @@ replace the default runtime or add a project dependency.
 ## Preservation and remaining limits
 
 Fourteen baseline originals are retained in
-[ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip](../../AnalyseFuture/validation/ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip).
-The [placement ledger](../../AnalyseFuture/organization/PATH_MAPPING.json) records
+[ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip](../../AnalyseFuture/history/recovery-reports/validation/ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip).
+The [placement ledger](../../AnalyseFuture/history/organization/PATH_MAPPING.json) records
 this report, the archive and original hashes. Earlier evidence remains untouched.
 
 No separate build, lint or type-check script is declared, so no such run is
@@ -96,6 +100,7 @@ isolation, database migrations and production deployment remain unconfigured or
 unimplemented. Those are integration/product gaps, not hidden skipped assertions
 in the 41-test result.
 
-The latest request authorizes testing and normal pushes again. These commits omit
-`[skip ci]`, allowing the existing workflow to run. Delivery remains directly to
+The request for that earlier validation authorized testing and normal pushes.
+Those validation commits omitted `[skip ci]`, allowing the existing workflow to
+run. The later restructuring request pauses testing again and uses `[skip ci]`. Delivery remains directly to
 `main`, without a PR, force push or history rewrite.
