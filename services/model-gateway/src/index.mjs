@@ -52,7 +52,6 @@ function abortContext(external, timeoutMs) {
   const onAbort = () => controller.abort(external?.reason);
   if (external?.aborted) onAbort(); else external?.addEventListener('abort', onAbort, { once: true });
   const timer = setTimeout(() => { timedOut = true; controller.abort(); }, timeoutMs);
-  timer.unref?.();
   return { signal: controller.signal, timedOut: () => timedOut, cleanup() { clearTimeout(timer); external?.removeEventListener('abort', onAbort); } };
 }
 
@@ -122,7 +121,6 @@ async function delay(ms, signal) {
       reject(new ModelGatewayError('Model request was cancelled.', { code: 'cancelled', provider: 'gateway' }));
     };
     const timer = setTimeout(finish, ms);
-    timer.unref?.();
     signal?.addEventListener('abort', onAbort, { once: true });
   });
 }
@@ -203,7 +201,7 @@ export class OllamaModelProvider {
     if (!response.ok) { await jsonResponse(response, this.name); return; }
     if (!response.body) throw new ModelGatewayError('Ollama streaming response had no body.', { code: 'invalid_provider_response', provider: this.name });
     const decoder = new TextDecoder();
-    let buffer = '', finalUsage = null;
+    let buffer = '', finalUsage = null, completed = false;
     for await (const chunk of response.body) {
       buffer += decoder.decode(chunk, { stream: true });
       let at;
@@ -211,11 +209,12 @@ export class OllamaModelProvider {
         const line = buffer.slice(0, at).trim(); buffer = buffer.slice(at + 1);
         if (!line) continue;
         const event = streamLine(line, this.name);
-        if (event.type === 'done') finalUsage = event.usage; else yield event;
+        if (event.type === 'done') { finalUsage = event.usage; completed = true; } else yield event;
       }
     }
     buffer += decoder.decode();
-    if (buffer.trim()) { const event = streamLine(buffer.trim(), this.name); if (event.type === 'done') finalUsage = event.usage; else yield event; }
+    if (buffer.trim()) { const event = streamLine(buffer.trim(), this.name); if (event.type === 'done') { finalUsage = event.usage; completed = true; } else yield event; }
+    if (!completed) throw new ModelGatewayError('Ollama stream ended without a completion event.', { code: 'invalid_provider_response', provider: this.name });
     yield { type: 'done', model, usage: finalUsage };
   }
 }
@@ -249,6 +248,7 @@ export class ModelGateway {
     let iterator;
     let completed = false;
     try {
+      if (abort.signal.aborted) throw abortError();
       const iterable = this.provider.stream({ ...payload, signal: abort.signal });
       if (!iterable || typeof iterable[Symbol.asyncIterator] !== 'function') {
         throw new ModelGatewayError('Provider stream() must return an async iterable.', { code: 'invalid_provider_response', provider: this.provider.name });

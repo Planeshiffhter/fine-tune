@@ -24,8 +24,9 @@ The current builder still calls `packages/project-generator`; it is intentionall
 
 The complete functional layout and placement decisions are in
 [PROJECT_STRUCTURE.md](../../PROJECT_STRUCTURE.md). Package names and exported
-contracts remain compatible. This folder reorganization was reviewed statically;
-tests and runtime validation were not run, as requested by the owner.
+contracts remain compatible. The initial folder reorganization was static-only;
+subsequent owner-authorized [validation](../development/VALIDATION_REPORT.md)
+passes the maintained suite on Node 22/24 and exercises startup and the mock UI.
 
 The original upstream ZIPs are kept in `AnalyseFuture/references/upstream/`.
 Historical documents and an inventory preserve the pre-organization contents.

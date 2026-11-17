@@ -60,8 +60,13 @@ async function readLimitedJson(request) {
 export function createHandler() {
   return async (request, response) => {
     applyHeaders(response);
-    const pathname = new URL(request.url ?? '/', 'http://localhost').pathname;
     try {
+      let pathname;
+      try {
+        pathname = new URL(request.url ?? '/', 'http://localhost').pathname;
+      } catch {
+        throw new InputError('Malformed request URL.');
+      }
       if (pathname === '/api/health' && request.method === 'GET') {
         return sendJson(response, 200, { status: 'ok', mode: 'offline_mock', model_connected: false });
       }

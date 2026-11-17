@@ -37,6 +37,13 @@ The gateway validates messages, propagates caller cancellation, applies a bounde
 
 ## Verification
 
+Streaming requires a real provider completion event (`done: true`). Empty or
+truncated NDJSON raises `invalid_provider_response`; already emitted text stays
+partial and is never replayed or labeled complete. Awaited retries/timeouts stay
+alive until completion/cancellation, and pre-aborted streams do not invoke the
+provider factory. See the current
+[validation report](../../docs/development/VALIDATION_REPORT.md).
+
 Run npm ci --ignore-scripts and npm test from the repository root. The suite uses
 deterministic fixtures, mocked fetch responses and local HTTP servers. Two-server
 native-fetch regressions check that 307 redirects receive no follow-up request or

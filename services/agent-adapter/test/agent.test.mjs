@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import { AgentAdapterError, OpenHandsAgentServerAdapter, createOpenHandsAgentAdapterFromEnv } from '../src/index.mjs';
 
 async function withServer(handler, fn) {
@@ -150,6 +152,48 @@ test('enforces timeout and caller cancellation', async () => {
   const controller = new AbortController();
   controller.abort();
   await assert.rejects(() => adapter.getSession('abc', { signal: controller.signal }), (error) => error.code === 'cancelled');
+});
+
+test('does not dispatch a lifecycle request cancelled before its fetch microtask', async () => {
+  let calls = 0;
+  const adapter = new OpenHandsAgentServerAdapter({ fetchImpl: async () => {
+    calls += 1;
+    return new Response('{}', { headers: { 'Content-Type': 'application/json' } });
+  } });
+  const controller = new AbortController();
+  const pending = adapter.run('abc', { signal: controller.signal });
+  controller.abort();
+  await assert.rejects(pending, (error) => error instanceof AgentAdapterError && error.code === 'cancelled');
+  assert.equal(calls, 0);
+});
+
+test('an awaited timeout survives when a custom fetch provides no event-loop handles', async () => {
+  const moduleUrl = new URL('../src/index.mjs', import.meta.url).href;
+  const source = `
+    import { OpenHandsAgentServerAdapter } from ${JSON.stringify(moduleUrl)};
+    const adapter = new OpenHandsAgentServerAdapter({ timeoutMs: 20, fetchImpl: async () => new Promise(() => {}) });
+    const outcome = await adapter.getSession('fixture').then(
+      () => ({ unexpectedFulfillment: true }),
+      (error) => ({ name: error.name, code: error.code, retryable: error.retryable }),
+    );
+    console.log(JSON.stringify(outcome));
+  `;
+  const { stdout } = await promisify(execFile)(process.execPath, ['--input-type=module', '--eval', source], { timeout: 5000 });
+  assert.deepEqual(JSON.parse(stdout), { name: 'AgentAdapterError', code: 'timeout', retryable: true });
+});
+
+test('rejects dot-segment conversation IDs before dispatching a delete', async () => {
+  const calls = [];
+  const adapter = new OpenHandsAgentServerAdapter({ fetchImpl: async (url, init) => {
+    calls.push({ method: init.method, pathname: new URL(url).pathname });
+    return new Response('{}', { headers: { 'Content-Type': 'application/json' } });
+  } });
+  for (const id of ['.', '..', ' . ', ' .. ']) {
+    await assert.rejects(() => adapter.deleteSession(id), (error) => error instanceof AgentAdapterError && error.code === 'invalid_request');
+  }
+  assert.deepEqual(calls, []);
+  await adapter.deleteSession('conv..-1');
+  assert.deepEqual(calls, [{ method: 'DELETE', pathname: '/api/conversations/conv..-1' }]);
 });
 
 test('validates endpoint safety and bounded iteration settings', async () => {

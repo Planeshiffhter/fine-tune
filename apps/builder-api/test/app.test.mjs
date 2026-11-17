@@ -1,6 +1,8 @@
 import test, { before, after } from 'node:test';
 import assert from 'node:assert/strict';
-import { createServer } from 'node:http';
+import { createServer, request as httpRequest } from 'node:http';
+import { spawn } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { createHandler } from '../src/app.mjs';
 
 let server;
@@ -17,6 +19,70 @@ after(async () => {
 async function generate(body, headers = { 'Content-Type': 'application/json' }) {
   return fetch(`${base}/api/generate`, { method: 'POST', headers, body });
 }
+
+async function standaloneServer(context) {
+  const serverProcess = spawn(process.execPath, [fileURLToPath(new URL('../src/server.mjs', import.meta.url))], {
+    env: { ...process.env, HOST: '127.0.0.1', PORT: '0' },
+    stdio: ['ignore', 'pipe', 'pipe'],
+  });
+  const closed = new Promise((resolve) => serverProcess.once('close', resolve));
+  context.after(async () => {
+    if (serverProcess.exitCode === null && serverProcess.signalCode === null) serverProcess.kill();
+    await closed;
+  });
+  let output = '';
+  let diagnostics = '';
+  serverProcess.stderr.setEncoding('utf8');
+  serverProcess.stderr.on('data', (chunk) => { diagnostics += chunk; });
+  serverProcess.stdout.setEncoding('utf8');
+  const port = await new Promise((resolve, reject) => {
+    serverProcess.once('error', reject);
+    serverProcess.stdout.on('data', (chunk) => {
+      output += chunk;
+      const match = output.match(/http:\/\/127\.0\.0\.1:(\d+)/);
+      if (match) resolve(Number(match[1]));
+    });
+    closed.then((code) => reject(new Error(`Server exited before startup (${code}): ${diagnostics}`)));
+  });
+  return { port, serverProcess };
+}
+
+function requestTarget(port, target) {
+  return new Promise((resolve, reject) => {
+    // An explicit path sends the raw target; fetch would reject it client-side.
+    const request = httpRequest({ hostname: '127.0.0.1', port, method: 'GET', path: target, agent: false }, (response) => {
+      const chunks = [];
+      response.on('data', (chunk) => chunks.push(chunk));
+      response.on('error', reject);
+      response.on('end', () => resolve({ status: response.statusCode, headers: response.headers, body: Buffer.concat(chunks).toString('utf8') }));
+    });
+    request.setTimeout(2000, () => request.destroy(new Error('Raw request timed out.')));
+    request.on('error', reject);
+    request.end();
+  });
+}
+
+test('malformed request URLs return a bounded error and leave the standalone server available', { timeout: 10_000 }, async (context) => {
+  const { port, serverProcess } = await standaloneServer(context);
+  for (const target of ['http://[', 'http://[::1']) {
+    const response = await requestTarget(port, target);
+    assert.equal(response.status, 400);
+    assert.match(response.headers['content-type'], /application\/json/);
+    assert.equal(response.headers['x-content-type-options'], 'nosniff');
+    assert.match(response.headers['content-security-policy'], /frame-ancestors 'none'/);
+    assert.equal(response.body, JSON.stringify({ error: 'Malformed request URL.' }));
+    const health = await fetch(`http://127.0.0.1:${port}/api/health`);
+    assert.equal(health.status, 200);
+    assert.deepEqual(await health.json(), { status: 'ok', mode: 'offline_mock', model_connected: false });
+    assert.equal(serverProcess.exitCode, null);
+  }
+  const generated = await fetch(`http://127.0.0.1:${port}/api/generate`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ prompt: 'Build a charming boutique store with products' }),
+  });
+  assert.equal(generated.status, 200);
+  assert.equal((await generated.json()).category, 'store');
+});
 
 test('health is honest about model connection', async () => {
   const response = await fetch(`${base}/api/health`);

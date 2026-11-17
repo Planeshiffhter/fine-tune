@@ -25,10 +25,11 @@ function validateObject(value, name) {
 }
 
 function validateId(value) {
-  if (typeof value !== 'string' || !value.trim() || value.length > 200 || /[/?#]/.test(value)) {
+  const id = typeof value === 'string' ? value.trim() : '';
+  if (!id || value.length > 200 || /[/?#]/.test(value) || id === '.' || id === '..') {
     throw new AgentAdapterError('conversationId is invalid.', { code: 'invalid_request' });
   }
-  return value.trim();
+  return id;
 }
 
 function validateMessage(value) {
@@ -63,7 +64,6 @@ function abortContext(external, timeoutMs) {
   const onAbort = () => controller.abort(external?.reason);
   if (external?.aborted) onAbort(); else external?.addEventListener('abort', onAbort, { once: true });
   const timer = setTimeout(() => { timedOut = true; controller.abort(new DOMException('Timed out', 'TimeoutError')); }, timeoutMs);
-  timer.unref?.();
   return {
     signal: controller.signal,
     timedOut: () => timedOut,
@@ -87,7 +87,10 @@ async function waitForSignal(operation, signal) {
       reject(signal.reason ?? abortError());
     };
     signal?.addEventListener('abort', onAbort, { once: true });
-    Promise.resolve().then(operation).then(
+    Promise.resolve().then(() => {
+      if (signal?.aborted) throw signal.reason ?? abortError();
+      return operation();
+    }).then(
       (value) => { if (!settled) { settled = true; cleanup(); resolve(value); } },
       (error) => { if (!settled) { settled = true; cleanup(); reject(error); } },
     );

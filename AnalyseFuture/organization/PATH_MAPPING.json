@@ -1777,9 +1777,17 @@
     {
       "path": "AnalyseFuture/organization/FOLLOW_UP_ORIGINALS_E19DFDA.zip",
       "purpose": "Ten exact pre-follow-up documents preserved before current navigation/handoff fixes"
+    },
+    {
+      "path": "docs/development/VALIDATION_REPORT.md",
+      "purpose": "Current post-move Node22/24 and browser/startup results, nine regressions, repaired defects and explicit integration limits"
+    },
+    {
+      "path": "AnalyseFuture/validation/ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip",
+      "purpose": "Fourteen exact baseline source/test/document originals retained before validation repairs"
     }
   ],
-  "expected_final_tracked_files": 108,
+  "expected_final_tracked_files": 110,
   "completion_follow_up": {
     "starting_commit": "e19dfdafc841f73ed8b62d1fe9123cb8c8ef05e7",
     "scope": "Close current handoff/navigation gaps only; no application changes or project execution",
@@ -1837,5 +1845,86 @@
         "purpose": "Ten exact pre-follow-up documents preserved before current navigation/handoff fixes"
       }
     ]
+  },
+  "post_move_validation": {
+    "starting_commit": "4a20bb07af3a81c4da256214900e617dad69383a",
+    "date": "2026-11-17",
+    "authorization": "User requested test all and fix them, lifting the earlier pause.",
+    "tests_run": true,
+    "node24": {
+      "version": "24.22.1",
+      "passed": 41,
+      "failed": 0,
+      "skipped": 0
+    },
+    "node22": {
+      "version": "22.23.5",
+      "passed": 41,
+      "failed": 0,
+      "skipped": 0
+    },
+    "browser": "Fresh Chromium mock flows, preview/download/error recovery/mobile controls passed",
+    "startup": "npm start health/generation passed",
+    "originals_archive": "AnalyseFuture/validation/ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip",
+    "originals_archive_sha256": "bfced3c4d5fc11d90fe0bed304c0b8176f2ef9c40382777ad21cdfdae15c9ed0",
+    "preserved_originals": [
+      {
+        "path": "apps/builder-api/src/app.mjs",
+        "sha256": "400f99928d688b4f6b37f181336027b0001c646037327148be68f88339091e72"
+      },
+      {
+        "path": "apps/builder-api/test/app.test.mjs",
+        "sha256": "b3c5220d509dd85f89fc726cb0bd43d553f174088b42e45d84b60ea4f5987d86"
+      },
+      {
+        "path": "services/model-gateway/src/index.mjs",
+        "sha256": "a02b28146e5c1551039d85604e0b512937a9ed62d456b62f8c183b6d92612939"
+      },
+      {
+        "path": "services/model-gateway/test/model-gateway.test.mjs",
+        "sha256": "27000380cdb866cff0ce18cf211eb16ef509a706a93eca1ab27ed218534c5e72"
+      },
+      {
+        "path": "services/model-gateway/README.md",
+        "sha256": "5f892929b75dabadd8050473579f8b19dda362b3b0c166c6fb05ba0ac52c7189"
+      },
+      {
+        "path": "README.md",
+        "sha256": "7ca75563f4cdbcd8d174925373df1f8d61327bdc3b59384e6b17f4d224ccbcca"
+      },
+      {
+        "path": "PROJECT_STRUCTURE.md",
+        "sha256": "170b1fc6a6495e202b3fad8df0b1ac2d7c1fc97a0d112e4011eec4b1f5313130"
+      },
+      {
+        "path": "docs/README.md",
+        "sha256": "4b232ad4a3ea946a2af7bb3549345282068a5e4a4e6a02704f262d937ae9eb59"
+      },
+      {
+        "path": "docs/development/CONTINUATION.md",
+        "sha256": "fe124c3b8d54e53a56a7cc22195098e5a7ce7b817030ef803c4c715e1bb84d5e"
+      },
+      {
+        "path": "docs/development/IMPLEMENTATION_STATUS.md",
+        "sha256": "9ced06970f7bd15574bc3a14dcf7069eed152e667f280eb03986f8f0a08f2df6"
+      },
+      {
+        "path": "docs/architecture/ARCHITECTURE.md",
+        "sha256": "6376fb1ba2dba917382a3b0e26e7ee55ab590ce8958a4eaab787920a4de765f6"
+      },
+      {
+        "path": "AnalyseFuture/organization/PATH_MAPPING.json",
+        "sha256": "9d25e66d52ff044110d8bb21530d1606d9e1d3878e2dc0bebf3bab4d38e7f6dc"
+      },
+      {
+        "path": "services/agent-adapter/src/index.mjs",
+        "sha256": "5bf80953da49f1ea19133cfc79719a99d78c6ff3c88d1aecd794aa9cd8763058"
+      },
+      {
+        "path": "services/agent-adapter/test/agent.test.mjs",
+        "sha256": "81a3a43bd86dd5aadb59f3137db4ed54e0a1e247a9dd3d5df4078e3156d94469"
+      }
+    ],
+    "limits": "No live model/agent/sandbox/database/production deployment, and no observed remote Actions outcome."
   }
 }

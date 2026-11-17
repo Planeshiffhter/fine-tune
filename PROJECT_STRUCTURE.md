@@ -124,7 +124,9 @@ All **101 starting tracked files** have a functional decision in
 The two original upstream ZIPs remain byte-identical at their relocated paths.
 Hashes, original paths and restoration locations are recorded for all 101 files.
 The initial sort added five organization/navigation records, giving 106 files.
-A continuation-guide closure adds two records, giving **108 current tracked files**.
+A continuation-guide closure added two records, giving 108 files.
+Post-move validation adds a report and preservation archive, giving
+**110 current tracked files**.
 The added guide and its preserved originals are recorded in the same ledger.
 Git history remains intact, and remote tag
 `recovery/before-functional-sort-84dd0aa` preserves the starting commit.
@@ -136,13 +138,14 @@ and the new mapping to interpret those old paths. Historical Markdown copies can
 retain old internal links because they are evidence, not current navigation.
 Do not import, install or execute historical/upstream material from AnalyseFuture.
 
-**No tests, installation, application startup, browser checks or executable
-validation were run for this restructuring.** Review was limited to reading,
-classification, hashes, Git metadata and static path/reference analysis. Previous
-passing test counts remain historical evidence, not post-move runtime results.
-All commits for this pass use `[skip ci]` so the push does not request a GitHub
-Actions test run. Runtime behavior after the moves remains unverified until a
-later authorized validation session; the test files and commands are preserved.
+**The initial organization phase was static-only** and its commits used
+`[skip ci]`. The owner subsequently authorized testing and repairs. Current
+[post-move validation](docs/development/VALIDATION_REPORT.md) passes all 41
+maintained tests on both Node 22.23.5 and Node 24.22.1, plus real startup and
+headless mock UI checks. Nine regressions cover the newly repaired boundaries.
+Normal validation commits permit CI again; no remote Actions outcome is claimed.
+These checks do not establish live-agent, generated-code isolation or production
+readiness. Previous audit results remain historical for their own revisions.
 
 ## Where to put future work
 
@@ -298,3 +301,19 @@ The source collections remain unchanged from the functional sort. This follow-up
 ran no tests, installation, application startup, browser or project-code execution;
 its commits also use `[skip ci]`. Static path/reference and preservation review
 are the applicable evidence. Post-move runtime behavior remains unverified.
+
+## Post-move validation records
+
+The later user request to test and fix lifted the earlier pause. Current results,
+repairs, runtime provenance and unrun integrations are in
+[VALIDATION_REPORT.md](docs/development/VALIDATION_REPORT.md). The additional two
+functional records complete the current inventory of 110 paths:
+
+- `docs/development/VALIDATION_REPORT.md` — current test matrix, startup/browser
+  scope, reproduced defects, fixes and limits.
+- `AnalyseFuture/validation/ORIGINALS_BEFORE_POST_MOVE_VALIDATION_4A20BB0.zip` —
+  fourteen baseline source/test/document originals before those fixes.
+
+The existing folder ownership stays intact. No dependency, public export or
+feature was removed. The placement ledger preserves the original organization
+phase metadata separately from the later authorized validation evidence.

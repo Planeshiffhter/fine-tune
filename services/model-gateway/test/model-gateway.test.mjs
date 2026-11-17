@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
+import { spawnSync } from 'node:child_process';
 import { ModelGatewayError, OllamaModelProvider, ModelGateway, createModelGateway, createModelGatewayFromEnv } from '../src/index.mjs';
 
 const messages = [{ role: 'user', content: 'Build a small task app.' }];
@@ -106,6 +107,71 @@ test('retries only retryable provider failures within the configured bound', asy
   assert.equal(badCalls, 1);
 });
 
+test('default retry delay keeps an awaited operation alive in an otherwise idle process', () => {
+  const script = `
+    import assert from 'node:assert/strict';
+    import { ModelGateway, ModelGatewayError } from ${JSON.stringify(new URL('../src/index.mjs', import.meta.url).href)};
+    let calls = 0;
+    const provider = {
+      name: 'retry-liveness-fixture',
+      async generate() {
+        calls += 1;
+        if (calls === 1) throw new ModelGatewayError('Temporary fixture failure.', { retryable: true });
+        return { text: 'recovered' };
+      },
+      async *stream() {},
+    };
+    const result = await new ModelGateway(provider).generate({ messages: [{ role: 'user', content: 'fixture' }] });
+    assert.equal(result.text, 'recovered');
+    assert.equal(result.attempts, 2);
+    assert.equal(calls, 2);
+    console.log('retry-completed');
+  `;
+  const child = spawnSync(process.execPath, ['--input-type=module', '-e', script], { encoding: 'utf8', timeout: 3000 });
+  assert.equal(child.error, undefined);
+  assert.equal(child.status, 0, child.stderr);
+  assert.equal(child.stdout.trim(), 'retry-completed');
+});
+
+test('in-flight timeouts keep unresponsive provider operations bounded in an otherwise idle process', () => {
+  const script = `
+    import assert from 'node:assert/strict';
+    import { ModelGateway } from ${JSON.stringify(new URL('../src/index.mjs', import.meta.url).href)};
+    const provider = {
+      name: 'timeout-liveness-fixture',
+      async generate() { await new Promise(() => {}); },
+      async *stream() { await new Promise(() => {}); },
+    };
+    const gateway = new ModelGateway(provider, { timeoutMs: 10, maxRetries: 0 });
+    const request = { messages: [{ role: 'user', content: 'fixture' }] };
+    await assert.rejects(() => gateway.generate(request), (error) => error.code === 'timeout');
+    await assert.rejects(async () => { for await (const _event of gateway.stream(request)) {} }, (error) => error.code === 'timeout');
+    console.log('timeouts-completed');
+  `;
+  const child = spawnSync(process.execPath, ['--input-type=module', '-e', script], { encoding: 'utf8', timeout: 3000 });
+  assert.equal(child.error, undefined);
+  assert.equal(child.status, 0, child.stderr);
+  assert.equal(child.stdout.trim(), 'timeouts-completed');
+});
+
+test('pre-aborted streaming does not invoke the provider stream factory', async () => {
+  let calls = 0;
+  const provider = {
+    name: 'cancelled-stream-fixture',
+    async generate() { return { text: 'fixture' }; },
+    stream() {
+      calls += 1;
+      return (async function* () { yield { type: 'done' }; })();
+    },
+  };
+  const controller = new AbortController();
+  controller.abort();
+  await assert.rejects(async () => {
+    for await (const _event of new ModelGateway(provider).stream({ messages, signal: controller.signal })) {}
+  }, (error) => error.code === 'cancelled');
+  assert.equal(calls, 0);
+});
+
 test('timeout and caller cancellation produce structured errors and are not retried', async () => {
   let timeoutCalls = 0;
   const slowFetch = async (_url, init) => {
@@ -161,6 +227,30 @@ test('Ollama streaming parses NDJSON and exposes final usage', async () => {
   assert.equal(events.at(-1).provider, 'ollama');
   assert.deepEqual(events.at(-1).usage, { inputTokens: 2, outputTokens: 2, totalTokens: 4 });
 });
+
+for (const fixture of [
+  { name: 'partial NDJSON', body: JSON.stringify({ message: { content: 'partial' }, done: false }) + '\n', deltas: ['partial'] },
+  { name: 'empty response body', body: '', deltas: [] },
+]) {
+  test(`Ollama streaming rejects EOF after ${fixture.name} without a completion event`, async () => {
+    let calls = 0;
+    const gateway = new ModelGateway(new OllamaModelProvider({ model: 'fixture', fetchImpl: async () => {
+      calls += 1;
+      return new Response(fixture.body, { status: 200 });
+    } }), { maxRetries: 3 });
+    const deltas = [];
+    let completed = false;
+    await assert.rejects(async () => {
+      for await (const event of gateway.stream({ messages })) {
+        if (event.type === 'text-delta') deltas.push(event.delta);
+        if (event.type === 'done') completed = true;
+      }
+    }, (error) => error instanceof ModelGatewayError && error.code === 'invalid_provider_response' && error.provider === 'ollama');
+    assert.deepEqual(deltas, fixture.deltas);
+    assert.equal(completed, false);
+    assert.equal(calls, 1);
+  });
+}
 
 test('streaming provider errors are normalized without replaying partial output', async () => {
   const gateway = new ModelGateway(new OllamaModelProvider({ model: 'coder', fetchImpl: async () => new Response([

@@ -1,7 +1,7 @@
 # Current continuation guide
 
-Updated on **17 November 2026**, after the functional reorganization delivered at
-`e19dfdafc841f73ed8b62d1fe9123cb8c8ef05e7`.
+Updated on **17 November 2026**, after the functional reorganization and the
+subsequently authorized post-move validation from `4a20bb0`.
 
 This is the current handoff. The older files under `AnalyseFuture/handoff/`
 preserve the earlier recovery work and its original paths; they are historical
@@ -13,7 +13,8 @@ The requested functional sorting is complete. Every one of the 101 original
 tracked files has a recorded home: 84 moved and 17 retained. Original text and
 upstream archives remain recoverable. The structure pass added five records;
 this closure adds this guide and an archive of the documents changed here.
-There are now 108 tracked project files, all assigned in
+The subsequent validation phase adds a report and preservation archive, giving
+110 tracked project files, all assigned in
 [PROJECT_STRUCTURE.md](../../PROJECT_STRUCTURE.md) and the
 [placement ledger](../../AnalyseFuture/organization/PATH_MAPPING.json).
 
@@ -25,9 +26,10 @@ functional collection is a deliberate decision, not an omitted file.
 
 - Work directly on `main`, without feature branches or a PR, unless the owner
   changes the instruction. Preserve history; never force-push.
-- The owner's **no-tests-for-now** instruction remains in effect. Do not run
-  tests, installation, application startup, browser checks or executable
-  validation as part of this organization work. Commits use `[skip ci]`.
+- The owner lifted the testing pause with “test all and fix them”. Testing and
+  normal CI commits are authorized again. Use the root `npm test` command and
+  keep archived reference code outside test discovery. Do not use `[skip ci]`
+  for these validation/fix commits.
 - Preserve original content before edits and put safe historical/uncertain
   material in a labeled `AnalyseFuture` collection. Do not publish credentials
   or private data, or execute preserved source merely because it is archived.
@@ -68,11 +70,12 @@ the mock generation endpoint does not invoke them.
 
 ## What remains beyond organization
 
-1. **Post-move runtime validation is deferred.** Static path, import, link and
-   preservation review does not prove runtime behavior. The earlier 32 passing
-   tests and browser smoke belong to the pre-move recovery, not this layout.
-   A later session may install from the frozen lock, run the maintained checks
-   and exercise the mock only after the owner changes the no-tests instruction.
+1. **Post-move baseline validation is complete.** The maintained suite passes
+   41 tests on both Node 22.23.5 and Node 24.22.1, with no failures or skips.
+   Real startup and headless browser mock flows also pass. See
+   [VALIDATION_REPORT.md](VALIDATION_REPORT.md) for the nine added regressions,
+   repaired failures, exact scope and unrun integration milestones. Test future
+   changes appropriately; these results do not prove a production AI platform.
 2. **Real agent compatibility is unfinished product work.** Use a pinned Agent
    Server fixture and authorized model configuration. Fake-server transport
    coverage does not establish live coding, and local `/workspace` is not a
@@ -85,8 +88,9 @@ the mock generation endpoint does not invoke them.
    a live model. Persistence, data/auth, deployment and training follow their
    own evidence gates in the [roadmap](../product/ROADMAP.md).
 
-These are separate product milestones, not unfinished file sorting. No new
-product capability, deployment or post-move test pass is claimed by this closure.
+These are separate product milestones, not unfinished file sorting. Validation
+repairs the existing boundaries; it does not implement live generation, a sandbox
+or deployment. Passing checks are limited to the report's stated scope.
 The owned repository is the app-builder foundation; a separate English-speaking
 companion implementation has not been supplied or found and must not be invented
 by relabeling the agent conversation adapter.

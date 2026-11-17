@@ -217,6 +217,37 @@ package metadata, lockfile, preserved histories and upstream ZIPs are unchanged
 from the reorganization delivery. No tests, installation, application startup,
 browser or project-code execution were run; commits use `[skip ci]`.
 
+## Authorized post-move validation and fixes — 17 November 2026
+
+The owner requested “test all and fix them”, lifting the previous testing pause.
+Starting at `4a20bb0`, frozen installation passed and the existing 32-test suite
+passed after the folder moves. Additional regressions exposed and repaired:
+
+- A malformed URL could crash the API; it now returns bounded JSON `400` with
+  security headers and leaves subsequent requests working.
+- Empty/truncated Ollama streams could report success without `done: true`; they
+  now fail with `invalid_provider_response`, retaining partial output without replay.
+- Unreferenced retry/timeout timers could let awaited operations exit early; they
+  now remain active until completion/cancellation and are cleaned up.
+- Cancellation could invoke a pre-aborted stream factory or queued agent fetch;
+  the relevant guards now prevent dispatch.
+- Dot-segment conversation IDs could normalize DELETE to the wrong path; those
+  IDs now fail validation before any request.
+
+Nine meaningful regressions failed before their repairs and passed afterward.
+The complete suite now passes **41/41 on Node 24.22.1 and 41/41 on Node 22.23.5**,
+with no failures/skips. `npm start` passed real health/generation requests; fresh
+Chromium passed four mock template flows, rendered preview/plan, HTML download,
+controlled error recovery and mobile controls, with no uncaught page errors.
+Validation processes were stopped. No dependency or public API was replaced.
+
+Fourteen baseline originals are preserved before edits. The report and archive
+bring the current placement inventory to 110 files. See
+[VALIDATION_REPORT.md](VALIDATION_REPORT.md) and the current
+[continuation guide](CONTINUATION.md). Live model/agent/sandbox, database and
+production work remain unconfigured or unimplemented; no remote CI pass is claimed.
+Normal commits permit the existing CI workflow to run again.
+
 ## Rules for keeping this document accurate
 
 - A feature becomes “implemented” only with links to code, executable verification steps, and test results.

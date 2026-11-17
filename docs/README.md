@@ -16,5 +16,7 @@ feature ownership, preservation and per-file relocation index.
 | Long-term vision | [Detailed future vision](../AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt) |
 | Previous recovery evidence | [Preserved collections](../AnalyseFuture/README.md) |
 
-The current reorganization is static-only. Tests and runtime checks were expressly
-not run; earlier validation records are historical, not evidence for the new paths.
+The original reorganization was static-only. The owner subsequently authorized
+testing and repairs; [VALIDATION_REPORT.md](development/VALIDATION_REPORT.md) now
+records the post-move Node 22/24 suite, startup and browser results. Earlier
+preserved audit results remain historical evidence for their own commits.
