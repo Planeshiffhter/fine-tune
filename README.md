@@ -18,21 +18,22 @@ The product should offer:
 
 ## Start here
 
-The current whole-project layout and every file's placement are documented in
-[PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md). Documentation is grouped in the
-[functional index](docs/README.md). The initial reorganization was static-only.
-The owner subsequently authorized testing: the current
-[validation report](docs/development/VALIDATION_REPORT.md) records **41 passing
-tests on both Node 22 and Node 24**, startup/browser checks and repaired failures.
-Validation commits allow CI again; earlier `[skip ci]` commits remain historical.
+The complete functional layout is documented in
+[PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md), with a per-file preservation
+[catalogue](AnalyseFuture/organization/FILE_CATALOG.md). Documentation is grouped
+in the [functional index](docs/README.md). This restructuring is **static-only**:
+the owner requested no tests. The earlier
+[validation report](docs/development/VALIDATION_REPORT.md) records 41 passing tests
+on Node 22/24 plus startup/browser checks at the prior baseline. Those results
+have not been rerun for this change.
 
 | Audience | Read first |
 | --- | --- |
 | Everyone | [Project charter](docs/product/PROJECT_CHARTER.md), [current status](docs/development/IMPLEMENTATION_STATUS.md) |
-| Product planning | [Canonical project vision and future roadmap (TXT)](AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt): existing work, feasibility limits and conditional future horizons |
+| Product planning | [Canonical project vision and future roadmap (TXT)](docs/product/PROJECT_VISION_AND_FUTURE_ROADMAP.txt): existing work, feasibility limits and conditional future horizons |
 | Repository organization | [Current complete structure](PROJECT_STRUCTURE.md), [preservation and relocation record](AnalyseFuture/organization/REORGANIZATION.md), [historical reference inventory](AnalyseFuture/README.md) |
 | Continue development | [Current continuation guide](docs/development/CONTINUATION.md): current paths, instructions and remaining milestones; [post-move validation](docs/development/VALIDATION_REPORT.md) |
-| Historical recovery records | [Repository audit](AnalyseFuture/audit/REPOSITORY_AUDIT.txt), [feature inventory](AnalyseFuture/features/FEATURE_INVENTORY.txt), [validation results](AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt), [earlier handoff](AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt) |
+| Historical recovery records | [Repository audit](AnalyseFuture/history/recovery-reports/audit/REPOSITORY_AUDIT.txt), [feature inventory](AnalyseFuture/history/recovery-reports/features/FEATURE_INVENTORY.txt), [validation results](AnalyseFuture/history/recovery-reports/validation/TEST_AND_VALIDATION_REPORT.txt), [earlier handoff](AnalyseFuture/history/recovery-reports/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt) |
 | Engineers | [Architecture](docs/architecture/ARCHITECTURE.md), [product requirements](docs/product/PRODUCT_REQUIREMENTS.md), [roadmap](docs/product/ROADMAP.md) |
 | Codex / AI coding agents | [AGENTS.md](AGENTS.md), [Codex playbook](docs/development/CODEX_PLAYBOOK.md) |
 | Open-source integrators | [Reuse audit](docs/research/REUSE_AUDIT.md), [licensing and ownership](docs/legal/OWNERSHIP_AND_LICENSES.md) |
@@ -74,7 +75,7 @@ npm run dev
 to that command when extending the suite; archived reference code is excluded.
 Both HTTP adapters reject redirects, so configure the final Ollama/Agent Server
 endpoint rather than an address that redirects elsewhere. See the
-[security review](AnalyseFuture/security/SECURITY_AUDIT.txt) for evidence and unresolved limits.
+[security review](AnalyseFuture/history/recovery-reports/security/SECURITY_AUDIT.txt) for evidence and unresolved limits.
 
 Open http://127.0.0.1:3000. The browser demo still uses a deterministic static generator; it is **not yet connected** to the model gateway.
 

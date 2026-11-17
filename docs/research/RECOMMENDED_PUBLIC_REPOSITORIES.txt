@@ -1,7 +1,7 @@
 FINE-TUNE PROJECT — PUBLIC REPOSITORIES FOR STUDY AND REUSE
 ===========================================================
 Last reviewed: 2026-11-15
-Project: https://github.com/kawaho3/fine-tune
+Project: https://github.com/Planeshiffhter/fine-tune
 Purpose: Complete inventory of public GitHub repositories previously recommended
          in this project's ChatGPT planning conversations.
 

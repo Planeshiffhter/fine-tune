@@ -13,10 +13,10 @@ feature ownership, preservation and per-file relocation index.
 | Upstream research | [Reuse audit](research/REUSE_AUDIT.md), [repository references](research/RECOMMENDED_PUBLIC_REPOSITORIES.txt) |
 | Operations | [Cost and operating strategy](operations/COSTS_AND_OPERATIONS.md) |
 | Model research | [Training strategy](model-training/MODEL_TRAINING.md) |
-| Long-term vision | [Detailed future vision](../AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt) |
+| Long-term vision | [Detailed future vision](product/PROJECT_VISION_AND_FUTURE_ROADMAP.txt) |
 | Previous recovery evidence | [Preserved collections](../AnalyseFuture/README.md) |
 
-The original reorganization was static-only. The owner subsequently authorized
-testing and repairs; [VALIDATION_REPORT.md](development/VALIDATION_REPORT.md) now
-records the post-move Node 22/24 suite, startup and browser results. Earlier
-preserved audit results remain historical evidence for their own commits.
+The current restructuring is static-only and runs no tests. Earlier testing
+and repairs were separately authorized; [VALIDATION_REPORT.md](development/VALIDATION_REPORT.md) now
+records the earlier Node 22/24 suite, startup and browser results. Preserved
+audit results remain historical evidence for their own commits.

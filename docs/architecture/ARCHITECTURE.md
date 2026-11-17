@@ -25,24 +25,29 @@ The current builder still calls `packages/project-generator`; it is intentionall
 The complete functional layout and placement decisions are in
 [PROJECT_STRUCTURE.md](../../PROJECT_STRUCTURE.md). Package names and exported
 contracts remain compatible. The initial folder reorganization was static-only;
-subsequent owner-authorized [validation](../development/VALIDATION_REPORT.md)
-passes the maintained suite on Node 22/24 and exercises startup and the mock UI.
+later owner-authorized [validation](../development/VALIDATION_REPORT.md)
+records passing results on Node 22/24, startup and the mock UI at the prior
+baseline. The current organization pass runs no tests and claims no fresh runtime
+validation. Active source/workspace paths stay unchanged. Historical reviews and
+recovery records now live under `AnalyseFuture/history/`; the canonical product
+vision belongs with current product planning.
 
 The original upstream ZIPs are kept in `AnalyseFuture/references/upstream/`.
 Historical documents and an inventory preserve the pre-organization contents.
 Use [PROJECT_STRUCTURE.md](../../PROJECT_STRUCTURE.md) for the active layout and
 [CONTINUATION.md](../development/CONTINUATION.md) for current paths and next steps.
-The [earlier repository review](REPOSITORY_STRUCTURE.md) preserves historical
+The [earlier repository review](../../AnalyseFuture/history/organization/REPOSITORY_STRUCTURE.md) preserves historical
 layouts and recovery scope. Keep upstream source compressed to avoid accidental
 execution or discovery of unpacked third-party code.
 
 The follow-up full audit inventories the 65-file `e40fa80` starting state and
 all 39 commits reachable after explicitly fetching every remote branch. Its
-[feature/dependency map](../../AnalyseFuture/features/DEPENDENCY_MAP.txt) explains the actual
+[feature/dependency map](../../AnalyseFuture/history/recovery-reports/features/DEPENDENCY_MAP.txt) explains the actual
 cross-folder call paths. These are deliberate boundaries, not competing engines.
 The canonical product vision is now
-[AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt](../../AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt);
-`docs/product/PROJECT_IDEA.txt` remains a navigation compatibility file.
+[docs/product/PROJECT_VISION_AND_FUTURE_ROADMAP.txt](../product/PROJECT_VISION_AND_FUTURE_ROADMAP.txt).
+The obsolete compatibility pointer is preserved as historical evidence under
+`AnalyseFuture/history/organization/compatibility/`.
 
 Both adapter HTTP paths now reject redirects, and the test script explicitly
 lists active tests. See [ADR 0006](decisions/0006-reference-and-request-boundaries.md).

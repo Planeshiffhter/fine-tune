@@ -2,8 +2,8 @@ FINE-TUNE: AN AI APP BUILDER THAT SHOWS ITS WORK
 Canonical project vision and evidence-based future roadmap
 Prepared: 17 November 2026
 Reviewed during repository recovery and consolidation: 17 November 2026
-Canonical location: AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt
-Repository: kawaho3/fine-tune
+Canonical location: docs/product/PROJECT_VISION_AND_FUTURE_ROADMAP.txt
+Repository: Planeshiffhter/fine-tune
 
 DOCUMENT PURPOSE
 
@@ -104,15 +104,15 @@ EXISTING AND VERIFIED, within recorded scope:
   Deterministic validation/static generation; local API/assets, input errors and
   defined headers; mock model contracts; fake-server agent lifecycle. Historical
   evidence includes 29 passing repository tests and local HTTP readiness and
-  generation checks. Consult AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt for this
+  generation checks. Consult AnalyseFuture/history/recovery-reports/validation/TEST_AND_VALIDATION_REPORT.txt for this
   recovery's actual commands. This vision is not itself a fresh execution report.
 
 EXISTING BUT BROKEN, THEN REPAIRED DURING RECOVERY:
   Real HTTP regressions reproduced request forwarding through redirects in the
   agent and Ollama adapters, including forwarding a dummy session key. Both now
   reject redirects. Three regressions failed before the fix and passed after it;
-  the maintained suite now passes 32 tests. The repair is not proof of a complete
-  secure execution platform. See AnalyseFuture/security/SECURITY_AUDIT.txt and AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt.
+  the maintained suite passed 32 tests at that recovery baseline. The repair is not proof of a complete
+  secure execution platform. See AnalyseFuture/history/recovery-reports/security/SECURITY_AUDIT.txt and AnalyseFuture/history/recovery-reports/validation/TEST_AND_VALIDATION_REPORT.txt.
   The mock API still does not call these adapters: that is a missing integration,
   not proof that its tested generation behavior is broken. Other unconfirmed
   source-review concerns remain explicitly unresolved in the security report.
@@ -277,7 +277,7 @@ AVAILABLE UPSTREAM SOURCE, NOT INTEGRATED FEATURES:
   a preservation manifest for every file in baseline commit 0c45350. Reference
   material is not automatically integrated or safe to execute. The active
   application layout remains apps/, packages/ and services/; see
-  docs/architecture/REPOSITORY_STRUCTURE.md for the review, scope and limits. The remote main
+  AnalyseFuture/history/organization/REPOSITORY_STRUCTURE.md for the review, scope and limits. The remote main
   matched the previously pushed baseline when inspected, so this repository
   review did not establish the reported account compromise.
 
@@ -886,15 +886,19 @@ deliberately smaller: one complete, repeatable, honestly verified user workflow.
 CANONICAL DOCUMENT AND RECOVERY RECORDS
 =======================================
 
-The canonical vision is AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt.
-The former docs/product/PROJECT_IDEA.txt location remains a compatibility navigation file;
+The canonical vision is docs/product/PROJECT_VISION_AND_FUTURE_ROADMAP.txt.
+The later VALIDATION_REPORT.md records 41 tests at the next baseline; the current
+whole-repository restructuring runs no tests and claims no fresh runtime evidence.
+The former compatibility navigation file is preserved at
+AnalyseFuture/history/organization/compatibility/PROJECT_IDEA.txt;
 its earlier full text is preserved under AnalyseFuture/history/baseline-documents/.
 This retains earlier ideas without maintaining competing active roadmaps.
 
-Use AnalyseFuture/features/FEATURE_INVENTORY.txt for implementation status,
-AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt for actual commands/outcomes,
-AnalyseFuture/security/SECURITY_AUDIT.txt for confirmed/unresolved security findings, and
+Use docs/development/IMPLEMENTATION_STATUS.md for current implementation status;
+AnalyseFuture/history/recovery-reports/features/FEATURE_INVENTORY.txt for the older feature inventory,
+AnalyseFuture/history/recovery-reports/validation/TEST_AND_VALIDATION_REPORT.txt for actual commands/outcomes,
+AnalyseFuture/history/recovery-reports/security/SECURITY_AUDIT.txt for confirmed/unresolved security findings, and
 docs/development/CONTINUATION.md for the current handoff. The earlier
-AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt remains historical evidence.
+AnalyseFuture/history/recovery-reports/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt remains historical evidence.
 A roadmap does not substitute for those records. Organization does not prove the reported account
 compromise occurred and does not establish that account access is secure.
