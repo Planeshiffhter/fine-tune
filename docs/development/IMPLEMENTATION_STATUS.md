@@ -202,6 +202,21 @@ No tests, browser runs, application startup, installation or executable validati
 were performed. Only static file/hash/path/reference review applies to this pass.
 Commits use `[skip ci]`; later authorized runtime validation remains necessary.
 
+## Reorganization closure — 17 November 2026
+
+A static follow-up from `e19dfda` found no additional source moves or configuration
+changes to make. The remaining issue was current guidance linking to preserved
+pre-sort developer instructions. Added [CONTINUATION.md](CONTINUATION.md), updated
+active navigation and the architecture's current-structure link, and separated
+organization completion from future runtime validation/product work.
+
+Ten pre-follow-up documents were preserved byte-for-byte in a new inert ZIP. The
+placement ledger now accounts for all 108 current files: the original 101, five
+initial organization records and two closure records. Application code, imports,
+package metadata, lockfile, preserved histories and upstream ZIPs are unchanged
+from the reorganization delivery. No tests, installation, application startup,
+browser or project-code execution were run; commits use `[skip ci]`.
+
 ## Rules for keeping this document accurate
 
 - A feature becomes “implemented” only with links to code, executable verification steps, and test results.

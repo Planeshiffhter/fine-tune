@@ -7,7 +7,7 @@ feature ownership, preservation and per-file relocation index.
 | --- | --- |
 | Product | [Charter](product/PROJECT_CHARTER.md), [requirements](product/PRODUCT_REQUIREMENTS.md), [roadmap](product/ROADMAP.md), [feature backlog](product/FEATURE_MATRIX.md) |
 | Architecture | [Component boundaries](architecture/ARCHITECTURE.md), [decision records](architecture/decisions/) |
-| Development | [Onboarding](development/DEVELOPER_ONBOARDING.md), [current status](development/IMPLEMENTATION_STATUS.md), [mock/API guide](development/MOCK_PROTOTYPE.md), [evaluation](development/TESTING_AND_EVALUATION.md), [agent playbook](development/CODEX_PLAYBOOK.md) |
+| Development | [Current continuation guide](development/CONTINUATION.md), [onboarding](development/DEVELOPER_ONBOARDING.md), [current status](development/IMPLEMENTATION_STATUS.md), [mock/API guide](development/MOCK_PROTOTYPE.md), [evaluation](development/TESTING_AND_EVALUATION.md), [agent playbook](development/CODEX_PLAYBOOK.md) |
 | Security | [Threat model](security/SECURITY_ARCHITECTURE.md), [reporting policy](../SECURITY.md) |
 | Ownership and licensing | [Rights and licensing](legal/OWNERSHIP_AND_LICENSES.md) |
 | Upstream research | [Reuse audit](research/REUSE_AUDIT.md), [repository references](research/RECOMMENDED_PUBLIC_REPOSITORIES.txt) |

@@ -30,9 +30,10 @@ when needed; do not unpack upstream archives inside this checkout or run bare
 `node --test` over preserved material. Ollama and Agent Server endpoint URLs must
 be final endpoints: both adapters reject HTTP redirects.
 
-For the complete current file/feature map, dependency boundaries, validation
-limits and recovery history, read
-[NEXT_DEVELOPER_INSTRUCTIONS.txt](../../AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt).
+For the current file/feature locations, dependency boundaries, active constraints
+and remaining work, read [CONTINUATION.md](CONTINUATION.md). The earlier
+[NEXT_DEVELOPER_INSTRUCTIONS.txt](../../AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt)
+is a preserved pre-reorganization report and uses historical paths.
 The detailed vision is
 [PROJECT_VISION_AND_FUTURE_ROADMAP.txt](../../AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt).
 Production deployment is not implemented; `npm start` starts the local mock only.

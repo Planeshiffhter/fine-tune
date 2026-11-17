@@ -29,9 +29,11 @@ tests and runtime validation were not run, as requested by the owner.
 
 The original upstream ZIPs are kept in `AnalyseFuture/references/upstream/`.
 Historical documents and an inventory preserve the pre-organization contents.
-See [repository structure](REPOSITORY_STRUCTURE.md) for the active layout and
-preservation scope. Keep upstream source compressed here to avoid automatic test
-discovery of unpacked third-party code.
+Use [PROJECT_STRUCTURE.md](../../PROJECT_STRUCTURE.md) for the active layout and
+[CONTINUATION.md](../development/CONTINUATION.md) for current paths and next steps.
+The [earlier repository review](REPOSITORY_STRUCTURE.md) preserves historical
+layouts and recovery scope. Keep upstream source compressed to avoid accidental
+execution or discovery of unpacked third-party code.
 
 The follow-up full audit inventories the 65-file `e40fa80` starting state and
 all 39 commits reachable after explicitly fetching every remote branch. Its

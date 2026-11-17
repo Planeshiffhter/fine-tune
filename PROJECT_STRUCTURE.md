@@ -47,7 +47,7 @@ fine-tune/
     product/                           charter, requirements, roadmap and feature ambitions
     architecture/                      component design and decision records
       decisions/                       six existing ADRs
-    development/                       onboarding, current status, mock/API guide and evaluation
+    development/                       current continuation, onboarding, status and evaluation
     security/                          threat model and required controls
     legal/                             ownership, project licensing and reuse obligations
     research/                          upstream component research and repository references
@@ -108,6 +108,12 @@ source/test imports keep their component structure. Four known ignored local
 workspace symlinks were retargeted as filesystem configuration, without installing
 packages or executing application code. The ledger records their previous targets.
 
+Git's `.git/` metadata stays in its required location so history is preserved.
+Ignored `node_modules/` contains generated dependency/workspace state, not another
+owned feature implementation; it remains in the package manager's conventional
+location and is not copied into GitHub or the archive collections. These locations
+were classified deliberately rather than treated as unexamined product folders.
+
 ## Preservation and review limits
 
 All **101 starting tracked files** have a functional decision in
@@ -117,7 +123,9 @@ All **101 starting tracked files** have a functional decision in
 [ORIGINAL_TEXT_FILES.zip](AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip).
 The two original upstream ZIPs remain byte-identical at their relocated paths.
 Hashes, original paths and restoration locations are recorded for all 101 files.
-There are five new organization/navigation records, giving **106 delivered files**.
+The initial sort added five organization/navigation records, giving 106 files.
+A continuation-guide closure adds two records, giving **108 current tracked files**.
+The added guide and its preserved originals are recorded in the same ledger.
 Git history remains intact, and remote tag
 `recovery/before-functional-sort-84dd0aa` preserves the starting commit.
 
@@ -271,3 +279,22 @@ package tools, GitHub and developers discover them.
 - `AnalyseFuture/organization/PATH_MAPPING.json` — All101starting file purposes/dependencies, source-to-destination mapping, original hashes and link changes.
 - `AnalyseFuture/organization/ORIGINAL_TEXT_FILES.zip` — 99exact pre-sort text originals, compressed and inert.
 - `AnalyseFuture/organization/REORGANIZATION.md` — Current organization scope, decisions and static-only review record.
+
+## Continuation-guide closure
+
+The completed sort is followed by a current
+[continuation guide](docs/development/CONTINUATION.md). Active onboarding, the
+README and architecture now point to this guide instead of treating the preserved
+pre-sort handoff as current. All historical handoff/report bodies remain intact.
+
+Two additional functional records complete the current inventory:
+
+- `docs/development/CONTINUATION.md` — current paths, constraints, organization
+  completion and separate remaining product milestones.
+- `AnalyseFuture/organization/FOLLOW_UP_ORIGINALS_E19DFDA.zip` — ten exact original
+  documents from `e19dfda`, retained before updating this handoff/navigation layer.
+
+The source collections remain unchanged from the functional sort. This follow-up
+ran no tests, installation, application startup, browser or project-code execution;
+its commits also use `[skip ci]`. Static path/reference and preservation review
+are the applicable evidence. Post-move runtime behavior remains unverified.

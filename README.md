@@ -29,7 +29,8 @@ historical. The restructuring commits use `[skip ci]`.
 | Everyone | [Project charter](docs/product/PROJECT_CHARTER.md), [current status](docs/development/IMPLEMENTATION_STATUS.md) |
 | Product planning | [Canonical project vision and future roadmap (TXT)](AnalyseFuture/planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt): existing work, feasibility limits and conditional future horizons |
 | Repository organization | [Current complete structure](PROJECT_STRUCTURE.md), [preservation and relocation record](AnalyseFuture/organization/REORGANIZATION.md), [historical reference inventory](AnalyseFuture/README.md) |
-| Complete recovery records | [Repository audit](AnalyseFuture/audit/REPOSITORY_AUDIT.txt), [feature inventory](AnalyseFuture/features/FEATURE_INVENTORY.txt), [validation results](AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt), [continuation guide](AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt) |
+| Continue development | [Current continuation guide](docs/development/CONTINUATION.md): current paths, active instructions and remaining milestones |
+| Historical recovery records | [Repository audit](AnalyseFuture/audit/REPOSITORY_AUDIT.txt), [feature inventory](AnalyseFuture/features/FEATURE_INVENTORY.txt), [validation results](AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt), [earlier handoff](AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt) |
 | Engineers | [Architecture](docs/architecture/ARCHITECTURE.md), [product requirements](docs/product/PRODUCT_REQUIREMENTS.md), [roadmap](docs/product/ROADMAP.md) |
 | Codex / AI coding agents | [AGENTS.md](AGENTS.md), [Codex playbook](docs/development/CODEX_PLAYBOOK.md) |
 | Open-source integrators | [Reuse audit](docs/research/REUSE_AUDIT.md), [licensing and ownership](docs/legal/OWNERSHIP_AND_LICENSES.md) |

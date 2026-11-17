@@ -894,6 +894,7 @@ This retains earlier ideas without maintaining competing active roadmaps.
 Use AnalyseFuture/features/FEATURE_INVENTORY.txt for implementation status,
 AnalyseFuture/validation/TEST_AND_VALIDATION_REPORT.txt for actual commands/outcomes,
 AnalyseFuture/security/SECURITY_AUDIT.txt for confirmed/unresolved security findings, and
-AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt to continue. A roadmap does not
-substitute for those records. Organization does not prove the reported account
+docs/development/CONTINUATION.md for the current handoff. The earlier
+AnalyseFuture/handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt remains historical evidence.
+A roadmap does not substitute for those records. Organization does not prove the reported account
 compromise occurred and does not establish that account access is secure.

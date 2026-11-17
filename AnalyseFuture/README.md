@@ -28,7 +28,7 @@ No tests or runtime checks were run for this reorganization.
 | [SECURITY_AUDIT.txt](security/SECURITY_AUDIT.txt) | Reproduced/fixed findings, unresolved concerns and account-access limits |
 | [PROJECT_VISION_AND_FUTURE_ROADMAP.txt](planning/PROJECT_VISION_AND_FUTURE_ROADMAP.txt) | Canonical detailed product vision; the old docs path is a compatibility pointer |
 | [MIGRATION_SUMMARY.txt](migration/MIGRATION_SUMMARY.txt) / [ORIGINAL_TO_NEW_PATH_MAPPING.txt](migration/ORIGINAL_TO_NEW_PATH_MAPPING.txt) | Applied changes, compatibility and per-path preservation |
-| [NEXT_DEVELOPER_INSTRUCTIONS.txt](handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt) / [WORK_PROGRESS.txt](handoff/WORK_PROGRESS.txt) | Handoff and persistent progress |
+| [NEXT_DEVELOPER_INSTRUCTIONS.txt](handoff/NEXT_DEVELOPER_INSTRUCTIONS.txt) / [WORK_PROGRESS.txt](handoff/WORK_PROGRESS.txt) | Historical handoff/progress; use the [current continuation guide](../docs/development/CONTINUATION.md) for the renamed layout |
 | [history/before-complete-audit/](history/before-complete-audit) | Fifteen original files from the later `e40fa80` baseline, stored with an extra `.txt` suffix |
 | [inventory/evidence/](inventory/evidence) / [security/evidence/](security/evidence) | Starting-state hashes, all 6,737 ZIP member paths and metadata-only audit evidence |
 
